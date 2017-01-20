@@ -1,0 +1,45 @@
+/*doc
+---
+title: Forms
+name: globForms
+category: Sass Globals
+---
+
+Variable                | Value
+----------------------- | --------------------------------
+`$form-min-height`      | `$block`
+`$form-min-width`       | `$block`
+`$form-max-width`       | `$block-7`
+`$inputGutter`          | `$space/2` - used in checkbox/radio gutters
+
+*/
+$form-min-height : $block;
+$form-min-width  : $block;
+$form-max-width  : $block-7;
+$inputGutter: $space/2;
+
+// TODO: replace with bourbon vars
+$inputs-list: 'input[type="email"]',
+				  'input[type="number"]',
+				  'input[type="password"]',
+				  'input[type="search"]',
+				  'input[type="tel"]',
+				  'input[type="text"]',
+				  'input[type="url"]',
+			  	  'input:not([type])',
+
+				  // Webkit & Gecko may change the display of these in the future
+				  'input[type="color"]',
+				  'input[type="date"]',
+				  'input[type="datetime"]',
+				  'input[type="datetime-local"]',
+				  'input[type="month"]',
+				  'input[type="time"]',
+				  'input[type="week"]';
+
+$unquoted-inputs-list: ();
+
+@each $input-type in $inputs-list {
+  $unquoted-inputs-list: append($unquoted-inputs-list, unquote($input-type), comma);
+}
+$all-text-inputs: $unquoted-inputs-list;

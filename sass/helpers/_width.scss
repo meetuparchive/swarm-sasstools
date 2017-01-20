@@ -1,0 +1,18 @@
+////
+/// @group width
+////
+
+/// Sets element width with `calc`
+/// @access public
+///
+/// @param {int} $nCols
+///
+/// @example scss
+/// 	.myInlineblockList--3column > li {
+/// 		@mixin width-columns(3);
+/// 	}
+///
+@mixin width-columns($nCols: 1) {
+	width: calc(100% / #{$nCols});
+}
+

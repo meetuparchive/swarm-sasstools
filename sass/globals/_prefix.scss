@@ -1,0 +1,50 @@
+/*doc
+---
+title: Vendor Prefixing
+name: globPrefixer
+category: Sass Globals
+---
+
+## Bourbon prefixer mixin
+The [prefixer](http://bourbon.io/docs/#prefixer) mixin
+from [Broubon](http://bourbon.io/) accepts an argument
+that determines which vendor prefixes to output.
+
+For convenience, Sassquatch2 defines two global variables
+for this argument:
+
+Variable                | Value
+----------------------- | --------------------------------
+`$prefixes`             | `webkit ms spec`
+`$prefixes-edge`        | `ms spec`
+
+
+## Broubon global prefixer
+The [global prefixer](http://bourbon.io/docs/#global-prefixer) in
+Bourbon is used for property mixins like `transform()`. In Sassquatch2,
+we use the following variables to explicitly set the global prefixer
+defaults:
+
+Variable                | Value
+----------------------- | --------------------------------
+`$prefix-for-webkit`     | `true`
+`$prefix-for-mozilla`    | `false`
+`$prefix-for-microsoft`  | `true`
+`$prefix-for-opera`      | `false`
+`$prefix-for-spec`       | `true`
+
+*/
+
+// prefixer mixin arg aliases
+$prefixes: webkit ms spec;
+$prefixes-edge: ms spec;
+
+// broubon global prefixer settings
+$prefix-for-webkit:    true;
+$prefix-for-mozilla:   false;
+$prefix-for-microsoft: true;
+$prefix-for-opera:     false;
+$prefix-for-spec:      true;
+
+
+

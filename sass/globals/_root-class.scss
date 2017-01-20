@@ -1,0 +1,20 @@
+/*doc
+---
+title: Root classes
+name: rootClasses
+category: Sass Globals
+---
+"Root classes" are classes that we expect the
+`html` or `body` elements to contain. These classes can be
+used to target [specific languages](http://meetup.github.io/julep/#mixin-i18n-only),
+[versions of IE](http://meetup.github.io/julep/#mixin-browser-lessThanIE),
+and more.
+
+Most root classes are defined in [Julep](http://meetup.github.io/julep/), our
+custom Sass utility library. The root classes defined in Sassquatch2 are:
+
+Variable                | Value                | Description
+----------------------- | -------------------- | ---------------------------------
+`$root-debugEnable`     | `'enableDebug'`      | Enables `.debug` styles
+*/
+$root-debugEnable: 'enableDebug';

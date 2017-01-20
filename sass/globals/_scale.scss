@@ -1,0 +1,125 @@
+/*doc
+---
+title: Size scale
+name: globScale
+category: Sass Globals
+---
+We use a double-stranded
+[modular scale](http://alistapart.com/article/more-meaningful-typography)
+loosely based on a perfect-fifths scale.
+
+```
+$block   : 48px @ 1:1.5
+$space   : 16px @ 1:1.5
+```
+
+_See also: ["Don't compose without a scale"](http://webtypography.net/3.1.1)_
+*/
+
+/*doc
+---
+title: Block
+name: globBlock
+parent: globScale
+---
+"Block" variables contain size values in pixels starting from
+`48px`, moving up the `1:1.5` type scale.
+
+These sizes represent one strand of our double-stranded type scale.
+
+Variable                | Value
+----------------------- | --------------------------------
+`$block`                | `48px`
+`$block-2`              | `72px`
+`$block-3`             | `108px`
+`$block-4`             | `160px`
+`$block-5`             | `240px`
+`$block-6`             | `384px`
+`$block-7`             | `544px`
+*/
+$block           : 48px;
+$block-2         : 72px;
+$block-3         : 108px;
+$block-4         : 160px;
+$block-5         : 240px;
+$block-6         : 384px;
+$block-7         : 544px;
+
+/*doc
+---
+title: Space
+name: globSpace
+parent: globScale
+---
+"Space" variables contain size values in pixels starting from
+`16px`, moving up the `1:1.5` type scale.
+
+These sizes represent one strand of our double-stranded type scale.
+
+Variable                | Value
+----------------------- | --------------------------------
+`$space`                | `16px`
+`$space-2`             | `24px`
+`$space-3`             | `36px`
+`$space-4`             | `56px`
+`$space-5`             | `80px`
+`$space-6`             | `120px`
+`$space-7`             | `184px`
+`$space-8`             | `280px`
+*/
+$space           : 16px;
+$space-2         : 24px;
+$space-3         : 36px;
+$space-4         : 56px;
+$space-5         : 80px;
+$space-6         : 120px;
+$space-7         : 184px;
+$space-8         : 280px;
+
+$space-and-half  : $space*1.5;
+$space-double    : $space*2;
+$space-half      : $space/2;
+$space-quarter   : $space/4;
+
+
+/*doc
+---
+title: Media
+name: globMedia
+parent: globScale
+---
+Elements like images, icons, avatars, and illustrations
+can be thought of as "media". The following variables
+set media sizes based on our modular scale:
+
+Variable                | Value
+----------------------- | --------------------------------
+`$media-xs`              | `$space-2` (`24px`)
+`$media-s`               | `$space-3` (`36px`)
+`$media-m`               | `$block`   (`48px`)
+`$media-l`               | `$block-2` (`72px`)
+`$media-xl`              | `$block-4` (`160px`)
+
+```
+$media-map: (
+	xs: $media-xs,
+	s: $media-s,
+	m: $media-m,
+	l: $media-l,
+	xl: $media-xl
+);
+```
+*/
+$media-xs : $space-2; // 24px
+$media-s  : $space-3; // 36px
+$media-m  : $block;   // 48px
+$media-l  : $block-2; // 72px
+$media-xl : $block-4; // 160px
+
+$media-map: (
+	xs: $media-xs,
+	s: $media-s,
+	m: $media-m,
+	l: $media-l,
+	xl: $media-xl
+);
