@@ -26,6 +26,7 @@
 		"grunt-preprocess": "4.1.0",
 		"grunt-exec": "1.0.0",
 		"node-sass": "3.11.1",
+		"sassdocjs": "0.1.0",
 		"webpack": "^1.13.1",
 		"css-loader": "0.23.1",
 		"sass-loader": "4.0.0",

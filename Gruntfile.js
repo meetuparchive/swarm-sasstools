@@ -17,7 +17,11 @@ module.exports = function(grunt) {
 		// ------------------------------------------------------
 
 		'exec': {
-			webpack: 'webpack'
+			webpack: 'webpack',
+			sassdocjs: [
+				'sassdocjs sass/',
+				'-v <%= package.verson %>',
+			].join(' ')
 		},
 		'hologram': {
 			generate: {
@@ -43,7 +47,6 @@ module.exports = function(grunt) {
 					inline: true,
 					context: {
 						DEBUG: false,
-						'VERSION': '<%= package.version %>',
 						'FONT_URL': '<%= fontUrl %>',
 						'SASSQUATCH_CSS': '<%= sassquatchCSSPath %>',
 					}
