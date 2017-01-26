@@ -6,6 +6,7 @@
 *.swo
 *.css.map
 *.lock
+*.log
 .bower.json
 components/
 bower_components/
