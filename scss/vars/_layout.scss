@@ -1,0 +1,104 @@
+/*doc
+---
+title: Layout
+name: globLayout
+category: Sass Globals
+---
+
+## Views
+
+Variable                     | Value
+---------------------------- | --------------------------------
+`$view-minWidth`             | `320px`
+`$view-head-height`          | `56px`
+`$view-head-height-tablet`   | `64px`
+`$modal-width`               | `440px`
+
+
+## Bounds
+
+Variable                | Value
+----------------------- | --------------------------------
+`$bounds-wide`          | `1100px`
+`$bounds`               | `840px`
+
+
+## Border radius
+
+Variable                | Value
+----------------------- | --------------------------------
+`$defaultRadius`        | `3px`
+
+*/
+$view-minWidth: 320px;
+$view-head-height: 56px;
+$view-head-height-tablet: 64px;
+$modal-width: 440px;
+$bounds-wide: 1100px;
+$bounds: 840px;
+$defaultRadius: 3px;
+
+
+/*doc
+---
+title: z-index
+name: globZindex
+category: Sass Globals
+---
+A map is provided for `z-index` values:
+
+```
+$zindex-map: (
+	main: 0,
+	main-header: 10,
+	splitList-view: 15,
+	shade: 20,
+	shade-content: 25,
+	modal: 30,
+	modal-header: 40,
+	popup: 50
+);
+```
+*/
+$zindex-map: (
+	main: 0,
+	main-header: 10,
+	splitList-view: 15,
+	shade: 20,
+	shade-content: 25,
+	modal: 30,
+	modal-header: 40,
+	popup: 50
+);
+
+
+// ------------------------------------------
+// Private vars
+//
+
+// ---------------------------
+// DISPLAY
+// ---------------------------
+	$display-values: (
+		none,
+		block,
+		flex,
+		inline,
+		inline-block,
+		inline-flex
+	);
+
+// ---------------------------
+// FLEXBOX
+// ---------------------------
+	$flexJustifyMap: ( // omits flex-start (default prop)
+		"flexEnd": flex-end,
+		"center": center,
+		"spaceBetween": space-between,
+		"spaceAround": space-around
+	);
+	$flexAlignMap: (
+		"top": flex-start,
+		"bottom": flex-end,
+		"center": center
+	);
