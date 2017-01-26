@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 
 		'sassdoc': {
 			default: {
-				src: 'scss/**/*.scss'
+				src: 'scss/**/*.scss',
 				options: {
 					theme: 'neat'
 				}
