@@ -23,6 +23,7 @@
 		"grunt-cli": "",
 		"grunt-sass": "2.0.0",
 		"grunt-sassdoc": "2.0.2",
+		"sassdoc-theme-flippant": "0.1.0",
 		"grunt-gh-pages": "0.9.1"
 	},
 	"bugs": {

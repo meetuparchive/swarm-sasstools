@@ -1419,15 +1419,15 @@ minimatch@0.3:
     lru-cache "2"
     sigmund "~1.0.0"
 
-"minimatch@2 || 3", minimatch@^3.0.2, minimatch@~3.0.2:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.3.tgz#2a4e4090b96b2db06a9d7df01055a62a77c9b774"
+"minimatch@2 || 3", minimatch@^2.0.1, minimatch@^2.0.4:
+  version "2.0.10"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-2.0.10.tgz#8d087c39c6b38c001b97fca7ce6d0e1e80afbac7"
   dependencies:
     brace-expansion "^1.0.0"
 
-minimatch@^2.0.1, minimatch@^2.0.4:
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-2.0.10.tgz#8d087c39c6b38c001b97fca7ce6d0e1e80afbac7"
+minimatch@^3.0.2, minimatch@~3.0.2:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.3.tgz#2a4e4090b96b2db06a9d7df01055a62a77c9b774"
   dependencies:
     brace-expansion "^1.0.0"
 
@@ -1907,6 +1907,20 @@ sassdoc-theme-default@^2.3.4:
     swig "1.4.0"
     swig-extras "^0.0.1"
 
+sassdoc-theme-flippant@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/sassdoc-theme-flippant/-/sassdoc-theme-flippant-0.1.0.tgz#149a6b89ac3276351a2caeee1da45ac068e1bf8b"
+  dependencies:
+    chroma-js "^0.6.3"
+    es6-denodeify "^0.1.0"
+    es6-promise "^2.0.1"
+    extend "^2.0.0"
+    fs-extra "^0.16.3"
+    html-minifier "^0.7.0"
+    sassdoc-extras "^2.4.0"
+    swig "1.4.0"
+    swig-extras "^0.0.1"
+
 sassdoc@^2.0.0:
   version "2.1.20"
   resolved "https://registry.yarnpkg.com/sassdoc/-/sassdoc-2.1.20.tgz#a226d09064f707bad69d6802b2673d69cb128f1b"
@@ -2311,15 +2325,15 @@ which-module@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/which-module/-/which-module-1.0.0.tgz#bba63ca861948994ff307736089e3b96026c2a4f"
 
-which@1, which@^1.0.5, which@~1.0.5:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/which/-/which-1.0.9.tgz#460c1da0f810103d0321a9b633af9e575e64486f"
-
-which@^1.2.9:
+which@1, which@^1.0.5, which@^1.2.9:
   version "1.2.12"
   resolved "https://registry.yarnpkg.com/which/-/which-1.2.12.tgz#de67b5e450269f194909ef23ece4ebe416fa1192"
   dependencies:
     isexe "^1.1.1"
+
+which@~1.0.5:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/which/-/which-1.0.9.tgz#460c1da0f810103d0321a9b633af9e575e64486f"
 
 wide-align@^1.1.0:
   version "1.1.0"

@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 			default: {
 				src: 'scss/**/*.scss',
 				options: {
-					theme: 'neat'
+					theme: 'flippant'
 				}
 			}
 		},
