@@ -1,0 +1,21 @@
+////
+/// @group alignment
+////
+
+
+/// Aligns children of selected element using flexbox
+/// @param {String} $alignment [center] - any valid `vertical-align` value
+///
+/// @example scss
+/// 	@include valignChildren(center); // centers children in element
+/// 	@include valignChildren(top); // positions children to top of element
+/// 	@include valignChildren(bottom); // positions children to bottom of element
+@mixin valignChildren($alignment: center) {
+	@include display(flex);
+	@include flex-direction(column);
+	@include justify-content(map-get($flexAlignMap, "#{$alignment}"));
+
+	@include browser-lessThanIE( 10 ) {
+		@include _valignIE($alignment);
+	}
+}

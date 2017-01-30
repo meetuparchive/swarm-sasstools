@@ -1,0 +1,50 @@
+////
+/// @group Typography
+////
+
+
+//
+// PRIVATE
+// standard breakpoint for
+// text style changes
+//
+@mixin _textBp() {
+	@include atMediaUp(medium) {
+		@content
+	}
+}
+
+%text--display1,
+%text--display2,
+%text--display3 {
+	@include color-all($C_textPrimary);
+	font-weight: $W_bold;
+	letter-spacing: -0.02em;
+
+	.inverted & {
+		@include color-all($C_textPrimaryInverted);
+		font-weight: $W_medium;
+	}
+}
+
+/// Top level display text placeholder
+%text--display1 {
+	font-size: $font-size-display2;
+	line-height: $line-height-largeText;
+
+	@include _textBp() {
+		font-size: $font-size-display1;
+	}
+}
+
+/// Secondary level display text placeholder
+%text--display2 {
+	font-size: $font-size-display2;
+	line-height: $line-height-largeText;
+}
+
+/// Tertiary level display text placeholder
+%text--display3 {
+	font-size: $font-size-display3;
+	line-height: $line-height-largeText;
+}

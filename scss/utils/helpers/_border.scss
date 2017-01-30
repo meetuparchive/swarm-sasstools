@@ -1,0 +1,34 @@
+////
+/// @group border
+////
+
+
+/// Applies standard border using default `border-color`,
+/// including rules for inverted context.
+/// @param {String} $side ['top'] - side to apply the border
+/// @param {Value(px)} $size [1px] - border width
+///
+/// @example scss
+///    @include standardBorder(); // default = top
+///
+///    // apply border to bottom OR
+///    // 'top', 'left', 'right', 'bottom', 'all', 'none'
+///    @include standardBorder('bottom');
+///
+///    // apply a custom size (default = 1px)
+///    @include standardBorder('all', 4px);
+@mixin standardBorder( $side: 'top', $size: 1px ) {
+	@if '#{$side}' == 'all' {
+		border: $size solid $C_border;
+		.inverted & {
+			border: $size solid $C_borderInverted;
+		}
+	} @else if '#{$side}' == 'none' {
+		border: none !important; // override inverted selector specificity
+	} @else {
+		border-#{$side}: $size solid $C_border;
+		.inverted & {
+			border-#{$side}: $size solid $C_borderInverted;
+		}
+	}
+}

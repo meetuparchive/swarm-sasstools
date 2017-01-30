@@ -1,0 +1,55 @@
+////
+/// @group animation
+////
+
+
+/**
+* Keyframes
+* TODO: move these to our animation lib
+*/
+@include keyframes('bounce-in-subtle') {
+	0% {
+		@include transform(scale(1));
+	}
+	35% {
+		@include transform(scale(1.15));
+	}
+	75% {
+		@include transform(scale(1));
+	}
+}
+@include keyframes('spin') {
+	0% {
+		@include transform(rotate(0deg));
+	}
+	100% {
+		@include transform(rotate(360deg));
+	}
+}
+
+/// Sets transform origin to `center center`
+%_origin--center {
+	@include transform-origin(center center);
+}
+
+/// Subtle bounce effect using keyframes, provided via simple mixin
+/// _original keyframes generated with [Bounce.js](http://goo.gl/tT4jnp)_
+/// @param {Time} $time [250ms] - animation time
+///
+/// @example scss
+/// 	@include animate--bounce-in-subtle($time: 750ms);
+@mixin animate--bounceInSubtle($time: 250ms) {
+	@extend %_origin--center;
+	@include animation(bounce-in-subtle $time cubic-bezier(0.175, 0.885, 0.320, 1.275));
+}
+
+/// Infinite 2d rotation; 0-360deg.
+/// @param {Time} $time [0.8s] - animation time
+///
+/// @example scss
+/// 	@include animate--spin($time: 0.8s);
+@mixin animate--spin($time: 0.8s) {
+	@extend %_origin--center;
+	@include animation(spin $time linear);
+	@include animation-iteration-count(infinite);
+}

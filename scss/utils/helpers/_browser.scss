@@ -3,6 +3,27 @@
 ////
 
 
+/// Applies styles to IE10 and IE11 using a vendor-specific
+/// media query. Because we currently only support IE11, this
+/// can be treated as an IE11-only filter.
+/// @example scss
+/// 	// default styles
+/// 	.someClass {
+/// 		padding: 0;
+/// 	}
+///
+/// 	// IE11 overrides
+/// 	@include browser-ie11() {
+/// 		.someClass {
+/// 			padding-top: $space;
+/// 		}
+/// 	}
+@mixin browser-ie11() {
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		@content;
+	}
+}
+
 /// Targets styles to specific IE versions using the
 /// root class method (applying classes to the `body` tag
 /// with IE conditional comments).

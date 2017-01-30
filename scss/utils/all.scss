@@ -15,12 +15,13 @@
 //
 // vars
 //
+@import "vars/breakpoint";
+@import "vars/color";
+@import "vars/layout";
 @import "vars/prefix";
 @import "vars/root-class";
-@import "vars/color";
 @import "vars/scale";
 @import "vars/type";
-@import "vars/layout";
 
 //
 // functions
@@ -32,30 +33,26 @@
 //
 // helpers with dependencies
 //
-@import "helpers/browser";
-@import "helpers/breakpoint";
+@import "helpers/pcv-modifier";
+@import "helpers/selector";
 @import "helpers/a11y";
 @import "helpers/i18n";
-@import "helpers/selector";
-@import "helpers/pcv-modifier";
+@import "helpers/browser";
+@import "helpers/breakpoint";
 @import "helpers/position";
 
 //
 // helpers (depends on above)
 //
-//@import "helpers/align";
-//@import "helpers/animation";
-//@import "helpers/border";
-//@import "helpers/button";
-//@import "helpers/data-img";
-//@import "helpers/display";
-//@import "helpers/flexbox";
-//@import "helpers/ie11";
-//@import "helpers/modal";
-//@import "helpers/shadow";
-//@import "helpers/type";
+@import "helpers/align";
+@import "helpers/animation";
 @import "helpers/background";
+@import "helpers/border";
 @import "helpers/color";
+@import "helpers/display";
+@import "helpers/flexbox";
 @import "helpers/float";
+@import "helpers/type";
+@import "helpers/shadow";
 @import "helpers/shape";
 @import "helpers/width";

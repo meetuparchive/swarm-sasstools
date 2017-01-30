@@ -1,0 +1,12 @@
+////
+/// @group Shadow
+////
+
+
+/// Applies standard box-shadow
+///
+/// @example scss
+/// 	@extend %shadow;
+%shadow {
+	box-shadow: 0 0 2px 0 $C_border, 0 2px 4px 0 $C_border;
+}
