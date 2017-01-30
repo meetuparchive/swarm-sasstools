@@ -1,0 +1,29 @@
+////
+/// Root classes
+/// @group Config
+/// @access public
+////
+
+/// Class name to allow `debug` elements to appear
+/// @type String
+$root-debugEnable: 'enableDebug';
+
+/// Map iso639-2 lang codes to body class names
+/// @type String
+$root-language-map: (
+	"en": '.lang_en',
+	"es": '.lang_es',
+	"de": '.lang_es',
+	"fr": '.lang_fr',
+	"it": '.lang_it',
+	"ja": '.lang_ja',
+	"pt": '.lang_pt',
+	"pl": '.lang_pl',
+	"nl": '.lang_nl',
+	"ko": '.lang_ko',
+	"sv": '.lang_sv'
+);
+
+/// Prefix for IE conditional class names
+/// @type String
+$root-browserIEPrefix: 'ieRoot_'; // _[lt/gt]_[versionNumber] is appended

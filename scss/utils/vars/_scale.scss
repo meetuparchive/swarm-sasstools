@@ -1,0 +1,113 @@
+////
+/// Size Scale Vars
+/// @group Scale
+/// @access public
+////
+
+/**
+* We use a double-stranded
+* [modular scale](http://alistapart.com/article/more-meaningful-typography)
+* loosely based on a perfect-fifths scale.
+*
+* ```
+* $block   : 48px @ 1:1.5
+* $space   : 16px @ 1:1.5
+* ```
+*/
+
+/**
+* "Block" variables contain size values in pixels starting from
+* `48px`, moving up the `1:1.5` type scale.
+*/
+/// scales from 48px @ 1:1.5
+/// @type Value(px)
+$block           : 48px;
+/// scales from 48px @ 1:1.5
+/// @type Value(px)
+$block-2         : 72px;
+/// scales from 48px @ 1:1.5
+/// @type Value(px)
+$block-3         : 108px;
+/// scales from 48px @ 1:1.5
+/// @type Value(px)
+$block-4         : 160px;
+/// scales from 48px @ 1:1.5
+/// @type Value(px)
+$block-5         : 240px;
+/// scales from 48px @ 1:1.5
+/// @type Value(px)
+$block-6         : 384px;
+/// scales from 48px @ 1:1.5
+/// @type Value(px)
+$block-7         : 544px;
+
+/**
+* "Space" variables contain size values in pixels starting from
+* `16px`, moving up the `1:1.5` type scale.
+*/
+/// scales from 16px @ 1:1.5
+/// @type Value(px)
+$space           : 16px;
+/// scales from 16px @ 1:1.5
+/// @type Value(px)
+$space-2         : 24px;
+/// scales from 16px @ 1:1.5
+/// @type Value(px)
+$space-3         : 36px;
+/// scales from 16px @ 1:1.5
+/// @type Value(px)
+$space-4         : 56px;
+/// scales from 16px @ 1:1.5
+/// @type Value(px)
+$space-5         : 80px;
+/// scales from 16px @ 1:1.5
+/// @type Value(px)
+$space-6         : 120px;
+/// scales from 16px @ 1:1.5
+/// @type Value(px)
+$space-7         : 184px;
+/// scales from 16px @ 1:1.5
+/// @type Value(px)
+$space-8         : 280px;
+
+/// scales from 16px @ 1:1.5
+/// @type Value(px)
+$space-and-half  : $space*1.5;
+/// scales from 16px @ 1:1.5
+/// @type Value(px)
+$space-double    : $space*2;
+/// scales from 16px @ 1:1.5
+/// @type Value(px)
+$space-half      : $space/2;
+/// scales from 16px @ 1:1.5
+/// @type Value(px)
+$space-quarter   : $space/4;
+
+/**
+* Elements like images, icons, avatars, and illustrations
+* can be thought of as "media". The following variables
+* set media sizes based on our modular scale:
+*/
+/// @type Value(px)
+$media-xs : $space-2; // 24px
+/// @type Value(px)
+$media-s  : $space-3; // 36px
+/// @type Value(px)
+$media-m  : $block;   // 48px
+/// @type Value(px)
+$media-l  : $block-2; // 72px
+/// @type Value(px)
+$media-xl : $block-4; // 160px
+
+/// @prop {Value(px)} media-map.xs [$meida-xs]
+/// @prop {Value(px)} media-map.s [$meida-s]
+/// @prop {Value(px)} media-map.m [$meida-m]
+/// @prop {Value(px)} media-map.l [$meida-l]
+/// @prop {Value(px)} media-map.xl [$meida-xl]
+$media-map: (
+	xs: $media-xs,
+	s: $media-s,
+	m: $media-m,
+	l: $media-l,
+	xl: $media-xl
+);

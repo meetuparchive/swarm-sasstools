@@ -1,0 +1,19 @@
+////
+/// Color vars
+/// @group Color
+/// @access public
+////
+
+/// 0-255 threshold for brightness functions
+/// @type Number
+/// @see {function} isDark
+/// @see {function} isLight
+$brightness_threshold: 160;
+
+/// "Contrast text" colors for programmatic
+/// text colors
+/// @name C_contrast[DargBG|LightBG]
+/// @type Color
+/// @see {function} getPrimaryTextColor
+$C_contrastDarkBG: #fff;
+$C_contrastLightBG: #000;

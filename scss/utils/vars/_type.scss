@@ -1,0 +1,44 @@
+////
+/// Type vars
+/// @group Typography
+/// @access public
+////
+
+
+/// Default font stack
+/// @type String
+$font : "Graphik Meetup", helvetica, arial, sans-serif;
+
+/// Mono font stack
+/// @type String
+$font--mono : Monaco, "Andale Mono", "Courier New", monospace;
+
+/// @type Value(px)
+$font-size-small     : 13px;
+/// @type Value(px)
+$font-size-big       : 20px;
+/// @type Value(px)
+$font-size           : 16px;
+/// @type Value(px)
+$font-size-tearsheet : 24px;
+
+/// @type Value(px)
+$font-size-display3  : 28px;
+/// @type Value(px)
+$font-size-display2  : 34px;
+/// @type Value(px)
+$font-size-display1  : 42px;
+
+/// @type Number
+$W_normal : 400;
+/// @type Number
+$W_medium : 500;
+/// @type Number
+$W_bold   : 600;
+
+/// @type String
+$line-height-largeText : 1.25;
+/// @type String
+$line-height           : 1.45;
+/// @type String
+$line-height-smallText : 1.6;

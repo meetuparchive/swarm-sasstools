@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 
 		'sassdoc': {
 			default: {
-				src: 'scss/**/*.scss',
+				src: 'scss/utils/**/*.scss',
 				options: {
 					theme: 'flippant'
 				}
@@ -21,7 +21,9 @@ module.exports = function(grunt) {
 		'sass': {
 			dist: {
 				files: {
-					'sassdoc/assets/css/swarm-sassutils.css': 'scss/main.scss'
+					'sassdoc/assets/css/utils.css': 'scss/utils/all.scss',
+					'sassdoc/assets/css/reset.css': 'scss/reset/all.scss',
+					'sassdoc/assets/css/modifiers.css': 'scss/modifierClasses/all.scss',
 				}
 			},
 			options: {

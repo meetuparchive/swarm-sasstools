@@ -1,0 +1,43 @@
+/**
+* utils/all.scss
+* -------------------
+* imports all utility partials
+* ("silent" Sass only)
+*/
+
+//
+// vars
+//
+@import "vars/prefix";
+@import "vars/root-class";
+@import "vars/type";
+@import "vars/color";
+@import "vars/scale";
+@import "vars/layout";
+
+//
+// functions
+//
+//@import "functions/string";
+//@import "functions/brightness";
+//@import "functions/color";
+
+//
+// helpers with dependencies
+//
+//@import "helpers/browser";
+//@import "helpers/breakpoint";
+//@import "helpers/a11y";
+//@import "helpers/i18n";
+//@import "helpers/selector";
+//@import "helpers/pcv-modifier";
+//@import "helpers/position";
+
+//
+// helpers (depends on above)
+//
+//@import "helpers/background";
+//@import "helpers/color";
+//@import "helpers/float";
+//@import "helpers/shape";
+//@import "helpers/width";

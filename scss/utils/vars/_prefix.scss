@@ -1,0 +1,24 @@
+////
+/// Vendor prefixing
+/// @group Config
+/// @access public
+////
+
+
+/// Vars for mixin arguments
+/// @name prefixes[-edge]
+/// @type vargs
+$prefixes: webkit ms spec;
+$prefixes-edge: ms spec;
+
+/// Bourbon prefixer settings
+/// @name prefix-for-[webkit|mozilla|microsoft|opera|spec]
+/// @type Boolean
+$prefix-for-webkit:    true;
+$prefix-for-mozilla:   false;
+$prefix-for-microsoft: true;
+$prefix-for-opera:     false;
+$prefix-for-spec:      true;
+
+
+
