@@ -16,6 +16,7 @@
 		"url": "https://github.com/meetup/swarm-sasstools/blob/master/LICENSE"
 	},
 	"dependencies": {
+		"bourbon": "4.2.3",
 		"meetup-swatches": "3.1.1"
 	},
 	"devDependencies": {

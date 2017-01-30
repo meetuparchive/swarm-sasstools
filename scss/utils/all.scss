@@ -6,38 +6,56 @@
 */
 
 //
+// libraries
+// TODO: use `~` prefix in a webpack build
+//
+@import "../../node_modules/meetup-swatches/sass/colors.scss";
+@import "../../node_modules/bourbon/app/assets/stylesheets/_bourbon.scss";
+
+//
 // vars
 //
 @import "vars/prefix";
 @import "vars/root-class";
-@import "vars/type";
 @import "vars/color";
 @import "vars/scale";
+@import "vars/type";
 @import "vars/layout";
 
 //
 // functions
 //
-//@import "functions/string";
-//@import "functions/brightness";
-//@import "functions/color";
+@import "functions/string";
+@import "functions/brightness";
+@import "functions/color";
 
 //
 // helpers with dependencies
 //
-//@import "helpers/browser";
-//@import "helpers/breakpoint";
-//@import "helpers/a11y";
-//@import "helpers/i18n";
-//@import "helpers/selector";
-//@import "helpers/pcv-modifier";
-//@import "helpers/position";
+@import "helpers/browser";
+@import "helpers/breakpoint";
+@import "helpers/a11y";
+@import "helpers/i18n";
+@import "helpers/selector";
+@import "helpers/pcv-modifier";
+@import "helpers/position";
 
 //
 // helpers (depends on above)
 //
-//@import "helpers/background";
-//@import "helpers/color";
-//@import "helpers/float";
-//@import "helpers/shape";
-//@import "helpers/width";
+//@import "helpers/align";
+//@import "helpers/animation";
+//@import "helpers/border";
+//@import "helpers/button";
+//@import "helpers/data-img";
+//@import "helpers/display";
+//@import "helpers/flexbox";
+//@import "helpers/ie11";
+//@import "helpers/modal";
+//@import "helpers/shadow";
+//@import "helpers/type";
+@import "helpers/background";
+@import "helpers/color";
+@import "helpers/float";
+@import "helpers/shape";
+@import "helpers/width";
