@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
 
+	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-sassdoc');
 	grunt.loadNpmTasks('grunt-gh-pages');
@@ -14,6 +15,7 @@ module.exports = function(grunt) {
 			default: {
 				src: 'scss/utils/**/*.scss',
 				options: {
+					dest: './docs/build/sassdoc/',
 					theme: 'flippant'
 				}
 			}
@@ -21,23 +23,28 @@ module.exports = function(grunt) {
 		'sass': {
 			dist: {
 				files: {
-					'sassdoc/assets/css/utils.css': 'scss/utils/all.scss',
-					'sassdoc/assets/css/reset.css': 'scss/reset/all.scss',
-					'sassdoc/assets/css/modifiers.css': 'scss/modifierClasses/all.scss',
+					'docs/build/sassdoc/assets/css/utils.css': 'scss/utils/all.scss',
+					'docs/build/sassdoc/assets/css/reset.css': 'scss/reset/all.scss',
+					'docs/build/sassdoc/assets/css/modifiers.css': 'scss/modifierClasses/all.scss',
 				}
 			},
 			options: {
 				sourceMaps: true
 			}
 		},
+		'clean': [
+			// sassdoc has a bug where it builds to both `dest` and `./sassdoc`.
+			// for now, just clean this every build
+			"./sassdoc/"
+		],
 		'gh-pages': {
 			options: {
-				base: 'sassdoc/'
+				base: 'docs/build/'
 			},
 			src: ['**']
 		}
 	});
 
-	grunt.registerTask('default', ['sassdoc', 'sass']);
+	grunt.registerTask('default', ['sassdoc', 'clean', 'sass']);
 	grunt.registerTask('ghpages', ['default', 'gh-pages']);
 };

@@ -712,6 +712,12 @@ grunt-cli@:
     nopt "~3.0.6"
     resolve "~1.1.0"
 
+grunt-contrib-clean@0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/grunt-contrib-clean/-/grunt-contrib-clean-0.6.0.tgz#f532dba4b8212674c7c013e146bda6638b9048f6"
+  dependencies:
+    rimraf "~2.2.1"
+
 grunt-gh-pages@0.9.1:
   version "0.9.1"
   resolved "https://registry.yarnpkg.com/grunt-gh-pages/-/grunt-gh-pages-0.9.1.tgz#08b9a3d84939feea234e6684e43ff27f865dc3f4"
@@ -1855,7 +1861,7 @@ rimraf@2, rimraf@2.*, rimraf@^2.2.8, rimraf@^2.3.2:
   dependencies:
     glob "^7.0.5"
 
-rimraf@~2.2.8:
+rimraf@~2.2.1, rimraf@~2.2.8:
   version "2.2.8"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.2.8.tgz#e439be2aaee327321952730f99a8929e4fc50582"
 

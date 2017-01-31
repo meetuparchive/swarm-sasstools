@@ -22,6 +22,7 @@
 	"devDependencies": {
 		"grunt": "~0.4.5",
 		"grunt-cli": "",
+		"grunt-contrib-clean": "0.6.0",
 		"grunt-sass": "2.0.0",
 		"grunt-sassdoc": "2.0.2",
 		"sassdoc-theme-flippant": "0.1.0",
