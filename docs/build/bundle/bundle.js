@@ -44,8 +44,14 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	(function webpackMissingModule() { throw new Error("Cannot find module \"/Users/adamd/swarm/sasstools/docs/webpack-entry.scss\""); }());
+	module.exports = __webpack_require__(1);
 
+
+/***/ },
+/* 1 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);
