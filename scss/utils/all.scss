@@ -7,10 +7,10 @@
 
 //
 // libraries
-// TODO: use `~` prefix in a webpack build
+// ("~" prefix allows webpack to resolve `node_modules` location)
 //
-@import "../../node_modules/meetup-swatches/sass/colors.scss";
-@import "../../node_modules/bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "~/meetup-swatches/sass/colors.scss";
+@import "~/bourbon/app/assets/stylesheets/_bourbon.scss";
 
 //
 // vars

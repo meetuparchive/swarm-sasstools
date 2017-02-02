@@ -22,11 +22,17 @@
 	"devDependencies": {
 		"grunt": "~0.4.5",
 		"grunt-cli": "",
+		"grunt-exec": "1.0.0",
 		"grunt-contrib-clean": "0.6.0",
-		"grunt-sass": "2.0.0",
 		"grunt-sassdoc": "2.0.2",
 		"sassdoc-theme-flippant": "0.1.0",
-		"grunt-gh-pages": "0.9.1"
+		"grunt-gh-pages": "0.9.1",
+		"node-sass": "3.11.1",
+		"webpack": "^1.13.1",
+		"hologram-webpack-plugin": "1.0.1",
+		"css-loader": "0.23.1",
+		"sass-loader": "4.0.0",
+		"extract-text-webpack-plugin": "1.0.1"
 	},
 	"bugs": {
 		"url": "https://github.com/meetup/swarm-sassdoc/issues"

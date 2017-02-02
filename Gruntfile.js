@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
+	grunt.loadNpmTasks('grunt-exec');
 	grunt.loadNpmTasks('grunt-contrib-clean');
-	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-sassdoc');
 	grunt.loadNpmTasks('grunt-gh-pages');
 
@@ -11,6 +11,9 @@ module.exports = function(grunt) {
 		package: grunt.file.readJSON('package.json'),
 		// ------------------------------------------------------
 
+		'exec': {
+			webpack: 'webpack'
+		},
 		'sassdoc': {
 			default: {
 				src: 'scss/utils/**/*.scss',
@@ -20,23 +23,10 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		'sass': {
-			dist: {
-				files: {
-					'docs/build/sassdoc/assets/css/utils.css': 'scss/utils/all.scss',
-					'docs/build/sassdoc/assets/css/reset.css': 'scss/reset/all.scss',
-					'docs/build/sassdoc/assets/css/modifiers.css': 'scss/modifierClasses/all.scss',
-				}
-			},
-			options: {
-				sourceMaps: true
-			}
+		'clean': {
+			sassdoc: ["./sassdoc/"],
+			docs: ["./docs/build/"]
 		},
-		'clean': [
-			// sassdoc has a bug where it builds to both `dest` and `./sassdoc`.
-			// for now, just clean this every build
-			"./sassdoc/"
-		],
 		'gh-pages': {
 			options: {
 				base: 'docs/build/'
@@ -45,6 +35,12 @@ module.exports = function(grunt) {
 		}
 	});
 
-	grunt.registerTask('default', ['sassdoc', 'clean', 'sass']);
+
+	grunt.registerTask('default', [
+		'clean:docs',   // cleans built docs
+		'exec',         // (webpack) compile Sass, generates hologram CSS API docs
+		'sassdoc',      // generates sassdoc docs for Sass API
+		'clean:sassdoc' // rm extraneous build artifact from sassdoc (sassdoc bug)
+	]);
 	grunt.registerTask('ghpages', ['default', 'gh-pages']);
 };
