@@ -6,6 +6,7 @@
 *.css.map
 *.log
 .bower.json
+docs/build/
 node_modules/
 .grunt/
 sassdoc/
