@@ -1,1 +1,92 @@
-// TODO
+/*doc
+---
+title: Headings
+name: headings
+category: Typography
+---
+*/
+
+
+/*doc
+---
+title: Heading tags
+name: headingTags
+parent: headings
+---
+All heading tags are reset to use
+`text--heavy` styles by default.
+
+Apply a text class to apply additional
+heading styles; for example, `text--display1`.
+
+```html_example
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+```
+*/
+h1, h2, h3, h4, h5, h6 {
+	font-size: $font-size;
+}
+h1 {
+	.view-head & {
+		@extend %text--heavy;
+		font-size: $font-size;
+	}
+}
+
+
+/*doc
+---
+title: Display text
+name: displayText
+parent: headings
+---
+Display text is useful for styling headings.
+
+*Use the semantically correct heading level tag*,
+then apply a display text class to visually style
+the tag as a heading.
+
+```html_example
+<h2 class="text--display1">Display text is for headings</h2>
+<h2 class="text--display2">Display text is for headings</h2>
+<h2 class="text--display3">Display text is for headings</h2>
+```
+*/
+.text--display, // map legacy class to display1
+.text--display1 {
+	@extend %text--display1;
+}
+.text--display2 {
+	@extend %text--display2;
+}
+.text--display2 {
+	@extend %text--display2;
+}
+.text--display3 {
+	@extend %text--display3;
+}
+
+
+/*doc
+---
+title: Label header
+name: labelHeader
+parent: headings
+---
+
+```html_example
+	<h3 class="text--label">Label for subsection</h3>
+	<h3 class="text--labelSecondary">Secondary label for subsection</h3>
+```
+*/
+.text--label {
+	@extend %text--label;
+}
+.text--labelSecondary {
+	@extend %text--labelSecondary;
+}
