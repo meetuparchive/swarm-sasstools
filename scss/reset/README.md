@@ -1,8 +1,9 @@
 Reset styles
 ==============
 
-This directory contains CSS rules for HTML tags, including
-a CSS reset.
-
-For example, `article { display: block }`.
+This directory contains:
+- CSS base tag styles
+- contextual classes (`inverted`, `runningText`)
+- basic table and list classes
+- basic typography classes
 
