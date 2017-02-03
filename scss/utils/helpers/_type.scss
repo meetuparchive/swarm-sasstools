@@ -78,19 +78,7 @@
 	}
 }
 
-
-/*doc
----
-title: Weight placeholders
-name: weightPlaceholders
-parent: textUtil
----
-
-Placeholder             | Description
------------------------ | --------------------------------
-`%text--bold`           | Bold text (Medium weight)
-`%text--heavy`          | Bolder text (Semibold weight)
-*/
+// Bold text (medium weight)
 %text--bold {
 	font-weight: $W_medium !important;
 	.inverted .runningText,
@@ -98,10 +86,11 @@ Placeholder             | Description
 		font-weight: $W_bold !important;
 	}
 }
+
+// Heavy text (heaviest weight)
 %text--heavy {
 	font-weight: $W_bold !important;
 }
-
 
 /// Secondary (color) text
 %text--secondary {
