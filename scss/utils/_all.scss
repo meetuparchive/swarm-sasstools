@@ -3,6 +3,10 @@
 * -------------------
 * imports all utility partials
 * ("silent" Sass only)
+*
+* *IMPORTANT*
+* You do not need to explicitly include this file in your project.
+* These utilites are provided by `scss/reset/all.scss`.
 */
 
 //
@@ -52,6 +56,7 @@
 @import "helpers/display";
 @import "helpers/flexbox";
 @import "helpers/float";
+@import "helpers/lists";
 @import "helpers/type";
 @import "helpers/shadow";
 @import "helpers/shape";

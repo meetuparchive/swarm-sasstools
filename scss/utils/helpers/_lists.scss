@@ -1,0 +1,19 @@
+////
+/// @group list
+////
+
+
+/// Resets lists and list items
+/// (removes padding, margin, and bullets)
+/// @access public
+///
+/// @example scss
+/// 	.someSVG {
+/// 		@extend %list--reset;
+/// 	}
+///
+%list--reset {
+	margin-left: 0;
+	padding-left: 0;
+	list-style-type: none;
+}

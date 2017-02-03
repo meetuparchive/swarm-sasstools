@@ -1,0 +1,394 @@
+/*doc
+---
+title: Body/primary text
+name: bodyText
+category: Typography
+---
+
+```html_example
+<p>This is default body text, inheritied from type styles applied to &lt;body&gt;</p>
+```
+
+*/
+body {
+	color: $C_textPrimary;
+	font-family: $font;
+	font-size: $font-size;
+	font-weight: $W_normal;
+	line-height: $line-height;
+}
+
+/*doc
+---
+title: Inverted text
+name: invertedText
+parent: bodyText
+---
+
+Apply the `inverted` class to a container with
+a dark background color or photo to flip all text
+elements to inveted colors.
+
+```html_example
+<div style="background: #353E48;" class="inverted">
+	<p>This is default body text, inheritied from type styles applied to &lt;body&gt;</p>
+</div>
+```
+*/
+%inverted,
+.inverted {
+	@include color-all($C_textPrimaryInverted);
+}
+
+
+/*doc
+---
+title: Hint text
+name: hintText
+parent: bodyText
+---
+```html_example
+<p class="text--hint">This is hint text</p>
+```
+*/
+.text--hint {
+	@extend %text--hint;
+}
+
+
+/*doc
+---
+title: Secondary text
+name: secondaryText
+parent: bodyText
+---
+```html_example
+<p class="text--secondary">Secondary text is secondary</p>
+```
+*/
+.text--secondary {
+	@extend %text--secondary;
+}
+
+
+/*doc
+---
+title: Tertiary text
+name: tertiaryText
+parent: bodyText
+---
+```html_example
+<p class="text--tertiary">Tertiary text is tertiary</p>
+```
+*/
+.text--tertiary {
+	@extend %text--tertiary;
+}
+
+
+/*doc
+---
+title: Heavy text
+name: heavyText
+parent: bodyText
+---
+```html_example
+<p class="text--heavy">Heavy text is heavy</p>
+```
+*/
+.text--heavy {
+	@extend %text--heavy;
+}
+
+
+/*doc
+---
+title: Bold text
+name: boldText
+parent: bodyText
+---
+```html_example
+<p class="text--bold">Bold text is bold</p>
+```
+*/
+.text--bold {
+	@extend %text--bold;
+}
+
+
+/*doc
+---
+title: Small text
+name: smallText
+parent: bodyText
+---
+```html_example
+<p class="text--small">Small text class is small</p>
+<small>Default styling of "small" tag</small>
+```
+*/
+small,
+.text--small {
+	@extend %text--small;
+}
+
+/*doc
+---
+title: Big text
+name: bigText
+parent: bodyText
+---
+```html_example
+<p class="text--big">Big text class is big</p>
+<big>Default styling of "big" tag</big>
+```
+*/
+big,
+.text--big {
+	@extend %text--big;
+}
+
+
+/*doc
+---
+title: Monospaced text
+name: monoText
+parent: bodyText
+---
+The `code` and `pre` elements use a monospaced
+font by default. To apply monospaced type rules
+to any other element, use `text--mono`.
+
+```html_example
+<p class="text--mono">Is this code? What is this?</p>
+<code>This is code</code>
+<pre>We can safely assume a pre tag on Meetup is also code</pre>
+```
+*/
+code,
+pre,
+.text--mono {
+	@extend %text--mono;
+}
+
+
+/*doc
+---
+title: Caption text
+name: captionText
+parent: bodyText
+---
+```html_example
+<p class="text--caption">I'm captioning all the things</p>
+```
+*/
+.text--caption {
+	@extend %text--caption;
+}
+
+
+/*doc
+---
+title: Error text
+name: errorText
+parent: bodyText
+---
+```html_example
+<p class="text--error">I'm erroring all the things</p>
+<p class="text--attention">Attention!</p>
+```
+*/
+.text--error,
+.text--attention {
+	@extend %text--attention;
+}
+
+/*doc
+---
+title: Text colors
+name: coloredText
+parent: bodyText
+---
+Applies standard text colors. The variant
+is the color name: `text--[color]`. All supported
+variants are listed below.
+
+These classes set both the `color` and `fill` properties
+in order to also set the color of icons inline with text.
+
+**This style is set as `!important`**
+
+```html_example
+<section class="stripe stripe--inverted inverted">
+	<div class="bounds">
+		<ul class="inlineblockList inlineblockList--bulleted chunk text--heavy">
+			<li>Normal heavy text</li>
+			<li class="text--red">Colorful heavy text</li>
+			<li class="text--pink">Colorful heavy text</li>
+			<li class="text--yellow">Colorful heavy text</li>
+			<li class="text--teal">Colorful heavy text</li>
+		</ul>
+	</div>
+</section>
+```
+*/
+@each $colorName, $color in (
+	'red': $C_red,
+	'pink': $C_pink,
+	'teal': $C_teal,
+	'yellow': $C_yellow
+) {
+	@include _modifier('text', "#{$colorName}") {
+		@include color-all($color, true); // `true` sets this property as `!important`
+	}
+}
+
+/*doc
+---
+title: Middot text
+name: middotText
+parent: bodyText
+---
+```html_example
+<p class="text--middotRight">I have a right middot</p>
+<p class="text--middotLeft">I have a left middot</p>
+```
+*/
+.text--middotRight:after,
+.text--middotLeft:before {
+	display: inline-block;
+	content: "\00b7";
+	margin: auto 0.5em;
+	font-weight: $W_bold;
+}
+
+
+/*doc
+---
+title: Running text
+name: runningText
+parent: bodyText
+---
+By default, paragraphs and headings are not styled
+with any bottom spacing. Links are not blue by default,
+as the most common case on Meetup will be block-level
+anchors with large touch targets.
+
+However, there will be instaces where you want the blue
+links and properly spaced paragraphs of running text (ie.
+event descriptions).
+
+```html_example
+<p>The robot is partially dressed in waterproof surgical garb.</p>
+<p>"Bruce Springsteen" is a terrible name for a <a href="#">cat</a>.</p>
+
+<hr style="margin: 8px;" /> <!-- lol, hr -->
+
+<div class="runningText">
+	<p>The robot is partially dressed in waterproof surgical garb.</p>
+	<p>"Bruce Springsteen" is a terrible name for a <a href="#">cat</a>.</p>
+</div>
+```
+*/
+.runningText p {
+	@extend %wrapNice;
+	margin-bottom: $space;
+	max-width: 40em;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+
+/*doc
+---
+title: Link color
+name: linkColor
+parent: runningText
+---
+You can always force an anchor to apply a
+linky blue color by applying the `.link` class.
+
+```html_example
+<p>Let's force this <a class="link" href="#">link</a> to be blue</p>
+```
+*/
+a {
+	color: inherit;
+	text-decoration: none;
+	&.link,
+	.runningText & {
+		@extend %text--link;
+	}
+}
+
+
+/*doc
+---
+title: Bulleted lists
+name: bulletedList
+parent: bodyText
+---
+
+`<ul>` and `<ol>` element list styles are
+reset by default.
+
+```html_example
+<ul>
+	<li>Eggs</li>
+	<li>More Eggs</li>
+</ul>
+```
+
+List style bullets are applied when list
+elements are inside a `.runningText` container.
+
+```html_example
+<div class="bounds">
+	<h3 class="text--big">Shopping list</h3>
+	<div class="runningText">
+		<ul>
+			<li>Eggs</li>
+			<li>More Eggs</li>
+		</ul>
+	</div>
+</div>
+```
+
+You may also use the `.bullets` class to apply
+numbers/bullets to a list.
+
+```html_example
+<div class="bounds">
+	<h3 class="text--big">Shopping list</h3>
+	<ul class="bullets">
+		<li>Eggs</li>
+		<li>More Eggs</li>
+	</ul>
+</div>
+```
+
+*/
+%_listStyleBase {
+	list-style-position: outside;
+	padding-left: 1.33em; /* indent by default */
+	.runningText & {
+		@include atMediaUp(huge){
+			padding-left: inherit;
+		}
+	}
+}
+ul {
+	&.bullets,
+	.runningText & {
+		@extend %_listStyleBase;
+		list-style-type: disc;
+	}
+}
+ol {
+	&.bullets,
+	.runningText & {
+		@extend %_listStyleBase;
+		list-style-type: decimal;
+	}
+}
