@@ -1,5 +1,18 @@
 /**
 * reset/all.scss
 * -------------------
-* CSS resets for all base tags
+*
+* Includes:
+* - Sass utilities
+* - CSS resets for all base tags
+* - Heading classes
+* - Body text classes
+* - Debug classes
 */
+@import "../utils/all";
+
+@import "tagDefaults";
+@import "tables";
+@import "headings";
+@import "bodyText";
+@import "debugText";
