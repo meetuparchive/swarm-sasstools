@@ -189,28 +189,3 @@
 	@include prefixer(hyphenate-limit-before, 3, webkit moz spec);
 	@include prefixer(hyphenate-limit-lines, 2, webkit ms spec);
 }
-
-
-/// Text protection graident
-/// @param {String} $placement ['bottom'] - where to place the graident on the selected element
-@mixin textProtectionScrim($placement: 'bottom') {
-	$C_scrimGradient: $C_black;
-	&:before {
-		content: '';
-		display: block;
-		height: 100%;
-		position: absolute;
-		width: 100%;
-		z-index: 0;
-		left: 0;
-		mix-blend-mode: hard-light;
-
-		@if $placement == 'bottom' {
-			@include linear-gradient(180deg, transparentize($C_scrimGradient, .85) 25%, transparentize($C_scrimGradient, .6) 100%);
-			bottom: 0;
-		} @else {
-			@include linear-gradient(0deg, transparentize($C_scrimGradient, .85) 25%, transparentize($C_scrimGradient, .6) 100%);
-			top: 0;
-		}
-	}
-}
