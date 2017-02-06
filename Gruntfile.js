@@ -11,9 +11,13 @@ module.exports = function(grunt) {
 		package: grunt.file.readJSON('package.json'),
 
 		'exec': {
+			options: {
+				shell: 'bash'
+			},
 			webpack: 'webpack',
 			seldon: 'node node_modules/seldon/seldon.js seldon.config.json',
-			index: 'cp ./docs/index.html ./docs/build/index.html'
+			index: 'cp ./docs/index.html ./docs/build/index.html',
+			serve: 'cd docs/build && python -m SimpleHTTPServer 9000'
 		},
 		'sassdoc': {
 			default: {
@@ -65,5 +69,9 @@ module.exports = function(grunt) {
 		'preprocess',   // updates built docs with version and asset urls
 		'clean:sassdoc' // rm extraneous build artifact from sassdoc (sassdoc bug)
 	]);
+	grunt.registerTask('serve', [
+		'default',      // compile and build docs
+		'exec:serve'    // serve local docs on localhost:9000
+	])
 	grunt.registerTask('ghpages', ['default', 'gh-pages']);
 };
