@@ -45,10 +45,10 @@ module.exports = function(grunt) {
 					context: {
 						DEBUG: false,
 						'VERSION': '<%= package.version %>',
-						'FONT_URL': 'http://static2.meetupstatic.com/fonts/graphik.css',
-						'GITHUB_URL': 'https://github.com/meetup/swarm-sasstools',
+						'FONT_URL': '//static2.meetupstatic.com/fonts/graphik.css',
+						'GITHUB_URL': '//github.com/meetup/swarm-sasstools',
 						'CSS_PATH': './swarm-sasstools.css',
-						'SQ2_URL': 'http://meetup.github.io/sassquatch2/bundle/sassquatch.css'
+						'SQ2_URL': '//meetup.github.io/sassquatch2/bundle/sassquatch.css'
 					}
 				}
 			}
