@@ -24,7 +24,7 @@
 <!--[if IE 9]> <body class="lang_en ieRoot_IE9 ieRoot_lt_IE10"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <body class="lang_en ieRoot_modern"> <!--<![endif]-->
 
-<nav class="stripe--purple pushy pushy-left">
+<nav class="stripe--plum pushy pushy-left">
 	<ul class="list">
 		{{#each categoryObj}}
 		<li class="pushy-link">
@@ -36,14 +36,15 @@
 
 <div class="column">
 
-	<header id="header" class="column-item column-item--shrink stripe stripe--purple inverted">
-		<div class="bounds row">
+	<header id="header" class="column-item column-item--shrink stripe stripe--plum inverted">
+		<div class="row">
 			<div class="row-item row-item--shrink">
 				<div id="docMenu">
 					<a class="menu-btn text--big">&#9776;</a>
 				</div>
 			</div>
-			<h1 class="row-item chunk text--big">swarm-sasstools <!-- @echo VERSION --></h1>
+			<h1 class="row-item chunk text--big">swarm-sasstools</h1>
+			<a href="<!-- @echo GITHUB_URL -->" class="row-item row-item--shrink chunk text--big">v<!-- @echo VERSION --></a>
 		</div>
 	</header>
 
@@ -61,7 +62,7 @@
 					<div class="doc_category-blocks">
 						{{#each this.blocks}}
 						<dl class="doc_block">
-							<dt class="doc_block-title text--big text--heavy"><a class="offsetAnchor" name="{{this.name}}">{{this.title}}</a><dt>
+							<dt class="doc_block-title text--heavy"><a class="offsetAnchor" name="{{this.name}}">{{this.title}}</a><dt>
 							<dd class="doc_block-desc">{{{this.description}}}</dd>
 
 							{{! block children }}
@@ -84,16 +85,6 @@
 			</div>
 		</section>
 	</main>
-
-	<footer class="column-item column-item--shrink stripe stripe--collection">
-		<div class="bounds">
-			<div class="chunk row text--small">
-				<p class="row-item valign--middle">
-					Built by <a class="text--bold" style="color:rgb(213,87,65)!important;" href="http://www.meetup.com">Meetup</a>
-				</p>
-			</div>
-		</div>
-	</footer>
 </div>
 
 

@@ -8,12 +8,7 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 
-		// config variables -------------------------------------
 		package: grunt.file.readJSON('package.json'),
-		fontUrl: 'http://static2.meetupstatic.com/fonts/graphik.css',
-		cssPath: './swarm-sasstools.css',
-		sq2Url: 'http://meetup.github.io/sassquatch2/bundle/sassquatch.css', // TODO: remove this; use ad-hoc documentation css instead?
-		// ------------------------------------------------------
 
 		'exec': {
 			webpack: 'webpack',
@@ -46,9 +41,10 @@ module.exports = function(grunt) {
 					context: {
 						DEBUG: false,
 						'VERSION': '<%= package.version %>',
-						'FONT_URL': '<%= fontUrl %>',
-						'CSS_PATH': '<%= cssPath %>',
-						'SQ2_URL': '<%= sq2Url %>'
+						'FONT_URL': 'http://static2.meetupstatic.com/fonts/graphik.css',
+						'GITHUB_URL': 'https://github.com/meetup/swarm-sasstools',
+						'CSS_PATH': './swarm-sasstools.css',
+						'SQ2_URL': 'http://meetup.github.io/sassquatch2/bundle/sassquatch.css'
 					}
 				}
 			}

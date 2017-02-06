@@ -88,7 +88,6 @@ main {
 	right: 0;
 	z-index: 9999;
 }
-
-#header .bounds {
-	margin-left: 0;
+#header .row {
+	padding: 24px 16px 8px;
 }
