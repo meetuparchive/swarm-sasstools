@@ -3,7 +3,7 @@ var path = require('path');
 var ExtractPlugin = require('extract-text-webpack-plugin');
 
 var PATH_ENTRY = path.resolve(__dirname, 'docs', 'webpack-entry.scss');
-var PATH_BUNDLE_DEST = path.resolve(__dirname, 'docs', 'build', 'bundle');
+var PATH_BUNDLE_DEST = path.resolve(__dirname, 'docs', 'templates', 'assets');
 
 module.exports = {
 	module: {

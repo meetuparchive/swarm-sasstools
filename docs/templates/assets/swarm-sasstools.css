@@ -1,0 +1,1079 @@
+/**
+* Webpack entry
+* ------------------------
+* imports all swarm-sasstools modules
+* FOR DOCUMENTATION PURPOSES ONLY
+*/
+/**
+* reset/all.scss
+* -------------------
+*
+* Includes:
+* - Sass utilities
+* - CSS resets for all base tags
+* - Heading classes
+* - Body text classes
+* - Debug classes
+*/
+/**
+* utils/all.scss
+* -------------------
+* imports all utility partials
+* ("silent" Sass only)
+*
+* *IMPORTANT*
+* You do not need to explicitly include this file in your project.
+* These utilites are provided by `scss/reset/all.scss`.
+*/
+/**
+* We use a double-stranded
+* [modular scale](http://alistapart.com/article/more-meaningful-typography)
+* loosely based on a perfect-fifths scale.
+*
+* ```
+* $block   : 48px @ 1:1.5
+* $space   : 16px @ 1:1.5
+* ```
+*/
+/**
+* "Block" variables contain size values in pixels starting from
+* `48px`, moving up the `1:1.5` type scale.
+*/
+/**
+* "Space" variables contain size values in pixels starting from
+* `16px`, moving up the `1:1.5` type scale.
+*/
+/**
+* Elements like images, icons, avatars, and illustrations
+* can be thought of as "media". The following variables
+* set media sizes based on our modular scale:
+*/
+/*doc
+---
+title: Programmatic contrast text
+name: getPrimaryTextColor
+parent: brightness
+---
+For a given background color, this function returns
+a text color value with appropriate contrast.
+
+_returns `color` value_
+
+```
+// -> color: $C_textPrimaryInverted; (white text on dark)
+color: getPrimaryTextColor(#000);
+
+// -> color: $C_textPrimary; (dark text on white)
+color: getPrimaryTextColor(#FFF);
+```
+*/
+/**
+* Keyframes
+* TODO: move these to our animation lib
+*/
+@-webkit-keyframes bounce-in-subtle {
+  0% {
+    -webkit-transform: scale(1); }
+  35% {
+    -webkit-transform: scale(1.15); }
+  75% {
+    -webkit-transform: scale(1); } }
+
+@keyframes bounce-in-subtle {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+  35% {
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15); }
+  75% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); } }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+ul, ol {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none; }
+
+.text--display,
+.text--display1,
+.text--display2,
+.text--display3 {
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 600;
+  letter-spacing: -0.02em; }
+  .text--display,
+  .text--display1, .text--display svg,
+  .text--display1 svg,
+  .text--display2, .text--display2 svg,
+  .text--display3, .text--display3 svg {
+    stroke: transparent;
+    fill: rgba(0, 0, 0, 0.87); }
+  .inverted .text--display, .inverted
+  .text--display1,
+  .inverted .text--display2,
+  .inverted .text--display3 {
+    color: white;
+    font-weight: 500; }
+    .inverted .text--display, .inverted
+    .text--display1,
+    .inverted .text--display svg,
+    .inverted
+    .text--display1 svg,
+    .inverted .text--display2,
+    .inverted .text--display2 svg,
+    .inverted .text--display3,
+    .inverted .text--display3 svg {
+      stroke: transparent;
+      fill: white; }
+
+.text--display,
+.text--display1 {
+  font-size: 34px;
+  line-height: 1.25; }
+  @media only screen and (min-width: 640px) {
+    .text--display,
+    .text--display1 {
+      font-size: 42px; } }
+
+.text--display2 {
+  font-size: 34px;
+  line-height: 1.25; }
+
+.text--display3 {
+  font-size: 28px;
+  line-height: 1.25; }
+
+.text--labelSecondary, .text--label {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: -0.02em;
+  word-spacing: 0.1em; }
+  .text--labelSecondary, .text--label, .text--labelSecondary svg, .text--label svg {
+    stroke: transparent;
+    fill: rgba(0, 0, 0, 0.87); }
+  .inverted .text--labelSecondary, .inverted .text--label {
+    color: white; }
+    .inverted .text--labelSecondary, .inverted .text--label,
+    .inverted .text--labelSecondary svg,
+    .inverted .text--label svg {
+      stroke: transparent;
+      fill: white; }
+  .lang_en .text--labelSecondary, .lang_en .text--label {
+    text-transform: uppercase; }
+
+.text--labelSecondary {
+  color: rgba(0, 0, 0, 0.54);
+  font-weight: 500; }
+  .text--labelSecondary, .text--labelSecondary svg {
+    stroke: transparent;
+    fill: rgba(0, 0, 0, 0.54); }
+  .inverted .text--labelSecondary {
+    color: rgba(255, 255, 255, 0.7); }
+    .inverted .text--labelSecondary,
+    .inverted .text--labelSecondary svg {
+      stroke: transparent;
+      fill: rgba(255, 255, 255, 0.7); }
+
+.text--bold {
+  font-weight: 500 !important; }
+  .text--bold .inverted .runningText, .text--bold .inverted.runningText {
+    font-weight: 600 !important; }
+
+.view-head h1, .text--heavy {
+  font-weight: 600 !important; }
+
+.text--caption, .text--secondary {
+  color: rgba(0, 0, 0, 0.54); }
+  .text--caption, .text--secondary, .text--caption svg, .text--secondary svg {
+    stroke: transparent;
+    fill: rgba(0, 0, 0, 0.54); }
+  .inverted .text--caption, .inverted .text--secondary {
+    color: rgba(255, 255, 255, 0.7); }
+    .inverted .text--caption, .inverted .text--secondary,
+    .inverted .text--caption svg,
+    .inverted .text--secondary svg {
+      stroke: transparent;
+      fill: rgba(255, 255, 255, 0.7); }
+
+.text--hint, .text--tertiary {
+  color: rgba(0, 0, 0, 0.26); }
+  .text--hint, .text--tertiary, .text--hint svg, .text--tertiary svg {
+    stroke: transparent;
+    fill: rgba(0, 0, 0, 0.26); }
+  .inverted .text--hint, .inverted .text--tertiary {
+    color: rgba(255, 255, 255, 0.3); }
+    .inverted .text--hint, .inverted .text--tertiary,
+    .inverted .text--hint svg,
+    .inverted .text--tertiary svg {
+      stroke: transparent;
+      fill: rgba(255, 255, 255, 0.3); }
+
+big,
+.text--big {
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 500;
+  letter-spacing: -0.02em; }
+
+.text--caption, small,
+.text--small {
+  font-size: 13px;
+  line-height: 1.6; }
+
+a.link,
+.runningText a {
+  color: #1f24cc; }
+  a.link,
+  .runningText a, a.link svg,
+  .runningText a svg {
+    stroke: transparent;
+    fill: #1f24cc; }
+  a.link:hover,
+  .runningText a:hover, a.link:focus,
+  .runningText a:focus, a.link:active,
+  .runningText a:active {
+    text-decoration: underline; }
+  a.link .button,
+  .runningText a .button {
+    text-decoration: none; }
+  .inverted a.link, .inverted
+  .runningText a,
+  .runningText .inverted a {
+    color: #4dd1ed; }
+    .inverted a.link, .inverted
+    .runningText a,
+    .runningText .inverted a,
+    .inverted a.link svg,
+    .inverted
+    .runningText a svg,
+    .runningText
+    .inverted a svg {
+      stroke: transparent;
+      fill: #4dd1ed; }
+
+.text--error,
+.text--attention {
+  color: #ff911a; }
+  .text--error,
+  .text--attention, .text--error svg,
+  .text--attention svg {
+    stroke: transparent;
+    fill: #ff911a; }
+
+code,
+pre,
+.text--mono, .enableDebug .debug {
+  font-family: Monaco, "Andale Mono", "Courier New", monospace; }
+
+.runningText p {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  -ms-hyphenate-limit-chars: 5 3 2;
+  -webkit-hyphenate-limit-after: 2;
+  hyphenate-limit-after: 2;
+  -webkit-hyphenate-limit-before: 3;
+  hyphenate-limit-before: 3;
+  -webkit-hyphenate-limit-lines: 2;
+  -ms-hyphenate-limit-lines: 2;
+  hyphenate-limit-lines: 2; }
+
+html {
+  overflow-y: scroll;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  color: rgba(0, 0, 0, 0.87); }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff; }
+
+body {
+  position: relative; }
+
+abbr, strong, acronym, span, small, time, strike, sub, sup, a {
+  display: inline; }
+
+abbr, acronym {
+  border-width: 0; }
+
+b, strong {
+  font-weight: 500; }
+  .inverted b, .inverted strong {
+    font-weight: 600; }
+
+sup, sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+p, ul, ol, blockquote,
+form, fieldset, legend,
+table, dl, dd,
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+  display: block;
+  margin: 0;
+  padding: 0; }
+
+form, legend {
+  margin-bottom: 0; }
+
+img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 0; }
+  img.resample {
+    /* assuming we're sizing an img down on the client */
+    -ms-interpolation-mode: bicubic;
+    image-rendering: optimizeQuality; }
+
+li {
+  margin: 0;
+  padding: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+/*doc
+---
+title: Default table styles
+name: tableDefault
+category: Tables
+---
+
+```html_example
+<table>
+	<thead>
+		<tr>
+			<th>State</th>
+			<th>Number of escalators</th>
+			<th>State bird</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>New York</th>
+			<td>7,674</td>
+			<td>Cardinal</td>
+		</tr>
+		<tr>
+			<th>Wyoming</th>
+			<td>2</td>
+			<td>Cardinal</td>
+		</tr>
+		<tr>
+			<th>Oregon</th>
+			<td>400</td>
+			<td>Cardinal</td>
+		</tr>
+		<tr>
+			<th>Florida</th>
+			<td>n/a</td>
+			<td>Cardinal</td>
+		</tr>
+	</tbody>
+</table>
+```
+*/
+table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto; }
+
+caption,
+td,
+th {
+  padding: 8px 16px;
+  text-align: left;
+  vertical-align: middle;
+  color: rgba(0, 0, 0, 0.54); }
+  .inverted caption, .inverted
+  td, .inverted
+  th {
+    color: rgba(255, 255, 255, 0.7); }
+
+caption {
+  padding-left: 0; }
+
+thead th {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 600; }
+  .inverted thead th {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+
+/*doc
+---
+title: Bordered table
+name: borderedTable
+category: Tables
+---
+Apply the `borderedTable` class to apply borders to table cells.
+
+```html_example
+<table class="borderedTable">
+	<thead>
+		<tr>
+			<th>State</th>
+			<th>Number of escalators</th>
+			<th>State bird</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>New York</th>
+			<td>7,674</td>
+			<td>Cardinal</td>
+		</tr>
+		<tr>
+			<th>Wyoming</th>
+			<td>2</td>
+			<td>Cardinal</td>
+		</tr>
+		<tr>
+			<th>Oregon</th>
+			<td>400</td>
+			<td>Cardinal</td>
+		</tr>
+		<tr>
+			<th>Florida</th>
+			<td>n/a</td>
+			<td>Cardinal</td>
+		</tr>
+	</tbody>
+</table>
+```
+*/
+.borderedTable td, .borderedTable tbody th {
+  border-width: 1px 0 0 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.12); }
+  .borderedTable td:last-child, .borderedTable tbody th:last-child {
+    border-right: 1px solid rgba(0, 0, 0, 0.12); }
+  .inverted .borderedTable td, .inverted .borderedTable tbody th {
+    border-color: rgba(255, 255, 255, 0.2); }
+
+.borderedTable thead th {
+  border-width: 0; }
+
+.borderedTable tbody tr:last-child td, .borderedTable tbody tr:last-child th {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+  .inverted .borderedTable tbody tr:last-child td, .inverted .borderedTable tbody tr:last-child th {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+
+/*doc
+---
+title: Reset table
+name: resetTable
+category: Tables
+---
+
+```html_example
+<table class="resetTable">
+	<thead>
+		<tr>
+			<th>State</th>
+			<th>Number of escalators</th>
+			<th>State bird</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>New York</th>
+			<td>7,674</td>
+			<td>Cardinal</td>
+		</tr>
+		<tr>
+			<th>Wyoming</th>
+			<td>2</td>
+			<td>Cardinal</td>
+		</tr>
+		<tr>
+			<th>Oregon</th>
+			<td>400</td>
+			<td>Cardinal</td>
+		</tr>
+		<tr>
+			<th>Florida</th>
+			<td>n/a</td>
+			<td>Cardinal</td>
+		</tr>
+	</tbody>
+</table>
+```
+*/
+.resetTable caption,
+.resetTable tbody,
+.resetTable thead,
+.resetTable td,
+.resetTable th {
+  padding: 0;
+  font-size: 16px;
+  font-weight: normal;
+  border-width: 0;
+  vertical-align: top;
+  color: rgba(0, 0, 0, 0.87); }
+  .inverted .resetTable caption, .inverted
+  .resetTable tbody, .inverted
+  .resetTable thead, .inverted
+  .resetTable td, .inverted
+  .resetTable th {
+    color: white; }
+
+/*doc
+---
+title: Striped table
+name: stripedTable
+category: Tables
+---
+Apply the `stripedTable` class to add a background
+stripe to every other row of the table.
+
+```html_example
+<table class="stripedTable">
+	<thead>
+		<tr>
+			<th>State</th>
+			<th>Number of escalators</th>
+			<th>State bird</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>New York</th>
+			<td>7,674</td>
+			<td>Cardinal</td>
+		</tr>
+		<tr>
+			<th>Wyoming</th>
+			<td>2</td>
+			<td>Cardinal</td>
+		</tr>
+		<tr>
+			<th>Oregon</th>
+			<td>400</td>
+			<td>Cardinal</td>
+		</tr>
+		<tr>
+			<th>Florida</th>
+			<td>n/a</td>
+			<td>Cardinal</td>
+		</tr>
+	</tbody>
+</table>
+```
+
+*/
+.stripedTable tbody tr:nth-child(odd) td,
+.stripedTable tbody tr:nth-child(odd) th {
+  background-color: #fafafa; }
+  .inverted .stripedTable tbody tr:nth-child(odd) td, .inverted
+  .stripedTable tbody tr:nth-child(odd) th {
+    background-color: rgba(0, 0, 0, 0.26); }
+
+/*doc
+---
+title: Headings
+name: headings
+category: Typography
+---
+*/
+/*doc
+---
+title: Heading tags
+name: headingTags
+parent: headings
+---
+All heading tags are reset to use
+`text--heavy` styles by default.
+
+Apply a text class to apply additional
+heading styles; for example, `text--display1`.
+
+```html_example
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+```
+*/
+h1, h2, h3, h4, h5, h6 {
+  font-size: 16px; }
+
+.view-head h1 {
+  font-size: 16px; }
+
+/*doc
+---
+title: Display text
+name: displayText
+parent: headings
+---
+Display text is useful for styling headings.
+
+*Use the semantically correct heading level tag*,
+then apply a display text class to visually style
+the tag as a heading.
+
+```html_example
+<h2 class="text--display1">Display text is for headings</h2>
+<h2 class="text--display2">Display text is for headings</h2>
+<h2 class="text--display3">Display text is for headings</h2>
+```
+*/
+/*doc
+---
+title: Label header
+name: labelHeader
+parent: headings
+---
+
+```html_example
+	<h3 class="text--label">Label for subsection</h3>
+	<h3 class="text--labelSecondary">Secondary label for subsection</h3>
+```
+*/
+/*doc
+---
+title: Body/primary text
+name: bodyText
+category: Typography
+---
+
+```html_example
+<p>This is default body text, inheritied from type styles applied to &lt;body&gt;</p>
+```
+
+*/
+body {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: "Graphik Meetup", helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.45; }
+
+/*doc
+---
+title: Inverted text
+name: invertedText
+parent: bodyText
+---
+
+Apply the `inverted` class to a container with
+a dark background color or photo to flip all text
+elements to inveted colors.
+
+```html_example
+<div style="background: #353E48;" class="inverted">
+	<p>This is default body text, inheritied from type styles applied to &lt;body&gt;</p>
+</div>
+```
+*/
+
+.inverted {
+  color: white; }
+  
+  .inverted,
+  .inverted svg {
+    stroke: transparent;
+    fill: white; }
+
+/*doc
+---
+title: Hint text
+name: hintText
+parent: bodyText
+---
+```html_example
+<p class="text--hint">This is hint text</p>
+```
+*/
+/*doc
+---
+title: Secondary text
+name: secondaryText
+parent: bodyText
+---
+```html_example
+<p class="text--secondary">Secondary text is secondary</p>
+```
+*/
+/*doc
+---
+title: Tertiary text
+name: tertiaryText
+parent: bodyText
+---
+```html_example
+<p class="text--tertiary">Tertiary text is tertiary</p>
+```
+*/
+/*doc
+---
+title: Heavy text
+name: heavyText
+parent: bodyText
+---
+```html_example
+<p class="text--heavy">Heavy text is heavy</p>
+```
+*/
+/*doc
+---
+title: Bold text
+name: boldText
+parent: bodyText
+---
+```html_example
+<p class="text--bold">Bold text is bold</p>
+```
+*/
+/*doc
+---
+title: Small text
+name: smallText
+parent: bodyText
+---
+```html_example
+<p class="text--small">Small text class is small</p>
+<small>Default styling of "small" tag</small>
+```
+*/
+/*doc
+---
+title: Big text
+name: bigText
+parent: bodyText
+---
+```html_example
+<p class="text--big">Big text class is big</p>
+<big>Default styling of "big" tag</big>
+```
+*/
+/*doc
+---
+title: Monospaced text
+name: monoText
+parent: bodyText
+---
+The `code` and `pre` elements use a monospaced
+font by default. To apply monospaced type rules
+to any other element, use `text--mono`.
+
+```html_example
+<p class="text--mono">Is this code? What is this?</p>
+<code>This is code</code>
+<pre>We can safely assume a pre tag on Meetup is also code</pre>
+```
+*/
+/*doc
+---
+title: Caption text
+name: captionText
+parent: bodyText
+---
+```html_example
+<p class="text--caption">I'm captioning all the things</p>
+```
+*/
+/*doc
+---
+title: Error text
+name: errorText
+parent: bodyText
+---
+```html_example
+<p class="text--error">I'm erroring all the things</p>
+<p class="text--attention">Attention!</p>
+```
+*/
+/*doc
+---
+title: Text colors
+name: coloredText
+parent: bodyText
+---
+Applies standard text colors. The variant
+is the color name: `text--[color]`. All supported
+variants are listed below.
+
+These classes set both the `color` and `fill` properties
+in order to also set the color of icons inline with text.
+
+**This style is set as `!important`**
+
+```html_example
+<section class="stripe stripe--inverted inverted">
+	<div class="bounds">
+		<ul class="inlineblockList inlineblockList--bulleted chunk text--heavy">
+			<li>Normal heavy text</li>
+			<li class="text--red">Colorful heavy text</li>
+			<li class="text--pink">Colorful heavy text</li>
+			<li class="text--yellow">Colorful heavy text</li>
+			<li class="text--teal">Colorful heavy text</li>
+		</ul>
+	</div>
+</section>
+```
+*/
+
+.text--red {
+  color: #ed1c40 !important; }
+  
+  .text--red,
+  .text--red svg {
+    stroke: transparent;
+    fill: #ed1c40 !important; }
+
+
+.text--pink {
+  color: #ff65c4 !important; }
+  
+  .text--pink,
+  .text--pink svg {
+    stroke: transparent;
+    fill: #ff65c4 !important; }
+
+
+.text--teal {
+  color: #0fd9a3 !important; }
+  
+  .text--teal,
+  .text--teal svg {
+    stroke: transparent;
+    fill: #0fd9a3 !important; }
+
+
+.text--yellow {
+  color: #ffe600 !important; }
+  
+  .text--yellow,
+  .text--yellow svg {
+    stroke: transparent;
+    fill: #ffe600 !important; }
+
+/*doc
+---
+title: Middot text
+name: middotText
+parent: bodyText
+---
+```html_example
+<p class="text--middotRight">I have a right middot</p>
+<p class="text--middotLeft">I have a left middot</p>
+```
+*/
+.text--middotRight:after,
+.text--middotLeft:before {
+  display: inline-block;
+  content: "\B7";
+  margin: auto 0.5em;
+  font-weight: 600; }
+
+/*doc
+---
+title: Running text
+name: runningText
+parent: bodyText
+---
+By default, paragraphs and headings are not styled
+with any bottom spacing. Links are not blue by default,
+as the most common case on Meetup will be block-level
+anchors with large touch targets.
+
+However, there will be instaces where you want the blue
+links and properly spaced paragraphs of running text (ie.
+event descriptions).
+
+```html_example
+<p>The robot is partially dressed in waterproof surgical garb.</p>
+<p>"Bruce Springsteen" is a terrible name for a <a href="#">cat</a>.</p>
+
+<hr style="margin: 8px;" /> <!-- lol, hr -->
+
+<div class="runningText">
+	<p>The robot is partially dressed in waterproof surgical garb.</p>
+	<p>"Bruce Springsteen" is a terrible name for a <a href="#">cat</a>.</p>
+</div>
+```
+*/
+.runningText p {
+  margin-bottom: 16px;
+  max-width: 40em; }
+  .runningText p:last-child {
+    margin-bottom: 0; }
+
+/*doc
+---
+title: Link color
+name: linkColor
+parent: runningText
+---
+You can always force an anchor to apply a
+linky blue color by applying the `.link` class.
+
+```html_example
+<p>Let's force this <a class="link" href="#">link</a> to be blue</p>
+```
+*/
+a {
+  color: inherit;
+  text-decoration: none; }
+
+/*doc
+---
+title: Bulleted lists
+name: bulletedList
+parent: bodyText
+---
+
+`<ul>` and `<ol>` element list styles are
+reset by default.
+
+```html_example
+<ul>
+	<li>Eggs</li>
+	<li>More Eggs</li>
+</ul>
+```
+
+List style bullets are applied when list
+elements are inside a `.runningText` container.
+
+```html_example
+<div class="bounds">
+	<h3 class="text--big">Shopping list</h3>
+	<div class="runningText">
+		<ul>
+			<li>Eggs</li>
+			<li>More Eggs</li>
+		</ul>
+	</div>
+</div>
+```
+
+You may also use the `.bullets` class to apply
+numbers/bullets to a list.
+
+```html_example
+<div class="bounds">
+	<h3 class="text--big">Shopping list</h3>
+	<ul class="bullets">
+		<li>Eggs</li>
+		<li>More Eggs</li>
+	</ul>
+</div>
+```
+
+*/
+ul.bullets,
+.runningText ul, ol.bullets,
+.runningText ol {
+  list-style-position: outside;
+  padding-left: 1.33em;
+  /* indent by default */ }
+  @media only screen and (min-width: 1024px) {
+    .runningText ul, .runningText ol {
+      padding-left: inherit; } }
+
+ul.bullets,
+.runningText ul {
+  list-style-type: disc; }
+
+ol.bullets,
+.runningText ol {
+  list-style-type: decimal; }
+
+/*doc
+---
+title: Debug text
+name: debugText
+category: Typography
+---
+
+Sometimes you just need to dump some text into a document
+to debug.
+
+By default, the `debug` element is hidden. Apply the `enableDebug` class
+to a parent element to display `debug` elements.
+
+_Setting the `enableDebug` class on `body` for dev only is recommended._
+
+```html_example
+<p class="debug">Invisible debug</p>
+
+<div class="enableDebug">
+<p class="debug">
+	Visible debug [ ChapterProto =>
+	chapterId=530569
+	parentChapterId=0
+	transitionalVenueId=0
+	relocatedZip=
+	name=Foreign Androids Feel Frustrated
+</p>
+</div>
+```
+*/
+.debug {
+  display: none; }
+  .enableDebug .debug {
+    display: block;
+    padding: 0.25em 0.5em;
+    margin-bottom: 16px;
+    font-size: 13px;
+    color: purple;
+    background: pink;
+    outline: 1px dotted red;
+    white-space: pre-wrap; }
+    .enableDebug .debug:before {
+      display: inline;
+      content: "DEBUG:";
+      color: red;
+      font-weight: 600;
+      padding-right: 0.25em; }
+
+/**
+* modifierClasses/all.scss
+* -------------------
+* defines all modifier classes
+*/

@@ -1,0 +1,11 @@
+{
+	"source": "scss/",
+	"destination": "docs/build/seldon/",
+	"assets": [
+		"docs/templates/assets/"
+	],
+	"templates": {
+		"layout": "docs/templates/layout.hbs",
+		"example": "docs/templates/example.hbs"
+	}
+}

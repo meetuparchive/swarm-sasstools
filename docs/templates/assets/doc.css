@@ -1,0 +1,95 @@
+/*
+rgb(31,36,204); lightPurple
+rgb(237,28,64); red
+*/
+
+html {
+	overflow-x: hidden;
+}
+
+.hljs {
+	font-size: 13px;
+}
+
+.offsetAnchor:before {
+	content: "";
+	display: inline-block;
+}
+.doc_category-title .offsetAnchor:before {
+	height: 126px;
+	margin: -126px 0 0;
+}
+.doc_block-title .offsetAnchor:before {
+	height: 32px;
+	margin: -32px 0 0;
+}
+
+.stripe--purple {
+	background-color: rgb(55,30,172) !important;
+}
+
+.doc_category {
+	border-top: 4px solid rgb(237,28,64);
+	margin-top: 48px;
+}
+.doc_category-title {
+	color: rgb(237,28,64);
+	margin-bottom: 16px;
+}
+.doc_block,
+.doc_block > .doc_block-title {
+	padding: 4px 8px;
+	margin: auto -4px;
+	margin-bottom: 16px;
+}
+.doc_block {
+	background: rgb(250,250,250);
+}
+.doc_block > .doc_block-title {
+	background: rgba(0,0,0, 0.54);
+	color: #fff;
+	margin: -4px -8px 16px -8px;
+}
+
+.doc_block-desc {
+	margin-bottom: 32px;
+}
+.doc_block-desc > p,
+.doc_block-desc > table {
+	margin-bottom: 16px;
+}
+.doc_block-children {
+}
+.doc_childBlock {
+}
+
+.doc_example {
+	background: #fff;
+	margin: 8px auto 16px auto;
+}
+.doc_example-rendered {
+	padding: 16px;
+	margin: 0;
+}
+.doc_example-escaped pre {
+	padding: 8px;
+	overflow: scroll;
+	max-height: 500px;
+	margin: 0;
+}
+
+main {
+	padding-top: 32px;
+}
+
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+}
+
+#header .bounds {
+	margin-left: 0;
+}
