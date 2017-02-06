@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<title>swarm-sasstools <!-- @echo VERSION --></title>
+
+	<!-- font & SQ2 base -->
+	<link rel="stylesheet" href="<!-- @echo FONT_URL -->">
+	<link rel="stylesheet" href="<!-- @echo SQ2_URL -->">
+
+	<style type="text/css">
+		.docLink {
+			padding: 16px;
+			margin-bottom: 32px;
+			display: inline-block;
+		}
+		.docLink:hover {
+			background: #FF911A;
+		}
+	</style>
+</head>
+
+<body class="column stripe stripe--plum inverted" style="min-height: 100vh; padding-top: 8vh;">
+
+	<div class="bounds column-item column-item--shrink margin--bottom">
+		<h1 class="text--display3 padding--bottom">
+			<span class="text--heavy">&larr;&nbsp;</span>
+			<a href="<!-- @echo GITHUB_URL -->" style="text-decoration: underline;">
+				swarm-sasstools v<!-- @echo VERSION -->
+			</a>
+		</h1>
+	</div>
+
+	<div class="bounds column-item">
+		<div class="spreadable atMedium_spreadable--spread">
+
+			<div class="chunk spreadable-item">
+				<a class="docLink" href="seldon/doc.html">
+					<h2 class="text--display1 text--heavy">CSS API</h2>
+					<p class="text--big text--bold">Use this to style markup with classes <span class="text--heavy">&rarr;</span></p>
+				</a>
+			</div>
+
+			<div class="chunk spreadable-item">
+				<a class="chunk docLink" href="sassdoc/index.html">
+					<h2 class="text--display1 text--heavy">Sass API</h2>
+					<p class="text--big text--bold">Use this if you're writing new Sass <span class="text--heavy">&rarr;</span></p>
+				</a>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+</html>
