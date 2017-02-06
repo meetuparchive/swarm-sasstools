@@ -71,11 +71,15 @@ html {
 	margin: 0;
 }
 .doc_example-escaped pre {
-	padding: 8px;
 	overflow: scroll;
 	max-height: 500px;
 	margin: 0;
 }
+.doc_example-escaped pre code {
+	padding: 8px;
+	line-height: 1.8;
+}
+
 
 main {
 	padding-top: 32px;
