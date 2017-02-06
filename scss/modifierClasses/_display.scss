@@ -1,0 +1,47 @@
+/*doc
+---
+title: Display
+name: displayMod
+category: Modifier Classes
+---
+Modifies display property of element
+
+Class                   | Description
+----------------------- | --------------------------------
+`.display--none`        | sets `display` to `none`
+`.display--block`       | sets `display` to `block`
+`.display--flex`        | sets `display` to `flex`
+`.display--inline`      | sets `display` to `inline`
+`.display--inlineBlock` | sets `display` to `inline-block`
+`.display--inlineFlex`  | sets `display` to `inline-flex`
+*/
+@each $display in $display-values {
+
+	// convert hyphenated display values to camelCase
+	$_camelValue: str-replace(str-replace($display, '-block', 'Block'), '-flex', 'Flex');
+
+	@include _modifier(display, $_camelValue) {
+		display: $display;
+	}
+}
+
+
+/*doc
+---
+title: Flex Parent
+name: flexParentMod
+parent: displayMod
+---
+Sets `display: flex` rules for selected element as well as
+orientation rules for `row` or `column`.
+
+Class                   | Description
+----------------------- | --------------------------------
+`.flexParent--row`      | sets `display` to `flex` with row orientation for children
+`.flexParent--column`   | sets `display` to `flex` with column orientation for children
+*/
+@each $orientation in ('row', 'column') {
+	@include _modifier('flexParent', $orientation) {
+		@include flexParent($orientation);
+	}
+}

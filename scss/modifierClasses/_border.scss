@@ -1,0 +1,38 @@
+/*doc
+---
+title: Borders
+name: borderMod
+category: Modifier Classes
+---
+Sets border properties on element
+
+Class                   | Description
+----------------------- | --------------------------------
+`.border--top`          | sets a standard top border on the element
+`.border--left`         | sets a standard left border on the element
+`.border--none`         | removes all borders from element
+`.bordered`             | sets a standard top border AND top padding
+`.focus--none`          | removes user agent focus style
+*/
+
+@include _modifier(border, top) {
+	@include standardBorder();
+}
+
+@include _modifier(border, left) {
+	@include standardBorder('left');
+}
+
+@include _modifier(border, none) {
+	border-width: 0 !important;
+}
+
+.focus--none {
+	outline: 0;
+}
+
+%bordered,
+.bordered {
+	@extend %border--top;
+	padding-top: $space;
+}
