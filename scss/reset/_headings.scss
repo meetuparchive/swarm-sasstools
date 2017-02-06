@@ -2,7 +2,7 @@
 ---
 title: Headings
 name: headings
-category: Typography
+category: Headings
 ---
 */
 
@@ -11,7 +11,7 @@ category: Typography
 ---
 title: Heading tags
 name: headingTags
-parent: headings
+category: Headings
 ---
 All heading tags are reset to use
 `text--heavy` styles by default.
@@ -43,7 +43,7 @@ h1 {
 ---
 title: Display text
 name: displayText
-parent: headings
+category: Headings
 ---
 Display text is useful for styling headings.
 
@@ -76,7 +76,7 @@ the tag as a heading.
 ---
 title: Label header
 name: labelHeader
-parent: headings
+category: Headings
 ---
 
 ```html_example

@@ -36,19 +36,16 @@ html {
 	color: rgb(237,28,64);
 	margin-bottom: 16px;
 }
-.doc_block,
-.doc_block > .doc_block-title {
-	padding: 4px 8px;
-	margin: auto -4px;
+.doc_block {
+	margin: auto;
 	margin-bottom: 16px;
 }
 .doc_block {
-	background: rgb(250,250,250);
+	border-top: 2px solid rgba(0,0,0,0.12);
 }
 .doc_block > .doc_block-title {
-	background: rgba(0,0,0, 0.54);
-	color: #fff;
-	margin: -4px -8px 16px -8px;
+	padding: 3px 0;
+	margin-bottom: 6px;
 }
 
 .doc_block-desc {
@@ -66,6 +63,8 @@ html {
 .doc_example {
 	background: #fff;
 	margin: 8px auto 16px auto;
+	border: 1px solid rgba(0,0,0,0.12);
+	box-shadow: 0 0 8px rgba(0,0,0,0.12);
 }
 .doc_example-rendered {
 	padding: 16px;

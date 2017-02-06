@@ -2,7 +2,7 @@
 ---
 title: Body/primary text
 name: bodyText
-category: Typography
+category: Body Text
 ---
 
 ```html_example
@@ -22,7 +22,7 @@ body {
 ---
 title: Inverted text
 name: invertedText
-parent: bodyText
+category: Body Text
 ---
 
 Apply the `inverted` class to a container with
@@ -45,7 +45,7 @@ elements to inveted colors.
 ---
 title: Hint text
 name: hintText
-parent: bodyText
+category: Body Text
 ---
 ```html_example
 <p class="text--hint">This is hint text</p>
@@ -60,7 +60,7 @@ parent: bodyText
 ---
 title: Secondary text
 name: secondaryText
-parent: bodyText
+category: Body Text
 ---
 ```html_example
 <p class="text--secondary">Secondary text is secondary</p>
@@ -75,7 +75,7 @@ parent: bodyText
 ---
 title: Tertiary text
 name: tertiaryText
-parent: bodyText
+category: Body Text
 ---
 ```html_example
 <p class="text--tertiary">Tertiary text is tertiary</p>
@@ -90,7 +90,7 @@ parent: bodyText
 ---
 title: Heavy text
 name: heavyText
-parent: bodyText
+category: Body Text
 ---
 ```html_example
 <p class="text--heavy">Heavy text is heavy</p>
@@ -105,7 +105,7 @@ parent: bodyText
 ---
 title: Bold text
 name: boldText
-parent: bodyText
+category: Body Text
 ---
 ```html_example
 <p class="text--bold">Bold text is bold</p>
@@ -120,7 +120,7 @@ parent: bodyText
 ---
 title: Small text
 name: smallText
-parent: bodyText
+category: Body Text
 ---
 ```html_example
 <p class="text--small">Small text class is small</p>
@@ -136,7 +136,7 @@ small,
 ---
 title: Big text
 name: bigText
-parent: bodyText
+category: Body Text
 ---
 ```html_example
 <p class="text--big">Big text class is big</p>
@@ -153,7 +153,7 @@ big,
 ---
 title: Monospaced text
 name: monoText
-parent: bodyText
+category: Body Text
 ---
 The `code` and `pre` elements use a monospaced
 font by default. To apply monospaced type rules
@@ -176,7 +176,7 @@ pre,
 ---
 title: Caption text
 name: captionText
-parent: bodyText
+category: Body Text
 ---
 ```html_example
 <p class="text--caption">I'm captioning all the things</p>
@@ -191,7 +191,7 @@ parent: bodyText
 ---
 title: Error text
 name: errorText
-parent: bodyText
+category: Body Text
 ---
 ```html_example
 <p class="text--error">I'm erroring all the things</p>
@@ -207,7 +207,7 @@ parent: bodyText
 ---
 title: Text colors
 name: coloredText
-parent: bodyText
+category: Body Text
 ---
 Applies standard text colors. The variant
 is the color name: `text--[color]`. All supported
@@ -247,7 +247,7 @@ in order to also set the color of icons inline with text.
 ---
 title: Middot text
 name: middotText
-parent: bodyText
+category: Body Text
 ---
 ```html_example
 <p class="text--middotRight">I have a right middot</p>
@@ -267,7 +267,7 @@ parent: bodyText
 ---
 title: Running text
 name: runningText
-parent: bodyText
+category: Body Text
 ---
 By default, paragraphs and headings are not styled
 with any bottom spacing. Links are not blue by default,
@@ -304,7 +304,7 @@ event descriptions).
 ---
 title: Link color
 name: linkColor
-parent: runningText
+category: Body Text
 ---
 You can always force an anchor to apply a
 linky blue color by applying the `.link` class.
@@ -327,7 +327,7 @@ a {
 ---
 title: Bulleted lists
 name: bulletedList
-parent: bodyText
+category: Body Text
 ---
 
 `<ul>` and `<ol>` element list styles are
