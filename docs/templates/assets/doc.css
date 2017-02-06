@@ -11,6 +11,11 @@ html {
 	font-size: 13px;
 }
 
+/* prevent top nav from overlapping side nav */
+.pushy ul:first-child {
+	margin-top: 68px;
+}
+
 .offsetAnchor:before {
 	content: "";
 	display: inline-block;
@@ -29,8 +34,8 @@ html {
 }
 
 .doc_category {
-	border-top: 4px solid rgb(237,28,64);
-	margin-top: 48px;
+	border-top: 6px solid rgb(237,28,64);
+	margin-top: 80px;
 }
 .doc_category-title {
 	color: rgb(237,28,64);
@@ -41,9 +46,11 @@ html {
 	margin-bottom: 16px;
 }
 .doc_block {
-	border-top: 2px solid rgba(0,0,0,0.12);
+	margin-top: 48px;
+	border-top: 2px solid #7000b0;
 }
 .doc_block > .doc_block-title {
+	color: #7000b0;
 	padding: 3px 0;
 	margin-bottom: 6px;
 }
@@ -54,6 +61,9 @@ html {
 .doc_block-desc > p,
 .doc_block-desc > table {
 	margin-bottom: 16px;
+}
+.doc_block-desc code {
+	color: #1F24CC;
 }
 .doc_block-children {
 }
