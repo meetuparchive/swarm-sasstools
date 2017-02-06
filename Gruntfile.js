@@ -12,7 +12,8 @@ module.exports = function(grunt) {
 
 		'exec': {
 			webpack: 'webpack',
-			seldon: 'node node_modules/seldon/seldon.js seldon.config.json'
+			seldon: 'node node_modules/seldon/seldon.js seldon.config.json',
+			index: 'cp ./docs/index.html ./docs/build/index.html'
 		},
 		'sassdoc': {
 			default: {
@@ -35,7 +36,10 @@ module.exports = function(grunt) {
 		},
 		'preprocess': {
 			inline: {
-				src: [ 'docs/build/seldon/doc.html' ],
+				src: [
+					'docs/build/index.html',
+					'docs/build/seldon/doc.html'
+				],
 				options: {
 					inline: true,
 					context: {
@@ -54,10 +58,11 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('default', [
 		'clean:docs',   // cleans built docs
-		'exec:webpack', // (webpack) compile Sass, generates hologram CSS API docs
+		'exec:webpack', // (webpack) compile Sass
 		'sassdoc',      // generates sassdoc docs for Sass API
 		'exec:seldon',  // generates seldon docs for CSS class API
-		'preprocess',   // updates built seldon docs with version and asset urls
+		'exec:index',   // creates `index.html` landing page for built docs
+		'preprocess',   // updates built docs with version and asset urls
 		'clean:sassdoc' // rm extraneous build artifact from sassdoc (sassdoc bug)
 	]);
 	grunt.registerTask('ghpages', ['default', 'gh-pages']);
