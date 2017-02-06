@@ -6,20 +6,20 @@
 
 @import "../utils/all";
 
-@import "modifiers/align";
-@import "modifiers/animation";
-@import "modifiers/aspect-ratio";
-@import "modifiers/background";
-//@import "modifiers/border";
-//@import "modifiers/button";
-//@import "modifiers/display";
-//@import "modifiers/float";
-//@import "modifiers/flush";
-//@import "modifiers/js-conditional";
-//@import "modifiers/size";
-//@import "modifiers/spacing";
-//@import "modifiers/text";
-//@import "modifiers/thumb";
-//@import "modifiers/visibility";
-//@import "modifiers/width";
-//@import "modifiers/media-conditional"; // Must come last; extends other modifiers
+@import "align";
+@import "animation";
+@import "aspect-ratio";
+@import "background";
+@import "border";
+@import "button";
+@import "display";
+@import "float";
+@import "flush";
+@import "js-conditional";
+@import "size";
+@import "spacing";
+@import "text";
+@import "thumb";
+@import "visibility";
+@import "width";
+@import "media-conditional"; // Must come last; extends other modifiers

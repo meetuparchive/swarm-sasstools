@@ -1,0 +1,36 @@
+/*doc
+---
+title: Width
+name: widthModifier
+category: Modifier Classes
+---
+Sets element width in percentage.
+
+**Includes `!important` directive** in order to override
+input attribute selectors.
+
+`span--[width%]`
+
+```html_example
+<p class="span--100" style="background: pink;">100% width</p>
+<p class="span--80" style="background: pink;">80% width</p>
+<p class="span--75" style="background: pink;">75% width</p>
+<p class="span--60" style="background: pink;">60% width</p>
+<p class="span--50" style="background: pink;">50% width</p>
+<p class="span--30" style="background: pink;">30% width</p>
+<p class="span--25" style="background: pink;">25% width</p>
+```
+*/
+@each $pct in (
+	100,
+	80,
+	75,
+	60,
+	50,
+	30,
+	25
+) {
+	@include _modifier(span, $pct) {
+		width: $pct#{"%"} !important;
+	}
+}

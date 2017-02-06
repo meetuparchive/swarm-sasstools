@@ -1,0 +1,17 @@
+/*doc
+---
+title: Anchors & Buttons
+name: buttonPersonalityMod
+category: Modifier Classes
+---
+Applies button-like pointer styles, text-decoration,
+and user-select.
+
+```html_example
+	<a class="chunk display--block">I'm just an anchor, displayed block</a>
+	<a class="buttonPersonality chunk display--block">I behave more like a button (hover over me; try to select this text)</a>
+```
+*/
+.buttonPersonality {
+	@extend %buttonPersonality;
+}
