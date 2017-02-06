@@ -3,3 +3,23 @@
 * -------------------
 * defines all modifier classes
 */
+
+@import "../utils/all";
+
+@import "align";
+@import "animation";
+@import "aspect-ratio";
+@import "background";
+@import "border";
+@import "button";
+@import "display";
+@import "float";
+@import "flush";
+@import "js-conditional";
+@import "size";
+@import "spacing";
+@import "text";
+@import "thumb";
+@import "visibility";
+@import "width";
+@import "media-conditional"; // Must come last; extends other modifiers

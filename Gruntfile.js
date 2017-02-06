@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 	var BUILD_PATH = './docs/build/',
 		WATCH_PATHS = [
 			'docs/index.html',
-			'docs/templates/*.*',
+			'docs/templates/**/*.*',
 			'scss/**/*.scss'
 		];
 

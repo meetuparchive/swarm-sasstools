@@ -56,13 +56,13 @@
 				{{! categories }}
 				{{#each categoryObj}}
 				<div class="doc_category">
-					<h2 class="doc_category-title text--display2"><a class="offsetAnchor" name="{{this.name}}">{{this.title}}</a></h2>
+					<h2 class="doc_category-title text--heavy text--display1"><a class="offsetAnchor" name="{{this.name}}">{{this.title}}</a></h2>
 
 					{{! category-level blocks }}
 					<div class="doc_category-blocks">
 						{{#each this.blocks}}
 						<dl class="doc_block">
-							<dt class="doc_block-title text--heavy"><a class="offsetAnchor" name="{{this.name}}">{{this.title}}</a><dt>
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="{{this.name}}">{{this.title}}</a><dt>
 							<dd class="doc_block-desc">{{{this.description}}}</dd>
 
 							{{! block children }}
