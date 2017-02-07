@@ -9,18 +9,18 @@ Sets border properties on element
 Class                   | Description
 ----------------------- | --------------------------------
 `.border--top`          | sets a standard top border on the element
+`.border--right`        | sets a standard right border on the element
+`.border--bottom`       | sets a standard bottom border on the element
 `.border--left`         | sets a standard left border on the element
 `.border--none`         | removes all borders from element
 `.bordered`             | sets a standard top border AND top padding
 `.focus--none`          | removes user agent focus style
 */
 
-@include _modifier(border, top) {
-	@include standardBorder();
-}
-
-@include _modifier(border, left) {
-	@include standardBorder('left');
+@each $direction in (top, right, bottom, left) {
+	@include _modifier(border, $direction) {
+		@include standardBorder($direction);
+	}
 }
 
 @include _modifier(border, none) {

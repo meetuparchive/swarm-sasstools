@@ -4,6 +4,25 @@ title: Float
 name: floatMod
 category: Modifier Classes
 ---
+Left and right `float`
+
+Class             | Description
+----------------- | -----------------------------------------
+`.float--left`    | floats selected element left
+`.float--right`   | floats selected element right
+*/
+@each $direction in (left, right) {
+	@include _modifier(float, $direction) {
+		float: $direction;
+	}
+}
+
+/*doc
+---
+title: Float
+name: clearFix
+parent: floatMod
+---
 Float clearing.
 
 Class             | Description

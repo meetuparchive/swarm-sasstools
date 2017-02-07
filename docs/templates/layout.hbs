@@ -94,12 +94,14 @@
 <script type="text/javascript">
 $(function() {
 	//
-	// Highlightjs
+	// Highlightjs,
+	// fancy tables parsed from markdown
 	//
 	$(document).ready(function() {
 		$('pre code').each(function(i, block) {
 			hljs.highlightBlock(block);
 		});
+		$('.doc_block-desc table').addClass('stripedTable');
 	});
 
 
