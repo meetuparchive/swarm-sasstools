@@ -12,22 +12,43 @@ html {
 }
 
 /* prevent top nav from overlapping side nav */
-.pushy ul:first-child {
-	margin-top: 68px;
+.pushy-content {
+	margin-top: 80px !important;
+}
+
+.pushy-submenu {
+	border-top: 1px solid rgba(255,255,255,0.4);
+}
+.pushy-submenu-open {
+	padding-bottom: 16px;
+}
+.pushy-submenu button {
+	background: transparent !important;
+	color: #fff !important;
+	border-width: 0 !important;
+	text-align: left !important;
+	padding-left: 16px;
+	font-size: 18px;
+}
+.pushy-submenu a {
+	color: rgba(255,255,255,0.9);
+	padding: 6px 0 6px 2px;
 }
 
 .offsetAnchor:before {
 	content: "";
 	display: inline-block;
+	height: 104px;
+	margin: -104px 0 0;
 }
-.doc_category-title .offsetAnchor:before {
-	height: 126px;
-	margin: -126px 0 0;
-}
-.doc_block-title .offsetAnchor:before {
-	height: 32px;
-	margin: -32px 0 0;
-}
+/*
+ *.doc_category-title .offsetAnchor:before {
+ *}
+ *.doc_block-title .offsetAnchor:before {
+ *   height: 46px;
+ *   margin: -46px 0 0;
+ *}
+ */
 
 .stripe--purple {
 	background-color: rgb(55,30,172) !important;
