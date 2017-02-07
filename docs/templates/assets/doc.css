@@ -13,7 +13,7 @@ html {
 
 /* prevent top nav from overlapping side nav */
 .pushy-content {
-	margin-top: 80px !important;
+	margin-top: 73px !important;
 }
 
 .pushy-submenu {
@@ -31,7 +31,7 @@ html {
 	font-size: 18px;
 }
 .pushy-submenu a {
-	color: #fff;
+	color: #FFE533;
 	padding: 6px 0 6px 2px;
 }
 
