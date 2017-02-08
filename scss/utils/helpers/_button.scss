@@ -1,0 +1,11 @@
+////
+/// @group button
+////
+
+/// Sets button-like properties
+/// (pointer, user-select, etc)
+%buttonPersonality {
+	@include user-select(none);
+	cursor: pointer;
+	text-decoration: none !important;
+}
