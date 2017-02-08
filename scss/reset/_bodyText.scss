@@ -1,8 +1,8 @@
 /*doc
 ---
-title: Body/primary text
+title: Body/primary
 name: bodyText
-category: Body Text
+category: Text Styles
 ---
 
 ```html_example
@@ -20,9 +20,9 @@ body {
 
 /*doc
 ---
-title: Inverted text
+title: Inverted
 name: invertedText
-category: Body Text
+category: Text Styles
 ---
 
 Apply the `inverted` class to a container with
@@ -43,9 +43,9 @@ elements to inveted colors.
 
 /*doc
 ---
-title: Hint text
+title: Hint
 name: hintText
-category: Body Text
+category: Text Styles
 ---
 ```html_example
 <p class="text--hint">This is hint text</p>
@@ -58,9 +58,9 @@ category: Body Text
 
 /*doc
 ---
-title: Secondary text
+title: Secondary
 name: secondaryText
-category: Body Text
+category: Text Styles
 ---
 ```html_example
 <p class="text--secondary">Secondary text is secondary</p>
@@ -73,9 +73,9 @@ category: Body Text
 
 /*doc
 ---
-title: Tertiary text
+title: Tertiary
 name: tertiaryText
-category: Body Text
+category: Text Styles
 ---
 ```html_example
 <p class="text--tertiary">Tertiary text is tertiary</p>
@@ -88,9 +88,9 @@ category: Body Text
 
 /*doc
 ---
-title: Heavy text
+title: Heavy
 name: heavyText
-category: Body Text
+category: Text Styles
 ---
 ```html_example
 <p class="text--heavy">Heavy text is heavy</p>
@@ -103,9 +103,9 @@ category: Body Text
 
 /*doc
 ---
-title: Bold text
+title: Bold
 name: boldText
-category: Body Text
+category: Text Styles
 ---
 ```html_example
 <p class="text--bold">Bold text is bold</p>
@@ -118,9 +118,9 @@ category: Body Text
 
 /*doc
 ---
-title: Small text
+title: Small
 name: smallText
-category: Body Text
+category: Text Styles
 ---
 ```html_example
 <p class="text--small">Small text class is small</p>
@@ -134,9 +134,9 @@ small,
 
 /*doc
 ---
-title: Big text
+title: Big
 name: bigText
-category: Body Text
+category: Text Styles
 ---
 ```html_example
 <p class="text--big">Big text class is big</p>
@@ -151,9 +151,9 @@ big,
 
 /*doc
 ---
-title: Monospaced text
+title: Monospaced
 name: monoText
-category: Body Text
+category: Text Styles
 ---
 The `code` and `pre` elements use a monospaced
 font by default. To apply monospaced type rules
@@ -174,9 +174,9 @@ pre,
 
 /*doc
 ---
-title: Caption text
+title: Caption
 name: captionText
-category: Body Text
+category: Text Styles
 ---
 ```html_example
 <p class="text--caption">I'm captioning all the things</p>
@@ -189,9 +189,9 @@ category: Body Text
 
 /*doc
 ---
-title: Error text
+title: Error
 name: errorText
-category: Body Text
+category: Text Styles
 ---
 ```html_example
 <p class="text--error">I'm erroring all the things</p>
@@ -205,9 +205,9 @@ category: Body Text
 
 /*doc
 ---
-title: Text colors
+title: Colored text
 name: coloredText
-category: Body Text
+category: Text Styles
 ---
 Applies standard text colors. The variant
 is the color name: `text--[color]`. All supported
@@ -247,7 +247,7 @@ in order to also set the color of icons inline with text.
 ---
 title: Middot text
 name: middotText
-category: Body Text
+category: Text Styles
 ---
 ```html_example
 <p class="text--middotRight">I have a right middot</p>
@@ -267,7 +267,7 @@ category: Body Text
 ---
 title: Running text
 name: runningText
-category: Body Text
+category: Text Styles
 ---
 By default, paragraphs and headings are not styled
 with any bottom spacing. Links are not blue by default,
@@ -304,7 +304,7 @@ event descriptions).
 ---
 title: Link color
 name: linkColor
-category: Body Text
+category: Text Styles
 ---
 You can always force an anchor to apply a
 linky blue color by applying the `.link` class.
@@ -327,7 +327,7 @@ a {
 ---
 title: Bulleted lists
 name: bulletedList
-category: Body Text
+category: Text Styles
 ---
 
 `<ul>` and `<ol>` element list styles are

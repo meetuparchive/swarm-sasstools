@@ -7,6 +7,7 @@
 *.log
 .bower.json
 docs/build/
+docs/templates/assets/swarm-sasstools.css
 node_modules/
 .grunt/
 sassdoc/
