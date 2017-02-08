@@ -13,39 +13,50 @@
 
 	<style type="text/css">
 		.docLink {
-			padding: 16px;
+			padding: 2px 16px 0 0;
 			margin-bottom: 32px;
 			display: inline-block;
+			border-top: 6px solid transparent;
 		}
-		.docLink:hover {
-			background: #FF911A;
+		.docLink--CSS:hover {
+			border-top: 6px solid #FFE533;
+		}
+		.docLink--CSS:hover h2,
+		.docLink--CSS:hover p {
+			color: #FFE533 !important;
+		}
+		.docLink--Sass:hover {
+			border-top: 6px solid #4DD1ED;
+		}
+		.docLink--Sass:hover h2,
+		.docLink--Sass:hover p {
+			color: #4DD1ED !important;
 		}
 	</style>
 </head>
 
-<body class="column stripe stripe--plum inverted" style="min-height: 100vh; padding-top: 8vh;">
+<body class="column stripe stripe--black" style="min-height: 100vh; padding-top: 8vh;">
 
 	<div class="bounds column-item column-item--shrink margin--bottom">
-		<h1 class="text--display3 padding--bottom">
-			<span class="text--heavy">&larr;&nbsp;</span>
-			<a href="<!-- @echo GITHUB_URL -->" style="text-decoration: underline;">
+		<h1 class="text--red text--heavy text--display3 padding--bottom">
+			<a href="<!-- @echo GITHUB_URL -->">
 				swarm-sasstools v<!-- @echo VERSION -->
 			</a>
 		</h1>
 	</div>
 
-	<div class="bounds column-item">
+	<div class="bounds inverted column-item">
 		<div class="spreadable atMedium_spreadable--spread">
 
 			<div class="chunk spreadable-item">
-				<a class="docLink" href="seldon/doc.html">
+				<a class="docLink docLink--CSS" href="seldon/doc.html">
 					<h2 class="text--display1 text--heavy">CSS API</h2>
 					<p class="text--big text--bold">Use this to style markup with classes <span class="text--heavy">&rarr;</span></p>
 				</a>
 			</div>
 
 			<div class="chunk spreadable-item">
-				<a class="chunk docLink" href="sassdoc/index.html">
+				<a class="chunk docLink docLink--Sass" href="sassdoc/index.html">
 					<h2 class="text--display1 text--heavy">Sass API</h2>
 					<p class="text--big text--bold">Use this if you're writing new Sass <span class="text--heavy">&rarr;</span></p>
 				</a>
