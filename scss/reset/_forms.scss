@@ -168,7 +168,7 @@ input elements.
 	font-size: $font-size;
 	height: $font-size;
 	line-height: $line-height;
-	margin: 0 $inputGutter 0 0;
+	margin: 0 $space 0 0;
 
 	@include browser-lessThanIE(10) {
 		top: $space/2;
@@ -209,7 +209,7 @@ elements.
 	height: $font-size;
 	line-height: 1;
 	line-height: $line-height;
-	margin: 0 $inputGutter 0 0;
+	margin: 0 $space 0 0;
 
 	@include browser-lessThanIE(10) {
 		top: $space/2;
