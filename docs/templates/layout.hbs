@@ -50,8 +50,20 @@
 					<a class="menu-btn text--big">&#9776;</a>
 				</div>
 			</div>
-			<h1 class="row-item chunk text--big">swarm-sasstools</h1>
-			<a href="<!-- @echo GITHUB_URL -->" class="row-item row-item--shrink chunk text--big">v<!-- @echo VERSION --></a>
+			<div class="row-item">
+				<h1 class="row-item chunk">swarm-sasstools</h1>
+			</div>
+			<div class="row-item row-item--shrink">
+				<input
+					type="text"
+					name="search"
+					id="search"
+					autocomplete="off"
+				/>
+			</div>
+			<div class="row-item row-item--shrink">
+				<a href="<!-- @echo GITHUB_URL -->" class="chunk text--big">v<!-- @echo VERSION --></a>
+			</div>
 		</div>
 	</header>
 
@@ -97,9 +109,61 @@
 
 <script type="text/javascript" src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="//cdn.jsdelivr.net/highlight.js/9.1.0/highlight.min.js"></script>
+<script src="//unpkg.com/fuse.js@2.6.1/src/fuse.js"></script>
 <script src="./pushy.min.js"></script>
 <script type="text/javascript">
 $(function() {
+
+
+	//
+	// Search Index
+	//
+	var fuseIndex = [];
+
+	{{#each categoryObj as |cat|}}
+		{{#each cat.blocks as |block|}}
+			fuseIndex.push({
+				"title": "{{block.title}}",
+				"name": "{{block.name}}",
+				"category": "{{cat.title}}",
+				"anchor": "#{{block.name}}"
+			});
+		{{/each}}
+	{{/each}}
+	
+	
+	//
+	// Initialize Search
+	//
+	var Searchable = new Fuse(fuseIndex, {
+		caseSensitive: false,
+		includeScore: false,
+		shouldSort: true,
+		threshold: 0.3,
+		keys: [
+			"title",
+			"name",
+			"category"
+		]
+	});
+
+	$(document).ready(function() {
+		$('#search').on('keyup', function(e) {
+			var query = $(this).val(),
+				result;
+			
+			if ( query.length > 0 ) {
+				result = Searchable.search( $(this).val() );
+
+				if ( result ) {
+					console.info('First Result _title_: ' + result[0].title);
+					console.dir(result);
+				}
+			}
+		});
+	});
+
+
 	//
 	// Highlightjs,
 	// fancy tables parsed from markdown
