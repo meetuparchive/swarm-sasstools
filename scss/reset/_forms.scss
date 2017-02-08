@@ -1,0 +1,243 @@
+/*doc
+---
+title: Basic Inputs
+name: forms
+category: Forms
+---
+
+<div style="padding: 8px; background: #FFE533; margin: 8px 0 16px 0;">
+The `chunk` and `row` classs used below are for documentation
+purposes only and are not provided by `swarm-sassutils`. For layout components,
+see <a class="link" style="text-decoration: underline;" href="https://github.com/meetup/meetup-web-components">meetup-web-components</a>
+</div>
+
+## Text inputs
+
+```html_example
+<div class="chunk">
+	<label for="test-textinput" class="required">I'm a label</label>
+	<input id="test-textinput" type="text" value="Text input with value" />
+</div>
+
+<div class="chunk">
+	<label for="test-textinput2">Just another label</label>
+	<input id="test-textinput2" type="text" placeholder="Text input with placeholder" />
+</div>
+
+<div class="chunk">
+	<label for="test-textarea">Here's an area for your text</label>
+	<textarea id="test-textarea"></textarea>
+</div>
+
+<div class="chunk">
+	<label for="test-select">What is this?</label>
+	<select id="text-select">
+		<option value="One">One</option>
+		<option value="Two">Two</option>
+		<option value="Three">Three</option>
+		<option value="Four">Four</option>
+	</select>
+</div>
+
+<div class="row">
+	<div class="row-item chunk">
+		<label for="split1">Favorite number</label>
+		<input id="split0" type="number" />
+	</div>
+	<div class="row-item chunk">
+		<label for="split1">Unicorn name</label>
+		<input id="split1" type="text" placeholder="ie. Fluffy, Resplendent" />
+	</div>
+	<div class="row-item chunk">
+		<label class="required" for="split2">Unicorn color</label>
+		<select id="split2">
+			<option value="clear">Transparent</option>
+			<option value="green">Toasted clove saffron</option>
+			<option value="brown">Midnight brown</option>
+			<option value="black">Seabreeze black</option>
+		</select>
+	</div>
+</div>
+```
+
+*/
+%label,
+label {
+	font-size: $font-size-small;
+	font-weight: $W_bold;
+
+	&.required:after {
+		content: "*";
+		color: $C_attention;
+		font-size: $font-size-big;
+		line-height: 0;
+		margin-left: $space/4;
+		position: relative;
+		top: 3px;
+	}
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+
+%_formBase,
+button,
+input,
+select,
+textarea {
+	display: block;
+	font-family: inherit;
+	font-size: 100%;
+	line-height: $line-height;
+}
+
+%_formTextField,
+#{$all-text-inputs},
+textarea,
+select {
+	background-color: $C_lightGray;
+	border-radius: $defaultRadius;
+	border: 1px solid $C_border;
+	box-shadow: none;
+	box-sizing: border-box;
+	margin: 0 0 $space-quarter 0;
+	max-width: 100%;
+	padding: $space-half;
+	width: 100%;
+	&:focus {
+		background-color: $C_contentBG;
+		border-color: $C_lightPurple;
+		box-shadow: none;
+		outline: none;
+	}
+}
+
+input,
+select {
+	height: ($font-size * $line-height) + $space;
+}
+
+textarea {
+	min-height: (3 * $font-size * $line-height) + $space;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	font-style: normal;
+	color: $C_textTertiary;
+}
+
+
+/*doc
+---
+title: Checkboxes
+name: checkbox
+category: Forms
+---
+A label variant class of `label--switch` is
+used for side-by-side inputs and labels.
+
+For radios and checkboxes, we put the `input`
+element inside the `label` element.
+
+A class of `checkbox` is __required__ on checkbox
+input elements.
+
+```html_example
+<label for="check1" class="label--switch chunk">
+	<input id="check1" class="checkbox" value="green" type="checkbox" />
+	Green
+</label>
+<label for="check2" class="label--switch chunk">
+	<input id="check2" class="checkbox" value="blue" type="checkbox" />
+	Blue
+</label>
+<label for="check3" class="label--switch chunk">
+	<input id="check3" class="checkbox" value="blue" type="checkbox" checked />
+	Already checked
+</label>
+```
+*/
+.checkbox {
+	cursor: pointer;
+	display: inline-block;
+	font-size: $font-size;
+	height: $font-size;
+	line-height: $line-height;
+	margin: 0 $inputGutter 0 0;
+
+	@include browser-lessThanIE(10) {
+		top: $space/2;
+	}
+}
+
+
+/*doc
+---
+title: Radios
+name: radio
+category: Forms
+---
+A label variant class of `label--switch` is
+used for side-by-side inputs and labels.
+
+For radios and checkboxes, we put the `input`
+element inside the `label` element.
+
+A class of `radio` is __required__ on radio input
+elements.
+
+```html_example
+<label for="radio1" class="label--switch chunk">
+	<input id="radio1" class="radio" name="radioExample" value="green" type="radio" />
+	Green
+</label>
+<label for="radio2" class="label--switch chunk">
+	<input id="radio2" class="radio" name="radioExample" value="red" type="radio" />
+	Red
+</label>
+```
+*/
+.radio {
+	cursor: pointer;
+	display: inline-block;
+	font-size: $font-size;
+	height: $font-size;
+	line-height: 1;
+	line-height: $line-height;
+	margin: 0 $inputGutter 0 0;
+
+	@include browser-lessThanIE(10) {
+		top: $space/2;
+	}
+}
+
+/*doc
+---
+title: Validation errors
+name: formValidation
+category: Forms
+---
+Field errors set explicitly with `field--error`.
+
+Error text is set explicitly with `text--error`.
+
+```html_example
+<div class="chunk">
+	<label for="test-textinput">First name</label>
+	<input class="field--error" id="test-textinput" type="text" value="" />
+	<p class="text--error">First name can't be empty</p>
+</div>
+```
+
+*/
+.field--error {
+	border-color: $C_attention !important;
+	&:focus {
+		border-color: $C_attention !important;
+	}
+}

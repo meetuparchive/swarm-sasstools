@@ -11,8 +11,10 @@
 */
 @import "../utils/all";
 
+// keep this order for cascade
 @import "tagDefaults";
 @import "tables";
+@import "forms";
 @import "headings";
 @import "bodyText";
 @import "debugText";
