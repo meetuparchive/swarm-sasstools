@@ -14,8 +14,4 @@
 	@include display(flex);
 	@include flex-direction(column);
 	@include justify-content(map-get($flexAlignMap, "#{$alignment}"));
-
-	@include browser-lessThanIE( 10 ) {
-		@include _valignIE($alignment);
-	}
 }
