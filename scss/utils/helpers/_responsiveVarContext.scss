@@ -6,10 +6,9 @@
 /// $breakpoint should not be wrapped in an `atMediaUp` media query
 /// @access private
 @mixin _atMediaUpForVarContext($breakpoint) {
-	@if($breakpoint == small || $breakpoint == default) {
+	@if ($breakpoint == small) or ($breakpoint == default) {
 		@content
-	}
-	@else{
+	} @else {
 		@include atMediaUp($breakpoint){
 			@content;
 		}
