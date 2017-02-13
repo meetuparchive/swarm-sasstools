@@ -50,7 +50,12 @@ module.exports = function(grunt) {
 				src: 'scss/utils/**/*.scss',
 				options: {
 					dest: BUILD_PATH + 'sassdoc/',
-					theme: 'flippant'
+					theme: 'flippant',
+					display: {
+						access: ['public'],
+						alias: true,
+						watermark: false
+					}
 				}
 			}
 		},
