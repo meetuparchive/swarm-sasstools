@@ -3584,13 +3584,13 @@ right-align@^0.1.1:
   dependencies:
     align-text "^0.1.1"
 
-rimraf@2, rimraf@2.*, rimraf@^2.3.2, rimraf@~2.5.1, rimraf@~2.5.4:
+rimraf@2, rimraf@2.*, rimraf@^2.2.8, rimraf@^2.3.2, rimraf@~2.5.1, rimraf@~2.5.4:
   version "2.5.4"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.5.4.tgz#96800093cbf1a0c86bd95b4625467535c29dfa04"
   dependencies:
     glob "^7.0.5"
 
-rimraf@^2.2.8, rimraf@~2.2.1, rimraf@~2.2.8:
+rimraf@~2.2.1, rimraf@~2.2.8:
   version "2.2.8"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.2.8.tgz#e439be2aaee327321952730f99a8929e4fc50582"
 
@@ -3713,9 +3713,9 @@ scss-comment-parser@^0.8.1:
   dependencies:
     cdocparser "^0.13.0"
 
-seldon@0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/seldon/-/seldon-0.3.0.tgz#87ce941b9a9cbdd9a09ef39f2002ee2f5a2e12ea"
+seldon@0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/seldon/-/seldon-0.3.1.tgz#6da11cad169dc90032fa2a612c64e7bf1bd10e16"
   dependencies:
     colors "1.1.2"
     frontmatter "0.0.3"
