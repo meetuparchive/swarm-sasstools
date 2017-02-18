@@ -3713,9 +3713,9 @@ scss-comment-parser@^0.8.1:
   dependencies:
     cdocparser "^0.13.0"
 
-seldon@0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/seldon/-/seldon-0.3.1.tgz#6da11cad169dc90032fa2a612c64e7bf1bd10e16"
+seldon@0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/seldon/-/seldon-0.3.2.tgz#467aabe3e6c25faad560cd10a140472c8587cd56"
   dependencies:
     colors "1.1.2"
     frontmatter "0.0.3"

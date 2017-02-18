@@ -27,7 +27,7 @@
 		"grunt-contrib-watch": "1.0.0",
 		"grunt-preprocess": "4.1.0",
 		"grunt-browser-sync": "2.2.0",
-		"seldon": "0.3.1",
+		"seldon": "0.3.2",
 		"grunt-sassdoc": "2.0.2",
 		"sassdoc-theme-flippant": "0.1.0",
 		"grunt-gh-pages": "0.9.1",

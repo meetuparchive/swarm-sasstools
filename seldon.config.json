@@ -1,6 +1,6 @@
 {
 	"source": "scss/",
-	"destination": "docs/build/seldon/doc.html",
+	"destination": "docs/build/seldon/",
 	"assets": [
 		"docs/templates/assets/"
 	],
