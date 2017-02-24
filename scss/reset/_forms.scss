@@ -76,6 +76,9 @@ label {
 		top: 3px;
 	}
 }
+.label--minor {
+	font-weight: normal;
+}
 
 fieldset {
   border: 0;
@@ -138,7 +141,7 @@ title: Checkboxes
 name: checkbox
 category: Forms
 ---
-A label variant class of `label--switch` is
+A label variant class of `label--minor` is
 used for side-by-side inputs and labels.
 
 For radios and checkboxes, we put the `input`
@@ -148,15 +151,15 @@ A class of `checkbox` is __required__ on checkbox
 input elements.
 
 ```html_example
-<label for="check1" class="label--switch chunk">
+<label for="check1" class="label--minor chunk">
 	<input id="check1" class="checkbox" value="green" type="checkbox" />
 	Green
 </label>
-<label for="check2" class="label--switch chunk">
+<label for="check2" class="label--minor chunk">
 	<input id="check2" class="checkbox" value="blue" type="checkbox" />
 	Blue
 </label>
-<label for="check3" class="label--switch chunk">
+<label for="check3" class="label--minor chunk">
 	<input id="check3" class="checkbox" value="blue" type="checkbox" checked />
 	Already checked
 </label>
@@ -168,7 +171,7 @@ input elements.
 	font-size: $font-size;
 	height: $font-size;
 	line-height: $line-height;
-	margin: 0 $space 0 0;
+	margin: 0 $space-half 0 0;
 
 	@include browser-lessThanIE(10) {
 		top: $space/2;
@@ -182,7 +185,7 @@ title: Radios
 name: radio
 category: Forms
 ---
-A label variant class of `label--switch` is
+A label variant class of `label--minor` is
 used for side-by-side inputs and labels.
 
 For radios and checkboxes, we put the `input`
@@ -192,11 +195,11 @@ A class of `radio` is __required__ on radio input
 elements.
 
 ```html_example
-<label for="radio1" class="label--switch chunk">
+<label for="radio1" class="label--minor chunk">
 	<input id="radio1" class="radio" name="radioExample" value="green" type="radio" />
 	Green
 </label>
-<label for="radio2" class="label--switch chunk">
+<label for="radio2" class="label--minor chunk">
 	<input id="radio2" class="radio" name="radioExample" value="red" type="radio" />
 	Red
 </label>
@@ -209,7 +212,7 @@ elements.
 	height: $font-size;
 	line-height: 1;
 	line-height: $line-height;
-	margin: 0 $space 0 0;
+	margin: 0 $space-half 0 0;
 
 	@include browser-lessThanIE(10) {
 		top: $space/2;
