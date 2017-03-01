@@ -10,7 +10,7 @@
 ///
 /// @param {String} $base - base class
 /// @param {String} $modification - modification
-/// @content
+/// @content [Generates a selector _and_ a Sass placeholder to wrap style rule content]
 ///
 /// @example scss
 /// 	// create the placeholder and class margin--bottom
@@ -32,7 +32,7 @@
 ///
 /// @param {String} $base - base class
 /// @param {String} $modification - modification
-/// @content
+/// @content [Style rules to add to media queries]
 ///
 /// @example scss
 /// 	// creates:

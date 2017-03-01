@@ -5,6 +5,7 @@
 /// Assumes `small` or `default` values passed in as
 /// $breakpoint should not be wrapped in an `atMediaUp` media query
 /// @access private
+/// @content [Style rules]
 @mixin _atMediaUpForVarContext($breakpoint) {
 	@if ($breakpoint == small) or ($breakpoint == default) {
 		@content

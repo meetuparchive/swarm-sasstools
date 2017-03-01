@@ -10,7 +10,7 @@
 /// and any children with the given `$class`.
 ///
 /// @param {String} $class - class name
-/// @content
+/// @content [Style rules to wrap with generated selector]
 ///
 /// @example scss
 /// 	@include _sel-selfAndChild( 'row' ) {

@@ -11,7 +11,7 @@
 /// @access public
 ///
 /// @param {String | String...} $langs - ISO 639-1 language codes (ie. 'en')
-/// @content style rules
+/// @content [Wraps content in a selector that includes a root body className specific to provided languages]
 ///
 /// @example scss
 /// 	@include i18n-only('en') {
@@ -41,8 +41,9 @@
 ///
 /// @access public
 ///
+///
 /// @param {String | String...} $langs - ISO 639-1 language codes (ie. 'en')
-/// @content style rules
+/// @content [Wraps content in a selector that includes a root body className specific to provided languages]
 ///
 /// @example scss
 /// 	@include i18n-exclude('de') {
