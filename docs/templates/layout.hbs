@@ -113,13 +113,11 @@ $(function() {
 
 
 	//
-	// Disable links without real href
+	// Disable links in examples
 	//
-	$('a').on("click", function(e) {
-		if ( this.getAttribute("href") == "#" || $(this).hasClass('noFollow') ) {
-			e.preventDefault();
-		}
-		return;
+	$('.doc_example a').on("click", function(e) {
+		e.preventDefault();
+		return false;
 	});
 
 	//
