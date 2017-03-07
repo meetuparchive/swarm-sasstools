@@ -1,6 +1,6 @@
 {
 	"name": "swarm-sasstools",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"description": "Sass tools module of the Swarm Design System",
 	"directories": {
 		"doc": "sassdoc/",
@@ -32,10 +32,10 @@
 		"sassdoc-theme-flippant": "0.1.0",
 		"grunt-gh-pages": "0.9.1",
 		"node-sass": "3.11.1",
-		"webpack": "^1.13.1",
+		"webpack": "2.2.1",
 		"css-loader": "0.23.1",
 		"sass-loader": "4.0.0",
-		"extract-text-webpack-plugin": "1.0.1"
+		"extract-text-webpack-plugin": "2.1.0"
 	},
 	"bugs": {
 		"url": "https://github.com/meetup/swarm-sassdoc/issues"
