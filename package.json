@@ -1,6 +1,6 @@
 {
 	"name": "swarm-sasstools",
-	"version": "1.0.8",
+	"version": "1.0.9",
 	"description": "Sass tools module of the Swarm Design System",
 	"directories": {
 		"doc": "sassdoc/",
@@ -34,7 +34,7 @@
 		"node-sass": "3.11.1",
 		"webpack": "2.2.1",
 		"css-loader": "0.26.1",
-		"sass-loader": "4.0.0",
+		"sass-loader": "6.0.1",
 		"extract-text-webpack-plugin": "2.1.0"
 	},
 	"bugs": {
