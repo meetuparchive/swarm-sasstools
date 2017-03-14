@@ -124,10 +124,6 @@ select {
 	height: ($font-size * $line-height) + $space;
 }
 
-textarea {
-	min-height: (3 * $font-size * $line-height) + $space;
-}
-
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
 	font-style: normal;
