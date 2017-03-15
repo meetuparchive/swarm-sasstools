@@ -32,6 +32,7 @@
 ///
 /// @param {String} $base - base class
 /// @param {String} $modification - modification
+/// @param {Boolean} $generateAllSelector [false] - if set to `true`, an `atAll_base--modification` selector will be generated
 /// @content [Style rules to add to media queries]
 ///
 /// @example scss
@@ -42,17 +43,25 @@
 /// 	@include _bpModifier('border', 'none') {
 /// 		border-width: 0;
 /// 	}
-
-@mixin _bpModifier($base, $modification) {
-
+///
+/// 	// creates:
+/// 	// %atAll_border--none (not wrapped in media query), %atMedium_border--none, .atMedium_border--none,
+/// 	// %atLarge_border--none, .atLarge_border--none
+/// 	@include _bpModifier('border', 'none', true) {
+/// 		border-width: 0;
+/// 	}
+///
+@mixin _bpModifier($base, $modification, $generateAllSelector: false) {
+	@if $generateAllSelector {
+		.atAll_#{$base}--#{$modification} {
+			@content;
+		}
+	}
 	@each $breakpoint in (small, medium, large) {
-
 		@include atMediaUp($breakpoint) {
 			.at#{str-firstCharToUpper($breakpoint)}_#{$base}--#{$modification} {
 				@content;
 			}
 		}
-
 	}
-
 }
