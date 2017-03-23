@@ -14,7 +14,7 @@
 @import "display";
 @import "float";
 @import "flush";
-@import "js-conditional";
+@import "list";
 @import "row";
 @import "size";
 @import "spacing";
@@ -22,4 +22,5 @@
 @import "thumb";
 @import "visibility";
 @import "width";
-@import "media-conditional"; // Must come last; extends other modifiers
+@import "js-conditional"; // Conditional modifiers must come last in the cascade
+@import "media-conditional"; // Conditional modifiers must come last in the cascade
