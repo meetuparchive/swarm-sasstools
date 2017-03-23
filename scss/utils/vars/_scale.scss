@@ -89,15 +89,17 @@ $space-quarter   : $space/4;
 * set media sizes based on our modular scale:
 */
 /// @type Value(px)
-$media-xs : $space-2; // 24px
+$media-xs : $space;    // 16px
 /// @type Value(px)
-$media-s  : $space-3; // 36px
+$media-s : $space-2;   // 24px
 /// @type Value(px)
-$media-m  : $block;   // 48px
+$media-m  : $space-3;  // 36px
 /// @type Value(px)
-$media-l  : $block-2; // 72px
+$media-l  : $block;    // 48px
 /// @type Value(px)
-$media-xl : $block-4; // 160px
+$media-xl  : $block-2; // 72px
+/// @type Value(px)
+$media-xxl : $space-6; // 120px
 
 /// @prop {Value(px)} media-map.xs [$meida-xs]
 /// @prop {Value(px)} media-map.s [$meida-s]
@@ -109,5 +111,6 @@ $media-map: (
 	s: $media-s,
 	m: $media-m,
 	l: $media-l,
-	xl: $media-xl
+	xl: $media-xl,
+	xxl: $media-xxl
 );
