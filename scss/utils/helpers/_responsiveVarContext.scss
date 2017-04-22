@@ -80,34 +80,34 @@ $responsiveVarMap--base: (
 ///      }
 /// 	}
 
-/// responsive var map for `$base`
-/// configures value for `$base` at each breakpoint
+/// configures scale factor value for `$dynamicMedia-{sizeName}` at each breakpoint
 ///
-/// @prop {Value(px)} responsiveVarMap--base.small [16px]
-/// @prop {Value(px)} responsiveVarMap--base.medium [18px]
-/// @prop {Value(px)} responsiveVarMap--base.large [20px]
+/// @prop {Value(px)} responsiveScaleMap.small [1]
+/// @prop {Value(px)} responsiveScaleMap.medium [1.125]
+/// @prop {Value(px)} responsiveScaleMap.large [1.25]
 $responsiveScaleMap: (
 	small:	1,
 	medium:	1.125,
 	large:	1.25
 );
 
-/// Creates a Sass context in which the `$base` variable is rendered
-/// with different values for each `breakpoint` in `$responsiveVarMap--base`.
+/// Creates a Sass context in which the `$dynamicMedia-{sizeName}` variables
+/// are rendered with different values for each `breakpoint` in `$responsiveVarMap--media`.
 ///
 /// <div style="padding: 8px; background: rgba(255, 229, 51, 0.6); margin: 8px 0 16px 0;">
 /// To avoid generating large chunks of CSS multiple times, this mixin
 /// should only surround properties with responsive vars (see example below)
 /// </div>
 ///
-/// @see $responsiveVarMap--base
-/// @content [Renders CSS with media queries to set value of `$base` for given breakpoints in `$responsiveVarMap--base`]
+/// @see $responsiveVarMap--media
+/// @content [Renders CSS with media queries to set value of `$dynamicMedia-m` for given breakpoints in `$responsiveScaleMap`]
 ///
 /// @example scss - setting padding that scales at breakpoints
 /// 	.someCoolImage {
 /// 		background: pink;
-/// 		@include responsiveVarContext--base() {
-/// 			padding: $base; /* this property will be generated with a different value for each `base` breakpoint */
+/// 		height: auto;
+/// 		@include responsiveVarContext--media() {
+/// 			width: $dynamicMedia-m; /* this property will be generated with a different value for each breakpoint */
 ///      }
 /// 	}
 @mixin responsiveVarContext--media() {
@@ -154,17 +154,3 @@ $responsiveScaleMap: (
 	}
 
 }
-
-// @mixin responsiveVarContext--media($size) {
-
-// 	@each $breakpoint, $scaleVal in $responsiveScaleMap {
-// 		@debug $breakpoint;
-// 		@debug floor($size * $scaleVal);
-
-// 		@include _atMediaUpForVarContext($breakpoint) {
-// 			@content;
-// 		}
-
-// 	}
-
-// }
