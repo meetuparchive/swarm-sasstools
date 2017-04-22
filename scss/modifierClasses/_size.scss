@@ -14,13 +14,6 @@ Class          | Description
 `.media--l`    | Sets `width` to `$media-l` and height to `auto`
 `.media--xl`   | Sets `width` to `$media-xl` and height to `auto`
 `.media--xxl`  | Sets `width` to `$media-xxl` and height to `auto`
-
-```html_example
-<span class="media--xs">size: </span>
-<span class="media--s">size: </span>
-<span class="media--m">size: </span>
-<span class="media--l">size: </span>
-```
 */
 @each $sizeName, $size in $media-map {
 
