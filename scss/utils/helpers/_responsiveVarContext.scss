@@ -60,3 +60,111 @@ $responsiveVarMap--base: (
 		$base: $old !global;
 	}
 }
+
+/// Creates a Sass context in which the `$base` variable is rendered
+/// with different values for each `breakpoint` in `$responsiveVarMap--base`.
+///
+/// <div style="padding: 8px; background: rgba(255, 229, 51, 0.6); margin: 8px 0 16px 0;">
+/// To avoid generating large chunks of CSS multiple times, this mixin
+/// should only surround properties with responsive vars (see example below)
+/// </div>
+///
+/// @see $responsiveVarMap--base
+/// @content [Renders CSS with media queries to set value of `$base` for given breakpoints in `$responsiveVarMap--base`]
+///
+/// @example scss - setting padding that scales at breakpoints
+/// 	.someCoolImage {
+/// 		background: pink;
+/// 		@include responsiveVarContext--base() {
+/// 			padding: $base; /* this property will be generated with a different value for each `base` breakpoint */
+///      }
+/// 	}
+
+/// responsive var map for `$base`
+/// configures value for `$base` at each breakpoint
+///
+/// @prop {Value(px)} responsiveVarMap--base.small [16px]
+/// @prop {Value(px)} responsiveVarMap--base.medium [18px]
+/// @prop {Value(px)} responsiveVarMap--base.large [20px]
+$responsiveScaleMap: (
+	small:	1,
+	medium:	1.125,
+	large:	1.25
+);
+
+/// Creates a Sass context in which the `$base` variable is rendered
+/// with different values for each `breakpoint` in `$responsiveVarMap--base`.
+///
+/// <div style="padding: 8px; background: rgba(255, 229, 51, 0.6); margin: 8px 0 16px 0;">
+/// To avoid generating large chunks of CSS multiple times, this mixin
+/// should only surround properties with responsive vars (see example below)
+/// </div>
+///
+/// @see $responsiveVarMap--base
+/// @content [Renders CSS with media queries to set value of `$base` for given breakpoints in `$responsiveVarMap--base`]
+///
+/// @example scss - setting padding that scales at breakpoints
+/// 	.someCoolImage {
+/// 		background: pink;
+/// 		@include responsiveVarContext--base() {
+/// 			padding: $base; /* this property will be generated with a different value for each `base` breakpoint */
+///      }
+/// 	}
+@mixin responsiveVarContext--media() {
+
+	@each $breakpoint, $scaleVal in $responsiveScaleMap {
+		// until @content accepts arguments, we have to use a temporary global variable
+		// https://github.com/sass/sass/issues/871
+		// http://stackoverflow.com/questions/29596968/passing-arguments-from-a-mixin-to-a-content-block
+		$dynamicMedia-xs: null !default;
+		$oldDynamicMedia-xs: $dynamicMedia-xs;
+		$dynamicMedia-xs: floor(map-get($media-map, xs) * $scaleVal) !global;
+
+		$dynamicMedia-s: null !default;
+		$oldDynamicMedia-s: $dynamicMedia-s;
+		$dynamicMedia-s: floor(map-get($media-map, s) * $scaleVal) !global;
+
+		$dynamicMedia-m: null !default;
+		$oldDynamicMedia-m: $dynamicMedia-m;
+		$dynamicMedia-m: floor(map-get($media-map, m) * $scaleVal) !global;
+
+		$dynamicMedia-l: null !default;
+		$oldDynamicMedia-l: $dynamicMedia-l;
+		$dynamicMedia-l: floor(map-get($media-map, l) * $scaleVal) !global;
+
+		$dynamicMedia-xl: null !default;
+		$oldDynamicMedia-xl: $dynamicMedia-xl;
+		$dynamicMedia-xl: floor(map-get($media-map, xl) * $scaleVal) !global;
+
+		$dynamicMedia-xxl: null !default;
+		$oldDynamicMedia-xxl: $dynamicMedia-xxl;
+		$dynamicMedia-xxl: floor(map-get($media-map, xxl) * $scaleVal) !global;
+
+		@include _atMediaUpForVarContext($breakpoint) {
+			@content
+		}
+
+		$dynamicMedia-xs: $oldDynamicMedia-xs !global;
+		$dynamicMedia-s: $oldDynamicMedia-s !global;
+		$dynamicMedia-m: $oldDynamicMedia-m !global;
+		$dynamicMedia-l: $oldDynamicMedia-l !global;
+		$dynamicMedia-xl: $oldDynamicMedia-xl !global;
+		$dynamicMedia-xxl: $oldDynamicMedia-xxl !global;
+
+	}
+
+}
+
+// @mixin responsiveVarContext--media($size) {
+
+// 	@each $breakpoint, $scaleVal in $responsiveScaleMap {
+// 		@debug $breakpoint;
+// 		@debug floor($size * $scaleVal);
+
+// 		@include _atMediaUpForVarContext($breakpoint) {
+// 			@content;
+// 		}
+
+// 	}
+
+// }
