@@ -11,15 +11,15 @@ one of our specified media sizes.
 
 Class                         | Description
 ----------------------------- | --------------------------------
-`.matchMediaSize-height--xs`  | sets height to $media-xs
-`.matchMediaSize-height--s`   | sets height to $media-s
-`.matchMediaSize-height--m`   | sets height to $media-m
-`.matchMediaSize-height--l`   | sets height to $media-l
+`.matchMediaSize--height--xs`  | sets height to $media-xs
+`.matchMediaSize--height--s`   | sets height to $media-s
+`.matchMediaSize--height--m`   | sets height to $media-m
+`.matchMediaSize--height--l`   | sets height to $media-l
 */
 
 @each $sizeName, $size in $media-map {
 
-	@include _modifier('matchMediaSize-height', $sizeName) {
+	@include _modifier('matchMediaSize--height', $sizeName) {
 
 		@include responsiveVarContext--media() {
 
