@@ -34,6 +34,16 @@ Class                    | Description
 `.valign--middle`        | vertically centers element to middle
 `.valign--top`           | vertically centers element to top
 
+## Aligning Children
+The following classes adjust the alignment of child elements
+using flexbox.
+**The selected element will be set to `display: flex` in a `column` direction.**
+
+Class                      | Description
+-------------------------- | --------------------------------
+`.valignChildren--bottom`  | vertically centers children to the bottom of the parent element
+`.valignChildren--center`  | vertically centers children within the parent element
+
 */
 $_verticalAlign-to-selfAlign: (
 	baseline: baseline,
@@ -53,5 +63,13 @@ $_verticalAlign-to-selfAlign: (
 	@include _modifier(valign, $valignment) {
 		@include align-self( map-get($_verticalAlign-to-selfAlign, $valignment) );
 		vertical-align: $valignment !important;
+	}
+}
+
+@each $childAlignment in (bottom, center) {
+	@include _modifier(valignChildren, $childAlignment) {
+		@include display(Flex);
+		@include flex-direction(column);
+		@include justify-content(center);
 	}
 }
