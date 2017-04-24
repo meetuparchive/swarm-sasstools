@@ -6,7 +6,7 @@ category: Modifier Classes
 ---
 
 ## Match media height
-The following classes change the `height` of an element to match
+The following classes increasing the `height` of an element to match
 one of our specified media sizes.
 
 Class                         | Description
@@ -24,19 +24,19 @@ Class                         | Description
 		@include responsiveVarContext--media() {
 
 			@if ($sizeName == xs) {
-				height: $dynamicMedia-xs;
+				min-height: $dynamicMedia-xs;
 			}
 
 			@if ($sizeName == s) {
-				height: $dynamicMedia-s;
+				min-height: $dynamicMedia-s;
 			}
 
 			@if ($sizeName == m) {
-				height: $dynamicMedia-m;
+				min-height: $dynamicMedia-m;
 			}
 
 			@if ($sizeName == l) {
-				height: $dynamicMedia-l;
+				min-height: $dynamicMedia-l;
 			}
 
 		}
