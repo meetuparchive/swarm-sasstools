@@ -1,0 +1,46 @@
+/*doc
+---
+title: Match media size
+name: matchMediaSize
+category: Modifier Classes
+---
+
+## Match media height
+The following classes increasing the `height` of an element to match
+one of our specified media sizes.
+
+Class                         | Description
+----------------------------- | --------------------------------
+`.matchMediaSize--height--xs`  | sets height to $media-xs
+`.matchMediaSize--height--s`   | sets height to $media-s
+`.matchMediaSize--height--m`   | sets height to $media-m
+`.matchMediaSize--height--l`   | sets height to $media-l
+*/
+
+@each $sizeName, $size in $media-map {
+
+	@include _modifier('matchMediaSize--height', $sizeName) {
+
+		@include responsiveVarContext--media() {
+
+			@if ($sizeName == xs) {
+				min-height: $dynamicMedia-xs;
+			}
+
+			@if ($sizeName == s) {
+				min-height: $dynamicMedia-s;
+			}
+
+			@if ($sizeName == m) {
+				min-height: $dynamicMedia-m;
+			}
+
+			@if ($sizeName == l) {
+				min-height: $dynamicMedia-l;
+			}
+
+		}
+
+	}
+
+}
