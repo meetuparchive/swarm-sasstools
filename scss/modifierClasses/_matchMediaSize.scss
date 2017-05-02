@@ -21,22 +21,22 @@ Class                         | Description
 
 	@include _modifier('matchMediaSize--height', $sizeName) {
 
-		@include responsiveVarContext--media() {
+		@include responsiveVarContext--scalingMedia() {
 
 			@if ($sizeName == xs) {
-				min-height: $dynamicMedia-xs;
+				min-height: $scalingMedia-xs;
 			}
 
 			@if ($sizeName == s) {
-				min-height: $dynamicMedia-s;
+				min-height: $scalingMedia-s;
 			}
 
 			@if ($sizeName == m) {
-				min-height: $dynamicMedia-m;
+				min-height: $scalingMedia-m;
 			}
 
 			@if ($sizeName == l) {
-				min-height: $dynamicMedia-l;
+				min-height: $scalingMedia-l;
 			}
 
 		}

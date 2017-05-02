@@ -20,30 +20,30 @@ Class          | Description
 	@include _modifier('media', $sizeName) {
 		height: auto;
 
-		@include responsiveVarContext--media() {
+		@include responsiveVarContext--scalingMedia() {
 
 			@if ($sizeName == xs) {
-				width: $dynamicMedia-xs;
+				width: $scalingMedia-xs;
 			}
 
 			@if ($sizeName == s) {
-				width: $dynamicMedia-s;
+				width: $scalingMedia-s;
 			}
 
 			@if ($sizeName == m) {
-				width: $dynamicMedia-m;
+				width: $scalingMedia-m;
 			}
 
 			@if ($sizeName == l) {
-				width: $dynamicMedia-l;
+				width: $scalingMedia-l;
 			}
 
 			@if ($sizeName == xl) {
-				width: $dynamicMedia-xl;
+				width: $scalingMedia-xl;
 			}
 
 			@if ($sizeName == xxl) {
-				width: $dynamicMedia-xxl;
+				width: $scalingMedia-xxl;
 			}
 
 		}
