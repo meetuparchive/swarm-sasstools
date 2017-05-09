@@ -15,12 +15,14 @@
 	height: auto;
 	margin: 0;
 	padding: 0;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
 
 	&::-webkit-inner-spin-button,
 	&::-webkit-outer-spin-button {
 		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
 		margin: 0;
 	}
 }
