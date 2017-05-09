@@ -240,3 +240,63 @@ Error text is set explicitly with `text--error`.
 		border-color: $C_attention !important;
 	}
 }
+
+/*doc
+---
+title: Field reset
+name: fieldReset
+category: Forms
+---
+Reset default form styles with `.field--reset`.
+
+```html_example
+<div class="chunk">
+	<input class="field--reset" type="text" value="Reset text field" />
+</div>
+<div class="chunk">
+	<input class="field--reset" type="number" value="42" />
+</div>
+```
+*/
+input.field--reset,
+input.field--reset:hover,
+input.field--reset:focus,
+input.field--reset:active {
+	@include resetFieldStyles;
+}
+
+/*doc
+---
+title: Faux Input
+name: fauxInput
+category: Forms
+---
+Faux inputs visually mimic actual input elements.
+
+```html_example
+<div class="chunk">
+	<div class="fauxInput">I'm a faux input</div>
+</div>
+```
+*/
+.fauxInput {
+	// default form styling
+	background-color: $C_lightGray;
+	border-radius: $defaultRadius;
+	border: 1px solid $C_border;
+	box-shadow: none;
+	box-sizing: border-box;
+	margin: 0 0 $space-quarter 0;
+	max-width: 100%;
+	padding: $space-half;
+	width: 100%;
+
+	// manually changing height to match other inputs
+	height: ($font-size * $line-height) + $space;
+	&.focused {
+		background-color: $C_contentBG;
+		border-color: $C_lightPurple;
+		box-shadow: none;
+		outline: none;
+	}
+}
