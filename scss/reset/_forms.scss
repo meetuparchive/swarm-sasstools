@@ -58,6 +58,10 @@ see <a class="link" style="text-decoration: underline;" href="https://github.com
 		</select>
 	</div>
 </div>
+
+<div class="chunk">
+	<button>Hello, I am button</button>
+</div>
 ```
 
 */
@@ -96,6 +100,12 @@ textarea {
 	font-family: inherit;
 	font-size: 100%;
 	line-height: $line-height;
+}
+
+button {
+	background: transparent;
+	border-width: 0;
+	padding: 0;
 }
 
 %_formTextField,
