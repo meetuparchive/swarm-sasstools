@@ -15,3 +15,8 @@ Command              | Result
 `ghpages`            | __Caution__: automatically commits compiled docs in `docs/build/` to the `gh-pages` branch
 
 &#9733; in the event browsersync throws a permissions error, `chown` `node_modules/`
+
+### Deprecated as of 5/11/2017:
+* `.display--text2`, `.display--text2`
+* `%display--text3`, `.display--text3`
+* `.text--heavy`, `%text--heavy`

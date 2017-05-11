@@ -2,51 +2,45 @@
 /// @group Typography
 ////
 
-
-//
-// PRIVATE
-// standard breakpoint for
-// text style changes
-//
-@mixin _textBp() {
-	@include atMediaUp(medium) {
-		@content
-	}
-}
-
+%text--pageTitle,
+%text--sectionTitle,
+%text--big,
 %text--display1,
 %text--display2,
 %text--display3 {
 	@include color-all($C_textPrimary);
 	font-weight: $W_bold;
-	letter-spacing: -0.02em;
+	line-height: $line-height-largeText;
 
 	.inverted & {
 		@include color-all($C_textPrimaryInverted);
-		font-weight: $W_medium;
 	}
+}
+
+/// Page title text placeholder
+%text--pageTitle {
+	font-size: $font-size-title;
+}
+
+/// Section title text placeholder
+%text--sectionTitle {
+	font-size: $font-size-big2;
+	line-height: $line-height;
 }
 
 /// Top level display text placeholder
 %text--display1 {
-	font-size: $font-size-display2;
-	line-height: $line-height-largeText;
-
-	@include _textBp() {
-		font-size: $font-size-display1;
-	}
+	font-size: $font-size-display1;
 }
 
 /// Secondary level display text placeholder
 %text--display2 {
 	font-size: $font-size-display2;
-	line-height: $line-height-largeText;
 }
 
 /// Tertiary level display text placeholder
 %text--display3 {
 	font-size: $font-size-display3;
-	line-height: $line-height-largeText;
 }
 
 // Primary label text
@@ -87,7 +81,7 @@
 	}
 }
 
-// Heavy text (heaviest weight)
+// Heavy text (semibold weight)
 %text--heavy {
 	font-weight: $W_bold !important;
 }
@@ -113,9 +107,6 @@
 /// Big text
 %text--big {
 	font-size: $font-size-big;
-	line-height: $line-height-largeText;
-	font-weight: $W_medium;
-	letter-spacing: -0.02em;
 }
 
 /// Small text
