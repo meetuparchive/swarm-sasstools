@@ -13,9 +13,12 @@ category: Text Styles
 body {
 	color: $C_textPrimary;
 	font-family: $font;
-	font-size: $font-size;
 	font-weight: $W_normal;
 	line-height: $line-height;
+
+	@include responsiveVarContext--scalingType() {
+		font-size: $scalingType-body;
+	}
 }
 
 /*doc

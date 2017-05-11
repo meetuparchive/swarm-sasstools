@@ -1,3 +1,4 @@
+@import "../utils/helpers/responsiveVarContext";
 /*doc
 ---
 title: Basic Inputs
@@ -63,7 +64,9 @@ see <a class="link" style="text-decoration: underline;" href="https://github.com
 */
 %label,
 label {
-	font-size: $font-size-small;
+	@include responsiveVarContext--scalingType() {
+		font-size: $scalingType-small;
+	}
 	font-weight: $W_bold;
 
 	&.required:after {
@@ -121,7 +124,9 @@ select {
 
 input,
 select {
-	height: ($font-size * $line-height) + $space;
+	@include responsiveVarContext--scalingType() {
+		height: ($scalingType-body * $line-height) + $space;
+	}
 }
 
 input::-webkit-input-placeholder,
@@ -292,7 +297,9 @@ Faux inputs visually mimic actual input elements.
 	width: 100%;
 
 	// manually changing height to match other inputs
-	height: ($font-size * $line-height) + $space;
+	@include responsiveVarContext--scalingType() {
+		height: ($scalingType-body * $line-height) + $space;
+	}
 	&.focused {
 		background-color: $C_contentBG;
 		border-color: $C_lightPurple;

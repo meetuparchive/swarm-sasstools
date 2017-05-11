@@ -1,6 +1,7 @@
 ////
 /// @group Typography
 ////
+@import "responsiveVarContext";
 
 %text--pageTitle,
 %text--sectionTitle,
@@ -19,18 +20,24 @@
 
 /// Page title text placeholder
 %text--pageTitle {
-	font-size: $font-size-title;
+	@include responsiveVarContext--scalingType() {
+		font-size: $scalingType-title;
+	}
 }
 
 /// Section title text placeholder
 %text--sectionTitle {
-	font-size: $font-size-big2;
+	@include responsiveVarContext--scalingType() {
+		font-size: $scalingType-big2;
+	}
 	line-height: $line-height;
 }
 
 /// Top level display text placeholder
 %text--display1 {
-	font-size: $font-size-display1;
+	@include responsiveVarContext--scalingType() {
+		font-size: $scalingType-display1;
+	}
 }
 
 /// Secondary level display text placeholder
@@ -46,7 +53,9 @@
 // Primary label text
 %text--label {
 	@include color-all($C_textPrimary);
-	font-size: $font-size-small;
+	@include responsiveVarContext--scalingType() {
+		font-size: $scalingType-small;
+	}
 	font-weight: $W_bold;
 	line-height: $line-height-smallText;
 	letter-spacing: -0.02em;
@@ -106,12 +115,17 @@
 
 /// Big text
 %text--big {
-	font-size: $font-size-big;
+	@include responsiveVarContext--scalingType() {
+		font-size: $scalingType-big;
+	}
+	line-height: $line-height-largeText;
 }
 
 /// Small text
 %text--small {
-	font-size: $font-size-small;
+	@include responsiveVarContext--scalingType() {
+		font-size: $scalingType-small;
+	}
 	line-height: $line-height-smallText;
 }
 
