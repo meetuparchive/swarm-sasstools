@@ -10,15 +10,18 @@ category: Text Styles
 ```
 
 */
+html {
+	@include responsiveVarContext--scalingType() {
+		font-size: $scalingType-body;
+	}
+}
+
 body {
 	color: $C_textPrimary;
 	font-family: $font;
 	font-weight: $W_normal;
 	line-height: $line-height;
-
-	@include responsiveVarContext--scalingType() {
-		font-size: $scalingType-body;
-	}
+	font-size: rem($font-size);
 }
 
 /*doc

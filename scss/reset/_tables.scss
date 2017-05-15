@@ -182,9 +182,7 @@ category: Tables
 	td,
 	th {
 		padding: 0;
-		@include responsiveVarContext--scalingType() {
-			font-size: $scalingType-body;
-		}
+		font-size: rem($font-size);
 		font-weight: normal;
 		border-width: 0;
 		vertical-align: top;

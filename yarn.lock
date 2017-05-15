@@ -2657,9 +2657,9 @@ media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
 
-meetup-swatches@3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/meetup-swatches/-/meetup-swatches-3.1.1.tgz#71d150983deab5f353c77367c6935e126614919e"
+meetup-swatches@3.1.4:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/meetup-swatches/-/meetup-swatches-3.1.4.tgz#20bd45347adfe6595b9a164940cb5572df49905b"
 
 memoize-decorator@^1.0.2:
   version "1.0.2"
@@ -3862,6 +3862,10 @@ sass-loader@6.0.1:
     loader-utils "^0.2.15"
     lodash.tail "^4.1.1"
     pify "^2.3.0"
+
+sass-rem@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/sass-rem/-/sass-rem-1.2.4.tgz#59194e82a58c6d62e551a774f9bf4367ae6b2370"
 
 sassdoc-extras@^2.4.0:
   version "2.4.1"

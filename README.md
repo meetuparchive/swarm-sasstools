@@ -16,7 +16,7 @@ Command              | Result
 
 &#9733; in the event browsersync throws a permissions error, `chown` `node_modules/`
 
-### Deprecated as of 5/11/2017:
+### Deprecated as of v1.5.14:
 * `.display--text2`, `.display--text2`
 * `%display--text3`, `.display--text3`
 * `.text--heavy`, `%text--heavy`
