@@ -180,6 +180,11 @@ input elements.
 	}
 }
 
+// Safari height fix
+input[type=checkbox] {
+	height: auto;
+}
+
 
 /*doc
 ---
