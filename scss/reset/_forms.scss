@@ -98,6 +98,12 @@ textarea {
 	line-height: $line-height;
 }
 
+button {
+	background: transparent;
+	border-width: 0;
+	padding: 0;
+}
+
 %_formTextField,
 #{$all-text-inputs},
 textarea,
