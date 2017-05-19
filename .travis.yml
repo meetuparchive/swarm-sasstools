@@ -14,10 +14,10 @@ branches:
 env:
   global:
     - CI_BUILD_NUMBER=$TRAVIS_BUILD_NUMBER
-#    - secure: "UdU7dYh5Jef1yVYORQgpvRd3oVGi9UzPkoanUsAPF6Xmp/hpYN9bAG0nTnEE3OSFK4WehE2VdEQDtgvB/lgH6xgAmUcXv1ewNIZxRUvNQz7urYu6O+plbXlM+IUdDjOxGvj8P+ooWAiYuDYrChnfGOwcWydp1zOQc5RLmUSL9gi7E0hG119fCMPP+qJwaoDRpVQ2HdBQWLMCkcFqrRjYYEjf4ZYNhkNlL1jOx4+mgzbrezGL0jErnd9eX3ODt/NLH3NpX2XXt0WEYz9Q41HyMlV7eyUq/RHJRXWaksZYkEWHSitIJsjSOONFkBmEsLPD8VPS2fVYKfV1lXVoEVbERyy8HbbGDEbdm06DafOe3dB3+KSidSb95SyL8eUpdRetbySYyDSWsR4u8EF4Tr/SHUTl9ctOh6f0REvJzXjPRMM/uG+Pq5Fr+vGyA8YQj7n2LSvaw5zO2I07Nlf4MCFGY+CS0IE22AthnEptBKXbjFTFpLyTorkP5j8Tuvhru9BHZ3odJSOT2jFiZ5kxArbn5W+pg6Qiidm+JFmXZbtEVSsiS3HSJWXBxVJpBhWjMRpimKqdUMc272jyQ8KdEdpEVC0kEZtpE3Ul0ahdcIj492wnvhziGYHBR6s87fD4m9oPQ9r70iYQ3NcKbIo36uN7+Zd2w+C/jZr8XDIisg9NtI8="
+    - secure: "H2Q5XKPqEn75NkSzCyCofzuWfkvAIeOcV1k5OoHy15ehSIu9K8w+K6ELtXNnsBULn53aF4uaey9/N6P8uyXlM5QkFplacbbEsPApH0LCvMAivXrTG7td7OpNo3R2hNSk2r8i2VqzSlOZGKP/HwS5xLiCALlVACxyE5GDvOcOlRYZhYjfk2Hfz6zqwGbb9thcbVrrHPgC+z9LuEK3mDB3fbnb7I5ZwEBLRQ6MIBTk4g323aKnvfHDT8csPrI0Cljf0PaUTMS7kIgTSP5g1SVWs7V4/hPAZfvALTFhdABrBod0NgqbRH2S6k9GlPEAv8b72EouSTS7S8KDUyz3zZ23lmNxX84w/y8RslIpBjvIE0D9mV0XUwUJmZFGVVv41DW9K0w1ayY1rJtdADm8sXudcieXS/qwjbU99xmVhNl6ZFGwOOwBvZKmLn8AC0LAc4DYTc+f/MpWoV/A1TG5uOI3PWwtMrmzyReFWC91CE3RM2I5rn2fW7SAKsSJdusYHzq47YWRl9Dez52eKzfgW8cFMM5QPO6QzTVnR8D3wHLStie5kJ9HE0ml8m//zNbDotAPNTm9sC7p8WGWlh0E6tdOdXnXvg15J9czJvHulaww9MWJ/rK39fObvuhjGncjGjlLEcCn71gNQ1H0Gg8XKdoXk1Iu9dCOEVmIDq1APRRysfI="
 
 before_install:
-#  - openssl aes-256-cbc -K $encrypted_ee3d73113e03_key -iv $encrypted_ee3d73113e03_iv -in '.travis/github_deploy_key.enc' -out github_deploy_key -d
+  - openssl aes-256-cbc -K $encrypted_85d19214c727_key -iv $encrypted_85d19214c727_iv -in '.travis/github_deploy_key.enc' -out github_deploy_key -d
   - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
 
 before_script:
@@ -26,7 +26,7 @@ before_script:
 after_script:
   - git config --global user.email "builds@travis-ci.com"
   - git config --global user.name "Travis CI"
-  # - $(npm bin)/set-up-ssh --key "$encrypted_ee3d73113e03_key" --iv "$encrypted_ee3d73113e03_iv" --path-encrypted-key ".travis/github_deploy_key.enc"
+  - $(npm bin)/set-up-ssh --key "$encrypted_85d19214c727_key" --iv "$encrypted_85d19214c727_iv" --path-encrypted-key ".travis/github_deploy_key.enc"
   - >
     [ "${TRAVIS_BRANCH}" = "master" ] && [ "${TRAVIS_PULL_REQUEST}" = "false" ] &&
     export GIT_TAG=$(make version) ||
