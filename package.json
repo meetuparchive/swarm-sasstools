@@ -15,6 +15,9 @@
 		"type": "MIT",
 		"url": "https://github.com/meetup/swarm-sasstools/blob/master/LICENSE"
 	},
+	"scripts": {
+		"build": "grunt"
+	},
 	"dependencies": {
 		"@alrra/travis-scripts": "^3.0.1",
 		"bourbon": "4.2.3",
