@@ -75,7 +75,17 @@ label {
 		position: relative;
 		top: 3px;
 	}
+
+	&.disabled {
+		color: $C_textSecondary;
+	}
 }
+
+.label--field {
+	padding-bottom: $space-half;
+	display: inline-block;
+}
+
 .label--minor {
 	font-weight: normal;
 }
@@ -102,21 +112,35 @@ textarea {
 #{$all-text-inputs},
 textarea,
 select {
-	background-color: $C_lightGray;
+	background-color: $C_fieldBG;
 	border-radius: $defaultRadius;
-	border: 1px solid $C_border;
+	border: 1px solid transparent;
 	box-shadow: none;
 	box-sizing: border-box;
 	margin: 0 0 $space-quarter 0;
 	max-width: 100%;
 	padding: $space-half;
 	width: 100%;
+
+	&[disabled] {
+		background-color: $C_fieldBG--disabled;
+		color: $C_textSecondary;
+		&:hover {
+			background-color: $C_fieldBG--disabled;
+			border: 1px solid transparent;
+		}
+	}
+
+	&:hover {
+		border-color: $C_textHint;
+	}
+
 	&:focus {
-		background-color: $C_contentBG;
 		border-color: $C_lightPurple;
 		box-shadow: none;
 		outline: none;
 	}
+
 }
 
 input,
@@ -281,9 +305,9 @@ Faux inputs visually mimic actual input elements.
 */
 .fauxInput {
 	// default form styling
-	background-color: $C_lightGray;
+	background-color: $C_fieldBG;
 	border-radius: $defaultRadius;
-	border: 1px solid $C_border;
+	border: 1px solid transparent;
 	box-shadow: none;
 	box-sizing: border-box;
 	margin: 0 0 $space-quarter 0;
@@ -293,10 +317,30 @@ Faux inputs visually mimic actual input elements.
 
 	// manually changing height to match other inputs
 	height: ($font-size * $line-height) + $space;
+
+	&:hover {
+		border-color: $C_textHint;
+	}
+
 	&.focused {
-		background-color: $C_contentBG;
 		border-color: $C_lightPurple;
 		box-shadow: none;
 		outline: none;
+	}
+
+	&.error {
+		border-color: $C_attention !important;
+		// &.focused {
+		// 	border-color: $C_attention !important;
+		// }
+	}
+
+	&.disabled {
+		background-color: $C_fieldBG--disabled;
+		color: $C_textSecondary;
+		&:hover {
+			background-color: $C_fieldBG--disabled;
+			border: 1px solid transparent;
+		}
 	}
 }
