@@ -63,7 +63,7 @@ see <a class="link" style="text-decoration: underline;" href="https://github.com
 */
 %label,
 label {
-	font-size: $font-size-small;
+	font-size: rem($font-size-small);
 	font-weight: $W_bold;
 
 	&.required:after {
@@ -151,7 +151,7 @@ select {
 
 input,
 select {
-	height: ($font-size * $line-height) + $space;
+	height: rem(($font-size * $line-height) + $space);
 }
 
 input::-webkit-input-placeholder,
@@ -327,13 +327,13 @@ Faux inputs visually mimic actual input elements.
 	width: 100%;
 
 	// manually changing height to match other inputs
-	height: ($font-size * $line-height) + $space;
+	height: rem(($font-size * $line-height) + $space);
 
 	&:hover {
 		border-color: $C_textHint;
 	}
 
-	&.focused {
+  &.focused {
 		border-color: $C_lightPurple;
 		box-shadow: none;
 		outline: none;
