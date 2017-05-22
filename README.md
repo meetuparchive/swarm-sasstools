@@ -1,5 +1,7 @@
 swarm-sasstools
 ===============
+[![npm version](https://badge.fury.io/js/swarm-sasstools.svg)](https://badge.fury.io/js/swarm-sasstools)
+[![Build Status](https://travis-ci.org/meetup/swarm-sasstools.svg?branch=master)](https://travis-ci.org/meetup/swarm-sasstools)
 
 ### Documentation
 [https://meetup.github.io/swarm-sasstools/](https://meetup.github.io/swarm-sasstools/)
@@ -20,3 +22,13 @@ Command              | Result
 * `.display--text2`, `.display--text2`
 * `%display--text3`, `.display--text3`
 * `.text--heavy`, `%text--heavy`
+
+### Releases
+This package uses semver versioning to tag releases, although the patch version
+is determined exclusively by the Travis build number for pushes to `master`.
+Major and minor versions are hard-coded into the [Makefile](Makefile#L2).
+
+Manual pushes to `master` and PR merges to master will be built by Travis, and
+will kick off the yarn publish routine. The currently-published version of the
+package is shown on the repo homepage on GitHub in a badge at the top of the
+README.
