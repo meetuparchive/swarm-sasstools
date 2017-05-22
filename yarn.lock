@@ -3867,6 +3867,10 @@ sass-loader@6.0.1:
     lodash.tail "^4.1.1"
     pify "^2.3.0"
 
+sass-rem@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/sass-rem/-/sass-rem-1.2.4.tgz#59194e82a58c6d62e551a774f9bf4367ae6b2370"
+
 sassdoc-extras@^2.4.0:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/sassdoc-extras/-/sassdoc-extras-2.4.1.tgz#d69c783142a8fe427c72bb32fcd652f1da03f80a"
