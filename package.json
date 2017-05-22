@@ -1,6 +1,6 @@
 {
 	"name": "swarm-sasstools",
-	"version": "1.4.15",
+	"version": "0.0.0",
 	"description": "Sass tools module of the Swarm Design System",
 	"directories": {
 		"doc": "sassdoc/",
@@ -15,12 +15,19 @@
 		"type": "MIT",
 		"url": "https://github.com/meetup/swarm-sasstools/blob/master/LICENSE"
 	},
+	"scripts": {
+		"build": "grunt"
+	},
 	"dependencies": {
 		"bourbon": "4.2.3",
 		"meetup-swatches": "3.1.4",
 		"sass-rem": "^1.2.4"
 	},
 	"devDependencies": {
+<<<<<<< HEAD
+=======
+		"@alrra/travis-scripts": "^3.0.1",
+>>>>>>> dde27f6f07cffc64238d39791b85ae3cfc25aee5
 		"css-loader": "0.26.1",
 		"extract-text-webpack-plugin": "2.1.0",
 		"grunt": "~0.4.5",

@@ -42,7 +42,8 @@ elements to inveted colors.
 ```
 */
 %inverted,
-.inverted {
+.inverted,
+.inverted button {
 	@include color-all($C_textPrimaryInverted);
 }
 
