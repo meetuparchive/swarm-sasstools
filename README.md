@@ -18,8 +18,12 @@ Command              | Result
 
 &#9733; in the event browsersync throws a permissions error, `chown` `node_modules/`
 
-### Releases
+### Deprecated as of v1.5.14:
+* `.display--text2`, `.display--text2`
+* `%display--text3`, `.display--text3`
+* `.text--heavy`, `%text--heavy`
 
+### Releases
 This package uses semver versioning to tag releases, although the patch version
 is determined exclusively by the Travis build number for pushes to `master`.
 Major and minor versions are hard-coded into the [Makefile](Makefile#L2).

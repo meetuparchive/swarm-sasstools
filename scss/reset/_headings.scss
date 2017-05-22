@@ -54,9 +54,7 @@ then apply a display text class to visually style
 the tag as a heading.
 
 ```html_example
-<h2 class="text--display1">Display text is for headings</h2>
-<h2 class="text--display2">Display text is for headings</h2>
-<h2 class="text--display3">Display text is for headings</h2>
+	<h2 class="text--display1">Display text is for headings</h2>
 ```
 */
 .text--display, // map legacy class to display1
@@ -66,13 +64,29 @@ the tag as a heading.
 .text--display2 {
 	@extend %text--display2;
 }
-.text--display2 {
-	@extend %text--display2;
-}
 .text--display3 {
 	@extend %text--display3;
 }
 
+/*doc
+---
+title: Title text
+name: displayText
+category: Headings
+---
+Title text is used to title entire views or for
+labeling sections of a view.
+```html_example
+	<h2 class="text--pageTitle">Page title is for labeling views</h2>
+	<h2 class="text--sectionTitle">Section title is for labeling sections of views</h2>
+```
+*/
+.text--pageTitle {
+	@extend %text--pageTitle;
+}
+.text--sectionTitle {
+	@extend %text--sectionTitle;
+}
 
 /*doc
 ---
