@@ -10,12 +10,18 @@ category: Text Styles
 ```
 
 */
+html {
+	@include responsiveVarContext--scalingType() {
+		font-size: $scalingType-body;
+	}
+}
+
 body {
 	color: $C_textPrimary;
 	font-family: $font;
-	font-size: $font-size;
 	font-weight: $W_normal;
 	line-height: $line-height;
+	font-size: rem($font-size);
 }
 
 /*doc
@@ -89,21 +95,6 @@ category: Text Styles
 
 /*doc
 ---
-title: Heavy
-name: heavyText
-category: Text Styles
----
-```html_example
-<p class="text--heavy">Heavy text is heavy</p>
-```
-*/
-.text--heavy {
-	@extend %text--heavy;
-}
-
-
-/*doc
----
 title: Bold
 name: boldText
 category: Text Styles
@@ -114,6 +105,10 @@ category: Text Styles
 */
 .text--bold {
 	@extend %text--bold;
+}
+
+.text--heavy { // DEPRECATED
+	@extend %text--heavy;
 }
 
 
