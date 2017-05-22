@@ -14,18 +14,22 @@ $font : "Graphik Meetup", helvetica, arial, sans-serif;
 $font--mono : Monaco, "Andale Mono", "Courier New", monospace;
 
 /// @type Value(px)
-$font-size-small     : 13px;
-/// @type Value(px)
-$font-size-big       : 20px;
+$font-size-small     : 14px;
 /// @type Value(px)
 $font-size           : 16px;
 /// @type Value(px)
-$font-size-tearsheet : 24px;
+$font-size-tearsheet : 24px; // DEPRECATED
 
 /// @type Value(px)
-$font-size-display3  : 28px;
+$font-size-big2      : 18px;
 /// @type Value(px)
-$font-size-display2  : 34px;
+$font-size-big       : 22px;
+/// @type Value(px)
+$font-size-title     : 32px;
+/// @type Value(px)
+$font-size-display3  : 28px; // DEPRECATED
+/// @type Value(px)
+$font-size-display2  : 34px; // DEPRECATED
 /// @type Value(px)
 $font-size-display1  : 42px;
 
