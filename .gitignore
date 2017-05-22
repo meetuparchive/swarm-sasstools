@@ -13,3 +13,5 @@ node_modules/
 .grunt/
 sassdoc/
 !README*
+
+github_deploy_key

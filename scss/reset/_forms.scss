@@ -108,6 +108,12 @@ textarea {
 	line-height: $line-height;
 }
 
+button {
+	background: transparent;
+	border-width: 0;
+	padding: 0;
+}
+
 %_formTextField,
 #{$all-text-inputs},
 textarea,
@@ -196,6 +202,11 @@ input elements.
 	@include browser-lessThanIE(10) {
 		top: $space/2;
 	}
+}
+
+// Safari height fix
+input[type=checkbox] {
+	height: auto;
 }
 
 
