@@ -33,7 +33,7 @@ README.
 
 ### Release notes
 
-#### v1.2.0
+#### v1.7.X
 Introduced big visual changes to type and scaling, but no breaking changes.
 - deprecated `%display--text2`, `.display--text2`
 - deprecated `%display--text3`, `.display--text3`
