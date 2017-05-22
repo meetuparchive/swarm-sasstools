@@ -1,58 +1,53 @@
 ////
 /// @group Typography
 ////
+@import "responsiveVarContext";
 
-
-//
-// PRIVATE
-// standard breakpoint for
-// text style changes
-//
-@mixin _textBp() {
-	@include atMediaUp(medium) {
-		@content
-	}
-}
-
+%text--pageTitle,
+%text--sectionTitle,
+%text--big,
 %text--display1,
 %text--display2,
 %text--display3 {
 	@include color-all($C_textPrimary);
 	font-weight: $W_bold;
-	letter-spacing: -0.02em;
+	line-height: $line-height-largeText;
 
 	.inverted & {
 		@include color-all($C_textPrimaryInverted);
-		font-weight: $W_medium;
 	}
+}
+
+/// Page title text placeholder
+%text--pageTitle {
+	font-size: rem($font-size-title);
+}
+
+/// Section title text placeholder
+%text--sectionTitle {
+	font-size: rem($font-size-big2);
+	line-height: $line-height;
 }
 
 /// Top level display text placeholder
 %text--display1 {
-	font-size: $font-size-display2;
-	line-height: $line-height-largeText;
-
-	@include _textBp() {
-		font-size: $font-size-display1;
-	}
+	font-size: rem($font-size-display1);
 }
 
 /// Secondary level display text placeholder
 %text--display2 {
-	font-size: $font-size-display2;
-	line-height: $line-height-largeText;
+	font-size: rem($font-size-display2);
 }
 
 /// Tertiary level display text placeholder
 %text--display3 {
-	font-size: $font-size-display3;
-	line-height: $line-height-largeText;
+	font-size: rem($font-size-display3);
 }
 
 // Primary label text
 %text--label {
 	@include color-all($C_textPrimary);
-	font-size: $font-size-small;
+	font-size: rem($font-size-small);
 	font-weight: $W_bold;
 	line-height: $line-height-smallText;
 	letter-spacing: -0.02em;
@@ -87,7 +82,7 @@
 	}
 }
 
-// Heavy text (heaviest weight)
+// Heavy text (semibold weight)
 %text--heavy {
 	font-weight: $W_bold !important;
 }
@@ -112,15 +107,13 @@
 
 /// Big text
 %text--big {
-	font-size: $font-size-big;
+	font-size: rem($font-size-big);
 	line-height: $line-height-largeText;
-	font-weight: $W_medium;
-	letter-spacing: -0.02em;
 }
 
 /// Small text
 %text--small {
-	font-size: $font-size-small;
+	font-size: rem($font-size-small);
 	line-height: $line-height-smallText;
 }
 
