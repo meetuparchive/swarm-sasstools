@@ -25,6 +25,7 @@ Command              | Result
 
 Deprecated classes are still supported in this release.
 
+### Releases
 This package uses semver versioning to tag releases, although the patch version
 is determined exclusively by the Travis build number for pushes to `master`.
 Major and minor versions are hard-coded into the [Makefile](Makefile#L2).

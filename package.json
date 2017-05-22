@@ -1,6 +1,6 @@
 {
 	"name": "swarm-sasstools",
-	"version": "0.0.0",
+	"version": "2.4.16-beta",
 	"description": "Sass tools module of the Swarm Design System",
 	"directories": {
 		"doc": "sassdoc/",
@@ -24,10 +24,7 @@
 		"sass-rem": "^1.2.4"
 	},
 	"devDependencies": {
-<<<<<<< HEAD
-=======
 		"@alrra/travis-scripts": "^3.0.1",
->>>>>>> dde27f6f07cffc64238d39791b85ae3cfc25aee5
 		"css-loader": "0.26.1",
 		"extract-text-webpack-plugin": "2.1.0",
 		"grunt": "~0.4.5",
