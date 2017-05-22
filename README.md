@@ -31,11 +31,23 @@ will kick off the yarn publish routine. The currently-published version of the
 package is shown on the repo homepage on GitHub in a badge at the top of the
 README.
 
+----------
+
 ### Release notes
+
+#### Glossary
+**deprecated**
+Removed from documentation, but still supported for backward compatibility.
+_Please do not use undocumented features of `swarm-sasstools`._
+
+**removed**
+Removed from both documentation _and_ code. We will only do this for major
+version changes.
+
 
 #### v1.7.X
 Introduced big visual changes to type and scaling, but no breaking changes.
-- deprecated `%display--text2`, `.display--text2`
-- deprecated `%display--text3`, `.display--text3`
+- deprecated `%text--display2`, `.text--display2`
+- deprecated `%text--display3`, `.text--display3`
 - deprecated `%text--heavy`, `.text--heavy`
 
