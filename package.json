@@ -16,7 +16,8 @@
 		"url": "https://github.com/meetup/swarm-sasstools/blob/master/LICENSE"
 	},
 	"scripts": {
-		"build": "grunt"
+		"build": "grunt",
+		"publish-docs": "grunt ghpages"
 	},
 	"dependencies": {
 		"bourbon": "4.2.3",
