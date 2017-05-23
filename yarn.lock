@@ -2661,9 +2661,9 @@ media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
 
-meetup-swatches@3.1.4:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/meetup-swatches/-/meetup-swatches-3.1.4.tgz#20bd45347adfe6595b9a164940cb5572df49905b"
+meetup-swatches@3.2.5:
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/meetup-swatches/-/meetup-swatches-3.2.5.tgz#46ff0ffbe22fdf56267bbd05016e00466560efdd"
 
 memoize-decorator@^1.0.2:
   version "1.0.2"
