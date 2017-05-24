@@ -11,9 +11,16 @@ category: Text Styles
 
 */
 html {
-	@include responsiveVarContext--scalingType() {
-		font-size: $scalingType-body;
-	}
+	font-size: $font-size;
+
+	//
+	// Design team is still evaluating how type should scale across viewports.
+	// Just commenting this out and keeping the mixin so we can easily enable
+	// type that scales with the viewport.
+	//
+	// @include responsiveVarContext--scalingType() {
+	// 	font-size: $scalingType-body;
+	// }
 }
 
 body {
