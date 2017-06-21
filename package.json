@@ -1,49 +1,49 @@
 {
-	"name": "swarm-sasstools",
-	"version": "0.0.0",
-	"description": "Sass tools module of the Swarm Design System",
-	"directories": {
-		"doc": "sassdoc/",
-		"dist": "scss/"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/meetup/swarm-sasstools.git"
-	},
-	"author": "adamd@meetup.com",
-	"license": {
-		"type": "MIT",
-		"url": "https://github.com/meetup/swarm-sasstools/blob/master/LICENSE"
-	},
-	"scripts": {
-		"build": "grunt",
-		"publish-docs": "grunt ghpages"
-	},
-	"dependencies": {
-		"bourbon": "4.2.3",
-		"meetup-swatches": "3.2.5",
-		"sass-rem": "^1.2.4"
-	},
-	"devDependencies": {
-		"@alrra/travis-scripts": "^3.0.1",
-		"css-loader": "0.26.1",
-		"extract-text-webpack-plugin": "2.1.0",
-		"grunt": "~0.4.5",
-		"grunt-browser-sync": "2.2.0",
-		"grunt-cli": "",
-		"grunt-contrib-clean": "0.6.0",
-		"grunt-contrib-watch": "1.0.0",
-		"grunt-exec": "1.0.0",
-		"grunt-gh-pages": "0.9.1",
-		"grunt-preprocess": "4.1.0",
-		"grunt-sassdoc": "2.0.2",
-		"node-sass": "3.11.1",
-		"sass-loader": "6.0.1",
-		"sassdoc-theme-flippant": "0.1.0",
-		"seldon": "0.3.2",
-		"webpack": "2.2.1"
-	},
-	"bugs": {
-		"url": "https://github.com/meetup/swarm-sassdoc/issues"
-	}
+  "name": "swarm-sasstools",
+  "version": "1.7.33-beta",
+  "description": "Sass tools module of the Swarm Design System",
+  "directories": {
+    "doc": "sassdoc/",
+    "dist": "scss/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/meetup/swarm-sasstools.git"
+  },
+  "author": "adamd@meetup.com",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/meetup/swarm-sasstools/blob/master/LICENSE"
+  },
+  "scripts": {
+    "build": "grunt",
+    "publish-docs": "grunt ghpages"
+  },
+  "dependencies": {
+    "bourbon": "4.2.3",
+    "meetup-swatches": "3.2.5",
+    "sass-rem": "^1.2.4"
+  },
+  "devDependencies": {
+    "@alrra/travis-scripts": "^3.0.1",
+    "css-loader": "0.26.1",
+    "extract-text-webpack-plugin": "2.1.0",
+    "grunt": "~0.4.5",
+    "grunt-browser-sync": "2.2.0",
+    "grunt-cli": "",
+    "grunt-contrib-clean": "0.6.0",
+    "grunt-contrib-watch": "1.0.0",
+    "grunt-exec": "1.0.0",
+    "grunt-gh-pages": "0.9.1",
+    "grunt-preprocess": "4.1.0",
+    "grunt-sassdoc": "2.0.2",
+    "node-sass": "3.11.1",
+    "sass-loader": "6.0.1",
+    "sassdoc-theme-flippant": "0.1.0",
+    "seldon": "0.3.2",
+    "webpack": "2.2.1"
+  },
+  "bugs": {
+    "url": "https://github.com/meetup/swarm-sassdoc/issues"
+  }
 }
