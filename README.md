@@ -8,7 +8,7 @@ swarm-sasstools
 
 ### Grunt tasks
 
-Run build tasks with `grunt [command]`.
+Run build tasks with `yarn grunt [command]`.
 
 Command              | Result
 -------------------- | -----------------------------
