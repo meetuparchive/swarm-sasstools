@@ -118,6 +118,20 @@ category: Text Styles
 	@extend %text--heavy;
 }
 
+/*doc
+---
+title: Normal
+name: normalText
+category: Text Styles
+---
+```html_example
+<h2 class="text--normal">Normal text class is a normal font-weight.</h2>
+<h2 class="text--normal">This heading is usually bold.</h2>
+```
+*/
+.text--normal {
+	@extend %text--normal;
+}
 
 /*doc
 ---
