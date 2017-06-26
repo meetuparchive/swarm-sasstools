@@ -37,7 +37,7 @@
 		"grunt-gh-pages": "0.9.1",
 		"grunt-preprocess": "4.1.0",
 		"grunt-sassdoc": "2.0.2",
-		"node-sass": "3.11.1",
+		"node-sass": "4.5.3",
 		"sass-loader": "6.0.1",
 		"sassdoc-theme-flippant": "0.1.0",
 		"seldon": "0.3.2",
