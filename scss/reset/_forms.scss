@@ -126,7 +126,6 @@ select {
 	margin: 0 0 $space-quarter 0;
 	max-width: 100%;
 	padding: $space-half;
-	width: 100%;
 
 	&[disabled] {
 		background-color: $C_fieldBG--disabled;
@@ -324,7 +323,6 @@ Faux inputs visually mimic actual input elements.
 	margin: 0 0 $space-quarter 0;
 	max-width: 100%;
 	padding: $space-half;
-	width: 100%;
 
 	// manually changing height to match other inputs
 	height: rem(($font-size * $line-height) + $space);
