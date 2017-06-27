@@ -73,11 +73,6 @@
 	}
 }
 
-// Normal text 
-%text--normal {
-	font-weight: $W_normal !important;
-}
-
 // Bold text (medium weight)
 %text--bold {
 	font-weight: $W_medium !important;
@@ -178,6 +173,10 @@
 	}
 }
 
+// Normal text 
+%text--normal {
+	font-weight: $W_normal !important;
+}
 
 /// Nice hyphenation for running text
 %wrapNice {
