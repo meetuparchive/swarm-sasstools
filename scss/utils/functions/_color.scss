@@ -28,3 +28,29 @@
 
 	@return $colorList;
 }
+
+// Takes an RGBA base color and a background color
+// and returns it's opaque equivalent as HEX.
+//
+/// @param {color} $rgba - rgba color
+/// @param {color} $bgColor - the background color used to calculate opaque color
+///
+/// @returns {color} Opaque HEX color
+///
+/// @example scss
+///		.example {
+///			background-color: rgba-to-hex($C_textHint, $C_white);
+///		}
+///
+@function rgba-to-hex($rgba, $bgColor: $C_white){
+	@if $bgColor != $C_contentBG {
+		$bgColor: $bgColor;
+	}
+
+	$alphaPercent: alpha($rgba) * 100;
+	$bgColorAsHex: opacify($rgba, 1);
+	$hex: mix($bgColorAsHex, $bgColor, $alphaPercent);
+
+	@return $hex;
+}
+// end rgba-to-hex fn
