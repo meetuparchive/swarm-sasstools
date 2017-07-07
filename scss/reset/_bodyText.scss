@@ -11,9 +11,16 @@ category: Text Styles
 
 */
 html {
-	@include responsiveVarContext--scalingType() {
-		font-size: $scalingType-body;
-	}
+	font-size: $font-size;
+
+	//
+	// Design team is still evaluating how type should scale across viewports.
+	// Just commenting this out and keeping the mixin so we can easily enable
+	// type that scales with the viewport.
+	//
+	// @include responsiveVarContext--scalingType() {
+	// 	font-size: $scalingType-body;
+	// }
 }
 
 body {
@@ -111,6 +118,20 @@ category: Text Styles
 	@extend %text--heavy;
 }
 
+/*doc
+---
+title: Normal
+name: normalText
+category: Text Styles
+---
+```html_example
+<h2 class="text--normal">Normal text class is a normal font-weight.</h2>
+<h2 class="text--normal">This heading is usually bold.</h2>
+```
+*/
+.text--normal {
+	@extend %text--normal;
+}
 
 /*doc
 ---

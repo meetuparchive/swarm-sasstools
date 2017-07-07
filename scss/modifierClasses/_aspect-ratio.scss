@@ -31,7 +31,7 @@ $_aspectRatios: (
   &:before {
     content: '';
     display: block;
-    padding-top: $ratio;
+    padding-top: $ratio !important;
   }
 }
 

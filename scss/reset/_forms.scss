@@ -64,7 +64,7 @@ see <a class="link" style="text-decoration: underline;" href="https://github.com
 %label,
 label {
 	font-size: rem($font-size-small);
-	font-weight: $W_bold;
+	font-weight: $W_medium;
 
 	&.required:after {
 		content: "*";
@@ -126,7 +126,6 @@ select {
 	margin: 0 0 $space-quarter 0;
 	max-width: 100%;
 	padding: $space-half;
-	width: 100%;
 
 	&[disabled] {
 		background-color: $C_fieldBG--disabled;
