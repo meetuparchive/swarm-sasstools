@@ -16,9 +16,17 @@ $bounds: 840px;
 /// @type Value(px)
 $bounds-wide: 1100px;
 
+/// small border-radius value
+/// @type Value(px)
+$smallRadius: 2px;
+
 /// default border-radius value
 /// @type Value(px)
-$defaultRadius: 3px;
+$defaultRadius: 4px;
+
+/// large border-radius value
+/// @type Value(px)
+$largeRadius: 8px;
 
 /// zindex aliases
 /// @prop {Number} zindex-map.main [0]
