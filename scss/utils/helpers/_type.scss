@@ -124,20 +124,31 @@
 
 /// Links placeholder
 %text--link {
-	@include color-all($C_link);
+	@include color-all($C_textPrimary);
+	border-bottom: 1px solid $C_red;
+	text-decoration: none;
+	transition: all .2s ease-in-out;
+
+	&:link{
+		text-decoration: none;
+	}
 
 	&:hover,
 	&:focus,
 	&:active {
-		text-decoration: underline;
-	}
-	.button {
+		border-bottom: 1px solid transparent;
+		color: $C_red;
 		text-decoration: none;
 	}
 
-	.inverted & {
-		@include color-all($C_linkInverted);
+	.button {
+		border-bottom: 1px solid transparent;
 	}
+
+	.inverted & {
+		@include color-all($C_textPrimaryInverted);
+	}
+
 }
 
 /// Caption text
@@ -173,7 +184,7 @@
 	}
 }
 
-// Normal text 
+// Normal text
 %text--normal {
 	font-weight: $W_normal !important;
 }
