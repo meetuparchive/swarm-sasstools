@@ -43,7 +43,8 @@ module.exports = function(grunt) {
 			},
 			webpack: 'webpack',
 			seldon: 'node node_modules/seldon/seldon.js seldon.config.json',
-			docIndex: 'cp ./docs/index.html ./' + BUILD_PATH + 'index.html'
+			docIndex: 'cp ./docs/index.html ./' + BUILD_PATH + 'index.html',
+			cpExamples: 'cp -R ./docs/examples/ ' + BUILD_PATH + 'examples/'
 		},
 		'sassdoc': {
 			default: {
@@ -73,7 +74,8 @@ module.exports = function(grunt) {
 			inline: {
 				src: [
 					BUILD_PATH + 'index.html',
-					BUILD_PATH + 'seldon/doc.html'
+					BUILD_PATH + 'seldon/doc.html',
+					BUILD_PATH + 'examples/*.html'
 				],
 				options: {
 					inline: true,
@@ -83,7 +85,8 @@ module.exports = function(grunt) {
 						'FONT_URL': '//a248.e.akamai.net/secure.meetupstatic.com/s/fonts/402715706936963211631/graphik.css',
 						'GITHUB_URL': '//github.com/meetup/swarm-sasstools',
 						'CSS_PATH': './swarm-sasstools.css',
-						'SQ2_URL': '//meetup.github.io/sassquatch2/bundle/sassquatch.css'
+						'SQ2_URL': '//meetup.github.io/sassquatch2/bundle/sassquatch.css',
+						'MWC_STYLES_URL': '//beta2.meetup.com/static/en-US/main.9d49c12.css'
 					}
 				}
 			}
@@ -92,18 +95,19 @@ module.exports = function(grunt) {
 
 
 	grunt.registerTask('default', [
-		'clean:docs',    // cleans built docs
-		'exec:webpack',  // (webpack) compile Sass
-		'sassdoc',       // generates sassdoc docs for Sass API
-		'exec:seldon',   // generates seldon docs for CSS class API
-		'exec:docIndex', // creates `index.html` landing page for built docs
-		'preprocess',    // updates built docs with version and asset urls
-		'clean:sassdoc'  // rm extraneous build artifact from sassdoc (sassdoc bug)
+		'clean:docs',      // cleans built docs
+		'exec:webpack',    // (webpack) compile Sass
+		'sassdoc',         // generates sassdoc docs for Sass API
+		'exec:seldon',     // generates seldon docs for CSS class API
+		'exec:docIndex',   // creates `index.html` landing page for built docs
+		'exec:cpExamples', // creates `examples/*.html` pages for built docs
+		'preprocess',      // updates built docs with version and asset urls
+		'clean:sassdoc'    // rm extraneous build artifact from sassdoc (sassdoc bug)
 	]);
 	grunt.registerTask('serve', [
-		'default',       // initial compile
-		'browserSync',   // enable live reload
-		'watch'          // rebuild on src changes
+		'default',         // initial compile
+		'browserSync',     // enable live reload
+		'watch'            // rebuild on src changes
 	]);
 	grunt.registerTask('ghpages', ['default', 'gh-pages']);
 };
