@@ -327,18 +327,20 @@ You can always force an anchor to apply a
 linky blue color by applying the `.link` class.
 
 ```html_example
-<p>Let's force this <a class="link" href="#">link</a> to be blue</p>
+<p>Let's force this <a class="link" href="#">link</a> to be red-underlined.</p>
 ```
 */
-a {
+a, button {
 	color: inherit;
 	text-decoration: none;
-	&.link,
-	.runningText & {
+	&.link {
 		@extend %text--link;
 	}
 }
 
+.runningText a {
+	@extend %text--link;
+}
 
 /*doc
 ---
