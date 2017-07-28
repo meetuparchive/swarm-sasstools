@@ -26,9 +26,16 @@ html {
 body {
 	color: $C_textPrimary;
 	font-family: $font;
+	font-feature-settings: "liga","kern";
+	-moz-font-feature-settings: "liga","kern";
+	-moz-font-feature-settings: "liga=1, kern=1";
+	-ms-font-feature-settings: "liga","kern";
+	-o-font-feature-settings: "liga","kern";
+	-webkit-font-feature-settings: "liga","kern";
 	font-weight: $W_normal;
-	line-height: $line-height;
 	font-size: rem($font-size);
+	line-height: $line-height;
+	text-rendering: optimizeLegibility;
 }
 
 /*doc
