@@ -85,8 +85,7 @@ module.exports = function(grunt) {
 						'FONT_URL': '//a248.e.akamai.net/secure.meetupstatic.com/s/fonts/402715706936963211631/graphik.css',
 						'GITHUB_URL': '//github.com/meetup/swarm-sasstools',
 						'CSS_PATH': './swarm-sasstools.css',
-						'SQ2_URL': '//meetup.github.io/sassquatch2/bundle/sassquatch.css',
-						'MWC_STYLES_URL': '//beta2.meetup.com/static/en-US/main.9d49c12.css'
+						'SQ2_URL': '//meetup.github.io/sassquatch2/bundle/sassquatch.css'
 					}
 				}
 			}
