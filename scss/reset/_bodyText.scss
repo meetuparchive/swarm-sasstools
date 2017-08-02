@@ -251,6 +251,7 @@ in order to also set the color of icons inline with text.
 			<li class="text--pink">Colorful heavy text</li>
 			<li class="text--yellow">Colorful heavy text</li>
 			<li class="text--teal">Colorful heavy text</li>
+			<li class="text--blue">Colorful heavy text</li>
 		</ul>
 	</div>
 </section>
@@ -260,6 +261,7 @@ in order to also set the color of icons inline with text.
 	'red': $C_red,
 	'pink': $C_pink,
 	'teal': $C_teal,
+	'blue': $C_blue,
 	'yellow': $C_yellow
 ) {
 	@include _modifier('text', "#{$colorName}") {
