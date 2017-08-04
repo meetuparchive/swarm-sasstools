@@ -4445,6 +4445,14 @@ swap-case@^1.1.0:
     lower-case "^1.1.1"
     upper-case "^1.1.1"
 
+swarm-sasstools@^1.7.76:
+  version "1.7.76"
+  resolved "https://registry.yarnpkg.com/swarm-sasstools/-/swarm-sasstools-1.7.76.tgz#44670c410a5b9780fcd5ebe4a6c66b93d34c9669"
+  dependencies:
+    bourbon "4.2.3"
+    meetup-swatches "3.2.5"
+    sass-rem "^1.2.4"
+
 swig-extras@0.0.1, swig-extras@^0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/swig-extras/-/swig-extras-0.0.1.tgz#b503fede372ab9c24c6ac68caf656bcef1872328"
