@@ -22,7 +22,7 @@
 	"dependencies": {
 		"bourbon": "4.2.3",
 		"sass-rem": "^1.2.4",
-		"swarm-sasstools": "^1.7.76"
+		"swarm-constants": "0.1.6"
 	},
 	"devDependencies": {
 		"@alrra/travis-scripts": "^3.0.1",
