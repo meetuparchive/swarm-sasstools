@@ -4483,9 +4483,9 @@ swap-case@^1.1.0:
     lower-case "^1.1.1"
     upper-case "^1.1.1"
 
-swarm-constants@0.1.6:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/swarm-constants/-/swarm-constants-0.1.6.tgz#a30fcf6b5dece8fb5113dc57b9b02d9c9e2fe722"
+swarm-constants@0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/swarm-constants/-/swarm-constants-0.1.7.tgz#38eb97e4d116fd4c7e31784767b81c91ae90d8bc"
   dependencies:
     "@alrra/travis-scripts" "^3.0.1"
     gh-pages "^1.0.0"
