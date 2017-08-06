@@ -70,7 +70,7 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: Error\n    at /Users/adamd/swarm/sasstools/node_modules/webpack/lib/NormalModule.js:141:35\n    at /Users/adamd/swarm/sasstools/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /Users/adamd/swarm/sasstools/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/Users/adamd/swarm/sasstools/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (/Users/adamd/swarm/sasstools/node_modules/sass-loader/lib/loader.js:51:13)\n    at Object.<anonymous> (/Users/adamd/swarm/sasstools/node_modules/sass-loader/node_modules/async/dist/async.js:2244:31)\n    at Object.callback (/Users/adamd/swarm/sasstools/node_modules/sass-loader/node_modules/async/dist/async.js:906:16)\n    at options.error (/Users/adamd/swarm/sasstools/node_modules/node-sass/lib/index.js:294:32)");
 
 /***/ }),
 /* 1 */
