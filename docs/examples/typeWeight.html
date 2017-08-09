@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<title>swarm-sasstools <!-- @echo VERSION --> typography spec</title>
+
+	<!-- font -->
+	<link rel="stylesheet" href="<!-- @echo FONT_URL -->" />
+
+	<!-- CSS to be documented -->
+	<link rel="stylesheet" href="../seldon/<!-- @echo CSS_PATH -->" />
+
+	<style type="text/css">
+		.__doc_textWeightSample {
+			font-size: 36px;
+		}
+
+		.__doc_textWeightSample--medium {
+			font-weight: 500;
+		}
+
+		.__doc_textWeightSample--semibold {
+			font-weight: 600;
+		}
+
+		.card {
+			overflow: hidden;
+		}
+
+		.card .flex {
+			height: 160px; /* to fill card height */
+		}
+	</style>
+
+</head>
+<!--[if IE 8]> <body class="lang_en ieRoot_IE8 ieRoot_lt_IE9 ieRoot_lt_IE10"> <![endif]-->
+<!--[if IE 9]> <body class="lang_en ieRoot_IE9 ieRoot_lt_IE10"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <body class="lang_en ieRoot_modern"> <!--<![endif]-->
+
+<div class="stripe"><div class="bounds">
+
+	<div class="section section--hasSeparator border--none">
+
+		<div class="flex flex--column atMedium_flex--row">
+
+			<div class="flex-item"><div class="chunk">
+				<div class="card padding--none flex flex--column align--center">
+					<div class="flex flex--column">
+						<div class="flex-item flex flex--alignCenter">
+							<div class="span--100 padding--all">
+								<div class="__doc_textWeightSample __doc_textWeightSample--semibold">Meetup</div>
+							</div>
+						</div>
+
+						<div class="flex-item flex-item--shrink">
+							<div class="stripe stripe--collection padding--all">
+								<span class="text--bold text--secondary">Semibold 600</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div></div>
+
+			<div class="flex-item"><div class="chunk">
+				<div class="card padding--none flex flex--column align--center">
+					<div class="flex flex--column">
+						<div class="flex-item flex flex--alignCenter">
+							<div class="span--100 padding--all">
+								<div class="__doc_textWeightSample __doc_textWeightSample--medium">Meetup</div>
+							</div>
+						</div>
+
+						<div class="flex-item flex-item--shrink">
+							<div class="stripe stripe--collection padding--all">
+								<span class="text--bold text--secondary">Medium 500</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div></div>
+
+			<div class="flex-item"><div class="chunk">
+				<div class="card padding--none flex flex--column align--center">
+					<div class="flex flex--column">
+						<div class="flex-item flex flex--alignCenter">
+							<div class="span--100 padding--all">
+								<div class="__doc_textWeightSample">Meetup</div>
+							</div>
+						</div>
+
+						<div class="flex-item flex-item--shrink">
+							<div class="stripe stripe--collection padding--all">
+								<span class="text--bold text--secondary">Regular 400</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div></div>
+
+		</div>
+
+	</div>
+
+</div></div>
+
+</body>
+</html>
