@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<title>swarm-sasstools <!-- @echo VERSION --> typography spec</title>
+
+	<!-- font -->
+	<link rel="stylesheet" href="<!-- @echo FONT_URL -->" />
+
+	<!-- CSS to be documented -->
+	<link rel="stylesheet" href="../seldon/<!-- @echo CSS_PATH -->" />
+
+	<style type="text/css">
+		.__doc_card--inverted {
+			background-color: #353e48; /* $C_darkGray as of 08/09/2017 */
+		}
+
+		.__docs_text--primary {
+			color: rgba(46, 62, 72, 1) !important; /* $C_textPrimary as of 08/09/2017 */
+		}
+
+		.inverted .__docs_text--primary {
+			color: rgba(255, 255, 255, 1) !important; /* $C_textPrimaryInverted as of 08/09/2017 */
+		}
+
+		.inverted th.text--error,
+		.inverted td.text--error {
+			color: #ff5b0f; /* $C_attention as of 08/09/2017 */
+		}
+
+	</style>
+
+</head>
+<!--[if IE 8]> <body class="lang_en ieRoot_IE8 ieRoot_lt_IE9 ieRoot_lt_IE10"> <![endif]-->
+<!--[if IE 9]> <body class="lang_en ieRoot_IE9 ieRoot_lt_IE10"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <body class="lang_en ieRoot_modern"> <!--<![endif]-->
+
+<div class="stripe"><div class="bounds">
+
+	<div class="section section--hasSeparator border--none">
+
+		<div class="flex flex--column atMedium_flex--row">
+			<div class="flex-item">
+				<div class="chunk">
+					<h4 class="text--bold">Light bg</h4>
+					<div class="card padding--bottom">
+						<table class="span--100">
+							<thead>
+									<tr>
+											<th>Name</th>
+											<th>Base color</th>
+											<th>Alpha</th>
+									</tr>
+							</thead>
+							<tbody>
+									<tr>
+										<th class="__docs_text--primary">Primary</th>
+										<td class="__docs_text--primary">#2E3E48</td>
+										<td class="__docs_text--primary">1.0</td>
+									</tr>
+									<tr>
+										<th class="text--secondary">Secondary</th>
+										<td class="text--secondary">#2E3E48</td>
+										<td class="text--secondary">.60</td>
+									</tr>
+									<tr>
+										<th class="text--hint">Hint</th>
+										<td class="text--hint">#2E3E48</td>
+										<td class="text--hint">.35</td>
+									</tr>
+									<tr>
+										<th class="text--error">Error</th>
+										<td class="text--error">#FF5B0F</td>
+										<td class="text--error">1.0</td>
+									</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="flex-item">
+				<div class="chunk">
+					<h4 class="text--bold">Dark bg</h4>
+					<div class="card padding--bottom inverted __doc_card--inverted">
+						<table class="span--100">
+							<thead>
+									<tr>
+											<th>Name</th>
+											<th>Base color</th>
+											<th>Alpha</th>
+									</tr>
+							</thead>
+							<tbody>
+									<tr>
+										<th class="__docs_text--primary">Primary</th>
+										<td class="__docs_text--primary">#FFFFFF</td>
+										<td class="__docs_text--primary">1.0</td>
+									</tr>
+									<tr>
+										<th class="text--secondary">Secondary</th>
+										<td class="text--secondary">#FFFFFF</td>
+										<td class="text--secondary">.70</td>
+									</tr>
+									<tr>
+										<th class="text--hint">Hint</th>
+										<td class="text--hint">#FFFFFF</td>
+										<td class="text--hint">.35</td>
+									</tr>
+									<tr>
+										<th class="text--error">Error</th>
+										<td class="text--error">#FF5B0F</td>
+										<td class="text--error">1.0</td>
+									</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+
+</div></div>
+
+</body>
+</html>
