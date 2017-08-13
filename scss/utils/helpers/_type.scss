@@ -127,7 +127,6 @@
 	@include color-all($C_textPrimary);
 	border-bottom: 1px solid $C_red;
 	text-decoration: none;
-	transition: all .2s ease-in-out;
 
 	&:link{
 		text-decoration: none;
