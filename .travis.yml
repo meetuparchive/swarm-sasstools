@@ -7,6 +7,13 @@ cache:
   directories:
     - node_modules
 
+deploy:
+   provider: pages
+   skip_cleanup: true
+   github_token: $GITHUB_TOKEN
+   on:
+      branch: travis/deploy-ghpages
+
 branches:
   only:
     - master  # (PRs to master, master merges, master pushes)
