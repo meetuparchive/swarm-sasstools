@@ -12,7 +12,7 @@ deploy:
    skip_cleanup: true
    github_token: $GITHUB_TOKEN
    on:
-      branch: travis/deploy-ghpages
+      branch: master
 
 branches:
   only:
