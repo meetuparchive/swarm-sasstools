@@ -21,6 +21,7 @@ before_install:
   - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
 
 before_script:
+  - yarn run build
   - git diff --exit-code
 
 after_script:
