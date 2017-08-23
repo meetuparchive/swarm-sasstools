@@ -11,6 +11,15 @@
 	box-shadow: 0 0 2px 0 $C_border, 0 2px 4px 0 $C_border;
 }
 
+/// Applies a drop shadow with slight motion on :hover and :focus
+/// @param {Boolean} $hasRestingShadow [false] - whether or not the element you're styling already has a shadow before hover
+///
+/// @example scss
+///    @include shadowOnHover(); // default = true
+///
+///    // apply more shadow to an element that already has a shadow
+///    @include shadowOnHover(true);
+///
 @mixin shadowOnHover($hasRestingShadow: false) {
 	transition: box-shadow $duration--medium $easing--standard, transform $duration--medium $easing--standard;
 
