@@ -137,6 +137,24 @@ select {
 		outline: none;
 	}
 
+	.inverted & {
+		background-color: $C_fieldBGInverted;
+		color: $C_textPrimaryInverted;
+
+			&:hover {
+				border-color: $C_textHintInverted;
+			}
+
+			&[disabled] {
+				background-color: $C_fieldBGInverted--disabled;
+				color: $C_textSecondaryInverted;
+				&:hover {
+					background-color: $C_fieldBGInverted--disabled;
+				}
+			}
+
+	}
+
 }
 
 input,
