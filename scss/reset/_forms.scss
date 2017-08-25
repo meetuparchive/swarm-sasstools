@@ -146,10 +146,10 @@ select {
 			}
 
 			&[disabled] {
-				background-color: $C_fieldBGInverted--disabled;
+				background-color: $C_fieldBGinverted--disabled;
 				color: $C_textSecondaryInverted;
 				&:hover {
-					background-color: $C_fieldBGInverted--disabled;
+					background-color: $C_fieldBGinverted--disabled;
 				}
 			}
 
