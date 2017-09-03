@@ -22,8 +22,7 @@
 	"dependencies": {
 		"bourbon": "4.2.3",
 		"sass-rem": "^1.2.4",
-		"swarm-constants": "0.1.16",
-		"swarm-animation": "https://github.com/meetup/swarm-animation.git"
+		"swarm-constants": "0.1.16"
 	},
 	"devDependencies": {
 		"@alrra/travis-scripts": "^3.0.1",
@@ -42,6 +41,7 @@
 		"sass-loader": "6.0.1",
 		"sassdoc-theme-flippant": "0.1.0",
 		"seldon": "0.3.2",
+		"swarm-animation": "https://github.com/meetup/swarm-animation.git",
 		"webpack": "2.2.1"
 	},
 	"bugs": {
