@@ -22,7 +22,8 @@
 	"dependencies": {
 		"bourbon": "4.2.3",
 		"sass-rem": "^1.2.4",
-		"swarm-constants": "0.1.16"
+		"swarm-constants": "0.1.16",
+		"swarm-animation": "https://github.com/meetup/swarm-animation.git"
 	},
 	"devDependencies": {
 		"@alrra/travis-scripts": "^3.0.1",
