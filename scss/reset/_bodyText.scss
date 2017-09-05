@@ -316,13 +316,18 @@ event descriptions).
 </div>
 ```
 */
-.runningText p {
-	@extend %wrapNice;
-	margin-bottom: $space;
-	max-width: 40em;
-	&:last-child {
-		margin-bottom: 0;
+.runningText {
+	line-height: $line-height-runningText;
+
+	p {
+		@extend %wrapNice;
+		margin-bottom: $space;
+		max-width: 40em;
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
+
 }
 
 
