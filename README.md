@@ -44,6 +44,7 @@ _Please do not use undocumented features of `swarm-sasstools`._
 Removed from both documentation _and_ code. We will only do this for major
 version changes.
 
+
 #### v1.7.X
 Introduced big visual changes to type and scaling, but no breaking changes.
 - deprecated `%text--display2`, `.text--display2`
