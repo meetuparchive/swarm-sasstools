@@ -4553,12 +4553,13 @@ swap-case@^1.1.0:
     jasmine-jquery "^2.1.1"
     jquery "^3.2.1"
 
-swarm-constants@0.1.16:
-  version "0.1.16"
-  resolved "https://registry.yarnpkg.com/swarm-constants/-/swarm-constants-0.1.16.tgz#af7476970d2cb8a749802bc7d28c04eaa497ff8d"
+swarm-constants@0.2.31:
+  version "0.2.31"
+  resolved "https://registry.yarnpkg.com/swarm-constants/-/swarm-constants-0.2.31.tgz#be86eb4076784ec2709ebbb404213639a84aef23"
   dependencies:
     "@alrra/travis-scripts" "^3.0.1"
     gh-pages "^1.0.0"
+    mkdirp "^0.5.1"
 
 swig-extras@0.0.1, swig-extras@^0.0.1:
   version "0.0.1"
