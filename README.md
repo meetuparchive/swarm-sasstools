@@ -50,4 +50,3 @@ Introduced big visual changes to type and scaling, but no breaking changes.
 - deprecated `%text--display2`, `.text--display2`
 - deprecated `%text--display3`, `.text--display3`
 - deprecated `%text--heavy`, `.text--heavy`
-
