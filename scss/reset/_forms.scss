@@ -99,6 +99,10 @@ textarea {
 	line-height: $line-height;
 }
 
+textarea {
+	-ms-overflow-style: none;
+}
+
 button {
 	background: transparent;
 	border-width: 0;
