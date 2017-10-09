@@ -26,3 +26,62 @@
 		margin: 0;
 	}
 }
+
+/// provides default input styles
+/// @access public
+///
+/// @example scss
+/// 	input {
+/// 		@include formInput();
+/// 	}
+@mixin formInput() {
+	background-color: $C_white;
+	border-radius: $defaultRadius;
+	border: 1px solid $C_border;
+	box-shadow: none;
+	box-sizing: border-box;
+	margin: 0 0 $space-quarter 0;
+	max-width: 100%;
+	padding: $space;
+}
+
+/// provides default styles for a disabled input
+/// @access public
+///
+/// @example scss
+/// 	input[disabled] {
+/// 		@include formInput--disabled();
+/// 	}
+@mixin formInput--disabled() {
+	background-color: $C_lightGray;
+	border-color: transparent;
+	color: $C_textSecondary;
+	&:hover {
+		background-color: $C_lightGray;
+		border-color: transparent;
+	}
+}
+
+/// provides default styles for a hovered input
+/// @access public
+///
+/// @example scss
+/// 	input:hover {
+/// 		@include formInput--hovered();
+/// 	}
+@mixin formInput--hovered() {
+	border-color: $C_textHint;
+}
+
+/// provides default styles for a focused input
+/// @access public
+///
+/// @example scss
+/// 	input:focus {
+/// 		@include formInput--focused();
+/// 	}
+@mixin formInput--focused() {
+	border-color: $C_textPrimary;
+	box-shadow: none;
+	outline: none;
+}

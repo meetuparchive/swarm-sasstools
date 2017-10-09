@@ -44,6 +44,8 @@ _Please do not use undocumented features of `swarm-sasstools`._
 Removed from both documentation _and_ code. We will only do this for major
 version changes.
 
+#### v3.X.X
+Form inputs were re-styled. These updates increased padding on inputs considerably, and may cause layouts to shift. This should only be an issue for screens with designs that rely on the inputs being a specific height.
 
 #### v1.7.X
 Introduced big visual changes to type and scaling, but no breaking changes.
