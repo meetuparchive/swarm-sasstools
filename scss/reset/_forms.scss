@@ -99,6 +99,10 @@ textarea {
 	line-height: $line-height;
 }
 
+textarea {
+	-ms-overflow-style: none;
+}
+
 button {
 	background: transparent;
 	border-width: 0;
@@ -106,52 +110,42 @@ button {
 }
 
 %_formTextField,
-#{$all-text-inputs},
+#{$all-text-inputs}, // this var comes from Bourbon
 textarea,
 select {
-	background-color: $C_fieldBG;
-	border-radius: $defaultRadius;
-	border: 1px solid transparent;
-	box-shadow: none;
-	box-sizing: border-box;
-	margin: 0 0 $space-quarter 0;
-	max-width: 100%;
-	padding: $space-half;
+	@include formInput();
 
 	&[disabled] {
-		background-color: $C_fieldBG--disabled;
-		color: $C_textSecondary;
-		&:hover {
-			background-color: $C_fieldBG--disabled;
-			border: 1px solid transparent;
-		}
+		@include formInput--disabled();
 	}
 
 	&:hover {
-		border-color: $C_textHint;
+		@include formInput--hovered();
 	}
 
 	&:focus {
-		border-color: $C_lightPurple;
-		box-shadow: none;
-		outline: none;
+		@include formInput--focused();
 	}
 
 	.inverted & {
-		background-color: $C_fieldBGInverted;
+		background-color: $C_contentBGInverted;
+		border-color: $C_borderInverted;
 		color: $C_textPrimaryInverted;
 
+		&:hover {
+			border-color: $C_borderDarkInverted;
+		}
+
+		&[disabled] {
+			background-color: $C_borderInverted;
+			border-color: transparent;
+			color: $C_textSecondaryInverted;
+
 			&:hover {
-				border-color: $C_textHintInverted;
+				background-color: $C_borderInverted;
 			}
 
-			&[disabled] {
-				background-color: $C_fieldBGinverted--disabled;
-				color: $C_textSecondaryInverted;
-				&:hover {
-					background-color: $C_fieldBGinverted--disabled;
-				}
-			}
+		}
 
 	}
 
@@ -159,7 +153,7 @@ select {
 
 input,
 select {
-	height: rem(($font-size * $line-height) + $space);
+	height: ($font-size * $line-height) + $space*2;
 }
 
 input::-webkit-input-placeholder,

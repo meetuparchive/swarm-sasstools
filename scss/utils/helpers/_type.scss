@@ -117,6 +117,12 @@
 	line-height: $line-height-smallText;
 }
 
+/// Tiny text
+%text--tiny {
+	font-size: rem($font-size-tiny);
+	line-height: $line-height-smallText;
+}
+
 /// Hint text
 %text--hint {
 	@extend %text--tertiary;

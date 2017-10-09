@@ -158,6 +158,21 @@ small,
 
 /*doc
 ---
+title: Small
+name: smallText
+category: Text Styles
+---
+```html_example
+<p class="text--tiny">Tiny text class is VERY small and should be used sparingly and probably never in conjunction with `text--hint`</p>
+```
+*/
+.text--tiny {
+	@extend %text--tiny;
+}
+
+
+/*doc
+---
 title: Big
 name: bigText
 category: Text Styles
