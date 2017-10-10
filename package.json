@@ -1,6 +1,6 @@
 {
 	"name": "swarm-sasstools",
-	"version": "2.0.153-beta",
+	"version": "2.0.154-beta",
 	"description": "Sass tools module of the Swarm Design System",
 	"directories": {
 		"doc": "sassdoc/",
