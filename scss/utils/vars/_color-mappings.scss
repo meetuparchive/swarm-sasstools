@@ -13,13 +13,4 @@
 //
 // Base color palette
 //
-$C_transparentLightGray: rgba(0,0,0,0.2);
-$C_lightPurple: $C_blue;
-
-//
-// UI Colors
-//
-$C_buttonGray: $C_buttonBG;
-$C_fieldGray: $C_fieldBG;
-$C_fieldGrayDisabled: $C_fieldBG--disabled;
-$C_fieldGrayInvertedDisabled: $C_fieldBGinverted--disabled;
+$C_lightPurple: $C_blue; // 10.11.2017 - this variable is only used once to re-style a link in mup-web
