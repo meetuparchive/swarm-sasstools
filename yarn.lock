@@ -4688,9 +4688,9 @@ swap-case@^1.1.0:
     jasmine-jquery "^2.1.1"
     jquery "^3.2.1"
 
-swarm-constants@1.2.34:
-  version "1.2.34"
-  resolved "https://registry.yarnpkg.com/swarm-constants/-/swarm-constants-1.2.34.tgz#8ac92a965e462aedf948d4f92856480a1cb0eb6b"
+swarm-constants@1.2.43-beta:
+  version "1.2.43-beta"
+  resolved "https://registry.yarnpkg.com/swarm-constants/-/swarm-constants-1.2.43-beta.tgz#a0548901d322a6c98e9e9499215813d25f77b453"
   dependencies:
     "@alrra/travis-scripts" "^3.0.1"
     gh-pages "^1.0.0"
