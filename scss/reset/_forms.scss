@@ -68,7 +68,7 @@ label {
 
 	&.required:after {
 		content: "*";
-		color: $C_attention;
+		color: $C_textSecondary;
 		font-size: $font-size-big;
 		line-height: 0;
 		margin-left: $space/4;
