@@ -47,7 +47,7 @@ version changes.
 #### v3.X.X
 Form inputs were re-styled. These updates increased padding on inputs considerably, and may cause layouts to shift. This should only be an issue for screens with designs that rely on the inputs being a specific height.
 
-#### v1.7.X
+#### v1.7
 Introduced big visual changes to type and scaling, but no breaking changes.
 - deprecated `%text--display2`, `.text--display2`
 - deprecated `%text--display3`, `.text--display3`
