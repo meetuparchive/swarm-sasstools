@@ -69,11 +69,11 @@ label {
 	&.required:after {
 		content: "*";
 		color: $C_textSecondary;
-		font-size: $font-size-big;
+		font-size: $font-size;
 		line-height: 0;
 		margin-left: $space/4;
 		position: relative;
-		top: 3px;
+		top: 0;
 	}
 
 	&.disabled {
