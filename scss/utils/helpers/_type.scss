@@ -130,8 +130,7 @@
 
 /// Links placeholder
 %text--link {
-	@include color-all($C_textPrimary);
-	border-bottom: 1px solid $C_red;
+	@include color-all($C_accent);
 	text-decoration: none;
 
 	&:link{
@@ -141,13 +140,11 @@
 	&:hover,
 	&:focus,
 	&:active {
-		border-bottom: 1px solid transparent;
-		color: $C_red;
-		text-decoration: none;
+		text-decoration: underline;
 	}
 
 	.button {
-		border-bottom: 1px solid transparent;
+		text-decoration: none;
 	}
 
 	.inverted & {
