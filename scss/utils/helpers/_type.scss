@@ -198,4 +198,8 @@
 	@include prefixer(hyphenate-limit-after, 2, webkit moz spec);
 	@include prefixer(hyphenate-limit-before, 3, webkit moz spec);
 	@include prefixer(hyphenate-limit-lines, 2, webkit ms spec);
+	overflow-wrap: break-word;
+	-ms-word-break: break-all; // IE wraps funny with `break-word`
+	word-break: break-word;
+	word-wrap: break-word;
 }
