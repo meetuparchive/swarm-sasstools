@@ -162,6 +162,18 @@ textarea::-webkit-input-placeholder {
 	color: $C_textTertiary;
 }
 
+input[type=time] {
+	&::-webkit-clear-button,
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+}
+
+input[type=time]::-ms-clear {
+	display: none;
+}
 
 /*doc
 ---
