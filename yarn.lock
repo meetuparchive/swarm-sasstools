@@ -4680,9 +4680,9 @@ swap-case@^1.1.0:
     lower-case "^1.1.1"
     upper-case "^1.1.1"
 
-"swarm-animation@https://github.com/meetup/swarm-animation.git":
-  version "0.0.1"
-  resolved "https://github.com/meetup/swarm-animation.git#81a070a49a54f2e3ef78aec2f16a82778ae49f16"
+swarm-animation@^0.0.95:
+  version "0.0.95"
+  resolved "https://registry.yarnpkg.com/swarm-animation/-/swarm-animation-0.0.95.tgz#262df7a9360ceaf101bec27520d63b6e18b4f7ed"
   dependencies:
     autoprefixer "^7.1.1"
     jasmine-jquery "^2.1.1"
