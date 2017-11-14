@@ -63,7 +63,7 @@ see <a class="link" style="text-decoration: underline;" href="https://github.com
 */
 %label,
 label {
-	font-size: rem($font-size-small);
+	font-size: rem($font-size);
 	font-weight: $W_medium;
 
 	&.required:after {
