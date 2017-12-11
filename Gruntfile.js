@@ -82,7 +82,7 @@ module.exports = function(grunt) {
 					context: {
 						DEBUG: false,
 						'VERSION': '<%= package.version %>',
-						'FONT_URL': '//a248.e.akamai.net/secure.meetupstatic.com/s/fonts/402715706936963211631/graphik.css',
+						'FONT_URL': '//www.meetup.com/mu_static/en-US/graphik.c2ab8a6.css',
 						'GITHUB_URL': '//github.com/meetup/swarm-sasstools',
 						'CSS_PATH': './swarm-sasstools.css',
 						'SQ2_URL': '//meetup.github.io/sassquatch2/bundle/sassquatch.css'
