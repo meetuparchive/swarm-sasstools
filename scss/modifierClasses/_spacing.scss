@@ -39,17 +39,15 @@ Class                    | Description
 	// directional
 	@each $direction in (top, right, left, bottom) {
 		@include _modifier($property, $direction) {
-			@include responsiveVarContext--base() {
-				#{$property}-#{$direction}: $base;
-			}
+			#{$property}-#{$direction}: $space;
+			#{$property}-#{$direction}: var(--baseSpacing);
 		}
 	}
 
 	// all sides
 	@include _modifier($property, all) {
-		@include responsiveVarContext--base() {
-			#{$property}: $base;
-		}
+		#{$property}: $space;
+		#{$property}: var(--baseSpacing);
 	}
 
 	// reset

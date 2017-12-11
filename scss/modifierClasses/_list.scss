@@ -33,9 +33,8 @@ Bottom spacing is provided with `chunk`.
 %listBorders {
 	@include standardBorder();
 	display: block;
-	@include responsiveVarContext--base() {
-		padding-top: $base;
-	}
+	padding-top: var(--baseSpacing);
+
 	&:first-child:not(a) {
 		border-top: none;
 		padding-top: 0;
@@ -105,10 +104,10 @@ Class                   | Description
 }
 
 .list-item--gutters {
-	@include responsiveVarContext--base() {
-		padding-left: $base;
-		padding-right: $base;
-	}
+	padding-left: $space;
+	padding-right: $space;
+	padding-left: var(--baseSpacing);
+	padding-right: var(--baseSpacing);
 }
 
 @include atMediaUp(medium) {
