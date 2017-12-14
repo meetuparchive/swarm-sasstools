@@ -49,8 +49,12 @@ table {
 caption,
 td,
 th {
-	padding: $space/2 $space;
-	padding: calc(var(--baseSpacing)/2) var(--baseSpacing);
+	@include responsiveValue(
+		padding,
+		calc(var(--responsiveSpace)/2)
+		var(--responsiveSpace),
+		$space/2 $space
+	);
 	text-align: left;
 	vertical-align: middle;
 	color: $C_textSecondary;

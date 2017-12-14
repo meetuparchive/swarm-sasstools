@@ -34,6 +34,5 @@ Class                   | Description
 %bordered,
 .bordered {
 	@extend %border--top;
-	padding-top: $space;
-	padding-top: var(--baseSpacing);
+	@include responsiveValue(padding-top, var(--responsiveSpace), $space);
 }
