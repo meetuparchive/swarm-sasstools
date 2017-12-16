@@ -2,6 +2,21 @@
 /// @group Responsive Variables
 ////
 
+/// Sets a property and a value while accepting
+/// a hard-coded fallback value for browsers that
+/// don't support CSS custom properties.
+/// 
+/// @access private
+/// @content [Style rules]
+@mixin responsiveValue($properties, $cssVar, $fallback) {
+	@each $prop in $properties {
+		@if $fallback { 
+			#{$prop}: $fallback;
+		}
+		#{$prop}: $cssVar;
+	}
+}
+
 /// Assumes `small` or `default` values passed in as
 /// $breakpoint should not be wrapped in an `atMediaUp` media query
 /// @access private
