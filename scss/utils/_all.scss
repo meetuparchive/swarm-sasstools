@@ -55,13 +55,18 @@
 @import "helpers/border";
 @import "helpers/button";
 @import "helpers/color";
+@import "helpers/customPropertyValue";
 @import "helpers/display";
 @import "helpers/flexbox";
 @import "helpers/float";
 @import "helpers/forms";
 @import "helpers/lists";
 @import "helpers/type";
-@import "helpers/responsiveVarContext";
 @import "helpers/shadow";
 @import "helpers/shape";
 @import "helpers/width";
+
+//
+// customProperties
+//
+@import "customProperties/responsive";
