@@ -54,7 +54,7 @@ Removed `responsiveVarContext--base()` mixin in favor of CSS custom properties. 
 Removed `responsiveVarContext--scalingMedia()` mixin in favor of CSS custom properties. To acheive standard media sizes that scale with the viewport, you can use the `responsiveValue()` mixin by passing in a property, a CSS variable, and an optional hard-coded value to support IE11.
 **For example:**
 ```.avatar--small {
-    @include responsiveValue(width, var(--scalingMedia-s), $media-s);
+    @include responsiveValue(width, var(--responsiveMedia-s), $media-s);
 }
 ```
 
