@@ -20,32 +20,10 @@ Class          | Description
 	@include _modifier('media', $sizeName) {
 		height: auto;
 
-		@include responsiveVarContext--scalingMedia() {
-
-			@if ($sizeName == xs) {
-				width: $scalingMedia-xs;
+		@each $mediaKey, $mediaSize in $media-map {
+			@if ($sizeName == $mediaKey) {
+				@include customPropertyValue(width, var(--responsiveMedia-#{$mediaKey}), $mediaSize);
 			}
-
-			@if ($sizeName == s) {
-				width: $scalingMedia-s;
-			}
-
-			@if ($sizeName == m) {
-				width: $scalingMedia-m;
-			}
-
-			@if ($sizeName == l) {
-				width: $scalingMedia-l;
-			}
-
-			@if ($sizeName == xl) {
-				width: $scalingMedia-xl;
-			}
-
-			@if ($sizeName == xxl) {
-				width: $scalingMedia-xxl;
-			}
-
 		}
 
 	}
