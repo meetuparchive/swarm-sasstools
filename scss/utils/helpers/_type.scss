@@ -193,13 +193,8 @@
 
 /// Nice hyphenation for running text
 %wrapNice {
-	@include hyphens(auto);
-	@include prefixer(hyphenate-limit-chars, 5 3 2, ms);
-	@include prefixer(hyphenate-limit-after, 2, webkit moz spec);
-	@include prefixer(hyphenate-limit-before, 3, webkit moz spec);
-	@include prefixer(hyphenate-limit-lines, 2, webkit ms spec);
 	overflow-wrap: break-word;
-	-ms-word-break: break-all; // IE wraps funny with `break-word`
+	-ms-word-break: normal; // IE wraps funny with `break-word` and `break-all`
 	word-break: break-word;
 	word-wrap: break-word;
 }

@@ -88,6 +88,8 @@ $space-quarter   : $space/4;
 * can be thought of as "media". The following variables
 * set media sizes based on our modular scale:
 */
+/// @type Value(number)
+$mediaScale: 1;
 /// @type Value(px)
 $media-xs : $space;    // 16px
 /// @type Value(px)

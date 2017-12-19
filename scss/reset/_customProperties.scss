@@ -3,7 +3,12 @@
 //
 :root {
 	--responsiveBase: $space;
+	--mediaScale: $mediaScale;
+	@each $mediaKey in map-keys($media-map) {
+		--scalingMedia-#{$mediaKey}: floor(map-get($media-map, #{$mediaKey}) * $mediaScale);
+	}
 }
+
 
 //
 // Breakpoint values
@@ -17,6 +22,23 @@
 	@include atMediaUp($breakpoint) {
 		:root {
 			--responsiveSpace: $responsiveBaseValue;
+		}
+	}
+}
+
+// mediaScale
+// scalingMedia-{size}
+@each $breakpoint, $responsiveScaleValue in (
+	medium: 1.125,
+	large: 1.25,
+) {
+	@include atMediaUp($breakpoint) {
+		:root {
+			--mediaScale: $responsiveScaleValue;
+
+			@each $mediaKey in map-keys($media-map) {
+				--scalingMedia-#{$mediaKey}: floor(map-get($media-map, #{$mediaKey}) * $responsiveScaleValue);
+			}
 		}
 	}
 }
