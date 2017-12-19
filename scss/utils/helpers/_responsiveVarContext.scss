@@ -31,37 +31,6 @@
 	}
 }
 
-/// responsive var map for `$base`
-/// configures value for `$base` at each breakpoint
-///
-/// @prop {Value(px)} responsiveVarMap--base.small [16px]
-/// @prop {Value(px)} responsiveVarMap--base.medium [18px]
-/// @prop {Value(px)} responsiveVarMap--base.large [20px]
-$responsiveVarMap--base: (
-	small:	16px,
-	medium:	18px,
-	large:	20px
-);
-
-/// Creates a Sass context in which the `$base` variable is rendered
-/// with different values for each `breakpoint` in `$responsiveVarMap--base`.
-///
-/// <div style="padding: 8px; background: rgba(255, 229, 51, 0.6); margin: 8px 0 16px 0;">
-/// To avoid generating large chunks of CSS multiple times, this mixin
-/// should only surround properties with responsive vars (see example below)
-/// </div>
-///
-/// @see $responsiveVarMap--base
-/// @content [Renders CSS with media queries to set value of `$base` for given breakpoints in `$responsiveVarMap--base`]
-///
-/// @example scss - setting padding that scales at breakpoints
-/// 	.someCoolImage {
-/// 		background: pink;
-/// 		@include responsiveVarContext--base() {
-/// 			padding: $base; /* this property will be generated with a different value for each `base` breakpoint */
-///      }
-/// 	}
-
 /// configures scale factor value for `$scalingMedia-{sizeName}` at each breakpoint
 ///
 /// @prop {Value(px)} responsiveScaleMap.small [1]
