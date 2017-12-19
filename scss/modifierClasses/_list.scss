@@ -32,7 +32,7 @@ Bottom spacing is provided with `chunk`.
 // TODO: consider moving this placeholder to util/_border.scss and documenting
 %listBorders {
 	@include standardBorder();
-	@include responsiveValue(padding-top, var(--responsiveSpace), $space);
+	@include customPropertyValue(padding-top, var(--responsiveSpace), $space);
 	display: block;
 
 	&:first-child:not(a) {
@@ -105,7 +105,7 @@ Class                   | Description
 
 .list-item--gutters {
 	$props: (padding-left, padding-right);
-	@include responsiveValue($props, var(--responsiveSpace), $space);
+	@include customPropertyValue($props, var(--responsiveSpace), $space);
 }
 
 @include atMediaUp(medium) {

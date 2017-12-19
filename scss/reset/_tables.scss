@@ -1,4 +1,4 @@
-@import "../utils/helpers/responsiveVarContext";
+@import "../utils/helpers/customPropertyValue";
 /*doc
 ---
 title: Default table styles
@@ -49,7 +49,7 @@ table {
 caption,
 td,
 th {
-	@include responsiveValue(
+	@include customPropertyValue(
 		padding,
 		calc(var(--responsiveSpace)/2)
 		var(--responsiveSpace),

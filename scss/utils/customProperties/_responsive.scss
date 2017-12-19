@@ -1,11 +1,12 @@
 //
 // Default values
 //
+$mediaScale: 1;
 :root {
 	--responsiveBase: $space;
 	--mediaScale: $mediaScale;
 	@each $mediaKey in map-keys($media-map) {
-		--scalingMedia-#{$mediaKey}: floor(map-get($media-map, #{$mediaKey}) * $mediaScale);
+		--responsiveMedia-#{$mediaKey}: floor(map-get($media-map, #{$mediaKey}) * $mediaScale);
 	}
 }
 
@@ -37,7 +38,7 @@
 			--mediaScale: $responsiveScaleValue;
 
 			@each $mediaKey in map-keys($media-map) {
-				--scalingMedia-#{$mediaKey}: floor(map-get($media-map, #{$mediaKey}) * $responsiveScaleValue);
+				--responsiveMedia-#{$mediaKey}: floor(map-get($media-map, #{$mediaKey}) * $responsiveScaleValue);
 			}
 		}
 	}
