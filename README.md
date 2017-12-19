@@ -45,6 +45,20 @@ Removed from both documentation _and_ code. We will only do this for major
 version changes.
 
 #### v3.X.X
+Removed `responsiveVarContext--base()` mixin in favor of CSS custom properties. To acheive standard spacing that scales with the viewport, you can use the `responsiveValue()` mixin by passing in a property, a CSS variable, and an optional hard-coded value to support IE11.
+**For example:**
+```.padding--left {
+    @include responsiveValue(padding-left, var(--responsiveSpace), $space);
+}
+```
+Removed `responsiveVarContext--scalingMedia()` mixin in favor of CSS custom properties. To acheive standard media sizes that scale with the viewport, you can use the `responsiveValue()` mixin by passing in a property, a CSS variable, and an optional hard-coded value to support IE11.
+**For example:**
+```.avatar--small {
+    @include responsiveValue(width, var(--scalingMedia-s), $media-s);
+}
+```
+
+#### v2.X.X
 Form inputs were re-styled. These updates increased padding on inputs considerably, and may cause layouts to shift. This should only be an issue for screens with designs that rely on the inputs being a specific height.
 
 #### v1.7
