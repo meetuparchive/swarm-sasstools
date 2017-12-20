@@ -21,24 +21,10 @@ Class                         | Description
 
 	@include _modifier('matchMediaSize--height', $sizeName) {
 
-		@include responsiveVarContext--scalingMedia() {
-
-			@if ($sizeName == xs) {
-				min-height: $scalingMedia-xs;
+		@each $mediaKey, $mediaSize in $media-map {
+			@if ($sizeName == $mediaKey and not ($sizeName == xl) and not ($sizeName == xxl)) {
+				@include customPropertyValue(min-height, var(--responsiveMedia-#{$mediaKey}), $mediaSize)
 			}
-
-			@if ($sizeName == s) {
-				min-height: $scalingMedia-s;
-			}
-
-			@if ($sizeName == m) {
-				min-height: $scalingMedia-m;
-			}
-
-			@if ($sizeName == l) {
-				min-height: $scalingMedia-l;
-			}
-
 		}
 
 	}
