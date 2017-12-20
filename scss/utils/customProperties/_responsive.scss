@@ -3,7 +3,7 @@
 //
 $mediaScale: 1;
 :root {
-	--responsiveBase: $space;
+	--responsiveSpace: $space;
 	--mediaScale: $mediaScale;
 	@each $mediaKey in map-keys($media-map) {
 		--responsiveMedia-#{$mediaKey}: floor(map-get($media-map, #{$mediaKey}) * $mediaScale);
