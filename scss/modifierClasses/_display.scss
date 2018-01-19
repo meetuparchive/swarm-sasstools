@@ -14,6 +14,7 @@ Class                   | Description
 `.display--inline`      | sets `display` to `inline`
 `.display--inlineBlock` | sets `display` to `inline-block`
 `.display--inlineFlex`  | sets `display` to `inline-flex`
+`.display--grid`        | sets `display` to `grid`
 */
 @each $display in $display-values {
 
