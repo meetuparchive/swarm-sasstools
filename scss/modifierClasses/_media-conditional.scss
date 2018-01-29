@@ -24,7 +24,7 @@ Using this signature: `.at[Breakpoint]_[property]--[variant]`
 Breakpoints        | Property       | Variants
 ------------------ | -------------- | ---------------------------
 `medium`, `large`  | `align`        | `center`, `right`, `left`
-`medium`, `large`  | `display`      | `none`, `block`, `flex`, `inline`, `inlineBlock`, `inlineFlex`
+`medium`, `large`  | `display`      | `none`, `block`, `flex`, `grid` `inline`, `inlineBlock`, `inlineFlex`
 `medium`, `large`  | `padding`      | `top`, `right`, `bottom`, `left`, `none`
 `medium`, `large`  | `margin`       | `center`
 `medium`, `large`  | `border`       | `top`, `none`
