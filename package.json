@@ -17,7 +17,8 @@
 	},
 	"scripts": {
 		"build": "grunt",
-		"publish-docs": "grunt ghpages"
+		"publish-docs": "grunt ghpages",
+		"test": "echo no tests found"
 	},
 	"dependencies": {
 		"bourbon": "4.2.3",
