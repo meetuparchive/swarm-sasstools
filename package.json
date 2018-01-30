@@ -29,6 +29,7 @@
 		"@alrra/travis-scripts": "^3.0.1",
 		"css-loader": "0.26.1",
 		"extract-text-webpack-plugin": "2.1.0",
+		"gh-pages": "1.0.0",
 		"grunt": "1.0.1",
 		"grunt-browser-sync": "2.2.0",
 		"grunt-cli": "",
