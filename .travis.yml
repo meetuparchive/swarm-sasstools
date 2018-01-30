@@ -46,3 +46,12 @@ after_script:
     npm version $GIT_TAG -m "Version $GIT_TAG built by Travis CI - https://travis-ci.com/$TRAVIS_REPO_SLUG/builds/$TRAVIS_JOB_ID" &&
     git push --tags git@github.com:$TRAVIS_REPO_SLUG.git &&
     npm publish --tag $NPM_TAG
+
+deploy:
+   provider: pages
+   skip_cleanup: true
+   github_token: $GITHUB_TOKEN
+   local_dir: $TRAVIS_BUILD_DIR/docs/build
+   on:
+      branch: master
+
