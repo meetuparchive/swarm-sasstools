@@ -49,8 +49,7 @@ after_script:
 
 deploy:
    provider: pages
-   skip_cleanup: false
-   verbose: true
+   skip_cleanup: true
    github_token: $GITHUB_TOKEN
    local_dir: docs/build/
    on:

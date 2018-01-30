@@ -5,6 +5,7 @@
 *.swo
 *.css.map
 *.log
+.npmrc
 .bower.json
 docs/build/
 docs/templates/assets/swarm-sasstools.css
