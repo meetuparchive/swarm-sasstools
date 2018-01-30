@@ -52,7 +52,7 @@ deploy:
    skip_cleanup: false
    verbose: true
    github_token: $GITHUB_TOKEN
-   local_dir: ./docs/build
+   local_dir: docs/build
    on:
       branch: master
 
