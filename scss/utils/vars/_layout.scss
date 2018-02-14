@@ -6,27 +6,27 @@
 
 /// modal default width
 /// @type Value(px)
-$modal-width: 440px;
+$modal-width: var(--width-modal);
 
 /// bounds default width
 /// @type Value(px)
-$bounds: 840px;
+$bounds: var(--width-bounds);
 
 /// bounds wide variant width
 /// @type Value(px)
-$bounds-wide: 1100px;
+$bounds-wide: var(--width-bounds-wide);
 
 /// small border-radius value
 /// @type Value(px)
-$smallRadius: 2px;
+$smallRadius: var(--radius-small);
 
 /// default border-radius value
 /// @type Value(px)
-$defaultRadius: 4px;
+$defaultRadius: var(--radius-normal);
 
 /// large border-radius value
 /// @type Value(px)
-$largeRadius: 8px;
+$largeRadius: var(--radius-large);
 
 /// zindex aliases
 /// @prop {Number} zindex-map.main [0]
@@ -36,12 +36,12 @@ $largeRadius: 8px;
 /// @prop {Number} zindex-map.modal [30]
 /// @prop {Number} zindex-map.popup [50]
 $zindex-map: (
-	main: 0,
-	floating-content: 10,
-	shade: 20,
-	shade-content: 25,
-	modal: 30,
-	popup: 50
+	main: var(--zindex-main),
+	floating-content: var(--zindex-floatingContent),
+	shade: var(--zindex-shade),
+	shade-content: var(--zindex-shadeContent),
+	modal: var(--zindex-modal),
+	popup: var(--zindex-popup)
 );
 
 /// Convenience list of possible `display` values.
