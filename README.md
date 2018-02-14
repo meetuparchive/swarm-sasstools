@@ -10,6 +10,12 @@ swarm-sasstools
 Sass is compiled via `webpack`. Grunt is used in this project as a task runner to build
 documentation from compiled CSS.
 
+#### Scripts
+
+Script               | Result
+-------------------- | -----------------------------
+`yarn run build `    | Runs default grunt task.
+
 #### Grunt tasks
 
 Run build tasks with `yarn grunt [command]`.
