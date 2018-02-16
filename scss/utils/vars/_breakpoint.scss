@@ -6,19 +6,19 @@
 
 /// small breakpoint
 /// @type Value(px)
-$breakpoint-s  : 440px;
+$breakpoint-s  : var(--breakpoint-s);
 
 /// medium breakpoint
 /// @type Value(px)
-$breakpoint-m  : 640px;
+$breakpoint-m  : var(--breakpoint-m);
 
 /// large breakpoint
 /// @type Value(px)
-$breakpoint-l  : 840px;
+$breakpoint-l  : var(--breakpoint-l);
 
 /// huge breakpoint
 /// @type Value(px)
-$breakpoint-xl : 1024px;
+$breakpoint-xl : var(--breakpoint-xl);
 
 /// breakpoint aliases map
 /// @prop {Value(px)} breakpoint-map.s [440px]

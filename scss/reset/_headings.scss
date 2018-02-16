@@ -29,14 +29,14 @@ heading styles; for example, `text--display1`.
 ```
 */
 h1, h2, h3, h4, h5, h6 {
-	font-size: rem($font-size);
+	font-size: $font-size;
 	margin: 0;
 	padding: 0;
 }
 h1 {
 	.view-head & {
 		@extend %text--heavy;
-		font-size: rem($font-size);
+		font-size: $font-size;
 	}
 }
 
