@@ -5,5 +5,8 @@
 * FOR DOCUMENTATION PURPOSES ONLY
 */
 @import "../scss/reset/all";
-@import "../scss/mwc-styles";
+
+// disable component styles until CSS Modules/PostCSS is set up there
+// @import "~meetup-web-components/assets/scss/components/all";
+
 @import "../scss/modifierClasses/all";

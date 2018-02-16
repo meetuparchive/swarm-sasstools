@@ -22,8 +22,7 @@
 	},
 	"dependencies": {
 		"bourbon": "4.2.3",
-		"sass-rem": "^1.2.4",
-		"swarm-constants": "1.2.44"
+		"sass-rem": "^1.2.4"
 	},
 	"devDependencies": {
 		"@alrra/travis-scripts": "^3.0.1",
@@ -39,11 +38,13 @@
 		"grunt-gh-pages": "0.9.1",
 		"grunt-preprocess": "5.1.0",
 		"grunt-sassdoc": "2.0.2",
+		"meetup-web-components": "^4.6.1860",
 		"node-sass": "4.5.3",
 		"sass-loader": "6.0.1",
 		"sassdoc-theme-flippant": "0.1.0",
 		"seldon": "0.3.2",
 		"swarm-animation": "^0.0.95",
+		"swarm-constants": "^1.2.73",
 		"webpack": "2.2.1"
 	},
 	"bugs": {
