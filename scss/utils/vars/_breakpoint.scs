@@ -17,4 +17,3 @@ $brightness_threshold: 160;
 /// @see {function} getPrimaryTextColor
 $C_contrastDarkBG: #fff;
 $C_contrastLightBG: #000;
-$C_accent: $C_blue;

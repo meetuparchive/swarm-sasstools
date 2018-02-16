@@ -13,7 +13,7 @@
 // libraries
 // ("~" prefix allows webpack to resolve `node_modules` location)
 //
-@import "~swarm-constants/dist/css/customProperties";
+@import "~swarm-constants/dist/scss/colors";
 @import "~bourbon/app/assets/stylesheets/_bourbon.scss";
 @import "~swarm-animation/src/constants";
 @import "~swarm-animation/src/fade";
