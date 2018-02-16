@@ -7,46 +7,46 @@
 
 /// Default font stack
 /// @type String
-$font : "Graphik Meetup", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+$font : var(--font-family-normal);
 
 /// Mono font stack
 /// @type String
-$font--mono : Monaco, "Andale Mono", "Courier New", monospace;
+$font--mono : var(--font-family-mono);
 
 /// @type Value(px)
-$font-size-tiny      : 12px;
+$font-size-tiny      : var(--font-size-tiny);
 /// @type Value(px)
-$font-size-small     : 14px;
+$font-size-small     : var(--font-size-small);
 /// @type Value(px)
-$font-size           : 16px;
+$font-size           : var(--font-size-normal);
 /// @type Value(px)
 $font-size-tearsheet : 24px; // DEPRECATED
 
 /// @type Value(px)
-$font-size-big2      : 20px;
+$font-size-big2      : 20px; // DEPRECATED
 /// @type Value(px)
-$font-size-big       : 24px;
+$font-size-big       : var(--font-size-big);
 /// @type Value(px)
-$font-size-title     : 32px;
+$font-size-title     : var(--font-size-title);
 /// @type Value(px)
-$font-size-display3  : 28px; // DEPRECATED
+$font-size-display3  : var(--font-size-display3);
 /// @type Value(px)
-$font-size-display2  : 34px; // DEPRECATED
+$font-size-display2  : var(--font-size-display2);
 /// @type Value(px)
-$font-size-display1  : 42px;
+$font-size-display1  : var(--font-size-display1);
 
 /// @type Number
-$W_normal : 400;
+$W_normal : var(--font-weight-normal);
 /// @type Number
-$W_medium : 500;
+$W_medium : var(--font-weight-medium);
 /// @type Number
-$W_bold   : 600;
+$W_bold   : var(--font-weight-bold);
 
 /// @type String
-$line-height-largeText : 1.1;
+$line-height-largeText : var(--font-lineHeight-largeText);
 /// @type String
-$line-height           : 1.45;
+$line-height           : var(--font-lineHeight-normal);
 /// @type String
-$line-height-smallText : 1.6;
+$line-height-smallText : var(--font-lineHeight-smallText);
 /// @type String
-$line-height-runningText : 1.8;
+$line-height-runningText : var(--font-lineHeight-runningText);
