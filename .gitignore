@@ -8,7 +8,8 @@
 .npmrc
 .bower.json
 docs/build/
-docs/templates/assets/
+docs/templates/assets/swarm-sasstools.css
+docs/templates/assets/bundle.js
 node_modules/
 .grunt/
 sassdoc/

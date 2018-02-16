@@ -21,25 +21,25 @@
 */
 /// scales from 48px @ 1:1.5
 /// @type Value(px)
-$block           : var(--block-1);
+$block           : 48px;
 /// scales from 48px @ 1:1.5
 /// @type Value(px)
-$block-2         : var(--block-2);
+$block-2         : 72px;
 /// scales from 48px @ 1:1.5
 /// @type Value(px)
-$block-3         : var(--block-3);
+$block-3         : 108px;
 /// scales from 48px @ 1:1.5
 /// @type Value(px)
-$block-4         : var(--block-4);
+$block-4         : 160px;
 /// scales from 48px @ 1:1.5
 /// @type Value(px)
-$block-5         : var(--block-5);
+$block-5         : 240px;
 /// scales from 48px @ 1:1.5
 /// @type Value(px)
-$block-6         : var(--block-6);
+$block-6         : 384px;
 /// scales from 48px @ 1:1.5
 /// @type Value(px)
-$block-7         : var(--block-7);
+$block-7         : 544px;
 
 /**
 * "Space" variables contain size values in pixels starting from
@@ -47,41 +47,41 @@ $block-7         : var(--block-7);
 */
 /// scales from 16px @ 1:1.5
 /// @type Value(px)
-$space           : var(--space-1);
+$space           : 16px;
 /// scales from 16px @ 1:1.5
 /// @type Value(px)
-$space-2         : var(--space-2);
+$space-2         : 24px;
 /// scales from 16px @ 1:1.5
 /// @type Value(px)
-$space-3         : var(--space-3);
+$space-3         : 36px;
 /// scales from 16px @ 1:1.5
 /// @type Value(px)
-$space-4         : var(--space-4);
+$space-4         : 56px;
 /// scales from 16px @ 1:1.5
 /// @type Value(px)
-$space-5         : var(--space-5);
+$space-5         : 80px;
 /// scales from 16px @ 1:1.5
 /// @type Value(px)
-$space-6         : var(--space-6);
+$space-6         : 120px;
 /// scales from 16px @ 1:1.5
 /// @type Value(px)
-$space-7         : var(--space-7);
+$space-7         : 184px;
 /// scales from 16px @ 1:1.5
 /// @type Value(px)
-$space-8         : var(--space-8);
+$space-8         : 280px;
 
 /// scales from 16px @ 1:1.5
 /// @type Value(px)
-$space-and-half  : calc(var(--space-1)*1.5);
+$space-and-half  : $space*1.5;
 /// scales from 16px @ 1:1.5
 /// @type Value(px)
-$space-double    : var(--space-double);
+$space-double    : $space*2;
 /// scales from 16px @ 1:1.5
 /// @type Value(px)
-$space-half      : var(--space-half);
+$space-half      : $space/2;
 /// scales from 16px @ 1:1.5
 /// @type Value(px)
-$space-quarter   : var(--space-quarter);
+$space-quarter   : $space/4;
 
 /**
 * Elements like images, icons, avatars, and illustrations
@@ -89,17 +89,17 @@ $space-quarter   : var(--space-quarter);
 * set media sizes based on our modular scale:
 */
 /// @type Value(px)
-$media-xs : var(--media-xs);
+$media-xs : $space;    // 16px
 /// @type Value(px)
-$media-s : var(--media-s);
+$media-s : $space-2;   // 24px
 /// @type Value(px)
-$media-m  : var(--media-m);
+$media-m  : $space-3;  // 36px
 /// @type Value(px)
-$media-l  : var(--media-l);
+$media-l  : $block;    // 48px
 /// @type Value(px)
-$media-xl  : var(--media-xl);
+$media-xl  : $block-2; // 72px
 /// @type Value(px)
-$media-xxl : var(--media-xxl);
+$media-xxl : $space-6; // 120px
 
 /// @prop {Value(px)} media-map.xs [$meida-xs]
 /// @prop {Value(px)} media-map.s [$meida-s]
