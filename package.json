@@ -1,6 +1,6 @@
 {
 	"name": "swarm-sasstools",
-	"version": "0.0.0",
+	"version": "4.0.0--beta",
 	"description": "Sass tools module of the Swarm Design System",
 	"directories": {
 		"doc": "sassdoc/",
@@ -44,7 +44,7 @@
 		"sassdoc-theme-flippant": "0.1.0",
 		"seldon": "0.3.2",
 		"swarm-animation": "^0.0.95",
-		"swarm-constants": "1.2.44",
+		"swarm-constants": "^1.2.80",
 		"webpack": "2.2.1"
 	},
 	"bugs": {

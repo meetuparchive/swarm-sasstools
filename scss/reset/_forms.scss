@@ -63,7 +63,7 @@ see <a class="link" style="text-decoration: underline;" href="https://github.com
 */
 %label,
 label {
-	font-size: rem($font-size);
+	font-size: $font-size;
 	font-weight: $W_medium;
 
 	&.required:after {
@@ -154,7 +154,7 @@ select {
 
 input,
 select {
-	height: ($font-size * $line-height) + $space*2;
+	height: calc(($font-size * $line-height) + var(--space-double));
 }
 
 input::-webkit-input-placeholder,
