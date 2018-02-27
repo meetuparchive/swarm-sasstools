@@ -1,7 +1,7 @@
 ////
 /// Color vars
 /// @group Color
-/// @access public
+/// @access private
 ////
 
 /// 0-255 threshold for brightness functions
@@ -17,4 +17,6 @@ $brightness_threshold: 160;
 /// @see {function} getPrimaryTextColor
 $C_contrastDarkBG: #fff;
 $C_contrastLightBG: #000;
+
+// old holdover
 $C_accent: $C_blue;
