@@ -153,7 +153,7 @@ select {
 
 input,
 select {
-	height: calc(($font-size * $line-height) + var(--space-double));
+	height: calc($font-size * $line-height + var(--space-double));
 }
 
 input::-webkit-input-placeholder,
