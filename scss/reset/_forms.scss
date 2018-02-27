@@ -65,20 +65,6 @@ see <a class="link" style="text-decoration: underline;" href="https://github.com
 label {
 	font-size: rem($font-size);
 	font-weight: $W_medium;
-
-	&.required:after {
-		content: "*";
-		color: $C_textSecondary;
-		font-size: $font-size;
-		line-height: 0;
-		margin-left: $space/4;
-		position: relative;
-		top: 0;
-	}
-
-	&.disabled {
-		color: $C_textSecondary;
-	}
 }
 
 fieldset {
