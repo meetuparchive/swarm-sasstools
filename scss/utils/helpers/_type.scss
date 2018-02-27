@@ -19,34 +19,34 @@
 
 /// Page title text placeholder
 %text--pageTitle {
-	font-size: rem($font-size-title);
+	font-size: $font-size-title;
 }
 
 /// Section title text placeholder
 %text--sectionTitle {
-	font-size: rem($font-size-big2);
+	font-size: $font-size-big2;
 	line-height: $line-height;
 }
 
 /// Top level display text placeholder
 %text--display1 {
-	font-size: rem($font-size-display1);
+	font-size: $font-size-display1;
 }
 
 /// Secondary level display text placeholder
 %text--display2 {
-	font-size: rem($font-size-display2);
+	font-size: $font-size-display2;
 }
 
 /// Tertiary level display text placeholder
 %text--display3 {
-	font-size: rem($font-size-display3);
+	font-size: $font-size-display3;
 }
 
 // Primary label text
 %text--label {
 	@include color-all($C_textPrimary);
-	font-size: rem($font-size-small);
+	font-size: $font-size-small;
 	font-weight: $W_bold;
 	line-height: $line-height-smallText;
 	letter-spacing: -0.02em;
@@ -106,19 +106,19 @@
 
 /// Big text
 %text--big {
-	font-size: rem($font-size-big);
+	font-size: $font-size-big;
 	line-height: $line-height-largeText;
 }
 
 /// Small text
 %text--small {
-	font-size: rem($font-size-small);
+	font-size: $font-size-small;
 	line-height: $line-height-smallText;
 }
 
 /// Tiny text
 %text--tiny {
-	font-size: rem($font-size-tiny);
+	font-size: $font-size-tiny;
 	line-height: $line-height-smallText;
 }
 
