@@ -4395,9 +4395,9 @@ scss-tokenizer@^0.2.3:
     js-base64 "^2.1.8"
     source-map "^0.4.2"
 
-seldon@0.4.3:
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/seldon/-/seldon-0.4.3.tgz#97b88651ad8a6e0ea233e0680bd7334b24fcb3f3"
+seldon@0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/seldon/-/seldon-0.4.4.tgz#78ff2e20453e52a68cc8f2129d78b46d51dc08b2"
   dependencies:
     colors "1.1.2"
     frontmatter "0.0.3"
