@@ -42,7 +42,7 @@
 		"node-sass": "4.5.3",
 		"sass-loader": "6.0.1",
 		"sassdoc-theme-flippant": "0.1.0",
-		"seldon": "0.3.2",
+		"seldon": "0.4.3",
 		"swarm-animation": "^0.0.95",
 		"swarm-constants": "1.2.44",
 		"webpack": "2.2.1"

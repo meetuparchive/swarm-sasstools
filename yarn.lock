@@ -2947,9 +2947,9 @@ markdown@~0.5.0:
   dependencies:
     nopt "~2.1.1"
 
-marked@0.3.5:
-  version "0.3.5"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.5.tgz#4113a15ac5d7bca158a5aae07224587b9fa15b94"
+marked@0.3.9:
+  version "0.3.9"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.9.tgz#54ce6a57e720c3ac6098374ec625fcbcc97ff290"
 
 marked@^0.3.0:
   version "0.3.6"
@@ -4395,16 +4395,16 @@ scss-tokenizer@^0.2.3:
     js-base64 "^2.1.8"
     source-map "^0.4.2"
 
-seldon@0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/seldon/-/seldon-0.3.2.tgz#467aabe3e6c25faad560cd10a140472c8587cd56"
+seldon@0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/seldon/-/seldon-0.4.3.tgz#97b88651ad8a6e0ea233e0680bd7334b24fcb3f3"
   dependencies:
     colors "1.1.2"
     frontmatter "0.0.3"
     fs-extra "0.26.5"
     handlebars "4.0.5"
     lodash "4.5.0"
-    marked "0.3.5"
+    marked "0.3.9"
 
 semver-diff@^2.0.0:
   version "2.1.0"
