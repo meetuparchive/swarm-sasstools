@@ -4,22 +4,6 @@
 /// @access public
 ////
 
-/// small breakpoint
-/// @type Value(px)
-$breakpoint-s  : 440px;
-
-/// medium breakpoint
-/// @type Value(px)
-$breakpoint-m  : 640px;
-
-/// large breakpoint
-/// @type Value(px)
-$breakpoint-l  : 840px;
-
-/// huge breakpoint
-/// @type Value(px)
-$breakpoint-xl : 1024px;
-
 /// breakpoint aliases map
 /// @prop {Value(px)} breakpoint-map.s [440px]
 /// @prop {Value(px)} breakpoint-map.m-content [640px]
