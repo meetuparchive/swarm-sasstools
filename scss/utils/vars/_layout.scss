@@ -5,30 +5,37 @@
 ////
 
 /// modal default width
+/// (provided by swarm-constants)
 /// @type Value(px)
-$modal-width: 440px;
+$modal-width: $width-modal;
 
 /// bounds default width
+/// (provided by swarm-constants)
 /// @type Value(px)
-$bounds: 840px;
+$bounds: $width-bounds;
 
 /// bounds wide variant width
+/// (provided by swarm-constants)
 /// @type Value(px)
-$bounds-wide: 1100px;
+$bounds-wide: $width-bounds-wide;
 
 /// small border-radius value
+/// (provided by swarm-constants)
 /// @type Value(px)
-$smallRadius: 2px;
+$smallRadius: $radius-small;
 
 /// default border-radius value
+/// (provided by swarm-constants)
 /// @type Value(px)
-$defaultRadius: 4px;
+$defaultRadius: $radius-normal;
 
 /// large border-radius value
+/// (provided by swarm-constants)
 /// @type Value(px)
-$largeRadius: 8px;
+$largeRadius: $radius-large;
 
 /// zindex aliases
+/// (provided by swarm-constants)
 /// @prop {Number} zindex-map.main [0]
 /// @prop {Number} zindex-map.floating-content [10]
 /// @prop {Number} zindex-map.shade [20]
@@ -36,12 +43,12 @@ $largeRadius: 8px;
 /// @prop {Number} zindex-map.modal [30]
 /// @prop {Number} zindex-map.popup [50]
 $zindex-map: (
-	main: 0,
-	floating-content: 10,
-	shade: 20,
-	shade-content: 25,
-	modal: 30,
-	popup: 50
+	main: $zindex-main,
+	floating-content: $zindex-floatingContent,
+	shade: $zindex-shade,
+	shade-content: $zindex-shadeContent,
+	modal: $zindex-modal,
+	popup: $zindex-popup
 );
 
 /// Convenience list of possible `display` values.
