@@ -162,6 +162,10 @@ input[type=time]::-ms-clear {
 	display: none;
 }
 
+input[type='number'] {
+	-moz-appearance:textfield;
+}
+
 /*doc
 ---
 title: Checkboxes
