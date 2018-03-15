@@ -5,12 +5,11 @@
 /// Sets a property and a value while accepting
 /// a hard-coded fallback value for browsers that
 /// don't support CSS custom properties.
-/// 
-/// @access private
+///
 /// @content [Style rules]
 @mixin customPropertyValue($properties, $cssVar, $fallback) {
 	@each $prop in $properties {
-		@if $fallback { 
+		@if $fallback {
 			#{$prop}: $fallback;
 		}
 		#{$prop}: $cssVar;
