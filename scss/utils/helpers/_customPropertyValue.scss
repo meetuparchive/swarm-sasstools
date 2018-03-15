@@ -9,7 +9,6 @@
 /// @param {property} $properties - css properties (e.g. "padding")
 /// @Param {value} $cssVar - e.g. "var(--cssVar)"
 /// @param {value} $fallback - fallback value for IE11
-/// @content [Style rules]
 ///
 /// @example scsss - Set padding to use responsive space with IE11 fallback
 ///		@include customPropertyValue(padding, var(--responsiveSpace), $space);
