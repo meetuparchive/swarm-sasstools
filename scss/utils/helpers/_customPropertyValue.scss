@@ -7,7 +7,7 @@
 /// don't support CSS custom properties.
 ///
 /// @param {property} $properties - css properties (e.g. "padding")
-/// @Param {customProperty} $cssVar - e.g. "var(--cssVar)"
+/// @Param {value} $cssVar - e.g. "var(--cssVar)"
 /// @param {value} $fallback - fallback value for IE11
 /// @content [Style rules]
 ///
