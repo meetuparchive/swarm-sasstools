@@ -7,9 +7,12 @@
 /// don't support CSS custom properties.
 ///
 /// @param {property} $properties - css properties (e.g. "padding")
-/// @Param {var()} $cssVar - e.g. "var(--cssVar)"
+/// @Param {customProperty} $cssVar - e.g. "var(--cssVar)"
 /// @param {value} $fallback - fallback value for IE11
 /// @content [Style rules]
+///
+/// @example scsss - Set padding to use responsive space with IE11 fallback
+///		@include customPropertyValue(padding, var(--responsiveSpace), $space);
 @mixin customPropertyValue($properties, $cssVar, $fallback) {
 	@each $prop in $properties {
 		@if $fallback {
