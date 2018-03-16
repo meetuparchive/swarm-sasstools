@@ -37,22 +37,14 @@
 @import "functions/color";
 
 //
-// helpers with dependencies
+// helpers
 //
-@import "helpers/pcv-modifier";
-@import "helpers/selector";
 @import "helpers/a11y";
-@import "helpers/i18n";
-@import "helpers/browser";
-@import "helpers/breakpoint";
-@import "helpers/position";
-
-//
-// helpers (depends on above)
-//
 @import "helpers/align";
 @import "helpers/background";
 @import "helpers/border";
+@import "helpers/breakpoint";
+@import "helpers/browser";
 @import "helpers/button";
 @import "helpers/color";
 @import "helpers/customPropertyValue";
@@ -60,8 +52,12 @@
 @import "helpers/flexbox";
 @import "helpers/float";
 @import "helpers/forms";
+@import "helpers/i18n";
 @import "helpers/lists";
+@import "helpers/pcv-modifier";
+@import "helpers/position";
 @import "helpers/type";
+@import "helpers/selector";
 @import "helpers/shadow";
 @import "helpers/shape";
 @import "helpers/width";
