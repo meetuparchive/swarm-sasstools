@@ -68,10 +68,14 @@ Removed `responsiveVarContext--scalingMedia()` mixin in favor of CSS custom prop
 }
 ```
 
-#### v2.X.X
+#### 3.1.X
+All partials in `scss/utils/` now explicitly import their dependencies, making it easier
+to treat a specific utility as a standalone import. This is not a breaking change.
+
+#### 2.X.X
 Form inputs were re-styled. These updates increased padding on inputs considerably, and may cause layouts to shift. This should only be an issue for screens with designs that rely on the inputs being a specific height.
 
-#### v1.7
+#### 1.7.X
 Introduced big visual changes to type and scaling, but no breaking changes.
 - deprecated `%text--display2`, `.text--display2`
 - deprecated `%text--display3`, `.text--display3`
