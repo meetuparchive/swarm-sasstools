@@ -154,6 +154,17 @@
 
 	.inverted & {
 		@include color-all($C_textPrimaryInverted);
+		text-decoration: underline;
+
+		&:link{
+			text-decoration: underline;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			text-decoration: none;
+		}
 	}
 
 }
