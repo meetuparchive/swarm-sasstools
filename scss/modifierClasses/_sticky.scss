@@ -1,0 +1,10 @@
+.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+}
+
+@each $direction in (top, bottom) {
+	@include _modifier(sticky, $direction) {
+		#{$direction}: 0;
+	}
+}
