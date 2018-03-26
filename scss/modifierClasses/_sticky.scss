@@ -1,3 +1,20 @@
+/*doc
+---
+title: Sticky
+name: stickyMod
+category: Modifier Classes
+---
+Sets the position property of element to `sticky`, and
+uses modifier classes for picking a which side of the
+viewport to stick to
+
+Class                   | Description
+----------------------- | --------------------------------
+`.sticky`               | sets `position` to `sticky`
+`.sticky--top`          | sets `top` to `0`, causing element to "stick" to the top of the viewport
+`.sticky--bottom`       | sets `bottom` to `0`, causing element to "stick" to the bottom of the viewport
+*/
+
 .sticky {
 	position: -webkit-sticky;
 	position: sticky;
