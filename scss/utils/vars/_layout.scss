@@ -5,37 +5,37 @@
 ////
 
 /// modal default width
-/// (provided by swarm-constants)
+/// (provided by [swarm-constants](https://meetup.github.io/swarm-constants/#layout))
 /// @type Value(px)
 $modal-width: $width-modal;
 
 /// bounds default width
-/// (provided by swarm-constants)
+/// (provided by [swarm-constants](https://meetup.github.io/swarm-constants/#layout))
 /// @type Value(px)
 $bounds: $width-bounds;
 
 /// bounds wide variant width
-/// (provided by swarm-constants)
+/// (provided by [swarm-constants](https://meetup.github.io/swarm-constants/#layout))
 /// @type Value(px)
 $bounds-wide: $width-bounds-wide;
 
 /// small border-radius value
-/// (provided by swarm-constants)
+/// (provided by [swarm-constants](https://meetup.github.io/swarm-constants/#layout))
 /// @type Value(px)
 $smallRadius: $radius-small;
 
 /// default border-radius value
-/// (provided by swarm-constants)
+/// (provided by [swarm-constants](https://meetup.github.io/swarm-constants/#layout))
 /// @type Value(px)
 $defaultRadius: $radius-normal;
 
 /// large border-radius value
-/// (provided by swarm-constants)
+/// (provided by [swarm-constants](https://meetup.github.io/swarm-constants/#layout))
 /// @type Value(px)
 $largeRadius: $radius-large;
 
 /// zindex aliases
-/// (provided by swarm-constants)
+/// (provided by [swarm-constants](https://meetup.github.io/swarm-constants/#layout))
 /// @prop {Number} zindex-map.main [0]
 /// @prop {Number} zindex-map.floating-content [10]
 /// @prop {Number} zindex-map.shade [20]
