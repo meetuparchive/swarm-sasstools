@@ -11,23 +11,31 @@ to an element.
 
 Class                    | Description
 ------------------------ | --------------------------------
-`.margin--top`           | Adds top margin to element
-`.margin--right`         | Adds right margin to element
-`.margin--bottom`        | Adds bottom margin to element
-`.margin--left`          | Adds left margin to element
+`.margin--top`           | Adds top `$space` margin to element
+`.margin--right`         | Adds right `$space` margin to element
+`.margin--bottom`        | Adds bottom `$space` margin to element
+`.margin--left`          | Adds left `$space` margin to element
+`.margin--halfTop`       | Adds top `$space-half` margin to element
+`.margin--halfRight`     | Adds right `$space-half` margin to element
+`.margin--halfBottom`    | Adds bottom `$space-half` margin to element
+`.margin--halfLeft`      | Adds left `$space-half` margin to element
 `.margin--all`           | Adds margin to all sides of element
 `.margin--none`          | Sets `margin` to `0`
 `.margin--center`        | Sets left and right margin to `auto`
 
 
-## Margin
+## Padding
 
 Class                    | Description
 ------------------------ | --------------------------------
-`.padding--top`          | Adds top padding to element
-`.padding--right`        | Adds right padding to element
-`.padding--bottom`       | Adds bottom padding to element
-`.padding--left`         | Adds left padding to element
+`.padding--top`          | Adds top `$space` padding to element
+`.padding--right`        | Adds right `$space` padding to element
+`.padding--bottom`       | Adds bottom `$space` padding to element
+`.padding--left`         | Adds left `$space` padding to element
+`.padding--halfTop`      | Adds top `$pace-half` padding to element
+`.padding--halfRight`    | Adds right `$space-half` padding to element
+`.padding--halfBottom`   | Adds bottom `$space-half` padding to element
+`.padding--halfLeft`     | Adds left `$space-half` padding to element
 `.padding--all`          | Adds padding to all sides of element
 `.padding--none`         | Sets `padding` to `0`
 
@@ -40,6 +48,14 @@ Class                    | Description
 	@each $direction in (top, right, left, bottom) {
 		@include _modifier($property, $direction) {
 			@include customPropertyValue(#{$property}-#{$direction}, var(--responsiveSpace), $space);
+		}
+	}
+
+	// directional half-units
+	@each $direction in (top, right, left, bottom) {
+		$modification: 'half#{str-firstCharToUpper($direction)}';
+		@include _modifier($property, $modification) {
+			#{$property}-#{$direction}: $space-half;
 		}
 	}
 
