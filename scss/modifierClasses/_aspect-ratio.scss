@@ -17,33 +17,27 @@ Class              | Description
 
 */
 
-$_aspectRatios: (
-	/* (dividend, divisor) */
-	(9, 16),
-	(1, 2),
-	(3, 2),
-	(2, 3),
-	(3, 4)
-);
+$_aspectRatios: ((9, 16),  (1, 2),  (3, 2),  (2, 3),  (3, 4));
 
 @mixin _aspect( $ratio ) {
-  margin-bottom: 0;
-  &:before {
-    content: '';
-    display: block;
-    padding-top: $ratio !important;
-  }
+	margin-bottom: 0;
+
+	&::before {
+		content: "";
+		display: block;
+		padding-top: $ratio !important;
+	}
 }
 
 // 1:1 default
 %keepAspect,
 .keepAspect {
-	@include _aspect(percentage(1/1));
+	@include _aspect(percentage(1 / 1));
 }
 
 // other ratio variants
 @each $dividend, $divisor in $_aspectRatios {
 	@include _modifier(keepAspect, #{$divisor}-#{$dividend}) {
-		@include _aspect(percentage($dividend/$divisor))
+		@include _aspect(percentage($dividend / $divisor));
 	}
 }

@@ -2,13 +2,12 @@
 /// @group display
 ////
 
-
 /// Sets display property for psuedo-elements
 /// @param {Value} $value [block] - valid CSS `display` value
 ///
 /// @example
 /// 	@include pseudoDisplay($value: block);
 @mixin pseudoDisplay($value: block) {
-	content: '';
+	content: "";
 	display: $value;
 }

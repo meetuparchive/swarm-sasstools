@@ -16,10 +16,10 @@
 /// 		// styles for medium sizes and up
 /// 	}
 ///
+/* stylelint-disable string-no-newline */
 @mixin _wrapMediaQuery( $breakpoint ) {
-	@each $query in (
-		(
-			small "only screen and (min-width: #{$breakpoint-s})"
+	@each $query in ((
+		small "only screen and (min-width: #{$breakpoint-s})"
 		),
 		(
 			medium "only screen and (min-width: #{$breakpoint-m})"
@@ -29,8 +29,7 @@
 		),
 		(
 			huge "only screen and (min-width: #{$breakpoint-xl})"
-		)
-	) {
+	)) {
 		@if $breakpoint == nth($query, 1) {
 			@media #{nth($query, 2)} {
 				@content;
@@ -38,6 +37,7 @@
 		}
 	}
 }
+/* stylelint-enable */
 
 /// This breakpoint mixin uses a **mobile first**
 /// strategy, meaning the `medium` breakpoint, for

@@ -1,4 +1,4 @@
- @import "../vars/root-class";
+@import "../vars/root-class";
 
 ////
 /// @group i18n
@@ -34,7 +34,6 @@
 	}
 }
 
-
 /// Excludes styles from a specific language or set of languages
 /// using classes applied to the `body` element of a document
 ///
@@ -56,7 +55,7 @@
 ///
 @mixin i18n-exclude($langs...) {
 	@each $lang in $langs {
-		$class: map-get($root-language-map, $lang);
+		$class: map-get($root-language-map, $lang); // stylelint-disable-line scss/no-duplicate-dollar-variables
 
 		@if $class {
 			body:not(#{$class}) & {
@@ -65,4 +64,3 @@
 		}
 	}
 }
-

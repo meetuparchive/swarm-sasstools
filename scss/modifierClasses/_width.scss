@@ -21,15 +21,13 @@ input attribute selectors.
 <p class="span--25" style="background: pink;">25% width</p>
 ```
 */
-@each $pct in (
-	100,
-	80,
-	75,
-	60,
-	50,
-	30,
-	25
-) {
+@each $pct in (100,
+80,
+75,
+60,
+50,
+30,
+25) {
 	@include _modifier(span, $pct) {
 		width: $pct#{"%"} !important;
 	}

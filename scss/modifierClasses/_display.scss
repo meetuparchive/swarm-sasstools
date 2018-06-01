@@ -17,15 +17,19 @@ Class                   | Description
 `.display--grid`        | sets `display` to `grid`
 */
 @each $display in $display-values {
-
 	// convert hyphenated display values to camelCase
-	$_camelValue: str-replace(str-replace($display, '-block', 'Block'), '-flex', 'Flex');
+	/* stylelint-disable function-parentheses-newline-inside, function-parentheses-space-inside, function-comma-newline-after, function-comma-space-after */
+	$_camelValue: str-replace(
+		str-replace($display, "-block", "Block"),
+		"-flex",
+		"Flex"
+	);
+	/* stylelint-enable */
 
 	@include _modifier(display, $_camelValue) {
 		display: $display;
 	}
 }
-
 
 /*doc
 ---
@@ -41,8 +45,8 @@ Class                   | Description
 `.flexParent--row`      | sets `display` to `flex` with row orientation for children
 `.flexParent--column`   | sets `display` to `flex` with column orientation for children
 */
-@each $orientation in ('row', 'column') {
-	@include _modifier('flexParent', $orientation) {
+@each $orientation in ("row", "column") {
+	@include _modifier("flexParent", $orientation) {
 		@include flexParent($orientation);
 	}
 }

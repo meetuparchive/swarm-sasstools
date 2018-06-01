@@ -59,17 +59,19 @@ _Includes `table-cell` fallback for IE8._
 </div>
 ```
 */
+
 .row {
-	@include flexParent('row');
+	@include flexParent("row");
 }
+
 .row-item {
-	@include flexChild('grow');
+	@include flexChild("grow");
 	padding-left: $space;
+
 	&:first-child {
 		padding-left: 0;
 	}
 }
-
 
 /*doc
 ---
@@ -101,15 +103,19 @@ Class                   | Description
 `.row--spaceBetween`    | justifies content to `spaceBetween`
 `.row--spaceAround`     | justifies content to `spaceAround`
 */
+
 .row--noGutters .row-item {
 	padding: 0;
 }
+
 .row--reverse {
 	@include flex-direction(row-reverse);
 }
+
 .row--wrap {
 	@include flex-wrap(wrap);
 }
+
 @each $jName, $jprop in $flexJustifyMap {
 	.row--#{$jName} {
 		@include justify-content($jprop);
@@ -135,8 +141,9 @@ Class                   | Description
 ----------------------- | -------------------------------
 `.row-item--shrink`     | Item shrinks to fit content
 */
+
 .row-item--shrink {
-	@include flexChild('shrink');
+	@include flexChild("shrink");
 }
 
 // {{{ DEPRECATED

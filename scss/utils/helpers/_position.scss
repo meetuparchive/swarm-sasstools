@@ -3,10 +3,9 @@
 /// @access public
 ////
 
-
 /// Absolutely positions selected element
 /// and centers with `left` and negative margin
-/// 
+///
 /// @param {Value} $elementWidth - width of element (in `px`)
 ///
 /// @example scss
@@ -18,9 +17,8 @@
 @mixin centerAbsolute( $elementWidth ) {
 	position: absolute;
 	left: 50%;
-	margin-left: -($elementWidth/2);
+	margin-left: -($elementWidth / 2);
 }
-
 
 /// Absolutely positions selected element
 /// and stretches it to fill the viewport

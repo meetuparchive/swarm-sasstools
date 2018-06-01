@@ -20,9 +20,8 @@
 	$G: green($color);
 	$B: blue($color);
 
-	@return floor( ( ($R * 299) + ($G * 587) + ($B * 114) )/1000 );
+	@return floor( ( ($R * 299) + ($G * 587) + ($B * 114) ) / 1000 );
 }
-
 
 /// Tests if color is dark
 /// @access public
@@ -38,9 +37,8 @@
 /// 	// -> True
 ///
 @function isDark( $color, $threshold: $brightness_threshold ) {
-	@return ( getPerceivedBrightness($color) <= $threshold );
+	@return (getPerceivedBrightness($color) <= $threshold);
 }
-
 
 /// Tests if color is light
 /// @access public
@@ -58,8 +56,6 @@
 @function isLight( $color, $threshold: $brightness_threshold ) {
 	@return not(isDark( $color, $threshold ));
 }
-
-
 
 /*doc
 ---
@@ -93,9 +89,11 @@ color: getPrimaryTextColor(#FFF);
 /// 	color: getPrimaryTextColor( $myBackgroundColor );
 ///
 @function getPrimaryTextColor( $color ) {
-	@if isDark($color) { // very threshold darkness
+	@if isDark($color) {
+		// very threshold darkness
 		@return $C_contrastDarkBG;
-	} @else { // much light
+	} @else {
+		// much light
 		@return $C_contrastLightBG;
 	}
 	// wow

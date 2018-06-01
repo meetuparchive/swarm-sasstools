@@ -16,8 +16,7 @@ Class          | Description
 `.media--xxl`  | Sets `width` to `$media-xxl` and height to `auto`
 */
 @each $sizeName, $size in $media-map {
-
-	@include _modifier('media', $sizeName) {
+	@include _modifier("media", $sizeName) {
 		height: auto;
 
 		@each $mediaKey, $mediaSize in $media-map {
@@ -25,7 +24,5 @@ Class          | Description
 				@include customPropertyValue(width, var(--responsiveMedia-#{$mediaKey}), $mediaSize);
 			}
 		}
-
 	}
-
 }

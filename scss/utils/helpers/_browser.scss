@@ -4,7 +4,6 @@
 /// @group browser
 ////
 
-
 /// Applies styles to IE10 and IE11 using a vendor-specific
 /// media query. Because we currently only support IE11, this
 /// can be treated as an IE11-only filter.
@@ -49,10 +48,12 @@
 			@content;
 		}
 	} @else {
-		@error "invalid argument for mixin 'browser-lessThanIE'; must be a number, 9 or 10";
+		/* stylelint-disable string-no-newline */
+		@error "invalid argument for mixin 'browser-lessThanIE'; must be a number,
+			9 or 10";
+		/* stylelint-enable */
 	}
 }
-
 
 /// Applies styles contained in content directive
 /// to "modern" browsers only (excludes IE versions less than 10).

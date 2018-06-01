@@ -2,21 +2,25 @@
 * Keyframes
 * TODO: move these to our animation lib
 */
-@include keyframes('bounce-in-subtle') {
+@include keyframes("bounce-in-subtle") {
 	0% {
 		@include transform(scale(1));
 	}
+
 	35% {
 		@include transform(scale(1.15));
 	}
+
 	75% {
 		@include transform(scale(1));
 	}
 }
-@include keyframes('spin') {
+
+@include keyframes("spin") {
 	0% {
 		@include transform(rotate(0deg));
 	}
+
 	100% {
 		@include transform(rotate(360deg));
 	}
@@ -35,7 +39,7 @@
 /// 	@include animate--bounce-in-subtle($time: 750ms);
 @mixin animate--bounceInSubtle($time: 250ms) {
 	@extend %_origin--center;
-	@include animation(bounce-in-subtle $time cubic-bezier(0.175, 0.885, 0.320, 1.275));
+	@include animation(bounce-in-subtle $time cubic-bezier(0.175, 0.885, 0.32, 1.275)); // stylelint-disable-line number-max-precision
 }
 
 /// Infinite 2d rotation; 0-360deg.
@@ -48,7 +52,6 @@
 	@include animation(spin $time linear);
 	@include animation-iteration-count(infinite);
 }
-
 
 /*doc
 ---
