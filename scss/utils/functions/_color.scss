@@ -23,9 +23,9 @@
 	$colorList: ();
 
 	@for $n from 1 through $numColors {
-		$hueAdjust: $spectrum/$numColors*$n;
+		$hueAdjust: $spectrum / $numColors * $n;
 		$color: adjust-hue($baseColor, $hueAdjust);
-		$colorList: append($colorList, $color);
+		$colorList: append($colorList, $color); //stylelint-disable-line scss/no-duplicate-dollar-variables
 	}
 
 	@return $colorList;
@@ -44,7 +44,7 @@
 ///			background-color: rgba-to-hex($C_textHint, $C_white);
 ///		}
 ///
-@function rgba-to-hex($rgba, $bgColor: $C_white){
+@function rgba-to-hex($rgba, $bgColor: $C_white) {
 	@if $bgColor != $C_contentBG {
 		$bgColor: $bgColor;
 	}

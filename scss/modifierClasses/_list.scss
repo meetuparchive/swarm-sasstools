@@ -25,8 +25,8 @@ Bottom spacing is provided with `chunk`.
 */
 
 @include _modifier(list, reset) {
-  list-style: none;
-  padding-left: 0;
+	list-style: none;
+	padding-left: 0;
 }
 
 // TODO: consider moving this placeholder to util/_border.scss and documenting
@@ -97,6 +97,7 @@ Class                   | Description
 </ul>
 ```
 */
+
 .list-item {
 	@extend %listBorders;
 	margin: 0;

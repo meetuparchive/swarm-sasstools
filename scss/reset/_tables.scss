@@ -40,6 +40,8 @@ category: Tables
 </table>
 ```
 */
+
+/* stylelint-disable selector-max-combinators, selector-max-compound-selectors, selector-max-specificity */
 table {
 	display: table;
 	border-collapse: collapse;
@@ -51,13 +53,14 @@ td,
 th {
 	@include customPropertyValue(
 		padding,
-		calc(var(--responsiveSpace)/2)
+		calc(var(--responsiveSpace) / 2)
 		var(--responsiveSpace),
-		$space/2 $space
+		$space / 2 $space
 	);
 	text-align: left;
 	vertical-align: middle;
 	color: $C_textSecondary;
+
 	.inverted & {
 		color: $C_textSecondaryInverted;
 	}
@@ -68,7 +71,7 @@ caption {
 }
 
 thead th {
-	@include standardBorder('bottom');
+	@include standardBorder("bottom");
 	color: $C_textPrimary;
 	font-weight: $W_bold;
 }
@@ -115,28 +118,34 @@ Apply the `borderedTable` class to apply borders to table cells.
 </table>
 ```
 */
+
 .borderedTable {
-	td, tbody th {
+	td,
+	tbody th {
 		border-width: 1px 0 0 1px;
 		border-style: solid;
 		border-color: $C_border;
+
 		&:last-child {
 			border-right: 1px solid $C_border;
 		}
+
 		.inverted & {
 			border-color: $C_borderInverted;
 		}
 	}
+
 	thead th {
 		border-width: 0;
 	}
+
 	tbody tr:last-child {
-		td, th {
-			@include standardBorder('bottom');
+		td,
+		th {
+			@include standardBorder("bottom");
 		}
 	}
 }
-
 
 /*doc
 ---
@@ -179,6 +188,7 @@ category: Tables
 </table>
 ```
 */
+
 .resetTable {
 	caption,
 	tbody,
@@ -187,16 +197,16 @@ category: Tables
 	th {
 		padding: 0;
 		font-size: rem($font-size);
-		font-weight: normal;
+		font-weight: $W_normal;
 		border-width: 0;
 		vertical-align: top;
 		color: $C_textPrimary;
+
 		.inverted & {
 			color: $C_textPrimaryInverted;
 		}
 	}
 }
-
 
 /*doc
 ---
@@ -242,14 +252,17 @@ stripe to every other row of the table.
 ```
 
 */
+
 .stripedTable {
 	tbody {
 		tr:nth-child(odd) td,
 		tr:nth-child(odd) th {
 			background-color: $C_lightGray;
+
 			.inverted & {
 				background-color: $C_textTertiary;
 			}
 		}
 	}
 }
+/* stylelint-enable */

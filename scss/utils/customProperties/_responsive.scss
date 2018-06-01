@@ -1,10 +1,11 @@
- @import "~swarm-constants/dist/scss/vars";
- @import "../vars/scale";
+@import "~swarm-constants/dist/scss/vars";
+@import "../vars/scale";
 
 //
 // Default values
 //
 $mediaScale: 1;
+
 :root {
 	--responsiveSpace: $space;
 	--mediaScale: $mediaScale;
@@ -13,16 +14,13 @@ $mediaScale: 1;
 	}
 }
 
-
 //
 // Breakpoint values
 //
 
 // responsiveSpace
-@each $breakpoint, $responsiveBaseValue in (
-	medium: 18px,
-	large: 20px,
-) {
+@each $breakpoint, $responsiveBaseValue in (medium: 18px,
+large: 20px,) {
 	@include atMediaUp($breakpoint) {
 		:root {
 			--responsiveSpace: $responsiveBaseValue;
@@ -32,10 +30,9 @@ $mediaScale: 1;
 
 // mediaScale
 // scalingMedia-{size}
-@each $breakpoint, $responsiveScaleValue in (
-	medium: 1.125,
-	large: 1.25,
-) {
+/* stylelint-disable number-max-precision */
+@each $breakpoint, $responsiveScaleValue in (medium: 1.125,
+large: 1.25,) {
 	@include atMediaUp($breakpoint) {
 		:root {
 			--mediaScale: $responsiveScaleValue;
@@ -46,3 +43,4 @@ $mediaScale: 1;
 		}
 	}
 }
+/* stylelint-enable */

@@ -12,6 +12,7 @@ and user-select.
 	<a class="buttonPersonality chunk display--block">I behave more like a button (hover over me; try to select this text)</a>
 ```
 */
+
 .buttonPersonality {
 	@extend %buttonPersonality;
 }

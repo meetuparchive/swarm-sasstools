@@ -17,6 +17,7 @@ Class                        | Description
 `hasJS_display--inlineBlock` | Sets `display` property to `inline-block` if user has JS
 `hasJS_display--none`        | Sets `display` property to `none` if user has JS
 */
+
 .hasJS_display--block,
 .hasJS_display--inline,
 .hasJS_display--inlineBlock,
@@ -24,6 +25,14 @@ Class                        | Description
 	display: none;
 }
 
-.hasJS .hasJS_display--block			{ display: block; }
-.hasJS .hasJS_display--inline			{ display: inline; }
-.hasJS .hasJS_display--inlineBlock	{ display: inline-block; }
+.hasJS .hasJS_display--block {
+	display: block;
+}
+
+.hasJS .hasJS_display--inline {
+	display: inline;
+}
+
+.hasJS .hasJS_display--inlineBlock {
+	display: inline-block;
+}

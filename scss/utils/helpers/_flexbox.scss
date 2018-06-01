@@ -1,10 +1,9 @@
-@import "~bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "~bourbon/app/assets/stylesheets/bourbon.scss";
 @import "./browser";
 
 ////
 /// @group flexbox
 ////
-
 
 /// Sets flexbox properties for a flex parent (`display: flex;`)
 /// @param {String} $orientation - 'row' or 'column'
@@ -20,7 +19,7 @@
 	@include align-items(flex);
 	box-sizing: border-box;
 
-	@if '#{$orientation}' == 'row' {
+	@if "#{$orientation}" == "row" {
 		@include flex-direction(row);
 		@include flex-wrap(nowrap);
 	} @else {
@@ -41,7 +40,6 @@
 		}
 	}
 }
-
 
 /// Sets flexbox properties for a flex children.
 /// @param {String} $variant - 'shrink' or 'grow'

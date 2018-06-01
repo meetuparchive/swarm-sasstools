@@ -61,6 +61,8 @@ see <a class="link" style="text-decoration: underline;" href="https://github.com
 ```
 
 */
+
+/* stylelint-disable selector-no-qualifying-type, selector-no-vendor-prefix */
 %label,
 label {
 	font-size: rem($font-size);
@@ -68,11 +70,10 @@ label {
 }
 
 fieldset {
-  border: 0;
-  padding: 0;
-  margin: 0;
+	border: 0;
+	padding: 0;
+	margin: 0;
 }
-
 
 %_formBase,
 button,
@@ -97,8 +98,8 @@ button {
 }
 
 %_formTextField,
-#{$all-text-inputs}, // this var comes from Bourbon
-textarea,
+#{$all-text-inputs},
+// this var comes from bourbon textarea,
 select {
 	@include formInput();
 
@@ -131,16 +132,13 @@ select {
 			&:hover {
 				background-color: $C_borderInverted;
 			}
-
 		}
-
 	}
-
 }
 
 input,
 select {
-	height: ($font-size * $line-height) + $space*2;
+	height: ($font-size * $line-height) + $space * 2;
 }
 
 input::-webkit-input-placeholder,
@@ -149,7 +147,7 @@ textarea::-webkit-input-placeholder {
 	color: $C_textTertiary;
 }
 
-input[type=time] {
+input[type="time"] {
 	&::-webkit-clear-button,
 	&::-webkit-outer-spin-button,
 	&::-webkit-inner-spin-button {
@@ -158,12 +156,12 @@ input[type=time] {
 	}
 }
 
-input[type=time]::-ms-clear {
+input[type="time"]::-ms-clear {
 	display: none;
 }
 
-input[type='number'] {
-	-moz-appearance:textfield;
+input[type="number"] {
+	-moz-appearance: textfield;
 }
 
 /*doc
@@ -198,6 +196,7 @@ input elements.
 */
 
 // Safari height fix
-input[type=checkbox] {
+input[type="checkbox"] {
 	height: auto;
 }
+/* stylelint-enable  */

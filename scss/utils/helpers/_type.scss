@@ -1,4 +1,4 @@
-@import "~bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "~bourbon/app/assets/stylesheets/bourbon.scss";
 @import "~swarm-constants/dist/scss/vars";
 @import "../vars/type";
 @import "../vars/color";
@@ -7,7 +7,6 @@
 ////
 /// @group Typography
 ////
-
 %text--pageTitle,
 %text--sectionTitle,
 %text--big,
@@ -62,7 +61,7 @@
 		@include color-all($C_textPrimaryInverted);
 	}
 
-	@include i18n-only('en') {
+	@include i18n-only("en") {
 		text-transform: uppercase;
 	}
 }
@@ -79,13 +78,16 @@
 }
 
 // Bold text (medium weight)
+/* stylelint-disable selector-max-combinators, selector-max-compound-selectors */
 %text--bold {
 	font-weight: $W_medium !important;
+
 	.inverted .runningText,
 	.inverted.runningText {
 		font-weight: $W_bold !important;
 	}
 }
+/* stylelint-enable */
 
 // Heavy text (semibold weight)
 %text--heavy {
@@ -138,7 +140,7 @@
 	@include color-all($C_accent);
 	text-decoration: none;
 
-	&:link{
+	&:link {
 		text-decoration: none;
 	}
 
@@ -156,7 +158,7 @@
 		@include color-all($C_textPrimaryInverted);
 		text-decoration: underline;
 
-		&:link{
+		&:link {
 			text-decoration: underline;
 		}
 
@@ -166,7 +168,6 @@
 			text-decoration: none;
 		}
 	}
-
 }
 
 /// Caption text

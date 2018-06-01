@@ -30,7 +30,8 @@ Class             | Description
 `.clearfix`       | clears `float` property of children
 
 */
-.clearfix:after {
+
+.clearfix::after {
 	visibility: hidden;
 	display: block;
 	font-size: 0;
@@ -41,4 +42,3 @@ Class             | Description
 		zoom: 1;
 	}
 }
-

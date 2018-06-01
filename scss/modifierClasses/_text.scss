@@ -43,7 +43,6 @@ Class          | Description
 	overflow: hidden;
 }
 
-
 /*doc
 ---
 title: Text decoration/transform
@@ -60,8 +59,9 @@ Class                  | Description
 @include _modifier(text, strikethrough) {
 	text-decoration: line-through;
 }
+
 @include _modifier(text, uppercase) {
-	@include i18n-only('en') {
+	@include i18n-only("en") {
 		text-transform: uppercase;
 	}
 }

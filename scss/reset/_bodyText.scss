@@ -10,6 +10,7 @@ category: Text Styles
 ```
 
 */
+
 html {
 	font-size: $font-size;
 }
@@ -17,16 +18,16 @@ html {
 body {
 	color: $C_textPrimary;
 	font-family: $font;
-	font-feature-settings: "liga","kern";
-	-moz-font-feature-settings: "liga","kern";
+	font-feature-settings: "liga", "kern";
+	-moz-font-feature-settings: "liga", "kern";
 	-moz-font-feature-settings: "liga=1, kern=1";
-	-ms-font-feature-settings: "liga","kern";
-	-o-font-feature-settings: "liga","kern";
-	-webkit-font-feature-settings: "liga","kern";
+	-ms-font-feature-settings: "liga", "kern";
+	-o-font-feature-settings: "liga", "kern";
+	-webkit-font-feature-settings: "liga", "kern";
 	font-weight: $W_normal;
 	font-size: rem($font-size);
 	line-height: $line-height;
-	text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility; // stylelint-disable-line property-blacklist
 }
 
 /*doc
@@ -46,12 +47,12 @@ elements to inveted colors.
 </div>
 ```
 */
+
 %inverted,
 .inverted,
 .inverted button {
 	@include color-all($C_textPrimaryInverted);
 }
-
 
 /*doc
 ---
@@ -63,10 +64,10 @@ category: Text Styles
 <p class="text--hint">This is hint text</p>
 ```
 */
+
 .text--hint {
 	@extend %text--hint;
 }
-
 
 /*doc
 ---
@@ -78,10 +79,10 @@ category: Text Styles
 <p class="text--secondary">Secondary text is secondary</p>
 ```
 */
+
 .text--secondary {
 	@extend %text--secondary;
 }
-
 
 /*doc
 ---
@@ -93,10 +94,10 @@ category: Text Styles
 <p class="text--tertiary">Tertiary text is tertiary</p>
 ```
 */
+
 .text--tertiary {
 	@extend %text--tertiary;
 }
-
 
 /*doc
 ---
@@ -108,11 +109,13 @@ category: Text Styles
 <p class="text--bold">Bold text is bold</p>
 ```
 */
+
 .text--bold {
 	@extend %text--bold;
 }
 
-.text--heavy { // DEPRECATED
+.text--heavy {
+	// DEPRECATED
 	@extend %text--heavy;
 }
 
@@ -127,6 +130,7 @@ category: Text Styles
 <h2 class="text--normal">This heading is usually bold.</h2>
 ```
 */
+
 .text--normal {
 	@extend %text--normal;
 }
@@ -142,6 +146,7 @@ category: Text Styles
 <small>Default styling of "small" tag</small>
 ```
 */
+
 small,
 .text--small {
 	@extend %text--small;
@@ -157,10 +162,10 @@ category: Text Styles
 <p class="text--tiny">Tiny text class is VERY small and should be used sparingly and probably never in conjunction with `text--hint`</p>
 ```
 */
+
 .text--tiny {
 	@extend %text--tiny;
 }
-
 
 /*doc
 ---
@@ -173,11 +178,11 @@ category: Text Styles
 <big>Default styling of "big" tag</big>
 ```
 */
+
 big,
 .text--big {
 	@extend %text--big;
 }
-
 
 /*doc
 ---
@@ -195,12 +200,12 @@ to any other element, use `text--mono`.
 <pre>We can safely assume a pre tag on Meetup is also code</pre>
 ```
 */
+
 code,
 pre,
 .text--mono {
 	@extend %text--mono;
 }
-
 
 /*doc
 ---
@@ -212,10 +217,10 @@ category: Text Styles
 <p class="text--caption">I'm captioning all the things</p>
 ```
 */
+
 .text--caption {
 	@extend %text--caption;
 }
-
 
 /*doc
 ---
@@ -228,6 +233,7 @@ category: Text Styles
 <p class="text--attention">Attention!</p>
 ```
 */
+
 .text--error,
 .text--attention {
 	@extend %text--attention;
@@ -263,14 +269,13 @@ in order to also set the color of icons inline with text.
 </section>
 ```
 */
-@each $colorName, $color in (
-	'red': $C_red,
-	'pink': $C_pink,
-	'teal': $C_teal,
-	'blue': $C_blue,
-	'yellow': $C_yellow
-) {
-	@include _modifier('text', "#{$colorName}") {
+@each $colorName,
+	$color in ("red": $C_red,
+	"pink": $C_pink,
+	"teal": $C_teal,
+	"blue": $C_blue,
+	"yellow": $C_yellow) {
+	@include _modifier("text", "#{$colorName}") {
 		@include color-all($color, true); // `true` sets this property as `!important`
 	}
 }
@@ -286,14 +291,14 @@ category: Text Styles
 <p class="text--middotLeft">I have a left middot</p>
 ```
 */
-.text--middotRight:after,
-.text--middotLeft:before {
+
+.text--middotRight::after,
+.text--middotLeft::before {
 	display: inline-block;
 	content: "\00b7";
 	margin: auto 0.5em;
 	font-weight: $W_bold;
 }
-
 
 /*doc
 ---
@@ -322,6 +327,7 @@ event descriptions).
 </div>
 ```
 */
+
 .runningText {
 	line-height: $line-height-runningText;
 
@@ -329,13 +335,12 @@ event descriptions).
 		@extend %wrapNice;
 		margin-bottom: $space;
 		max-width: 40em;
+
 		&:last-child {
 			margin-bottom: 0;
 		}
 	}
-
 }
-
 
 /*doc
 ---
@@ -350,10 +355,13 @@ linky blue color by applying the `.link` class.
 <p>Let's force this <a class="link" href="#">link</a> to be red-underlined.</p>
 ```
 */
-a, button {
+
+a,
+button {
 	color: inherit;
 	text-decoration: none;
-	&.link {
+
+	&.link { // stylelint-disable-line selector-no-qualifying-type
 		@extend %text--link;
 	}
 }
@@ -408,15 +416,19 @@ numbers/bullets to a list.
 ```
 
 */
+
 %_listStyleBase {
 	list-style-position: outside;
 	padding-left: 1.33em; /* indent by default */
+
 	.runningText & {
-		@include atMediaUp(huge){
+		@include atMediaUp(huge) {
 			padding-left: inherit;
 		}
 	}
 }
+
+/* stylelint-disable selector-no-qualifying-type */
 ul {
 	&.bullets,
 	.runningText & {
@@ -424,6 +436,7 @@ ul {
 		list-style-type: disc;
 	}
 }
+
 ol {
 	&.bullets,
 	.runningText & {
@@ -431,6 +444,7 @@ ol {
 		list-style-type: decimal;
 	}
 }
+/* stylelint-enable */
 
 /*doc
 ---
@@ -477,7 +491,7 @@ _Setting the `enableDebug` class on `body` for dev only is recommended._
 		outline: 1px dotted red;
 		white-space: pre-wrap;
 
-		&:before {
+		&::before {
 			display: inline;
 			content: "DEBUG:";
 			color: red;

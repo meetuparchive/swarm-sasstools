@@ -22,31 +22,31 @@
 /// scales from 48px @ 1:1.5
 /// (provided by [swarm-constants](https://meetup.github.io/swarm-constants/#layout))
 /// @type Value(px)
-$block           : $block-1;
+$block: $block-1;
 /// scales from 48px @ 1:1.5
 /// (provided by [swarm-constants](https://meetup.github.io/swarm-constants/#layout))
 /// @type Value(px)
-$block-2         : $block-2;
+$block-2: $block-2;
 /// scales from 48px @ 1:1.5
 /// (provided by [swarm-constants](https://meetup.github.io/swarm-constants/#layout))
 /// @type Value(px)
-$block-3         : $block-3;
+$block-3: $block-3;
 /// scales from 48px @ 1:1.5
 /// (provided by [swarm-constants](https://meetup.github.io/swarm-constants/#layout))
 /// @type Value(px)
-$block-4         : $block-4;
+$block-4: $block-4;
 /// scales from 48px @ 1:1.5
 /// (provided by [swarm-constants](https://meetup.github.io/swarm-constants/#layout))
 /// @type Value(px)
-$block-5         : $block-5;
+$block-5: $block-5;
 /// scales from 48px @ 1:1.5
 /// (provided by [swarm-constants](https://meetup.github.io/swarm-constants/#layout))
 /// @type Value(px)
-$block-6         : $block-6;
+$block-6: $block-6;
 /// scales from 48px @ 1:1.5
 /// (provided by [swarm-constants](https://meetup.github.io/swarm-constants/#layout))
 /// @type Value(px)
-$block-7         : $block-7;
+$block-7: $block-7;
 
 /**
 * "Space" variables contain size values in pixels starting from
@@ -55,50 +55,50 @@ $block-7         : $block-7;
 /// scales from 16px @ 1:1.5
 /// (provided by [swarm-constants](https://meetup.github.io/swarm-constants/#layout))
 /// @type Value(px)
-$space           : $space-1;
+$space: $space-1;
 /// scales from 16px @ 1:1.5
 /// (provided by [swarm-constants](https://meetup.github.io/swarm-constants/#layout))
 /// @type Value(px)
-$space-2         : $space-2;
+$space-2: $space-2;
 /// scales from 16px @ 1:1.5
 /// (provided by [swarm-constants](https://meetup.github.io/swarm-constants/#layout))
 /// @type Value(px)
-$space-3         : $space-3;
+$space-3: $space-3;
 /// scales from 16px @ 1:1.5
 /// (provided by [swarm-constants](https://meetup.github.io/swarm-constants/#layout))
 /// @type Value(px)
-$space-4         : $space-4;
+$space-4: $space-4;
 /// scales from 16px @ 1:1.5
 /// (provided by [swarm-constants](https://meetup.github.io/swarm-constants/#layout))
 /// @type Value(px)
-$space-5         : $space-5;
+$space-5: $space-5;
 /// scales from 16px @ 1:1.5
 /// (provided by [swarm-constants](https://meetup.github.io/swarm-constants/#layout))
 /// @type Value(px)
-$space-6         : $space-6;
+$space-6: $space-6;
 /// scales from 16px @ 1:1.5
 /// @type Value(px)
-$space-7         : $space-7;
+$space-7: $space-7;
 /// scales from 16px @ 1:1.5
 /// (provided by [swarm-constants](https://meetup.github.io/swarm-constants/#layout))
 /// @type Value(px)
-$space-8         : $space-8;
+$space-8: $space-8;
 
 /// scales from 16px @ 1:1.5
 /// @type Value(px)
-$space-and-half  : $space-1*1.5;
+$space-and-half: $space-1 * 1.5;
 /// scales from 16px @ 1:1.5
 /// (provided by [swarm-constants](https://meetup.github.io/swarm-constants/#layout))
 /// @type Value(px)
-$space-double    : $space-double;
+$space-double: $space-double;
 /// scales from 16px @ 1:1.5
 /// (provided by [swarm-constants](https://meetup.github.io/swarm-constants/#layout))
 /// @type Value(px)
-$space-half      : $space-half;
+$space-half: $space-half;
 /// scales from 16px @ 1:1.5
 /// (provided by [swarm-constants](https://meetup.github.io/swarm-constants/#layout))
 /// @type Value(px)
-$space-quarter   : $space-1/4;
+$space-quarter: $space-1 / 4;
 
 /**
 * Elements like images, icons, avatars, and illustrations
@@ -106,17 +106,17 @@ $space-quarter   : $space-1/4;
 * set media sizes based on our modular scale:
 */
 /// @type Value(px)
-$media-xs : $space-1;    // 16px
+$media-xs: $space-1; // 16px
 /// @type Value(px)
-$media-s : $space-2;   // 24px
+$media-s: $space-2; // 24px
 /// @type Value(px)
-$media-m  : $space-3;  // 36px
+$media-m: $space-3; // 36px
 /// @type Value(px)
-$media-l  : $block;    // 48px
+$media-l: $block; // 48px
 /// @type Value(px)
-$media-xl  : $block-2; // 72px
+$media-xl: $block-2; // 72px
 /// @type Value(px)
-$media-xxl : $space-6; // 120px
+$media-xxl: $space-6; // 120px
 
 /// @prop {Value(px)} media-map.xs [$meida-xs]
 /// @prop {Value(px)} media-map.s [$meida-s]

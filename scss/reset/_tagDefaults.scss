@@ -6,72 +6,119 @@ html {
 	font-size: 100%;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
-	text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility; // stylelint-disable-line property-blacklist
 	color: $C_textPrimary;
 }
-html, body {
+
+html,
+body {
 	margin: 0;
 	padding: 0;
 	background-color: #fff;
 }
+
 body {
 	position: relative; // for the sake of split views
 }
 
-
 //
 // Inline tags
 //
-abbr, strong, acronym, span, small, time, strike, sub, sup, a {
+abbr,
+strong,
+acronym,
+span,
+small,
+time,
+strike,
+sub,
+sup,
+a {
 	display: inline;
 }
-abbr, acronym {
+
+abbr,
+acronym {
 	border-width: 0;
 }
-b,strong {
+
+b,
+strong {
 	font-weight: $W_medium;
+
 	.inverted & {
 		font-weight: $W_bold;
 	}
 }
-sup, sub {
+
+sup,
+sub {
 	font-size: 75%;
 	line-height: 0;
 	position: relative;
 	vertical-align: baseline;
 }
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
 
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
 
 //
 // Block tags
 //
-p, ul, ol, blockquote,
-form, fieldset, legend,
-table, dl,dd,
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+p,
+ul,
+ol,
+blockquote,
+form,
+fieldset,
+legend,
+table,
+dl,
+dd,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
 	display: block;
 	margin: 0;
 	padding: 0;
 }
-form, legend {
+
+form,
+legend {
 	margin-bottom: 0;
 }
+
 img {
 	display: block;
 	margin: 0;
 	padding: 0;
 	border: 0;
 	line-height: 0;
-	&.resample { /* assuming we're sizing an img down on the client */
-		-ms-interpolation-mode: bicubic;
-		image-rendering: optimizeQuality;
-	}
 }
-ul, ol {
+
+.resample {
+	/* assuming we're sizing an img down on the client */
+	-ms-interpolation-mode: bicubic;
+	image-rendering: optimizeQuality;
+}
+
+ul,
+ol {
 	@extend %list--reset;
 }
+
 li {
 	margin: 0;
 	padding: 0;
@@ -80,12 +127,25 @@ li {
 //
 // HTML5 elements
 //
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
 	display: block;
 }
-audio, canvas, video {
+
+audio,
+canvas,
+video {
 	display: inline-block;
 }
+
 address {
 	display: inline;
 	font-style: normal;
