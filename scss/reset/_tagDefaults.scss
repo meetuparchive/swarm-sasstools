@@ -2,19 +2,19 @@
 // Body
 //
 html {
-	overflow-y: scroll;
+	color: $C_textPrimary;
 	font-size: 100%;
+	overflow-y: scroll;
+	text-rendering: optimizeLegibility; // stylelint-disable-line property-blacklist
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
-	text-rendering: optimizeLegibility; // stylelint-disable-line property-blacklist
-	color: $C_textPrimary;
 }
 
 html,
 body {
+	background-color: #fff;
 	margin: 0;
 	padding: 0;
-	background-color: #fff;
 }
 
 body {
@@ -101,17 +101,17 @@ legend {
 }
 
 img {
+	border: 0;
 	display: block;
+	line-height: 0;
 	margin: 0;
 	padding: 0;
-	border: 0;
-	line-height: 0;
 }
 
 .resample {
+	image-rendering: optimizeQuality;
 	/* assuming we're sizing an img down on the client */
 	-ms-interpolation-mode: bicubic;
-	image-rendering: optimizeQuality;
 }
 
 ul,

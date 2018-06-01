@@ -18,14 +18,14 @@ html {
 body {
 	color: $C_textPrimary;
 	font-family: $font;
-	font-feature-settings: "liga", "kern";
 	-moz-font-feature-settings: "liga", "kern";
 	-moz-font-feature-settings: "liga=1, kern=1";
 	-ms-font-feature-settings: "liga", "kern";
 	-o-font-feature-settings: "liga", "kern";
 	-webkit-font-feature-settings: "liga", "kern";
-	font-weight: $W_normal;
+	font-feature-settings: "liga", "kern";
 	font-size: rem($font-size);
+	font-weight: $W_normal;
 	line-height: $line-height;
 	text-rendering: optimizeLegibility; // stylelint-disable-line property-blacklist
 }
@@ -294,10 +294,10 @@ category: Text Styles
 
 .text--middotRight::after,
 .text--middotLeft::before {
-	display: inline-block;
 	content: "\00b7";
-	margin: auto 0.5em;
+	display: inline-block;
 	font-weight: $W_bold;
+	margin: auto 0.5em;
 }
 
 /*doc
@@ -482,19 +482,19 @@ _Setting the `enableDebug` class on `body` for dev only is recommended._
 
 	.#{$root-debugEnable} & {
 		@extend %text--mono;
-		display: block;
-		padding: 0.25em 0.5em;
-		margin-bottom: $space;
-		font-size: $font-size-small;
-		color: purple;
 		background: pink;
+		color: purple;
+		display: block;
+		font-size: $font-size-small;
+		margin-bottom: $space;
 		outline: 1px dotted red;
+		padding: 0.25em 0.5em;
 		white-space: pre-wrap;
 
 		&::before {
-			display: inline;
-			content: "DEBUG:";
 			color: red;
+			content: "DEBUG:";
+			display: inline;
 			font-weight: $W_bold;
 			padding-right: 0.25em;
 		}

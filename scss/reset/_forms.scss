@@ -71,8 +71,8 @@ label {
 
 fieldset {
 	border: 0;
-	padding: 0;
 	margin: 0;
+	padding: 0;
 }
 
 %_formBase,
@@ -143,8 +143,8 @@ select {
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-	font-style: normal;
 	color: $C_textTertiary;
+	font-style: normal;
 }
 
 input[type="time"] {

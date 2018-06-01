@@ -43,8 +43,8 @@ category: Tables
 
 /* stylelint-disable selector-max-combinators, selector-max-compound-selectors, selector-max-specificity */
 table {
-	display: table;
 	border-collapse: collapse;
+	display: table;
 	table-layout: auto;
 }
 
@@ -57,9 +57,9 @@ th {
 		var(--responsiveSpace),
 		$space / 2 $space
 	);
+	color: $C_textSecondary;
 	text-align: left;
 	vertical-align: middle;
-	color: $C_textSecondary;
 
 	.inverted & {
 		color: $C_textSecondaryInverted;
@@ -122,9 +122,9 @@ Apply the `borderedTable` class to apply borders to table cells.
 .borderedTable {
 	td,
 	tbody th {
-		border-width: 1px 0 0 1px;
-		border-style: solid;
 		border-color: $C_border;
+		border-style: solid;
+		border-width: 1px 0 0 1px;
 
 		&:last-child {
 			border-right: 1px solid $C_border;
@@ -195,12 +195,12 @@ category: Tables
 	thead,
 	td,
 	th {
-		padding: 0;
+		border-width: 0;
+		color: $C_textPrimary;
 		font-size: rem($font-size);
 		font-weight: $W_normal;
-		border-width: 0;
+		padding: 0;
 		vertical-align: top;
-		color: $C_textPrimary;
 
 		.inverted & {
 			color: $C_textPrimaryInverted;

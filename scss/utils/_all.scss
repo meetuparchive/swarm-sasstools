@@ -14,7 +14,7 @@
 // ("~" prefix allows webpack to resolve `node_modules` location)
 //
 @import "~swarm-constants/dist/scss/vars";
-@import "~bourbon/app/assets/stylesheets/bourbon.scss";
+@import "~bourbon/app/assets/stylesheets/_bourbon.scss"; // stylelint-disable-line scss/at-import-no-partial-leading-underscore
 @import "~swarm-animation/src/constants";
 @import "~swarm-animation/src/fade";
 

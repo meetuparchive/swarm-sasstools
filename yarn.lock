@@ -4611,9 +4611,9 @@ multipipe@^1.0.2:
     duplexer2 "^0.1.2"
     object-assign "^4.1.0"
 
-mwp-config@16.0.2418:
-  version "16.0.2418"
-  resolved "https://registry.yarnpkg.com/mwp-config/-/mwp-config-16.0.2418.tgz#b14c08ffabb24d7c91a36b9de07ef9442e57d65f"
+mwp-config@16.0.2422:
+  version "16.0.2422"
+  resolved "https://registry.yarnpkg.com/mwp-config/-/mwp-config-16.0.2422.tgz#196e28d96792f224fc2fcf0360735cdbbb161988"
   dependencies:
     babel-core "6.25.0"
     babel-plugin-react-intl "2.3.1"
@@ -4625,6 +4625,7 @@ mwp-config@16.0.2418:
     babel-preset-stage-2 "6.24.1"
     convict "4.0.1"
     stylelint "9.2.1"
+    stylelint-order "0.8.1"
     stylelint-scss "3.1.0"
 
 nan@^2.3.0, nan@^2.3.2:
@@ -5438,6 +5439,13 @@ postcss-selector-parser@^4.0.0:
     cssesc "^1.0.1"
     indexes-of "^1.0.1"
     uniq "^1.0.1"
+
+postcss-sorting@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/postcss-sorting/-/postcss-sorting-3.1.0.tgz#af7c90ee73ad12569a57664eaf06735c2e25bec0"
+  dependencies:
+    lodash "^4.17.4"
+    postcss "^6.0.13"
 
 postcss-svgo@^2.1.1:
   version "2.1.6"
@@ -6675,6 +6683,14 @@ strip-json-comments@~2.0.1:
 style-search@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/style-search/-/style-search-0.1.0.tgz#7958c793e47e32e07d2b5cafe5c0bf8e12e77902"
+
+stylelint-order@0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/stylelint-order/-/stylelint-order-0.8.1.tgz#35f71af3a15954154e0e99e5646ba3d6fbe34f8d"
+  dependencies:
+    lodash "^4.17.4"
+    postcss "^6.0.14"
+    postcss-sorting "^3.1.0"
 
 stylelint-scss@3.1.0:
   version "3.1.0"

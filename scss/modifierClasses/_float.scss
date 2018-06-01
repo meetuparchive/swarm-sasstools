@@ -32,11 +32,11 @@ Class             | Description
 */
 
 .clearfix::after {
-	visibility: hidden;
+	content: " ";
 	display: block;
 	font-size: 0;
-	content: " ";
 	height: 0;
+	visibility: hidden;
 
 	@include browser-lessThanIE( 10 ) {
 		zoom: 1;

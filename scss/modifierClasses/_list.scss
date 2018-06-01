@@ -43,9 +43,9 @@ Bottom spacing is provided with `chunk`.
 
 .list {
 	@extend %list--reset;
-	padding: 0;
-	margin: 0;
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 /*doc
@@ -100,8 +100,8 @@ Class                   | Description
 
 .list-item {
 	@extend %listBorders;
-	margin: 0;
 	border-bottom: 1px solid transparent; // prevents margin collapse
+	margin: 0;
 }
 
 .list-item--gutters {
