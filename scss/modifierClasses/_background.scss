@@ -8,8 +8,6 @@ category: Modifier Classes
 Background modifiers.
 */
 
-
-
 /*doc
 ---
 title: Image Fill
@@ -24,6 +22,7 @@ Extends `%imgFill`.
 
 EXAMPLE TK
 */
+
 .imgFill {
 	@extend %imgFill;
 }

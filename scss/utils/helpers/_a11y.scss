@@ -12,7 +12,7 @@
 /// 	.visualHide { @include a11yVisibility('hidden'); }
 /// 	.visualShow { @include a11yVisibility('visible'); }
 @mixin a11yVisibility( $val ) {
-	@if '#{$val}' == 'hidden' {
+	@if "#{$val}" == "hidden" {
 		border: 0;
 		clip: rect(0 0 0 0);
 		position: absolute;

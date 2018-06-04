@@ -55,15 +55,7 @@ $zindex-map: (
 /// see `str-firstCharToUpper` for managing camelCasing
 /// @type List
 /// @see {Function} str-firstCharToUpper
-$display-values: (
-	none,
-	block,
-	flex,
-	inline,
-	inline-block,
-	inline-flex,
-	grid
-);
+$display-values: (none, block, flex, inline, inline-block, inline-flex, grid);
 
 /// camelCase to CSS values.
 /// omits `flex-start` because it is a default prop of Flex items
@@ -83,8 +75,4 @@ $flexJustifyMap: (
 /// @prop {Value} flexAlignMap.top [flex-start]
 /// @prop {Value} flexAlignMap.bottom [flex-end]
 /// @prop {Value} flexAlignMap.center [center]
-$flexAlignMap: (
-	"top": flex-start,
-	"bottom": flex-end,
-	"center": center
-);
+$flexAlignMap: ("top": flex-start, "bottom": flex-end, "center": center);
