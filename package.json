@@ -19,7 +19,8 @@
 		"build": "grunt",
 		"publish-docs": "grunt ghpages",
 		"test": "echo no tests found",
-		"stylelint": "stylelint scss/**/*.scss --syntax scss"
+		"stylelint": "stylelint scss/**/*.scss --syntax scss",
+		"lint:prettier": "prettier -l scss/**/*.scss"
 	},
 	"dependencies": {
 		"bourbon": "4.2.3",
