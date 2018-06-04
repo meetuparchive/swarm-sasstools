@@ -34,59 +34,67 @@ Breakpoints        | Property       | Variants
 
 // text align
 @each $alignment in (center, right, left) {
-	@include _bpModifier('align', $alignment) {
+	@include _bpModifier("align", $alignment) {
 		text-align: $alignment !important;
 	}
 }
 
 // display
 @each $display in $display-values {
-
 	// convert hyphenated display values to camelCase
-	$_camelValue: str-replace(str-replace($display, '-block', 'Block'), '-flex', 'Flex');
+	/* stylelint-disable function-parentheses-newline-inside, function-parentheses-space-inside, function-comma-newline-after, function-comma-space-after */
+	$_camelValue: str-replace(
+		str-replace($display, "-block", "Block"),
+		"-flex",
+		"Flex"
+	);
+	/* stylelint-enable */
 
-	@include _bpModifier('display', $_camelValue) {
+	@include _bpModifier("display", $_camelValue) {
 		display: $display !important;
 	}
 }
 
 // a11y display hide and show
-@include _bpModifier( 'visibility', 'a11yHide' ) {
-	@include a11yVisibility('hidden');
+@include _bpModifier( "visibility", "a11yHide" ) {
+	@include a11yVisibility("hidden");
 }
-@include _bpModifier( 'visibility', 'a11yShow') {
-	@include a11yVisibility('visible');
+
+@include _bpModifier( "visibility", "a11yShow") {
+	@include a11yVisibility("visible");
 }
 
 // width
-@include _bpModifier('width', 'auto') {
+@include _bpModifier("width", "auto") {
 	width: auto !important;
 }
-@include _bpModifier('width', 'full') {
+
+@include _bpModifier("width", "full") {
 	width: 100% !important;
 }
 
 // padding
 @each $alignment in (top, right, bottom, left, none) {
-	@include _bpModifier('padding', $alignment) {
+	@include _bpModifier("padding", $alignment) {
 		@if "#{$alignment}" == "none" {
 			padding: 0 !important;
 		} @else {
 			@include customPropertyValue(padding-#{$alignment}, var(--responsiveSpace), $space);
 		}
-	};
+	}
 }
 
 // margin
-@include _bpModifier('margin', 'center') {
+@include _bpModifier("margin", "center") {
 	margin-left: auto;
 	margin-right: auto;
 }
 
 // border
-@include _bpModifier('border', 'top') {
+@include _bpModifier("border", "top") {
 	@include standardBorder();
 }
-@include _bpModifier('border', 'none') {
+
+@include _bpModifier("border", "none") {
 	border-width: 0 !important;
 }

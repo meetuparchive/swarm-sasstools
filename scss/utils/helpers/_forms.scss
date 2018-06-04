@@ -60,6 +60,7 @@
 	background-color: $C_lightGray;
 	border-color: transparent;
 	color: $C_textSecondary;
+
 	&:hover {
 		background-color: $C_lightGray;
 		border-color: transparent;
@@ -87,5 +88,5 @@
 @mixin formInput--focused() {
 	border-color: $C_textPrimary;
 	box-shadow: none;
-	outline: none;
+	outline: none; // stylelint-disable-line declaration-property-value-blacklist
 }

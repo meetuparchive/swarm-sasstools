@@ -41,9 +41,7 @@ Class                    | Description
 
 */
 
-
 @each $property in (margin, padding) {
-
 	// directional
 	@each $direction in (top, right, left, bottom) {
 		@include _modifier($property, $direction) {
@@ -53,7 +51,7 @@ Class                    | Description
 
 	// directional half-units
 	@each $direction in (top, right, left, bottom) {
-		$modification: 'half#{str-firstCharToUpper($direction)}';
+		$modification: "half#{str-firstCharToUpper($direction)}";
 		@include _modifier($property, $modification) {
 			#{$property}-#{$direction}: $space-half;
 		}
@@ -68,11 +66,9 @@ Class                    | Description
 	@include _modifier($property, none) {
 		#{$property}: 0;
 	}
-
 }
 
 @include _modifier(margin, center) {
 	margin-left: auto;
 	margin-right: auto;
 }
-

@@ -14,10 +14,10 @@ Class                    | Description
 `.visibility--a11yShow`  | reveals a a11y hidden element for sighted users
 */
 
-@include _modifier( visibility, 'a11yHide' ) {
-	@include a11yVisibility('hidden');
+@include _modifier( visibility, "a11yHide" ) {
+	@include a11yVisibility("hidden");
 }
 
-@include _modifier( visibility, 'a11yShow' ) {
-	@include a11yVisibility('visible');
+@include _modifier( visibility, "a11yShow" ) {
+	@include a11yVisibility("visible");
 }

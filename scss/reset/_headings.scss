@@ -8,7 +8,6 @@ category: Headings
 Heading defaults.
 */
 
-
 /*doc
 ---
 title: Heading tags
@@ -30,18 +29,24 @@ heading styles; for example, `text--display1`.
 <h6>Heading 6</h6>
 ```
 */
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-size: rem($font-size);
 	margin: 0;
 	padding: 0;
 }
+
 h1 {
 	.view-head & {
 		@extend %text--heavy;
 		font-size: rem($font-size);
 	}
 }
-
 
 /*doc
 ---
@@ -59,13 +64,16 @@ the tag as a heading.
 	<h2 class="text--display1">Display text is for headings</h2>
 ```
 */
-.text--display, // map legacy class to display1
-.text--display1 {
+
+.text--display {
+	// map legacy class to display1 .text--display1 {
 	@extend %text--display1;
 }
+
 .text--display2 {
 	@extend %text--display2;
 }
+
 .text--display3 {
 	@extend %text--display3;
 }
@@ -83,9 +91,11 @@ labeling sections of a view.
 	<h2 class="text--sectionTitle">Section title is for labeling sections of views</h2>
 ```
 */
+
 .text--pageTitle {
 	@extend %text--pageTitle;
 }
+
 .text--sectionTitle {
 	@extend %text--sectionTitle;
 }
@@ -102,9 +112,11 @@ category: Headings
 	<h3 class="text--labelSecondary">Secondary label for subsection</h3>
 ```
 */
+
 .text--label {
 	@extend %text--label;
 }
+
 .text--labelSecondary {
 	@extend %text--labelSecondary;
 }

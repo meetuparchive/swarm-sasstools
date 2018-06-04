@@ -4,7 +4,6 @@
 /// @group Shadow
 ////
 
-
 /// Applies standard box-shadow
 ///
 /// @example scss
@@ -23,15 +22,16 @@
 ///    @include shadowOnHover(true);
 ///
 @mixin shadowOnHover($hasRestingShadow: false) {
-	transition: box-shadow $duration--medium $easing--standard, transform $duration--medium $easing--standard;
+	transition: box-shadow $duration--medium $easing--standard,
+		transform $duration--medium $easing--standard;
 
-		&:hover,
-		&:focus {
-			@if '#{$hasRestingShadow}' == false {
-				box-shadow: 0 0 2px 0 $C_border, 0 2px 4px 0 $C_border;
-			} @else {
-				box-shadow: 0 0 4px 0 $C_border, 0 4px 12px 0 $C_border;
-			}
-			transform: translateY(-1px);
+	&:hover,
+	&:focus {
+		@if "#{$hasRestingShadow}" == false {
+			box-shadow: 0 0 2px 0 $C_border, 0 2px 4px 0 $C_border;
+		} @else {
+			box-shadow: 0 0 4px 0 $C_border, 0 4px 12px 0 $C_border;
 		}
+		transform: translateY(-1px);
+	}
 }

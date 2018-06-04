@@ -2,7 +2,6 @@
 /// @group color
 ////
 
-
 /// Sets properties to color SVG icons
 /// @access public
 ///
@@ -16,7 +15,7 @@
 ///
 @mixin color-svg($color: black, $isImportant:false) {
 	&,
-	& svg {
+	svg {
 		stroke: transparent;
 		@if $isImportant {
 			fill: $color !important;
@@ -24,8 +23,7 @@
 			fill: $color;
 		}
 	}
-};
-
+}
 
 /// Sets properties to color SVG icons AND text
 /// @access public
@@ -45,4 +43,4 @@
 	} @else {
 		color: $color;
 	}
-};
+}
