@@ -1,3 +1,6 @@
+# [4.0]
+
+- **BREAKING CHANGE** Removed [Bourbon](https://www.bourbon.io/) dependency
 
 # [3.1]
 
