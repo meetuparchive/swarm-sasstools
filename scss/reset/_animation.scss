@@ -2,33 +2,33 @@
 * Keyframes
 * TODO: move these to our animation lib
 */
-@include keyframes("bounce-in-subtle") {
+@keyframes bounce-in-subtle {
 	0% {
-		@include transform(scale(1));
+		transform: scale(1);
 	}
 
 	35% {
-		@include transform(scale(1.15));
+		transform: scale(1.15);
 	}
 
 	75% {
-		@include transform(scale(1));
+		transform: scale(1);
 	}
 }
 
-@include keyframes("spin") {
+@keyframes spin {
 	0% {
-		@include transform(rotate(0deg));
+		transform: rotate(0deg);
 	}
 
 	100% {
-		@include transform(rotate(360deg));
+		transform: rotate(360deg);
 	}
 }
 
 /// Sets transform origin to `center center`
 %_origin--center {
-	@include transform-origin(center center);
+	transform-origin: center center;
 }
 
 /// Subtle bounce effect using keyframes, provided via simple mixin
@@ -39,7 +39,7 @@
 /// 	@include animate--bounce-in-subtle($time: 750ms);
 @mixin animate--bounceInSubtle($time: 250ms) {
 	@extend %_origin--center;
-	@include animation(bounce-in-subtle $time cubic-bezier(0.175, 0.885, 0.32, 1.275)); // stylelint-disable-line number-max-precision
+	animation: bounce-in-subtle $time cubic-bezier(0.175, 0.885, 0.32, 1.275); // stylelint-disable-line number-max-precision
 }
 
 /// Infinite 2d rotation; 0-360deg.
@@ -49,8 +49,8 @@
 /// 	@include animate--spin($time: 0.8s);
 @mixin animate--spin($time: 0.8s) {
 	@extend %_origin--center;
-	@include animation(spin $time linear);
-	@include animation-iteration-count(infinite);
+	animation: spin $time linear;
+	animation-iteration-count: infinite;
 }
 
 /*doc
