@@ -9,3 +9,85 @@
 	cursor: pointer;
 	text-decoration: none !important;
 }
+
+
+/// Applies base button styles using a mixin.
+/// _(The `extend` directive can cause ugly cascade problems)_
+///
+/// @example
+///		@include buttonBase();
+///
+
+@mixin buttonBase() {
+	@extend %buttonPersonality;
+
+	@include display(inline-flex);
+	@include flex-direction(row);
+	@include justify-content(center);
+	@include align-items(center);
+	@include transition(background 0.15s);
+	-webkit-appearance: none;
+	border-radius: $defaultRadius;
+	box-sizing: border-box;
+	font-size: $font-size-small;
+	line-height: $line-height-smallText;
+	outline: 0;
+	padding: $space-half $space-double;
+	vertical-align: middle;
+
+	@include browser-ie11() {
+		min-height: 0;
+		padding-bottom: 0.5em;
+		padding-top: 0.33em;
+	}
+}
+
+/// Applies button color-related styles using a mixin.
+/// @param {Color} $bgColor - resting button background color. Should not be a custom property unless `$hoverColor`, `$activeColor`, `$textColor` are also set with custom properties
+/// @param {Color} $hoverColor [darken($bgColor, 5%)] - hovered button background color
+/// @param {Color} $activeColor [darken($bgColor, 12%)] - pressed button background color
+/// @param {Color} $textColor [getPrimaryTextColor($bgColor)] - color of text inside of button
+/// @param {Boolean} $textTransition [true] - whether to animate color change of button text or icon on :hover
+///
+/// @example
+///		@include buttonColor($bgColor: $C_red);
+///		@include buttonColor(
+///			$bgColor: $C_red,
+///			$hoverColor: darken($C_red, 10%),
+///			$activeColor: darken($C_red, 15%)
+///		);
+///		@include buttonColor(
+///			$bgColor: $C_red,
+///			$hoverColor: darken($C_red, 10%),
+///			$activeColor: darken($C_red, 15%),
+///			$textTransition: false
+///		);
+///
+@mixin buttonColor(
+	$bgColor,
+	$hoverColor: darken($bgColor, 5%),
+	$activeColor: darken($bgColor, 12%),
+	$textColor: getPrimaryTextColor($bgColor),
+	$textTransition: true
+) {
+	@include color-all($textColor);
+	background: $bgColor;
+
+	&:hover {
+		background: $hoverColor;
+
+		@if $textTransition {
+			transition: all 400ms $animate_easeOutQuad;
+
+			svg {
+				transition: fill 400ms $animate_easeOutQuad;
+			}
+		} @else {
+			transition: background 400ms $animate_easeOutQuad;
+		}
+	}
+
+	&:active {
+		background: $activeColor;
+	}
+}
