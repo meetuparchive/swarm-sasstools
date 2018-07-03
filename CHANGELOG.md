@@ -1,4 +1,8 @@
-# [4.0]
+# [4.2]
+
+- **Change: ** Added `buttonBase()` and `buttonColor()` mixins. These came from [meetup-web-components](https://github.com/meetup/meetup-web-components/), and will be removed from there once the `swarm-sasstools` dependency is updated to require `4.2` or higher
+
+# [4.1]
 
 - **BREAKING CHANGE** Removed [Bourbon](https://www.bourbon.io/) dependency
 
