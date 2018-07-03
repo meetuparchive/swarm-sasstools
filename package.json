@@ -23,7 +23,6 @@
 		"lint:prettier": "prettier -l scss/**/*.scss"
 	},
 	"dependencies": {
-		"bourbon": "4.2.3",
 		"sass-rem": "^1.2.4"
 	},
 	"devDependencies": {
