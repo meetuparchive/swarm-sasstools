@@ -109,16 +109,16 @@ Class                   | Description
 }
 
 .row--reverse {
-	@include flex-direction(row-reverse);
+	flex-direction: row-reverse;
 }
 
 .row--wrap {
-	@include flex-wrap(wrap);
+	flex-wrap: wrap;
 }
 
 @each $jName, $jprop in $flexJustifyMap {
 	.row--#{$jName} {
-		@include justify-content($jprop);
+		justify-content: $jprop;
 	}
 }
 
@@ -149,7 +149,7 @@ Class                   | Description
 // {{{ DEPRECATED
 // use `.valign--middle`
 .row-item--alignMiddle {
-	@include align-self(center);
+	align-self: center;
 
 	@include browser-lessThanIE( 10 ) {
 		vertical-align: middle;
