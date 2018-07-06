@@ -54,22 +54,22 @@ $_verticalAlign-to-selfAlign: (
 
 @each $alignment in (left, right, center) {
 	@include _modifier(align, $alignment) {
-		@include align-self($alignment);
+		align-self: $alignment;
 		text-align: $alignment !important;
 	}
 }
 
 @each $valignment in (baseline, bottom, middle, top) {
 	@include _modifier(valign, $valignment) {
-		@include align-self( map-get($_verticalAlign-to-selfAlign, $valignment) );
+		align-self: map-get($_verticalAlign-to-selfAlign, $valignment);
 		vertical-align: $valignment !important;
 	}
 }
 
 @each $childAlignment in (bottom, center) {
 	@include _modifier(valignChildren, $childAlignment) {
-		@include display(Flex);
-		@include flex-direction(column);
-		@include justify-content(center);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 }
