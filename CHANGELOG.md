@@ -1,6 +1,15 @@
 # [5.0]
 
-- **BREAKING CHANGE** Removed `customPropertyValue` mixin
+- **BREAKING CHANGE** Removed `customPropertyValue` mixin. Just use custom properties natively, and it will be handled by PostCSS in `mwp-cli` (version `8.x` or higher).
+
+Example:
+```
+@include customPropertyValue(padding-top, var(--responsive-space), $space);
+```
+becomes
+```
+padding-top: var(--responsive-space);
+```
 
 # [4.2]
 
