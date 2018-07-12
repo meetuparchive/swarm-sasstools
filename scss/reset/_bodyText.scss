@@ -24,7 +24,7 @@ body {
 	-o-font-feature-settings: "liga", "kern";
 	-webkit-font-feature-settings: "liga", "kern";
 	font-feature-settings: "liga", "kern";
-	font-size: rem($font-size);
+	font-size: $font-size;
 	font-weight: $W_normal;
 	line-height: $line-height;
 	text-rendering: optimizeLegibility; // stylelint-disable-line property-blacklist

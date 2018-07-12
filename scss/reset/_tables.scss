@@ -197,7 +197,7 @@ category: Tables
 	th {
 		border-width: 0;
 		color: $C_textPrimary;
-		font-size: rem($font-size);
+		font-size: $font-size;
 		font-weight: $W_normal;
 		padding: 0;
 		vertical-align: top;
