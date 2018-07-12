@@ -39,7 +39,7 @@
 		"grunt-gh-pages": "0.9.1",
 		"grunt-preprocess": "5.1.0",
 		"grunt-sassdoc": "2.0.2",
-		"meetup-web-components": "^5.0.2339",
+		"meetup-web-components": "^5.0.2373",
 		"mwp-config": "16.0.2422",
 		"node-sass": "4.5.3",
 		"sass-loader": "6.0.1",
