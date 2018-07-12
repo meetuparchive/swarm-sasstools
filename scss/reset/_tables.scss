@@ -1,4 +1,3 @@
-@import "../utils/helpers/customPropertyValue";
 /*doc
 ---
 title: Default table styles
@@ -51,12 +50,7 @@ table {
 caption,
 td,
 th {
-	@include customPropertyValue(
-		padding,
-		calc(var(--responsive-space) / 2)
-		var(--responsive-space),
-		$space / 2 $space
-	);
+	padding: calc(var(--responsive-space) / 2) var(--responsive-space);
 	color: $C_textSecondary;
 	text-align: left;
 	vertical-align: middle;

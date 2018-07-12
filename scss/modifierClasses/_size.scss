@@ -21,7 +21,7 @@ Class          | Description
 
 		@each $mediaKey, $mediaSize in $media-map {
 			@if ($sizeName == $mediaKey) {
-				@include customPropertyValue(width, var(--responsiveMedia-#{$mediaKey}), $mediaSize);
+				width: var(--responsiveMedia-#{$mediaKey});
 			}
 		}
 	}

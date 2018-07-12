@@ -1,3 +1,16 @@
+# [5.0]
+
+- **BREAKING CHANGE** Removed `customPropertyValue` mixin. Just use custom properties natively, and it will be handled by PostCSS in `mwp-cli` (version `8.x` or higher).
+
+Example:
+```
+@include customPropertyValue(padding-top, var(--responsive-space), $space);
+```
+becomes
+```
+padding-top: var(--responsive-space);
+```
+
 # [4.2]
 
 - **Change: ** Added `buttonBase()` and `buttonColor()` mixins. These came from [meetup-web-components](https://github.com/meetup/meetup-web-components/), and will be removed from there once the `swarm-sasstools` dependency is updated to require `4.2` or higher

@@ -21,7 +21,7 @@ Class                         | Description
 	@include _modifier("matchMediaSize--height", $sizeName) {
 		@each $mediaKey, $mediaSize in $media-map {
 			@if ($sizeName == $mediaKey and not ($sizeName == xl) and not ($sizeName == xxl)) {
-				@include customPropertyValue(min-height, var(--responsiveMedia-#{$mediaKey}), $mediaSize);
+				min-height: var(--responsiveMedia-#{$mediaKey});
 			}
 		}
 	}
