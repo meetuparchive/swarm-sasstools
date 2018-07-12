@@ -28,7 +28,7 @@
 
 // New method for viewport-conditional property values
 .padding--left {
-    @include responsiveValue(padding-left, var(--responsiveSpace), $space);
+    @include responsiveValue(padding-left, var(--responsive-space), $space);
 }
 
 // New method without IE11 fallbacks, or when using [style modules](https://meetup.atlassian.net/wiki/spaces/WEG/pages/421659021/Writing+Style+Modules)

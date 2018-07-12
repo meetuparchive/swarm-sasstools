@@ -34,5 +34,5 @@ Class                   | Description
 %bordered,
 .bordered {
 	@extend %border--top;
-	@include customPropertyValue(padding-top, var(--responsiveSpace), $space);
+	@include customPropertyValue(padding-top, var(--responsive-space), $space);
 }
