@@ -79,7 +79,7 @@ Breakpoints        | Property       | Variants
 		@if "#{$alignment}" == "none" {
 			padding: 0 !important;
 		} @else {
-			@include customPropertyValue(padding-#{$alignment}, var(--responsive-space), $space);
+			padding-#{$alignment}: var(--responsive-space);
 		}
 	}
 }
