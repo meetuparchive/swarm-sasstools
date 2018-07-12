@@ -65,7 +65,7 @@ see <a class="link" style="text-decoration: underline;" href="https://github.com
 /* stylelint-disable selector-no-qualifying-type, selector-no-vendor-prefix */
 %label,
 label {
-	font-size: rem($font-size);
+	font-size: $font-size;
 	font-weight: $W_medium;
 }
 
