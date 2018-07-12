@@ -11,7 +11,7 @@
 /// @param {value} $fallback - fallback value for IE11
 ///
 /// @example scsss - Set padding to use responsive space with IE11 fallback
-///		@include customPropertyValue(padding, var(--responsiveSpace), $space);
+///		@include customPropertyValue(padding, var(--responsive-space), $space);
 @mixin customPropertyValue($properties, $cssVar, $fallback) {
 	@each $prop in $properties {
 		@if $fallback {

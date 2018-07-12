@@ -53,8 +53,8 @@ td,
 th {
 	@include customPropertyValue(
 		padding,
-		calc(var(--responsiveSpace) / 2)
-		var(--responsiveSpace),
+		calc(var(--responsive-space) / 2)
+		var(--responsive-space),
 		$space / 2 $space
 	);
 	color: $C_textSecondary;
