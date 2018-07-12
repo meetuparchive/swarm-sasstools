@@ -7,7 +7,7 @@
 $mediaScale: 1;
 
 :root {
-	--responsiveSpace: $space;
+	--responsive-space: $space;
 	--mediaScale: $mediaScale;
 	@each $mediaKey in map-keys($media-map) {
 		--responsiveMedia-#{$mediaKey}: floor(map-get($media-map, #{$mediaKey}) * $mediaScale);
@@ -23,7 +23,7 @@ $mediaScale: 1;
 large: 20px,) {
 	@include atMediaUp($breakpoint) {
 		:root {
-			--responsiveSpace: $responsiveBaseValue;
+			--responsive-space: $responsiveBaseValue;
 		}
 	}
 }

@@ -45,7 +45,7 @@ Class                    | Description
 	// directional
 	@each $direction in (top, right, left, bottom) {
 		@include _modifier($property, $direction) {
-			@include customPropertyValue(#{$property}-#{$direction}, var(--responsiveSpace), $space);
+			@include customPropertyValue(#{$property}-#{$direction}, var(--responsive-space), $space);
 		}
 	}
 
@@ -59,7 +59,7 @@ Class                    | Description
 
 	// all sides
 	@include _modifier($property, all) {
-		@include customPropertyValue(#{$property}, var(--responsiveSpace), $space);
+		@include customPropertyValue(#{$property}, var(--responsive-space), $space);
 	}
 
 	// reset
