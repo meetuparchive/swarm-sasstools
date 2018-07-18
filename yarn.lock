@@ -6846,9 +6846,9 @@ swarm-animation@^0.0.95:
     jasmine-jquery "^2.1.1"
     jquery "^3.2.1"
 
-swarm-constants@1.2.83:
-  version "1.2.83"
-  resolved "https://registry.yarnpkg.com/swarm-constants/-/swarm-constants-1.2.83.tgz#61590f8adc31b3fcf75e46ee1afdaff642880f62"
+swarm-constants@2.2.126-beta:
+  version "2.2.126-beta"
+  resolved "https://registry.yarnpkg.com/swarm-constants/-/swarm-constants-2.2.126-beta.tgz#26bff3da14e0dfacf4c7a8f60954ad4a5f040088"
 
 swig-extras@0.0.1, swig-extras@^0.0.1:
   version "0.0.1"

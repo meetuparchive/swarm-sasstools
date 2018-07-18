@@ -46,7 +46,7 @@
 		"sassdoc-theme-flippant": "0.1.0",
 		"seldon": "0.4.4",
 		"swarm-animation": "^0.0.95",
-		"swarm-constants": "1.2.83",
+		"swarm-constants": "2.2.126-beta",
 		"webpack": "2.2.1"
 	},
 	"bugs": {
