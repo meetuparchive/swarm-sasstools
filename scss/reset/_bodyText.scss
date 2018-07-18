@@ -271,7 +271,7 @@ in order to also set the color of icons inline with text.
 */
 @each $colorName,
 	$color in (
-		"red": $C_red,
+		"red": $C_textRed,
 		"pink": $C_pink,
 		"teal": $C_teal,
 		"blue": $C_blue,
@@ -279,6 +279,18 @@ in order to also set the color of icons inline with text.
 	) {
 	@include _modifier("text", "#{$colorName}") {
 		@include color-all($color, true); // `true` sets this property as `!important`
+	}
+}
+
+.inverted {
+	@each $colorName,
+	$color in (
+		"red": $C_textRedInverted,
+		"blue": $C_textBlueInverted
+	) {
+		@include _modifier("text", "#{$colorName}") {
+			@include color-all($color, true); // `true` sets this property as `!important`
+		}
 	}
 }
 
