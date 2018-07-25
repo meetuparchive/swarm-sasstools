@@ -21,11 +21,11 @@
 @mixin buttonBase() {
 	@extend %buttonPersonality;
 
-	@include display(inline-flex);
-	@include flex-direction(row);
-	@include justify-content(center);
-	@include align-items(center);
-	@include transition(background 0.15s);
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	transition: background 0.15s;
 	-webkit-appearance: none;
 	border-radius: $defaultRadius;
 	box-sizing: border-box;
