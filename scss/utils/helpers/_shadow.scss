@@ -26,7 +26,8 @@
 		transform $duration--medium $easing--standard;
 
 	&:hover,
-	&:focus {
+	&:focus,
+	&:focus-within {
 		@if "#{$hasRestingShadow}" == false {
 			box-shadow: 0 0 2px 0 $C_border, 0 2px 4px 0 $C_border;
 		} @else {
