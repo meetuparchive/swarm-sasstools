@@ -260,10 +260,12 @@ in order to also set the color of icons inline with text.
 		<ul class="inlineblockList inlineblockList--bulleted chunk text--heavy">
 			<li>Normal heavy text</li>
 			<li class="text--red">Colorful heavy text</li>
+			<li class="text--dark-red">Colorful heavy text</li>
 			<li class="text--pink">Colorful heavy text</li>
-			<li class="text--yellow">Colorful heavy text</li>
 			<li class="text--teal">Colorful heavy text</li>
 			<li class="text--blue">Colorful heavy text</li>
+			<li class="text--yellow">Colorful heavy text</li>
+			<li class="text--orange">Colorful heavy text</li>
 		</ul>
 	</div>
 </section>
@@ -273,11 +275,12 @@ in order to also set the color of icons inline with text.
 	$color
 		in (
 			"red": $C_red,
+			"dark-red": $C_darkRed,
 			"pink": $C_pink,
 			"teal": $C_teal,
 			"blue": $C_blue,
 			"yellow": $C_yellow,
-			"darkOrange": $C_attention
+			"orange": $C_orange
 		)
 {
 	@include _modifier("text", "#{$colorName}") {
