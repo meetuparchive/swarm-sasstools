@@ -270,13 +270,16 @@ in order to also set the color of icons inline with text.
 ```
 */
 @each $colorName,
-	$color in (
-		"red": $C_red,
-		"pink": $C_pink,
-		"teal": $C_teal,
-		"blue": $C_blue,
-		"yellow": $C_yellow
-	) {
+	$color
+		in (
+			"red": $C_red,
+			"pink": $C_pink,
+			"teal": $C_teal,
+			"blue": $C_blue,
+			"yellow": $C_yellow,
+			"darkOrange": $C_attention
+		)
+{
 	@include _modifier("text", "#{$colorName}") {
 		@include color-all($color, true); // `true` sets this property as `!important`
 	}
