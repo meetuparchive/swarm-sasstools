@@ -18,6 +18,7 @@ html {
 body {
 	color: $C_textPrimary;
 	font-family: $font;
+	font-display: swap; // allow Flash of Unstyled Text for accessibility
 	-moz-font-feature-settings: "liga", "kern";
 	-moz-font-feature-settings: "liga=1, kern=1";
 	-ms-font-feature-settings: "liga", "kern";
