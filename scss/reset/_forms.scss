@@ -136,6 +136,10 @@ select {
 	}
 }
 
+input {
+	color: $C_textPrimary;
+}
+
 input,
 select {
 	height: ($font-size * $line-height) + $space * 2;
