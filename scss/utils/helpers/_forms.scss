@@ -41,7 +41,7 @@
 	-webkit-appearance: none;
 	background-color: $C_white;
 	border-radius: $defaultRadius;
-	border: 1px solid $C_border;
+	border: 1px solid $C_textTertiary;
 	box-shadow: none;
 	box-sizing: border-box;
 	margin: 0 0 $space-quarter 0;
@@ -75,7 +75,7 @@
 /// 		@include formInput--hovered();
 /// 	}
 @mixin formInput--hovered() {
-	border-color: $C_textHint;
+	border-color: $C_textSecondary;
 }
 
 /// provides default styles for a focused input
