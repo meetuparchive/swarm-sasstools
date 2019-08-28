@@ -10,8 +10,8 @@ $mediaScale: 1;
 	--responsive-space: #{$space};
 	--mediaScale: #{$mediaScale};
 	@each $mediaKey in map-keys($media-map) {
-		#{responsiveMedia-$mediaKey}: floor(map-get($media-map, #{$mediaKey}) * $mediaScale);
-		--responsiveMedia-#{$mediaKey}: #{responsiveMedia-$mediaKey};
+		$responsiveMedia: floor(map-get($media-map, #{$mediaKey}) * $mediaScale);
+		--responsiveMedia-#{$mediaKey}: #{$responsiveMedia};
 	}
 }
 
@@ -39,8 +39,8 @@ large: 1.25,) {
 			--mediaScale: #{$responsiveScaleValue};
 
 			@each $mediaKey in map-keys($media-map) {
-				#{responsiveMedia-$mediaKey}: floor(map-get($media-map, #{$mediaKey}) * $responsiveScaleValue);
-				--responsiveMedia-#{$mediaKey}: #{responsiveMedia-$mediaKey};
+				$responsiveMedia: floor(map-get($media-map, #{$mediaKey}) * $responsiveScaleValue);
+				--responsiveMedia-#{$mediaKey}: #{$responsiveMedia};
 			}
 		}
 	}
