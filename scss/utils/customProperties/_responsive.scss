@@ -7,10 +7,11 @@
 $mediaScale: 1;
 
 :root {
-	--responsive-space: $space;
-	--mediaScale: $mediaScale;
+	--responsive-space: #{$space};
+	--mediaScale: #{$mediaScale};
 	@each $mediaKey in map-keys($media-map) {
-		--responsiveMedia-#{$mediaKey}: floor(map-get($media-map, #{$mediaKey}) * $mediaScale);
+		#{responsiveMedia-$mediaKey}: floor(map-get($media-map, #{$mediaKey}) * $mediaScale);
+		--responsiveMedia-#{$mediaKey}: #{responsiveMedia-$mediaKey};
 	}
 }
 
@@ -23,7 +24,7 @@ $mediaScale: 1;
 large: 20px,) {
 	@include atMediaUp($breakpoint) {
 		:root {
-			--responsive-space: $responsiveBaseValue;
+			--responsive-space: #{$responsiveBaseValue};
 		}
 	}
 }
@@ -35,10 +36,11 @@ large: 20px,) {
 large: 1.25,) {
 	@include atMediaUp($breakpoint) {
 		:root {
-			--mediaScale: $responsiveScaleValue;
+			--mediaScale: #{$responsiveScaleValue};
 
 			@each $mediaKey in map-keys($media-map) {
-				--responsiveMedia-#{$mediaKey}: floor(map-get($media-map, #{$mediaKey}) * $responsiveScaleValue);
+				#{responsiveMedia-$mediaKey}: floor(map-get($media-map, #{$mediaKey}) * $responsiveScaleValue);
+				--responsiveMedia-#{$mediaKey}: #{responsiveMedia-$mediaKey};
 			}
 		}
 	}
