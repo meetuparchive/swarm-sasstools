@@ -2,6 +2,10 @@
 	"name": "swarm-sasstools",
 	"version": "0.0.0",
 	"description": "Sass tools module of the Swarm Design System",
+	"engines": {
+		"node": "^10.16.3",
+		"yarn": "^1.9.4"
+	},
 	"directories": {
 		"doc": "sassdoc/",
 		"dist": "scss/"
@@ -39,9 +43,8 @@
 		"grunt-gh-pages": "0.9.1",
 		"grunt-preprocess": "5.1.0",
 		"grunt-sassdoc": "2.0.2",
-		"meetup-web-components": "^5.0.2373",
+		"meetup-web-components": "8.0.2904-beta",
 		"mwp-config": "16.0.2422",
-		"node-sass": "4.5.3",
 		"sass-loader": "6.0.1",
 		"sassdoc-theme-flippant": "0.1.0",
 		"seldon": "0.4.4",

@@ -21,7 +21,6 @@ before_install:
   - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
 
 before_script:
-  - npm rebuild node-sass #need to rebuild here https://github.com/sass/node-sass/issues/1387#issuecomment-185451183
   - yarn run build
   - git diff --exit-code
 
