@@ -1,0 +1,128 @@
+/*
+rgb(31,36,204); lightPurple
+rgb(237,28,64); red
+*/
+
+html {
+	overflow-x: hidden;
+}
+
+.hljs {
+	font-size: 13px;
+}
+
+/* prevent top nav from overlapping side nav */
+.pushy-content {
+	margin-top: 73px !important;
+}
+
+.pushy-submenu {
+	border-top: 1px solid rgba(255,255,255,0.4);
+}
+.pushy-submenu-open {
+	padding-bottom: 16px;
+}
+.pushy-submenu button {
+	background: transparent !important;
+	color: #fff !important;
+	border-width: 0 !important;
+	text-align: left !important;
+	padding-left: 16px;
+	font-size: 18px;
+}
+.pushy-submenu a {
+	color: #FFE533;
+	padding: 6px 0 6px 2px;
+}
+
+.offsetAnchor:before {
+	content: "";
+	display: inline-block;
+	height: 104px;
+	margin: -104px 0 0;
+}
+/*
+ *.doc_category-title .offsetAnchor:before {
+ *}
+ *.doc_block-title .offsetAnchor:before {
+ *   height: 46px;
+ *   margin: -46px 0 0;
+ *}
+ */
+
+.stripe--purple {
+	background-color: rgb(55,30,172) !important;
+}
+
+.doc_category {
+	border-top: 6px solid rgb(237,28,64);
+	margin-top: 80px;
+}
+.doc_category-title {
+	color: rgb(237,28,64);
+	margin-bottom: 16px;
+}
+.doc_block {
+	margin: auto;
+	margin-bottom: 16px;
+}
+.doc_block {
+	margin-top: 48px;
+	border-top: 2px solid #7000b0;
+}
+.doc_block > .doc_block-title {
+	color: #7000b0;
+	padding: 3px 0;
+	margin-bottom: 6px;
+}
+
+.doc_block-desc {
+	margin-bottom: 32px;
+}
+.doc_block-desc > p,
+.doc_block-desc > table {
+	margin-bottom: 16px;
+}
+.doc_block-desc code {
+	color: #1F24CC;
+}
+.doc_block-children {
+}
+.doc_childBlock {
+}
+
+.doc_example {
+	background: #fff;
+	margin: 8px auto 16px auto;
+	border: 1px solid rgba(0,0,0,0.12);
+	box-shadow: 0 0 8px rgba(0,0,0,0.12);
+}
+.doc_example-rendered {
+	padding: 16px;
+	margin: 0;
+}
+.doc_example-escaped pre {
+	overflow: scroll;
+	max-height: 500px;
+	margin: 0;
+}
+.doc_example-escaped pre code {
+	padding: 8px;
+	line-height: 1.8;
+}
+
+
+main {
+	padding-top: 32px;
+}
+
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+}
+#header .row {
+	padding: 24px 16px 8px;
+}

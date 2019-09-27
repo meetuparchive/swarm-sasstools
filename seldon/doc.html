@@ -1,0 +1,2691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<title>swarm-sasstools 0.0.0</title>
+
+	<!-- font & SQ2 base -->
+	<link rel="stylesheet" href="//www.meetup.com/mu_static/en-US/graphik.c2ab8a6.css" />
+	<link rel="stylesheet" href="//meetup.github.io/sassquatch2/bundle/sassquatch.css" />
+
+	<!-- CSS to be documented -->
+	<link rel="stylesheet" href="./swarm-sasstools.css" />
+
+	<!-- Styleguide CSS -->
+	<link rel="stylesheet" href="./pushy.css" />
+	<link rel="stylesheet" href="./doc.css" />
+	<link rel="stylesheet" href="./hljs.css" />
+</head>
+
+<!--[if IE 8]> <body class="lang_en ieRoot_IE8 ieRoot_lt_IE9 ieRoot_lt_IE10"> <![endif]-->
+<!--[if IE 9]> <body class="lang_en ieRoot_IE9 ieRoot_lt_IE10"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <body class="lang_en ieRoot_modern"> <!--<![endif]-->
+
+<nav class="stripe stripe--black pushy pushy-left">
+	<ul class="pushy-content">
+			<li class="pushy-submenu">
+				<button class="button button--contrast button--fullWidth">Modifier Classes</button>
+				<ul>
+						<li class="pushy-link">
+							<a href="#alignMod">Alignment</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#keepAspect">Aspect ratio helper</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#backgroundMod">Background</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#borderMod">Borders</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#buttonPersonalityMod">Anchors &amp; Buttons</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#displayMod">Display</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#floatMod">Float</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#flushMod">Flush</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#jsMod">Javascript-conditional modifiers</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#list">List</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#matchMediaSize">Match media size</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#mediaMod">Media-conditional modifiers</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#sizeMod">Media Sizing</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#spacingMod">Margin/Padding</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#stickyMod">Sticky</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#textMod">Text Modifiers</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#thumb">Thumbnails</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#visibilityMod">Visibility</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#widthModifier">Width</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#animMod">Animation</a>
+						</li>
+				</ul>
+			</li>
+			<li class="pushy-submenu">
+				<button class="button button--contrast button--fullWidth">Layout</button>
+				<ul>
+						<li class="pushy-link">
+							<a href="#flexRow">Row</a>
+						</li>
+				</ul>
+			</li>
+			<li class="pushy-submenu">
+				<button class="button button--contrast button--fullWidth">Text Styles</button>
+				<ul>
+						<li class="pushy-link">
+							<a href="#bodyText">Body/primary</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#invertedText">Inverted</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#hintText">Hint</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#secondaryText">Secondary</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#tertiaryText">Tertiary</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#boldText">Bold</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#normalText">Normal</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#smallText">Small</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#tinyText">Tiny</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#bigText">Big</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#monoText">Monospaced</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#captionText">Caption</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#errorText">Error</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#coloredText">Colored text</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#middotText">Middot text</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#runningText">Running text</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#linkColor">Link color</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#bulletedList">Bulleted lists</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#debugText">Debug text</a>
+						</li>
+				</ul>
+			</li>
+			<li class="pushy-submenu">
+				<button class="button button--contrast button--fullWidth">Forms</button>
+				<ul>
+						<li class="pushy-link">
+							<a href="#forms">Basic Inputs</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#checkbox">Checkboxes</a>
+						</li>
+				</ul>
+			</li>
+			<li class="pushy-submenu">
+				<button class="button button--contrast button--fullWidth">Headings</button>
+				<ul>
+						<li class="pushy-link">
+							<a href="#headings">Headings</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#headingTags">Heading tags</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#displayText">Display text</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#displayText">Title text</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#labelHeader">Label header</a>
+						</li>
+				</ul>
+			</li>
+			<li class="pushy-submenu">
+				<button class="button button--contrast button--fullWidth">Tables</button>
+				<ul>
+						<li class="pushy-link">
+							<a href="#tableDefault">Default table styles</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#borderedTable">Bordered table</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#resetTable">Reset table</a>
+						</li>
+						<li class="pushy-link">
+							<a href="#stripedTable">Striped table</a>
+						</li>
+				</ul>
+			</li>
+	</ul>
+</nav>
+
+<div class="column">
+
+	<header id="header" class="column-item column-item--shrink stripe stripe--black inverted">
+		<div class="row">
+			<div class="row-item row-item--shrink">
+				<div id="docMenu">
+					<a class="menu-btn text--big">&#9776;</a>
+				</div>
+			</div>
+			<h1 class="row-item text--big">swarm-sasstools</h1>
+			<a href="//github.com/meetup/swarm-sasstools" class="row-item row-item--shrink text--big">v0.0.0</a>
+		</div>
+	</header>
+
+	<main class="column-item">
+		<section id="content" class="stripe">
+			<div class="bounds">
+
+				<div class="doc_category">
+					<h2 class="doc_category-title text--heavy text--display1"><a class="offsetAnchor" name="modifierClasses">Modifier Classes</a></h2>
+
+					<div class="doc_category-blocks">
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="alignMod">Alignment</a><dt>
+							<dd class="doc_block-desc"><p><strong>Applies <code>!important</code> declaration</strong></p>
+<h2 id="text-alignment">Text alignment</h2>
+<p>The following classes change the <code>text-align</code> of an element.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.align--left</code></td>
+<td>sets <code>text-align</code> to <code>left</code></td>
+</tr>
+<tr>
+<td><code>.align--right</code></td>
+<td>sets <code>text-align</code> to <code>right</code></td>
+</tr>
+<tr>
+<td><code>.align--center</code></td>
+<td>sets <code>text-align</code> to <code>center</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="vertical-alignment">Vertical alignment</h2>
+<p>The following classes adjust vertical centering of element
+contents.</p>
+<p>For elements displaying as <code>inline-block</code> or <code>table-cell</code>,
+the <code>vertical-align</code> property is used.</p>
+<p>For flex children, these classes set the <code>align-self</code> property
+to a value that best matches the <code>vertical-align</code> value.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.valign--baseline</code></td>
+<td>vertically centers element to baseline</td>
+</tr>
+<tr>
+<td><code>.valign--bottom</code></td>
+<td>vertically centers element to bottom</td>
+</tr>
+<tr>
+<td><code>.valign--middle</code></td>
+<td>vertically centers element to middle</td>
+</tr>
+<tr>
+<td><code>.valign--top</code></td>
+<td>vertically centers element to top</td>
+</tr>
+</tbody>
+</table>
+<h2 id="aligning-children">Aligning Children</h2>
+<p>The following classes adjust the alignment of child elements
+using flexbox.
+<strong>The selected element will be set to <code>display: flex</code> in a <code>column</code> direction.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.valignChildren--bottom</code></td>
+<td>vertically centers children to the bottom of the parent element</td>
+</tr>
+<tr>
+<td><code>.valignChildren--center</code></td>
+<td>vertically centers children within the parent element</td>
+</tr>
+</tbody>
+</table>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="keepAspect">Aspect ratio helper</a><dt>
+							<dd class="doc_block-desc"><p>Maintains a given aspect ratio for flexible media.
+Apply to elements with background images.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.keepAspect</code></td>
+<td>maintains 1:1 aspect ratio when resized</td>
+</tr>
+<tr>
+<td><code>.keepAspect--16-9</code></td>
+<td>maintains 16:9 aspect ratio when resized</td>
+</tr>
+<tr>
+<td><code>.keepAspect--2-1</code></td>
+<td>maintains 2:1 aspect ratio when resized</td>
+</tr>
+<tr>
+<td><code>.keepAspect--2-3</code></td>
+<td>maintains 2:3 aspect ratio when resized</td>
+</tr>
+<tr>
+<td><code>.keepAspect--4-3</code></td>
+<td>maintains 4:3 aspect ratio when resized</td>
+</tr>
+</tbody>
+</table>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="backgroundMod">Background</a><dt>
+							<dd class="doc_block-desc"><p>Background modifiers.</p>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+									<dt class="doc_block-title text--heavy">Image Fill<dt>
+									<dd class="doc_block-desc"><p>Sets background properties that center
+background image, set size to &#39;cover&#39;,
+and overflow hidden.</p>
+<p>Extends <code>%imgFill</code>.</p>
+<p>EXAMPLE TK</p>
+</dd>
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="borderMod">Borders</a><dt>
+							<dd class="doc_block-desc"><p>Sets border properties on element</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.border--top</code></td>
+<td>sets a standard top border on the element</td>
+</tr>
+<tr>
+<td><code>.border--right</code></td>
+<td>sets a standard right border on the element</td>
+</tr>
+<tr>
+<td><code>.border--bottom</code></td>
+<td>sets a standard bottom border on the element</td>
+</tr>
+<tr>
+<td><code>.border--left</code></td>
+<td>sets a standard left border on the element</td>
+</tr>
+<tr>
+<td><code>.border--none</code></td>
+<td>removes all borders from element</td>
+</tr>
+<tr>
+<td><code>.bordered</code></td>
+<td>sets a standard top border AND top padding</td>
+</tr>
+<tr>
+<td><code>.focus--none</code></td>
+<td>removes user agent focus style</td>
+</tr>
+</tbody>
+</table>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="buttonPersonalityMod">Anchors &amp; Buttons</a><dt>
+							<dd class="doc_block-desc"><p>Applies button-like pointer styles, text-decoration,
+and user-select.</p>
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <a class="chunk display--block">I&#39;m just an anchor, displayed block</a>
+    <a class="buttonPersonality chunk display--block">I behave more like a button (hover over me; try to select this text)</a>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;a class&#x3D;&quot;chunk display--block&quot;&gt;I&#x27;m just an anchor, displayed block&lt;/a&gt;
+    &lt;a class&#x3D;&quot;buttonPersonality chunk display--block&quot;&gt;I behave more like a button (hover over me; try to select this text)&lt;/a&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="displayMod">Display</a><dt>
+							<dd class="doc_block-desc"><p>Modifies display property of element</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.display--none</code></td>
+<td>sets <code>display</code> to <code>none</code></td>
+</tr>
+<tr>
+<td><code>.display--block</code></td>
+<td>sets <code>display</code> to <code>block</code></td>
+</tr>
+<tr>
+<td><code>.display--flex</code></td>
+<td>sets <code>display</code> to <code>flex</code></td>
+</tr>
+<tr>
+<td><code>.display--inline</code></td>
+<td>sets <code>display</code> to <code>inline</code></td>
+</tr>
+<tr>
+<td><code>.display--inlineBlock</code></td>
+<td>sets <code>display</code> to <code>inline-block</code></td>
+</tr>
+<tr>
+<td><code>.display--inlineFlex</code></td>
+<td>sets <code>display</code> to <code>inline-flex</code></td>
+</tr>
+<tr>
+<td><code>.display--grid</code></td>
+<td>sets <code>display</code> to <code>grid</code></td>
+</tr>
+</tbody>
+</table>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+									<dt class="doc_block-title text--heavy">Flex Parent<dt>
+									<dd class="doc_block-desc"><p>Sets <code>display: flex</code> rules for selected element as well as
+orientation rules for <code>row</code> or <code>column</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.flexParent--row</code></td>
+<td>sets <code>display</code> to <code>flex</code> with row orientation for children</td>
+</tr>
+<tr>
+<td><code>.flexParent--column</code></td>
+<td>sets <code>display</code> to <code>flex</code> with column orientation for children</td>
+</tr>
+</tbody>
+</table>
+</dd>
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="floatMod">Float</a><dt>
+							<dd class="doc_block-desc"><p>Left and right <code>float</code></p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.float--left</code></td>
+<td>floats selected element left</td>
+</tr>
+<tr>
+<td><code>.float--right</code></td>
+<td>floats selected element right</td>
+</tr>
+</tbody>
+</table>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+									<dt class="doc_block-title text--heavy">Float<dt>
+									<dd class="doc_block-desc"><p>Float clearing.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.clearfix</code></td>
+<td>clears <code>float</code> property of children</td>
+</tr>
+</tbody>
+</table>
+</dd>
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="flushMod">Flush</a><dt>
+							<dd class="doc_block-desc"><p><strong>Applies <code>!important</code> declaration</strong></p>
+<p>The following classes &quot;flush&quot; an element, removing
+padding and margin for a given side variant.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.flush--all</code></td>
+<td>removes <code>padding</code> and <code>margin</code> from all sides of an element</td>
+</tr>
+<tr>
+<td><code>.flush--top</code></td>
+<td>removes <code>padding</code> and <code>margin</code> from the top side of an element</td>
+</tr>
+<tr>
+<td><code>.flush--right</code></td>
+<td>removes <code>padding</code> and <code>margin</code> from the right side of an element</td>
+</tr>
+<tr>
+<td><code>.flush--bottom</code></td>
+<td>removes <code>padding</code> and <code>margin</code> from the bottom side of an element</td>
+</tr>
+<tr>
+<td><code>.flush--left</code></td>
+<td>removes <code>padding</code> and <code>margin</code> from the left side of an element</td>
+</tr>
+</tbody>
+</table>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="jsMod">Javascript-conditional modifiers</a><dt>
+							<dd class="doc_block-desc"><p>Conditionally changes the display property of an element based
+javascript availability.</p>
+<p><em>Assumes a class of <code>hasJS</code> is added to the <code>body</code> tag with
+javascript on page load</em></p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hasJS_display--block</code></td>
+<td>Sets <code>display</code> property to <code>block</code> if user has JS</td>
+</tr>
+<tr>
+<td><code>hasJS_display--inline</code></td>
+<td>Sets <code>display</code> property to <code>inline</code> if user has JS</td>
+</tr>
+<tr>
+<td><code>hasJS_display--inlineBlock</code></td>
+<td>Sets <code>display</code> property to <code>inline-block</code> if user has JS</td>
+</tr>
+<tr>
+<td><code>hasJS_display--none</code></td>
+<td>Sets <code>display</code> property to <code>none</code> if user has JS</td>
+</tr>
+</tbody>
+</table>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="list">List</a><dt>
+							<dd class="doc_block-desc"><p>Standard divided/spaced list; similar to
+an iOS table view.</p>
+<p>Bottom spacing is provided with <code>chunk</code>.</p>
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <ul class="list">
+    <li class="list-item">
+        <h2 class="chunk">Just a list item</h2>
+    </li>
+    <li class="list-item">
+        <h2 class="chunk">Just a list item</h2>
+    </li>
+    <li class="list-item">
+        <h2 class="chunk">Just a list item</h2>
+    </li>
+</ul>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;ul class&#x3D;&quot;list&quot;&gt;
+    &lt;li class&#x3D;&quot;list-item&quot;&gt;
+        &lt;h2 class&#x3D;&quot;chunk&quot;&gt;Just a list item&lt;/h2&gt;
+    &lt;/li&gt;
+    &lt;li class&#x3D;&quot;list-item&quot;&gt;
+        &lt;h2 class&#x3D;&quot;chunk&quot;&gt;Just a list item&lt;/h2&gt;
+    &lt;/li&gt;
+    &lt;li class&#x3D;&quot;list-item&quot;&gt;
+        &lt;h2 class&#x3D;&quot;chunk&quot;&gt;Just a list item&lt;/h2&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+									<dt class="doc_block-title text--heavy">List item variants<dt>
+									<dd class="doc_block-desc"><p>A class of <code>.list-item</code> is <strong>required</strong> on list items. The
+following classes are optional variants:</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.list-item--active</code></td>
+<td>adds a background color to denote selected/active state (at medium &amp; up only)</td>
+</tr>
+<tr>
+<td><code>.list-item--gutters</code></td>
+<td>adds left and right padding to list item</td>
+</tr>
+</tbody>
+</table>
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <div class="chunk">
+    <h2>Touchable list items with selection</h2>
+    <p>The <code>list-item</code> class can be applied to anchors instead for a touchable list</p>
+</div>
+<ul class="list">
+    <li>
+        <a href="#" class="list-item list-item--gutters">
+            <div class="chunk">
+                <h3 class="text--bold">Member Name</h3>
+                <p class="text--caption">Something blah blah</p>
+            </div>
+        </a>
+    </li>
+    <li>
+        <a href="#" class="list-item list-item--gutters list-item--active">
+            <div class="chunk">
+                <h3 class="text--bold">Member Name</h3>
+                <p class="text--caption">Something blah blah</p>
+            </div>
+        </a>
+    </li>
+    <li>
+        <a href="#" class="list-item list-item--gutters">
+            <div class="chunk">
+                <h3 class="text--bold">Member Name</h3>
+                <p class="text--caption">Something blah blah</p>
+            </div>
+        </a>
+    </li>
+</ul>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;div class&#x3D;&quot;chunk&quot;&gt;
+    &lt;h2&gt;Touchable list items with selection&lt;/h2&gt;
+    &lt;p&gt;The &lt;code&gt;list-item&lt;/code&gt; class can be applied to anchors instead for a touchable list&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul class&#x3D;&quot;list&quot;&gt;
+    &lt;li&gt;
+        &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;list-item list-item--gutters&quot;&gt;
+            &lt;div class&#x3D;&quot;chunk&quot;&gt;
+                &lt;h3 class&#x3D;&quot;text--bold&quot;&gt;Member Name&lt;/h3&gt;
+                &lt;p class&#x3D;&quot;text--caption&quot;&gt;Something blah blah&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;list-item list-item--gutters list-item--active&quot;&gt;
+            &lt;div class&#x3D;&quot;chunk&quot;&gt;
+                &lt;h3 class&#x3D;&quot;text--bold&quot;&gt;Member Name&lt;/h3&gt;
+                &lt;p class&#x3D;&quot;text--caption&quot;&gt;Something blah blah&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;list-item list-item--gutters&quot;&gt;
+            &lt;div class&#x3D;&quot;chunk&quot;&gt;
+                &lt;h3 class&#x3D;&quot;text--bold&quot;&gt;Member Name&lt;/h3&gt;
+                &lt;p class&#x3D;&quot;text--caption&quot;&gt;Something blah blah&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </div>
+</div>
+</dd>
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="matchMediaSize">Match media size</a><dt>
+							<dd class="doc_block-desc"><h2 id="match-media-height">Match media height</h2>
+<p>The following classes increasing the <code>height</code> of an element to match
+one of our specified media sizes.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.matchMediaSize--height--xs</code></td>
+<td>sets height to $media-xs</td>
+</tr>
+<tr>
+<td><code>.matchMediaSize--height--s</code></td>
+<td>sets height to $media-s</td>
+</tr>
+<tr>
+<td><code>.matchMediaSize--height--m</code></td>
+<td>sets height to $media-m</td>
+</tr>
+<tr>
+<td><code>.matchMediaSize--height--l</code></td>
+<td>sets height to $media-l</td>
+</tr>
+</tbody>
+</table>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="mediaMod">Media-conditional modifiers</a><dt>
+							<dd class="doc_block-desc"><p>Media-conditional modifiers allow us to apply
+a modification at a specific breakpoint.</p>
+<p><em>Uses atMediaUp</em></p>
+<h3 id="example">Example</h3>
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <p class="atLarge_align--center">
+        This text inherits the default left alignment by default, but at <code>large</code> viewports and up, the text should center
+    </p>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;p class&#x3D;&quot;atLarge_align--center&quot;&gt;
+        This text inherits the default left alignment by default, but at &#x60;large&#x60; viewports and up, the text should center
+    &lt;/p&gt;</code></pre>
+    </div>
+</div>
+
+
+<h3 id="supported-modifications">Supported modifications</h3>
+<p>Using this signature: <code>.at[Breakpoint]_[property]--[variant]</code></p>
+<table>
+<thead>
+<tr>
+<th>Breakpoints</th>
+<th>Property</th>
+<th>Variants</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>medium</code>, <code>large</code></td>
+<td><code>align</code></td>
+<td><code>center</code>, <code>right</code>, <code>left</code></td>
+</tr>
+<tr>
+<td><code>medium</code>, <code>large</code></td>
+<td><code>display</code></td>
+<td><code>none</code>, <code>block</code>, <code>flex</code>, <code>grid</code> <code>inline</code>, <code>inlineBlock</code>, <code>inlineFlex</code></td>
+</tr>
+<tr>
+<td><code>medium</code>, <code>large</code></td>
+<td><code>padding</code></td>
+<td><code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>, <code>none</code></td>
+</tr>
+<tr>
+<td><code>medium</code>, <code>large</code></td>
+<td><code>margin</code></td>
+<td><code>center</code></td>
+</tr>
+<tr>
+<td><code>medium</code>, <code>large</code></td>
+<td><code>border</code></td>
+<td><code>top</code>, <code>none</code></td>
+</tr>
+<tr>
+<td><code>medium</code>, <code>large</code></td>
+<td><code>visibility</code></td>
+<td><code>a11yHide</code>, <code>a11yShow</code></td>
+</tr>
+<tr>
+<td><code>medium</code>, <code>large</code></td>
+<td><code>width</code></td>
+<td><code>auto</code>, <code>full</code></td>
+</tr>
+</tbody>
+</table>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="sizeMod">Media Sizing</a><dt>
+							<dd class="doc_block-desc"><p>Classes for applying dimensions to an element.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.media--xs</code></td>
+<td>Sets <code>width</code> to <code>$media-xs</code> and height to <code>auto</code></td>
+</tr>
+<tr>
+<td><code>.media--s</code></td>
+<td>Sets <code>width</code> to <code>$media-s</code> and height to <code>auto</code></td>
+</tr>
+<tr>
+<td><code>.media--m</code></td>
+<td>Sets <code>width</code> to <code>$media-m</code> and height to <code>auto</code></td>
+</tr>
+<tr>
+<td><code>.media--l</code></td>
+<td>Sets <code>width</code> to <code>$media-l</code> and height to <code>auto</code></td>
+</tr>
+<tr>
+<td><code>.media--xl</code></td>
+<td>Sets <code>width</code> to <code>$media-xl</code> and height to <code>auto</code></td>
+</tr>
+<tr>
+<td><code>.media--xxl</code></td>
+<td>Sets <code>width</code> to <code>$media-xxl</code> and height to <code>auto</code></td>
+</tr>
+</tbody>
+</table>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="spacingMod">Margin/Padding</a><dt>
+							<dd class="doc_block-desc"><p>Applies the standard unit of space as margin or padding
+to an element.</p>
+<h2 id="margin">Margin</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.margin--top</code></td>
+<td>Adds top <code>$space</code> margin to element</td>
+</tr>
+<tr>
+<td><code>.margin--right</code></td>
+<td>Adds right <code>$space</code> margin to element</td>
+</tr>
+<tr>
+<td><code>.margin--bottom</code></td>
+<td>Adds bottom <code>$space</code> margin to element</td>
+</tr>
+<tr>
+<td><code>.margin--left</code></td>
+<td>Adds left <code>$space</code> margin to element</td>
+</tr>
+<tr>
+<td><code>.margin--halfTop</code></td>
+<td>Adds top <code>$space-half</code> margin to element</td>
+</tr>
+<tr>
+<td><code>.margin--halfRight</code></td>
+<td>Adds right <code>$space-half</code> margin to element</td>
+</tr>
+<tr>
+<td><code>.margin--halfBottom</code></td>
+<td>Adds bottom <code>$space-half</code> margin to element</td>
+</tr>
+<tr>
+<td><code>.margin--halfLeft</code></td>
+<td>Adds left <code>$space-half</code> margin to element</td>
+</tr>
+<tr>
+<td><code>.margin--all</code></td>
+<td>Adds margin to all sides of element</td>
+</tr>
+<tr>
+<td><code>.margin--none</code></td>
+<td>Sets <code>margin</code> to <code>0</code></td>
+</tr>
+<tr>
+<td><code>.margin--center</code></td>
+<td>Sets left and right margin to <code>auto</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="padding">Padding</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.padding--top</code></td>
+<td>Adds top <code>$space</code> padding to element</td>
+</tr>
+<tr>
+<td><code>.padding--right</code></td>
+<td>Adds right <code>$space</code> padding to element</td>
+</tr>
+<tr>
+<td><code>.padding--bottom</code></td>
+<td>Adds bottom <code>$space</code> padding to element</td>
+</tr>
+<tr>
+<td><code>.padding--left</code></td>
+<td>Adds left <code>$space</code> padding to element</td>
+</tr>
+<tr>
+<td><code>.padding--halfTop</code></td>
+<td>Adds top <code>$pace-half</code> padding to element</td>
+</tr>
+<tr>
+<td><code>.padding--halfRight</code></td>
+<td>Adds right <code>$space-half</code> padding to element</td>
+</tr>
+<tr>
+<td><code>.padding--halfBottom</code></td>
+<td>Adds bottom <code>$space-half</code> padding to element</td>
+</tr>
+<tr>
+<td><code>.padding--halfLeft</code></td>
+<td>Adds left <code>$space-half</code> padding to element</td>
+</tr>
+<tr>
+<td><code>.padding--all</code></td>
+<td>Adds padding to all sides of element</td>
+</tr>
+<tr>
+<td><code>.padding--none</code></td>
+<td>Sets <code>padding</code> to <code>0</code></td>
+</tr>
+</tbody>
+</table>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="stickyMod">Sticky</a><dt>
+							<dd class="doc_block-desc"><p>Sets the position property of element to <code>sticky</code>, and
+uses modifier classes for picking a which side of the
+viewport to stick to</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.sticky</code></td>
+<td>sets <code>position</code> to <code>sticky</code></td>
+</tr>
+<tr>
+<td><code>.sticky--top</code></td>
+<td>sets <code>top</code> to <code>0</code>, causing element to &quot;stick&quot; to the top of the viewport</td>
+</tr>
+<tr>
+<td><code>.sticky--bottom</code></td>
+<td>sets <code>bottom</code> to <code>0</code>, causing element to &quot;stick&quot; to the bottom of the viewport</td>
+</tr>
+</tbody>
+</table>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="textMod">Text Modifiers</a><dt>
+							<dd class="doc_block-desc"><p>Modifiers for text.</p>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+									<dt class="doc_block-title text--heavy">Hiding Text<dt>
+									<dd class="doc_block-desc"><p>To hide just the text node of an element, use
+the <code>text--hide</code> modifier.</p>
+<p>This is useful for links that only contain an
+SVG icon (use descriptive text for screen readers).</p>
+<p><em>(this class will not work on <code>inline</code> elements)</em></p>
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <a class="display--block text--hide" href="#">
+    You can see the kitten, but you can&#39;t see this text.
+    <img src="https://placekitten.com/g/32/32" />
+</a>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;a class&#x3D;&quot;display--block text--hide&quot; href&#x3D;&quot;#&quot;&gt;
+    You can see the kitten, but you can&#x27;t see this text.
+    &lt;img src&#x3D;&quot;<a href="https://placekitten.com/g/32/32&amp;quot">https://placekitten.com/g/32/32&amp;quot</a>; /&gt;
+&lt;/a&gt;</code></pre>
+    </div>
+</div>
+
+
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.text--hide</code></td>
+<td>Visually hides text; removes text from document flow</td>
+</tr>
+</tbody>
+</table>
+</dd>
+									<dt class="doc_block-title text--heavy">Text decoration/transform<dt>
+									<dd class="doc_block-desc"><p>Basic text decoration and transform</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.text--strikethrough</code></td>
+<td>strikethrough/strikeout/line-through</td>
+</tr>
+<tr>
+<td><code>.text--uppercase</code></td>
+<td>uppercase text (limited to English)</td>
+</tr>
+</tbody>
+</table>
+</dd>
+									<dt class="doc_block-title text--heavy">No Hyphens<dt>
+									<dd class="doc_block-desc"><p>Don&#39;t allow hyphens on line breaks</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.text--noHyphens</code></td>
+<td>Don&#39;t allow hyphens on line breaks</td>
+</tr>
+</tbody>
+</table>
+</dd>
+									<dt class="doc_block-title text--heavy">Nice Hyphenation<dt>
+									<dd class="doc_block-desc"><p>Enables breaking all words and auto-hyphenation.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.text--wrapNice</code></td>
+<td>Auto hyphenation and nice wrapping for running text</td>
+</tr>
+</tbody>
+</table>
+</dd>
+									<dt class="doc_block-title text--heavy">Type wrap/whitespace<dt>
+									<dd class="doc_block-desc"><p>Sets type wrapping, witespace, and overflow properties on element</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.wrap--singleLine</code></td>
+<td>forces text to a single line (nowrap)</td>
+</tr>
+<tr>
+<td><code>.wrap--singleLine--truncate</code></td>
+<td>forces text to a single line (nowrap) and truncates with &hellip;</td>
+</tr>
+<tr>
+<td><code>.matchLineHeight</code></td>
+<td>adds a small amount of top and bottom margin to a non-text element to match line height of nearby text</td>
+</tr>
+</tbody>
+</table>
+</dd>
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="thumb">Thumbnails</a><dt>
+							<dd class="doc_block-desc"><p>Sets background cover and position for photo thumbnails.</p>
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <div class="thumb media--l" style="background-image: url(http://photos4.meetupstatic.com/photos/member/d/0/2/c/member_156833292.jpeg);"></div>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;div class&#x3D;&quot;thumb media--l&quot; style&#x3D;&quot;background-image: url(<a href="http://photos4.meetupstatic.com/photos/member/d/0/2/c/member_156833292.jpeg);&quot;&gt;&lt;/div&amp;gt">http://photos4.meetupstatic.com/photos/member/d/0/2/c/member_156833292.jpeg);&quot;&gt;&lt;/div&amp;gt</a>;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="visibilityMod">Visibility</a><dt>
+							<dd class="doc_block-desc"><p>Modifies <code>visibility</code> property of an element <strong>or</strong>
+in the case of <code>a11y</code> classes, visually hides an element
+that will <a href="http://a11yproject.com/posts/how-to-hide-content/">not be ignored by screen readers</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.visibility--a11yHide</code></td>
+<td>takes element out of document flow and hides it (screen readers will NOT ignore the element)</td>
+</tr>
+<tr>
+<td><code>.visibility--a11yShow</code></td>
+<td>reveals a a11y hidden element for sighted users</td>
+</tr>
+</tbody>
+</table>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="widthModifier">Width</a><dt>
+							<dd class="doc_block-desc"><p>Sets element width in percentage.</p>
+<p><strong>Includes <code>!important</code> directive</strong> in order to override
+input attribute selectors.</p>
+<p><code>span--[width%]</code></p>
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <p class="span--100" style="background: pink;">100% width</p>
+<p class="span--80" style="background: pink;">80% width</p>
+<p class="span--75" style="background: pink;">75% width</p>
+<p class="span--60" style="background: pink;">60% width</p>
+<p class="span--50" style="background: pink;">50% width</p>
+<p class="span--30" style="background: pink;">30% width</p>
+<p class="span--25" style="background: pink;">25% width</p>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;p class&#x3D;&quot;span--100&quot; style&#x3D;&quot;background: pink;&quot;&gt;100% width&lt;/p&gt;
+&lt;p class&#x3D;&quot;span--80&quot; style&#x3D;&quot;background: pink;&quot;&gt;80% width&lt;/p&gt;
+&lt;p class&#x3D;&quot;span--75&quot; style&#x3D;&quot;background: pink;&quot;&gt;75% width&lt;/p&gt;
+&lt;p class&#x3D;&quot;span--60&quot; style&#x3D;&quot;background: pink;&quot;&gt;60% width&lt;/p&gt;
+&lt;p class&#x3D;&quot;span--50&quot; style&#x3D;&quot;background: pink;&quot;&gt;50% width&lt;/p&gt;
+&lt;p class&#x3D;&quot;span--30&quot; style&#x3D;&quot;background: pink;&quot;&gt;30% width&lt;/p&gt;
+&lt;p class&#x3D;&quot;span--25&quot; style&#x3D;&quot;background: pink;&quot;&gt;25% width&lt;/p&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="animMod">Animation</a><dt>
+							<dd class="doc_block-desc"><p>Applies keyframes animation to element</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.animate--bounceInSubtle</code></td>
+<td>Applies bounce-in keyframes animation (plays once)</td>
+</tr>
+<tr>
+<td><code>.animate--spin</code></td>
+<td>Applies 360deg rotation keyframes (infinite)</td>
+</tr>
+</tbody>
+</table>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+					</div>
+
+				</div>
+				<div class="doc_category">
+					<h2 class="doc_category-title text--heavy text--display1"><a class="offsetAnchor" name="layout">Layout</a></h2>
+
+					<div class="doc_category-blocks">
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="flexRow">Row</a><dt>
+							<dd class="doc_block-desc"><h2 id="deprecated">DEPRECATED</h2>
+<p>Please use the <code>Flex</code> component in <a class="link" href="https://github.com/meetup/meetup-web-components">meetup-web-components</a> instead.</p>
+<hr>
+<p>Arranges content in rows using <code>display: flex</code>.</p>
+<p>The <code>.row</code> class is applied to a wrapping element.</p>
+<p>Direct children of <code>.row</code> are flex children, and require
+a class of <code>.row-item</code> with an optional <code>.row-item--shrink</code>
+for a flex-shrink item.</p>
+<p>The flex children in flex row do not have a <code>flex-basis</code> set; a
+basis is not required for most common layout tasks.</p>
+<p><em>Includes <code>table-cell</code> fallback for IE8.</em></p>
+<h4 id="examples-">Examples:</h4>
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <div class="row">
+    <div class="_DOC-SHADE row-item">Item 1</div>
+    <div class="_DOC-SHADE row-item row-item--shrink">Item 2</div>
+    <div class="_DOC-SHADE row-item row-item--shrink">Item 3</div>
+    <div class="_DOC-SHADE row-item">Item 4</div>
+</div>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;div class&#x3D;&quot;row&quot;&gt;
+    &lt;div class&#x3D;&quot;_DOC-SHADE row-item&quot;&gt;Item 1&lt;/div&gt;
+    &lt;div class&#x3D;&quot;_DOC-SHADE row-item row-item--shrink&quot;&gt;Item 2&lt;/div&gt;
+    &lt;div class&#x3D;&quot;_DOC-SHADE row-item row-item--shrink&quot;&gt;Item 3&lt;/div&gt;
+    &lt;div class&#x3D;&quot;_DOC-SHADE row-item&quot;&gt;Item 4&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+
+
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <div class="row">
+    <div class="_DOC-SHADE row-item row-item--shrink">Item 1</div>
+    <div class="_DOC-SHADE row-item">Item 2</div>
+    <div class="_DOC-SHADE row-item row-item--shrink">Item 3</div>
+</div>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;div class&#x3D;&quot;row&quot;&gt;
+    &lt;div class&#x3D;&quot;_DOC-SHADE row-item row-item--shrink&quot;&gt;Item 1&lt;/div&gt;
+    &lt;div class&#x3D;&quot;_DOC-SHADE row-item&quot;&gt;Item 2&lt;/div&gt;
+    &lt;div class&#x3D;&quot;_DOC-SHADE row-item row-item--shrink&quot;&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+
+
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <div class="row row--flexEnd">
+    <div class="_DOC-SHADE row-item row-item--shrink">Item 1</div>
+    <div class="_DOC-SHADE row-item row-item--shrink">Item 2</div>
+    <div class="_DOC-SHADE row-item row-item--shrink">Item 3</div>
+</div>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;div class&#x3D;&quot;row row--flexEnd&quot;&gt;
+    &lt;div class&#x3D;&quot;_DOC-SHADE row-item row-item--shrink&quot;&gt;Item 1&lt;/div&gt;
+    &lt;div class&#x3D;&quot;_DOC-SHADE row-item row-item--shrink&quot;&gt;Item 2&lt;/div&gt;
+    &lt;div class&#x3D;&quot;_DOC-SHADE row-item row-item--shrink&quot;&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+
+
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <div class="row row--spaceBetween row--reverse">
+    <div class="_DOC-SHADE row-item row-item--shrink">Item 1</div>
+    <div class="_DOC-SHADE row-item row-item--shrink">Item 2</div>
+    <div class="_DOC-SHADE row-item row-item--shrink">Item 3</div>
+    <div class="_DOC-SHADE row-item row-item--shrink">Item 4</div>
+</div>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;div class&#x3D;&quot;row row--spaceBetween row--reverse&quot;&gt;
+    &lt;div class&#x3D;&quot;_DOC-SHADE row-item row-item--shrink&quot;&gt;Item 1&lt;/div&gt;
+    &lt;div class&#x3D;&quot;_DOC-SHADE row-item row-item--shrink&quot;&gt;Item 2&lt;/div&gt;
+    &lt;div class&#x3D;&quot;_DOC-SHADE row-item row-item--shrink&quot;&gt;Item 3&lt;/div&gt;
+    &lt;div class&#x3D;&quot;_DOC-SHADE row-item row-item--shrink&quot;&gt;Item 4&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+									<dt class="doc_block-title text--heavy">Row variants<dt>
+									<dd class="doc_block-desc"><h2 id="deprecated">DEPRECATED</h2>
+<p>Please use the <code>Flex</code> component in <a class="link" href="https://github.com/meetup/meetup-web-components">meetup-web-components</a> instead.</p>
+<hr>
+<p>A class of <code>.row</code> is <strong>required</strong> on the flex row parent. The
+following classes are optional variants:</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.row--noGutters</code></td>
+<td>removes padding from all <code>.row-item</code> children</td>
+</tr>
+<tr>
+<td><code>.row--wrap</code></td>
+<td>allows row wrapping (useful for collapsing rows in smaller viewports)</td>
+</tr>
+<tr>
+<td><code>.row--reverse</code></td>
+<td>reverses row order</td>
+</tr>
+</tbody>
+</table>
+<p>Content justification variants are also available (see also: <a class="link" target="_blank" href="https://css-tricks.com/almanac/properties/j/justify-content/">css tricks flexbox demo</a>)</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.row--flexEnd</code></td>
+<td>justifies content to <code>flex-end</code></td>
+</tr>
+<tr>
+<td><code>.row--center</code></td>
+<td>justifies content to <code>center</code></td>
+</tr>
+<tr>
+<td><code>.row--spaceBetween</code></td>
+<td>justifies content to <code>spaceBetween</code></td>
+</tr>
+<tr>
+<td><code>.row--spaceAround</code></td>
+<td>justifies content to <code>spaceAround</code></td>
+</tr>
+</tbody>
+</table>
+</dd>
+									<dt class="doc_block-title text--heavy">Row Item variants<dt>
+									<dd class="doc_block-desc"><h2 id="deprecated">DEPRECATED</h2>
+<p>Please use the <code>Flex</code> component in <a class="link" href="https://github.com/meetup/meetup-web-components">meetup-web-components</a> instead.</p>
+<hr>
+<p>A class of <code>.row-item</code> is <strong>required</strong> on row items.
+The following classes are optional variants:</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.row-item--shrink</code></td>
+<td>Item shrinks to fit content</td>
+</tr>
+</tbody>
+</table>
+</dd>
+								</dl>
+							</dd>
+
+						</dl>
+					</div>
+
+				</div>
+				<div class="doc_category">
+					<h2 class="doc_category-title text--heavy text--display1"><a class="offsetAnchor" name="textStyles">Text Styles</a></h2>
+
+					<div class="doc_category-blocks">
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="bodyText">Body/primary</a><dt>
+							<dd class="doc_block-desc"><div class="doc_example">
+    <div class="doc_example-rendered">
+        <p>This is default body text, inheritied from type styles applied to &lt;body&gt;</p>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;p&gt;This is default body text, inheritied from type styles applied to &amp;lt;body&amp;gt;&lt;/p&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="invertedText">Inverted</a><dt>
+							<dd class="doc_block-desc"><p>Apply the <code>inverted</code> class to a container with
+a dark background color or photo to flip all text
+elements to inveted colors.</p>
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <div style="background: #353E48;" class="inverted">
+    <p>This is default body text, inheritied from type styles applied to &lt;body&gt;</p>
+</div>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;div style&#x3D;&quot;background: #353E48;&quot; class&#x3D;&quot;inverted&quot;&gt;
+    &lt;p&gt;This is default body text, inheritied from type styles applied to &amp;lt;body&amp;gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="hintText">Hint</a><dt>
+							<dd class="doc_block-desc"><div class="doc_example">
+    <div class="doc_example-rendered">
+        <p class="text--hint">This is hint text</p>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;p class&#x3D;&quot;text--hint&quot;&gt;This is hint text&lt;/p&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="secondaryText">Secondary</a><dt>
+							<dd class="doc_block-desc"><div class="doc_example">
+    <div class="doc_example-rendered">
+        <p class="text--secondary">Secondary text is secondary</p>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;p class&#x3D;&quot;text--secondary&quot;&gt;Secondary text is secondary&lt;/p&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="tertiaryText">Tertiary</a><dt>
+							<dd class="doc_block-desc"><div class="doc_example">
+    <div class="doc_example-rendered">
+        <p class="text--tertiary">Tertiary text is tertiary</p>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;p class&#x3D;&quot;text--tertiary&quot;&gt;Tertiary text is tertiary&lt;/p&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="boldText">Bold</a><dt>
+							<dd class="doc_block-desc"><div class="doc_example">
+    <div class="doc_example-rendered">
+        <p class="text--bold">Bold text is bold</p>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;p class&#x3D;&quot;text--bold&quot;&gt;Bold text is bold&lt;/p&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="normalText">Normal</a><dt>
+							<dd class="doc_block-desc"><div class="doc_example">
+    <div class="doc_example-rendered">
+        <h2 class="text--normal">Normal text class is a normal font-weight.</h2>
+<h2 class="text--normal">This heading is usually bold.</h2>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;h2 class&#x3D;&quot;text--normal&quot;&gt;Normal text class is a normal font-weight.&lt;/h2&gt;
+&lt;h2 class&#x3D;&quot;text--normal&quot;&gt;This heading is usually bold.&lt;/h2&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="smallText">Small</a><dt>
+							<dd class="doc_block-desc"><div class="doc_example">
+    <div class="doc_example-rendered">
+        <p class="text--small">Small text class is small</p>
+<small>Default styling of &quot;small&quot; tag</small>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;p class&#x3D;&quot;text--small&quot;&gt;Small text class is small&lt;/p&gt;
+&lt;small&gt;Default styling of &quot;small&quot; tag&lt;/small&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="tinyText">Tiny</a><dt>
+							<dd class="doc_block-desc"><div class="doc_example">
+    <div class="doc_example-rendered">
+        <p class="text--tiny">Tiny text class is VERY small and should be used sparingly and probably never in conjunction with <code>text--hint</code></p>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;p class&#x3D;&quot;text--tiny&quot;&gt;Tiny text class is VERY small and should be used sparingly and probably never in conjunction with &#x60;text--hint&#x60;&lt;/p&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="bigText">Big</a><dt>
+							<dd class="doc_block-desc"><div class="doc_example">
+    <div class="doc_example-rendered">
+        <p class="text--big">Big text class is big</p>
+<big>Default styling of &quot;big&quot; tag</big>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;p class&#x3D;&quot;text--big&quot;&gt;Big text class is big&lt;/p&gt;
+&lt;big&gt;Default styling of &quot;big&quot; tag&lt;/big&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="monoText">Monospaced</a><dt>
+							<dd class="doc_block-desc"><p>The <code>code</code> and <code>pre</code> elements use a monospaced
+font by default. To apply monospaced type rules
+to any other element, use <code>text--mono</code>.</p>
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <p class="text--mono">Is this code? What is this?</p>
+<code>This is code</code>
+<pre>We can safely assume a pre tag on Meetup is also code</pre>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;p class&#x3D;&quot;text--mono&quot;&gt;Is this code? What is this?&lt;/p&gt;
+&lt;code&gt;This is code&lt;/code&gt;
+&lt;pre&gt;We can safely assume a pre tag on Meetup is also code&lt;/pre&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="captionText">Caption</a><dt>
+							<dd class="doc_block-desc"><div class="doc_example">
+    <div class="doc_example-rendered">
+        <p class="text--caption">I&#39;m captioning all the things</p>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;p class&#x3D;&quot;text--caption&quot;&gt;I&#x27;m captioning all the things&lt;/p&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="errorText">Error</a><dt>
+							<dd class="doc_block-desc"><div class="doc_example">
+    <div class="doc_example-rendered">
+        <p class="text--error">I&#39;m erroring all the things</p>
+<p class="text--attention">Attention!</p>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;p class&#x3D;&quot;text--error&quot;&gt;I&#x27;m erroring all the things&lt;/p&gt;
+&lt;p class&#x3D;&quot;text--attention&quot;&gt;Attention!&lt;/p&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="coloredText">Colored text</a><dt>
+							<dd class="doc_block-desc"><p>Applies standard text colors. The variant
+is the color name: <code>text--[color]</code>. All supported
+variants are listed below.</p>
+<p>These classes set both the <code>color</code> and <code>fill</code> properties
+in order to also set the color of icons inline with text.</p>
+<p><strong>This style is set as <code>!important</code></strong></p>
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <section class="stripe stripe--inverted inverted">
+    <div class="bounds">
+        <ul class="inlineblockList inlineblockList--bulleted chunk text--heavy">
+            <li>Normal heavy text</li>
+            <li class="text--red">Colorful heavy text</li>
+            <li class="text--dark-red">Colorful heavy text</li>
+            <li class="text--pink">Colorful heavy text</li>
+            <li class="text--teal">Colorful heavy text</li>
+            <li class="text--blue">Colorful heavy text</li>
+            <li class="text--yellow">Colorful heavy text</li>
+            <li class="text--orange">Colorful heavy text</li>
+        </ul>
+    </div>
+</section>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;section class&#x3D;&quot;stripe stripe--inverted inverted&quot;&gt;
+    &lt;div class&#x3D;&quot;bounds&quot;&gt;
+        &lt;ul class&#x3D;&quot;inlineblockList inlineblockList--bulleted chunk text--heavy&quot;&gt;
+            &lt;li&gt;Normal heavy text&lt;/li&gt;
+            &lt;li class&#x3D;&quot;text--red&quot;&gt;Colorful heavy text&lt;/li&gt;
+            &lt;li class&#x3D;&quot;text--dark-red&quot;&gt;Colorful heavy text&lt;/li&gt;
+            &lt;li class&#x3D;&quot;text--pink&quot;&gt;Colorful heavy text&lt;/li&gt;
+            &lt;li class&#x3D;&quot;text--teal&quot;&gt;Colorful heavy text&lt;/li&gt;
+            &lt;li class&#x3D;&quot;text--blue&quot;&gt;Colorful heavy text&lt;/li&gt;
+            &lt;li class&#x3D;&quot;text--yellow&quot;&gt;Colorful heavy text&lt;/li&gt;
+            &lt;li class&#x3D;&quot;text--orange&quot;&gt;Colorful heavy text&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="middotText">Middot text</a><dt>
+							<dd class="doc_block-desc"><div class="doc_example">
+    <div class="doc_example-rendered">
+        <p class="text--middotRight">I have a right middot</p>
+<p class="text--middotLeft">I have a left middot</p>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;p class&#x3D;&quot;text--middotRight&quot;&gt;I have a right middot&lt;/p&gt;
+&lt;p class&#x3D;&quot;text--middotLeft&quot;&gt;I have a left middot&lt;/p&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="runningText">Running text</a><dt>
+							<dd class="doc_block-desc"><p>By default, paragraphs and headings are not styled
+with any bottom spacing. Links are not blue by default,
+as the most common case on Meetup will be block-level
+anchors with large touch targets.</p>
+<p>However, there will be instaces where you want the blue
+links and properly spaced paragraphs of running text (ie.
+event descriptions).</p>
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <p>The robot is partially dressed in waterproof surgical garb.</p>
+<p>&quot;Bruce Springsteen&quot; is a terrible name for a <a href="#">cat</a>.</p>
+
+<hr style="margin: 8px;" /> <!-- lol, hr -->
+
+<div class="runningText">
+    <p>The robot is partially dressed in waterproof surgical garb.</p>
+    <p>&quot;Bruce Springsteen&quot; is a terrible name for a <a href="#">cat</a>.</p>
+</div>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;p&gt;The robot is partially dressed in waterproof surgical garb.&lt;/p&gt;
+&lt;p&gt;&quot;Bruce Springsteen&quot; is a terrible name for a &lt;a href&#x3D;&quot;#&quot;&gt;cat&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr style&#x3D;&quot;margin: 8px;&quot; /&gt; &lt;!-- lol, hr --&gt;
+
+&lt;div class&#x3D;&quot;runningText&quot;&gt;
+    &lt;p&gt;The robot is partially dressed in waterproof surgical garb.&lt;/p&gt;
+    &lt;p&gt;&quot;Bruce Springsteen&quot; is a terrible name for a &lt;a href&#x3D;&quot;#&quot;&gt;cat&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="linkColor">Link color</a><dt>
+							<dd class="doc_block-desc"><p>You can always force an anchor to apply a
+linky blue color by applying the <code>.link</code> class.</p>
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <p>Let&#39;s force this <a class="link" href="#">link</a> to be red-underlined.</p>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;p&gt;Let&#x27;s force this &lt;a class&#x3D;&quot;link&quot; href&#x3D;&quot;#&quot;&gt;link&lt;/a&gt; to be red-underlined.&lt;/p&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="bulletedList">Bulleted lists</a><dt>
+							<dd class="doc_block-desc"><p><code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code> element list styles are
+reset by default.</p>
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <ul>
+    <li>Eggs</li>
+    <li>More Eggs</li>
+</ul>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;ul&gt;
+    &lt;li&gt;Eggs&lt;/li&gt;
+    &lt;li&gt;More Eggs&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </div>
+</div>
+
+
+<p>List style bullets are applied when list
+elements are inside a <code>.runningText</code> container.</p>
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <div class="bounds">
+    <h3 class="text--big">Shopping list</h3>
+    <div class="runningText">
+        <ul>
+            <li>Eggs</li>
+            <li>More Eggs</li>
+        </ul>
+    </div>
+</div>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;div class&#x3D;&quot;bounds&quot;&gt;
+    &lt;h3 class&#x3D;&quot;text--big&quot;&gt;Shopping list&lt;/h3&gt;
+    &lt;div class&#x3D;&quot;runningText&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Eggs&lt;/li&gt;
+            &lt;li&gt;More Eggs&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+
+
+<p>You may also use the <code>.bullets</code> class to apply
+numbers/bullets to a list.</p>
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <div class="bounds">
+    <h3 class="text--big">Shopping list</h3>
+    <ul class="bullets">
+        <li>Eggs</li>
+        <li>More Eggs</li>
+    </ul>
+</div>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;div class&#x3D;&quot;bounds&quot;&gt;
+    &lt;h3 class&#x3D;&quot;text--big&quot;&gt;Shopping list&lt;/h3&gt;
+    &lt;ul class&#x3D;&quot;bullets&quot;&gt;
+        &lt;li&gt;Eggs&lt;/li&gt;
+        &lt;li&gt;More Eggs&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="debugText">Debug text</a><dt>
+							<dd class="doc_block-desc"><p>Sometimes you just need to dump some text into a document
+to debug.</p>
+<p>By default, the <code>debug</code> element is hidden. Apply the <code>enableDebug</code> class
+to a parent element to display <code>debug</code> elements.</p>
+<p><em>Setting the <code>enableDebug</code> class on <code>body</code> for dev only is recommended.</em></p>
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <p class="debug">Invisible debug</p>
+
+<div class="enableDebug">
+<p class="debug">
+    Visible debug [ ChapterProto =&gt;
+    chapterId=530569
+    parentChapterId=0
+    transitionalVenueId=0
+    relocatedZip=
+    name=Foreign Androids Feel Frustrated
+</p>
+</div>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;p class&#x3D;&quot;debug&quot;&gt;Invisible debug&lt;/p&gt;
+
+&lt;div class&#x3D;&quot;enableDebug&quot;&gt;
+&lt;p class&#x3D;&quot;debug&quot;&gt;
+    Visible debug [ ChapterProto &#x3D;&gt;
+    chapterId&#x3D;530569
+    parentChapterId&#x3D;0
+    transitionalVenueId&#x3D;0
+    relocatedZip&#x3D;
+    name&#x3D;Foreign Androids Feel Frustrated
+&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+					</div>
+
+				</div>
+				<div class="doc_category">
+					<h2 class="doc_category-title text--heavy text--display1"><a class="offsetAnchor" name="forms">Forms</a></h2>
+
+					<div class="doc_category-blocks">
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="forms">Basic Inputs</a><dt>
+							<dd class="doc_block-desc"><div style="padding: 8px; background: #FFE533; margin: 8px 0 16px 0;">
+The <code>chunk</code> and <code>row</code> classs used below are for documentation
+purposes only and are not provided by <code>swarm-sassutils</code>. For layout components,
+see <a class="link" style="text-decoration: underline;" href="https://github.com/meetup/meetup-web-components">meetup-web-components</a>
+</div>
+
+<h2 id="text-inputs">Text inputs</h2>
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <div class="chunk">
+    <label for="test-textinput" class="required">I&#39;m a label</label>
+    <input id="test-textinput" type="text" value="Text input with value" />
+</div>
+
+<div class="chunk">
+    <label for="test-textinput2">Just another label</label>
+    <input id="test-textinput2" type="text" placeholder="Text input with placeholder" />
+</div>
+
+<div class="chunk">
+    <label for="test-textarea">Here&#39;s an area for your text</label>
+    <textarea id="test-textarea"></textarea>
+</div>
+
+<div class="chunk">
+    <label for="test-select">What is this?</label>
+    <select id="text-select">
+        <option value="One">One</option>
+        <option value="Two">Two</option>
+        <option value="Three">Three</option>
+        <option value="Four">Four</option>
+    </select>
+</div>
+
+<div class="row">
+    <div class="row-item chunk">
+        <label for="split1">Favorite number</label>
+        <input id="split0" type="number" />
+    </div>
+    <div class="row-item chunk">
+        <label for="split1">Unicorn name</label>
+        <input id="split1" type="text" placeholder="ie. Fluffy, Resplendent" />
+    </div>
+    <div class="row-item chunk">
+        <label class="required" for="split2">Unicorn color</label>
+        <select id="split2">
+            <option value="clear">Transparent</option>
+            <option value="green">Toasted clove saffron</option>
+            <option value="brown">Midnight brown</option>
+            <option value="black">Seabreeze black</option>
+        </select>
+    </div>
+</div>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;div class&#x3D;&quot;chunk&quot;&gt;
+    &lt;label for&#x3D;&quot;test-textinput&quot; class&#x3D;&quot;required&quot;&gt;I&#x27;m a label&lt;/label&gt;
+    &lt;input id&#x3D;&quot;test-textinput&quot; type&#x3D;&quot;text&quot; value&#x3D;&quot;Text input with value&quot; /&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;chunk&quot;&gt;
+    &lt;label for&#x3D;&quot;test-textinput2&quot;&gt;Just another label&lt;/label&gt;
+    &lt;input id&#x3D;&quot;test-textinput2&quot; type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;Text input with placeholder&quot; /&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;chunk&quot;&gt;
+    &lt;label for&#x3D;&quot;test-textarea&quot;&gt;Here&#x27;s an area for your text&lt;/label&gt;
+    &lt;textarea id&#x3D;&quot;test-textarea&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;chunk&quot;&gt;
+    &lt;label for&#x3D;&quot;test-select&quot;&gt;What is this?&lt;/label&gt;
+    &lt;select id&#x3D;&quot;text-select&quot;&gt;
+        &lt;option value&#x3D;&quot;One&quot;&gt;One&lt;/option&gt;
+        &lt;option value&#x3D;&quot;Two&quot;&gt;Two&lt;/option&gt;
+        &lt;option value&#x3D;&quot;Three&quot;&gt;Three&lt;/option&gt;
+        &lt;option value&#x3D;&quot;Four&quot;&gt;Four&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;row&quot;&gt;
+    &lt;div class&#x3D;&quot;row-item chunk&quot;&gt;
+        &lt;label for&#x3D;&quot;split1&quot;&gt;Favorite number&lt;/label&gt;
+        &lt;input id&#x3D;&quot;split0&quot; type&#x3D;&quot;number&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;row-item chunk&quot;&gt;
+        &lt;label for&#x3D;&quot;split1&quot;&gt;Unicorn name&lt;/label&gt;
+        &lt;input id&#x3D;&quot;split1&quot; type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;ie. Fluffy, Resplendent&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;row-item chunk&quot;&gt;
+        &lt;label class&#x3D;&quot;required&quot; for&#x3D;&quot;split2&quot;&gt;Unicorn color&lt;/label&gt;
+        &lt;select id&#x3D;&quot;split2&quot;&gt;
+            &lt;option value&#x3D;&quot;clear&quot;&gt;Transparent&lt;/option&gt;
+            &lt;option value&#x3D;&quot;green&quot;&gt;Toasted clove saffron&lt;/option&gt;
+            &lt;option value&#x3D;&quot;brown&quot;&gt;Midnight brown&lt;/option&gt;
+            &lt;option value&#x3D;&quot;black&quot;&gt;Seabreeze black&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="checkbox">Checkboxes</a><dt>
+							<dd class="doc_block-desc"><p>A label variant class of <code>label--minor</code> is
+used for side-by-side inputs and labels.</p>
+<p>For radios and checkboxes, we put the <code>input</code>
+element inside the <code>label</code> element.</p>
+<p>A class of <code>checkbox</code> is <strong>required</strong> on checkbox
+input elements.</p>
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <label for="check1" class="label--minor chunk">
+    <input id="check1" class="checkbox" value="green" type="checkbox" />
+    Green
+</label>
+<label for="check2" class="label--minor chunk">
+    <input id="check2" class="checkbox" value="blue" type="checkbox" />
+    Blue
+</label>
+<label for="check3" class="label--minor chunk">
+    <input id="check3" class="checkbox" value="blue" type="checkbox" checked />
+    Already checked
+</label>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;label for&#x3D;&quot;check1&quot; class&#x3D;&quot;label--minor chunk&quot;&gt;
+    &lt;input id&#x3D;&quot;check1&quot; class&#x3D;&quot;checkbox&quot; value&#x3D;&quot;green&quot; type&#x3D;&quot;checkbox&quot; /&gt;
+    Green
+&lt;/label&gt;
+&lt;label for&#x3D;&quot;check2&quot; class&#x3D;&quot;label--minor chunk&quot;&gt;
+    &lt;input id&#x3D;&quot;check2&quot; class&#x3D;&quot;checkbox&quot; value&#x3D;&quot;blue&quot; type&#x3D;&quot;checkbox&quot; /&gt;
+    Blue
+&lt;/label&gt;
+&lt;label for&#x3D;&quot;check3&quot; class&#x3D;&quot;label--minor chunk&quot;&gt;
+    &lt;input id&#x3D;&quot;check3&quot; class&#x3D;&quot;checkbox&quot; value&#x3D;&quot;blue&quot; type&#x3D;&quot;checkbox&quot; checked /&gt;
+    Already checked
+&lt;/label&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+					</div>
+
+				</div>
+				<div class="doc_category">
+					<h2 class="doc_category-title text--heavy text--display1"><a class="offsetAnchor" name="headings">Headings</a></h2>
+
+					<div class="doc_category-blocks">
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="headings">Headings</a><dt>
+							<dd class="doc_block-desc"><p>Heading defaults.</p>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="headingTags">Heading tags</a><dt>
+							<dd class="doc_block-desc"><p>All heading tags are reset to use
+<code>text--heavy</code> styles by default.</p>
+<p>Apply a text class to apply additional
+heading styles; for example, <code>text--display1</code>.</p>
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="displayText">Display text</a><dt>
+							<dd class="doc_block-desc"><p>Display text is useful for styling headings.</p>
+<p><em>Use the semantically correct heading level tag</em>,
+then apply a display text class to visually style
+the tag as a heading.</p>
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <h2 class="text--display1">Display text is for headings</h2>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;h2 class&#x3D;&quot;text--display1&quot;&gt;Display text is for headings&lt;/h2&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="displayText">Title text</a><dt>
+							<dd class="doc_block-desc"><p>Title text is used to title entire views or for
+labeling sections of a view.</p>
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <h2 class="text--pageTitle">Page title is for labeling views</h2>
+    <h2 class="text--sectionTitle">Section title is for labeling sections of views</h2>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;h2 class&#x3D;&quot;text--pageTitle&quot;&gt;Page title is for labeling views&lt;/h2&gt;
+    &lt;h2 class&#x3D;&quot;text--sectionTitle&quot;&gt;Section title is for labeling sections of views&lt;/h2&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="labelHeader">Label header</a><dt>
+							<dd class="doc_block-desc"><div class="doc_example">
+    <div class="doc_example-rendered">
+        <h3 class="text--label">Label for subsection</h3>
+    <h3 class="text--labelSecondary">Secondary label for subsection</h3>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;h3 class&#x3D;&quot;text--label&quot;&gt;Label for subsection&lt;/h3&gt;
+    &lt;h3 class&#x3D;&quot;text--labelSecondary&quot;&gt;Secondary label for subsection&lt;/h3&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+					</div>
+
+				</div>
+				<div class="doc_category">
+					<h2 class="doc_category-title text--heavy text--display1"><a class="offsetAnchor" name="tables">Tables</a></h2>
+
+					<div class="doc_category-blocks">
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="tableDefault">Default table styles</a><dt>
+							<dd class="doc_block-desc"><div class="doc_example">
+    <div class="doc_example-rendered">
+        <table>
+    <thead>
+        <tr>
+            <th>State</th>
+            <th>Number of escalators</th>
+            <th>State bird</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>New York</th>
+            <td>7,674</td>
+            <td>Cardinal</td>
+        </tr>
+        <tr>
+            <th>Wyoming</th>
+            <td>2</td>
+            <td>Cardinal</td>
+        </tr>
+        <tr>
+            <th>Oregon</th>
+            <td>400</td>
+            <td>Cardinal</td>
+        </tr>
+        <tr>
+            <th>Florida</th>
+            <td>n/a</td>
+            <td>Cardinal</td>
+        </tr>
+    </tbody>
+</table>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;State&lt;/th&gt;
+            &lt;th&gt;Number of escalators&lt;/th&gt;
+            &lt;th&gt;State bird&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;New York&lt;/th&gt;
+            &lt;td&gt;7,674&lt;/td&gt;
+            &lt;td&gt;Cardinal&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Wyoming&lt;/th&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;Cardinal&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Oregon&lt;/th&gt;
+            &lt;td&gt;400&lt;/td&gt;
+            &lt;td&gt;Cardinal&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Florida&lt;/th&gt;
+            &lt;td&gt;n/a&lt;/td&gt;
+            &lt;td&gt;Cardinal&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="borderedTable">Bordered table</a><dt>
+							<dd class="doc_block-desc"><p>Apply the <code>borderedTable</code> class to apply borders to table cells.</p>
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <table class="borderedTable">
+    <thead>
+        <tr>
+            <th>State</th>
+            <th>Number of escalators</th>
+            <th>State bird</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>New York</th>
+            <td>7,674</td>
+            <td>Cardinal</td>
+        </tr>
+        <tr>
+            <th>Wyoming</th>
+            <td>2</td>
+            <td>Cardinal</td>
+        </tr>
+        <tr>
+            <th>Oregon</th>
+            <td>400</td>
+            <td>Cardinal</td>
+        </tr>
+        <tr>
+            <th>Florida</th>
+            <td>n/a</td>
+            <td>Cardinal</td>
+        </tr>
+    </tbody>
+</table>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;table class&#x3D;&quot;borderedTable&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;State&lt;/th&gt;
+            &lt;th&gt;Number of escalators&lt;/th&gt;
+            &lt;th&gt;State bird&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;New York&lt;/th&gt;
+            &lt;td&gt;7,674&lt;/td&gt;
+            &lt;td&gt;Cardinal&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Wyoming&lt;/th&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;Cardinal&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Oregon&lt;/th&gt;
+            &lt;td&gt;400&lt;/td&gt;
+            &lt;td&gt;Cardinal&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Florida&lt;/th&gt;
+            &lt;td&gt;n/a&lt;/td&gt;
+            &lt;td&gt;Cardinal&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="resetTable">Reset table</a><dt>
+							<dd class="doc_block-desc"><div class="doc_example">
+    <div class="doc_example-rendered">
+        <table class="resetTable">
+    <thead>
+        <tr>
+            <th>State</th>
+            <th>Number of escalators</th>
+            <th>State bird</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>New York</th>
+            <td>7,674</td>
+            <td>Cardinal</td>
+        </tr>
+        <tr>
+            <th>Wyoming</th>
+            <td>2</td>
+            <td>Cardinal</td>
+        </tr>
+        <tr>
+            <th>Oregon</th>
+            <td>400</td>
+            <td>Cardinal</td>
+        </tr>
+        <tr>
+            <th>Florida</th>
+            <td>n/a</td>
+            <td>Cardinal</td>
+        </tr>
+    </tbody>
+</table>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;table class&#x3D;&quot;resetTable&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;State&lt;/th&gt;
+            &lt;th&gt;Number of escalators&lt;/th&gt;
+            &lt;th&gt;State bird&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;New York&lt;/th&gt;
+            &lt;td&gt;7,674&lt;/td&gt;
+            &lt;td&gt;Cardinal&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Wyoming&lt;/th&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;Cardinal&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Oregon&lt;/th&gt;
+            &lt;td&gt;400&lt;/td&gt;
+            &lt;td&gt;Cardinal&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Florida&lt;/th&gt;
+            &lt;td&gt;n/a&lt;/td&gt;
+            &lt;td&gt;Cardinal&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+						<dl class="doc_block">
+							<dt class="doc_block-title text--bold"><a class="offsetAnchor" name="stripedTable">Striped table</a><dt>
+							<dd class="doc_block-desc"><p>Apply the <code>stripedTable</code> class to add a background
+stripe to every other row of the table.</p>
+<div class="doc_example">
+    <div class="doc_example-rendered">
+        <table class="stripedTable">
+    <thead>
+        <tr>
+            <th>State</th>
+            <th>Number of escalators</th>
+            <th>State bird</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>New York</th>
+            <td>7,674</td>
+            <td>Cardinal</td>
+        </tr>
+        <tr>
+            <th>Wyoming</th>
+            <td>2</td>
+            <td>Cardinal</td>
+        </tr>
+        <tr>
+            <th>Oregon</th>
+            <td>400</td>
+            <td>Cardinal</td>
+        </tr>
+        <tr>
+            <th>Florida</th>
+            <td>n/a</td>
+            <td>Cardinal</td>
+        </tr>
+    </tbody>
+</table>
+    </div>
+    <div class="doc_example-escaped">
+<pre><code class="html">&lt;table class&#x3D;&quot;stripedTable&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;State&lt;/th&gt;
+            &lt;th&gt;Number of escalators&lt;/th&gt;
+            &lt;th&gt;State bird&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;New York&lt;/th&gt;
+            &lt;td&gt;7,674&lt;/td&gt;
+            &lt;td&gt;Cardinal&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Wyoming&lt;/th&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;Cardinal&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Oregon&lt;/th&gt;
+            &lt;td&gt;400&lt;/td&gt;
+            &lt;td&gt;Cardinal&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Florida&lt;/th&gt;
+            &lt;td&gt;n/a&lt;/td&gt;
+            &lt;td&gt;Cardinal&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+    </div>
+</div>
+</dd>
+
+							<dd class="doc_block-children">
+								<dl class="doc_childBlock">
+								</dl>
+							</dd>
+
+						</dl>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+	</main>
+</div>
+
+
+<script type="text/javascript" src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="//cdn.jsdelivr.net/highlight.js/9.1.0/highlight.min.js"></script>
+<script src="./pushy.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	//
+	// Highlightjs,
+	// fancy tables parsed from markdown
+	//
+	$(document).ready(function() {
+		$('pre code').each(function(i, block) {
+			hljs.highlightBlock(block);
+		});
+		$('.doc_block-desc > table').addClass('stripedTable');
+	});
+
+
+	//
+	// Disable links in examples
+	//
+	$('.doc_example a').on("click", function(e) {
+		e.preventDefault();
+		return false;
+	});
+
+	//
+	// collapsible example
+	//
+	var $c = $('#cContainer'),
+		CLASS_COL_CLOSE = 'collapsible--close';
+	if ( $c.length > 0 ) {
+		$('#cTrigger').on('click', function() {
+			if ( $c.hasClass(CLASS_COL_CLOSE) ) {
+				$c.removeClass(CLASS_COL_CLOSE);
+			} else {
+				$c.addClass(CLASS_COL_CLOSE);
+			}
+		});
+	}
+});
+</script>
+
+</body>
+</html>
