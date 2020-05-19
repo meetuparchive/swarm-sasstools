@@ -12,7 +12,7 @@ category: Text Styles
 */
 
 html {
-	font-size: $font-size;
+	font-size: sass-rem($font-size);
 }
 
 body {
@@ -24,7 +24,7 @@ body {
 	-o-font-feature-settings: "liga", "kern";
 	-webkit-font-feature-settings: "liga", "kern";
 	font-feature-settings: "liga", "kern";
-	font-size: $font-size;
+	font-size: 100%;
 	font-weight: $W_normal;
 	line-height: $line-height;
 	text-rendering: optimizeLegibility; // stylelint-disable-line property-blacklist
@@ -495,7 +495,7 @@ _Setting the `enableDebug` class on `body` for dev only is recommended._
 		background: pink;
 		color: purple;
 		display: block;
-		font-size: $font-size-small;
+		font-size: sass-rem($font-size-small);
 		margin-bottom: $space;
 		outline: 1px dotted red;
 		padding: 0.25em 0.5em;

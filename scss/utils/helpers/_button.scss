@@ -29,7 +29,7 @@
 	-webkit-appearance: none;
 	border-radius: $defaultRadius;
 	box-sizing: border-box;
-	font-size: $font-size-small;
+	font-size: sass-rem($font-size-small);
 	line-height: $line-height-smallText;
 	outline: 0;
 	padding: $space-half $space-double;
