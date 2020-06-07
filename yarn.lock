@@ -17,13 +17,13 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.0.tgz#50c1e2260ac0ed9439a181de3725a0168d59c48a"
 
-"@sass-collective/sass-rem@^1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@sass-collective/sass-rem/-/sass-rem-1.3.1.tgz#0ef36514d60365b866d7a39b1e32fa6413bbb980"
-  integrity sha512-V+aSu8tci77pRpHy5F3oBWjwx9fSg/T4WbkECRkbFv6GECHNNGbCPunC45avdTA2h4teDdShuc1to6e3xzKg3g==
+"@sass-collective/sass-rem@^1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@sass-collective/sass-rem/-/sass-rem-1.4.1.tgz#606c0b543f8705ae2df7b676acc2f8193ad40473"
+  integrity sha512-LfIlnCawbL2vf+W5C2in6xs6R+JQkTVb3ZwWnH5WGwvOXZbW8kCDvKazTQ40vx15vaYP81mVmYMqJ6yeZpciWg==
   dependencies:
     "@sass-collective/strip-unit" "^1.0.1"
-    sass "^1.26.5"
+    sass "^1.26.8"
 
 "@sass-collective/strip-unit@^1.0.1":
   version "1.0.1"
@@ -6383,10 +6383,10 @@ sass-loader@7.3.1:
     pify "^4.0.1"
     semver "^6.3.0"
 
-sass@^1.26.3, sass@^1.26.5:
-  version "1.26.5"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.26.5.tgz#2d7aecfbbabfa298567c8f06615b6e24d2d68099"
-  integrity sha512-FG2swzaZUiX53YzZSjSakzvGtlds0lcbF+URuU9mxOv7WBh7NhXEVDa4kPKN4hN6fC2TkOTOKqiqp6d53N9X5Q==
+sass@^1.26.3, sass@^1.26.8:
+  version "1.26.8"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.26.8.tgz#312652530721f9568d4c4000b0db07ec6eb23325"
+  integrity sha512-yvtzyrKLGiXQu7H12ekXqsfoGT/aTKeMDyVzCB675k1HYuaj0py63i8Uf4SI9CHXj6apDhpfwbUr3gGOjdpu2Q==
   dependencies:
     chokidar ">=2.0.0 <4.0.0"
 
