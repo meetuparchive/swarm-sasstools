@@ -1,7 +1,7 @@
 swarm-sasstools
 ===============
 [![npm version](https://badge.fury.io/js/swarm-sasstools.svg)](https://badge.fury.io/js/swarm-sasstools)
-[![Build Status](https://travis-ci.org/meetup/swarm-sasstools.svg?branch=master)](https://travis-ci.org/meetup/swarm-sasstools)
+[![Build Status](https://travis-ci.com/meetup/swarm-sasstools.svg?branch=master)](https://travis-ci.com/meetup/swarm-sasstools)
 
 ### Documentation
 [https://meetup.github.io/swarm-sasstools/](https://meetup.github.io/swarm-sasstools/)
