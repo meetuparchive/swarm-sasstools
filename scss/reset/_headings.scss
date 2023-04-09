@@ -36,7 +36,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-size: $font-size;
+	font-size: sass-rem($font-size);
 	margin: 0;
 	padding: 0;
 }
@@ -44,7 +44,7 @@ h6 {
 h1 {
 	.view-head & {
 		@extend %text--heavy;
-		font-size: $font-size;
+		font-size: sass-rem($font-size);
 	}
 }
 

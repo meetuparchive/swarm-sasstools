@@ -13,6 +13,7 @@
 // libraries
 // ("~" prefix allows webpack to resolve `node_modules` location)
 //
+@import "~@sass-collective/sass-rem";
 @import "~swarm-constants/dist/scss/vars";
 @import "~swarm-animation/src/constants";
 @import "~swarm-animation/src/fade";

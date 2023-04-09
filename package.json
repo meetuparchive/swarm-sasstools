@@ -22,11 +22,9 @@
 		"stylelint": "stylelint scss/**/*.scss --syntax scss",
 		"lint:prettier": "prettier -l scss/**/*.scss"
 	},
-	"dependencies": {
-		"sass-rem": "^1.2.4"
-	},
 	"devDependencies": {
 		"@alrra/travis-scripts": "^3.0.1",
+		"@sass-collective/sass-rem": "^1.4.1",
 		"css-loader": "0.26.1",
 		"extract-text-webpack-plugin": "2.1.0",
 		"gh-pages": "1.0.0",
@@ -41,7 +39,7 @@
 		"grunt-sassdoc": "2.0.2",
 		"meetup-web-components": "^5.0.2373",
 		"mwp-config": "16.0.2422",
-		"node-sass": "4.8.1",
+		"node-sass": "^4.14.1",
 		"sass-loader": "7.3.1",
 		"sassdoc-theme-flippant": "0.1.0",
 		"seldon": "0.4.4",
